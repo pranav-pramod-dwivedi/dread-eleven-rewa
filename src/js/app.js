@@ -1,335 +1,216 @@
 /**
- * DREAD ELEVEN (DE) — AWWWARDS SITE OF THE YEAR INTERACTIVE ENGINE
+ * DREAD ELEVEN (DE) — OFFICIAL CRICKET FRANCHISE INTERACTIVE ENGINE
+ * Captain: Akhil Mishra (#1) | Atal Bihari Vajpayee Memorial Tournament, Rewa
+ * Strict Constraint: ABSOLUTELY ZERO BLUE. Pitch Void & Acid Volt (#d4ff00).
  * 
- * 1. Kinetic Fluid Aura & Velocity Shockwave Mesh Canvas (60fps)
- * 2. Specular 3D Gyroscopic Tilt & Spotlight Glare
- * 3. Animated Number Rollups (countUp on viewport entry)
- * 4. Multi-Dimensional One Day & T20 Format & Season Filter
- * 5. ESPNcricinfo Interactive Tab Controller
- * 6. Squad Role Filter
+ * 1. Procedural 24fps Film Grain & Noise Foreground Canvas
+ * 2. Film Grain Toggle HUD Pill
+ * 3. Interactive Cursor Spotlight Tracker
+ * 4. Next Derby Match Live Countdown Clock
+ * 5. Multi-Tier Season & Format Filter Engine
+ * 6. Squad Role Filter & Real-Time Search
+ * 7. Mobile Navigation Drawer Controller
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initKineticFluidCanvas();
-  init3DSpecularTilt();
-  initNumberCounters();
-  initScorecardTabs();
+  initProceduralFilmGrain();
+  initGrainToggle();
+  initCursorSpotlight();
+  initLiveCountdown();
   initMatchFilters();
   initSquadRoleFilter();
+  initMobileMenu();
 });
 
 /* ==========================================================================
-   1. KINETIC FLUID AURA & VELOCITY SHOCKWAVE MESH CANVAS
+   1. PROCEDURAL 24FPS FILM GRAIN & NOISE FOREGROUND CANVAS
    ========================================================================== */
-function initKineticFluidCanvas() {
-  const canvas = document.getElementById('ambient-canvas');
+function initProceduralFilmGrain() {
+  const canvas = document.getElementById('film-grain-canvas');
   if (!canvas) return;
 
-  // Respect prefers-reduced-motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     canvas.style.display = 'none';
     return;
   }
 
-  const ctx = canvas.getContext('2d');
-  let width, height;
-  let ripples = [];
-  let nodes = [];
-  const nodeCount = window.innerWidth < 768 ? 25 : 55;
+  const ctx = canvas.getContext('2d', { alpha: true });
+  if (!ctx) return;
 
-  let mouse = {
-    x: -1000,
-    y: -1000,
-    targetX: -1000,
-    targetY: -1000,
-    lastX: -1000,
-    lastY: -1000,
-    speed: 0,
-    radius: 190
-  };
+  const patternSize = 256;
+  const patternCanvas = document.createElement('canvas');
+  patternCanvas.width = patternSize;
+  patternCanvas.height = patternSize;
+  const patternCtx = patternCanvas.getContext('2d');
 
-  function resize() {
+  const noiseTiles = [];
+  const totalTiles = 6;
+
+  for (let t = 0; t < totalTiles; t++) {
+    const imgData = patternCtx.createImageData(patternSize, patternSize);
+    const data = imgData.data;
+    const len = data.length;
+
+    for (let i = 0; i < len; i += 4) {
+      const v = (Math.random() * 255) | 0;
+      data[i] = v;
+      data[i + 1] = v;
+      data[i + 2] = v;
+      data[i + 3] = (Math.random() * 45 + 18) | 0; // High-density grain
+    }
+
+    noiseTiles.push(imgData);
+  }
+
+  let width = (canvas.width = window.innerWidth);
+  let height = (canvas.height = window.innerHeight);
+
+  window.addEventListener('resize', () => {
     width = canvas.width = window.innerWidth;
     height = canvas.height = window.innerHeight;
-  }
-  window.addEventListener('resize', resize);
-  resize();
-
-  window.addEventListener('mousemove', (e) => {
-    mouse.targetX = e.clientX;
-    mouse.targetY = e.clientY;
-
-    const dx = e.clientX - mouse.lastX;
-    const dy = e.clientY - mouse.lastY;
-    mouse.speed = Math.sqrt(dx * dx + dy * dy);
-    mouse.lastX = e.clientX;
-    mouse.lastY = e.clientY;
-
-    // High velocity trigger shockwave ripple
-    if (mouse.speed > 28 && ripples.length < 6) {
-      ripples.push({
-        x: e.clientX,
-        y: e.clientY,
-        radius: 10,
-        maxRadius: Math.min(mouse.speed * 4, 180),
-        alpha: 0.35,
-        speed: 4.5
-      });
-    }
   });
 
-  window.addEventListener('mouseleave', () => {
-    mouse.targetX = -1000;
-    mouse.targetY = -1000;
-    mouse.speed = 0;
-  });
+  let frame = 0;
+  let lastTime = performance.now();
+  const fpsInterval = 1000 / 24; // 24fps cinematic shutter rate
 
-  class KineticNode {
-    constructor() {
-      this.x = Math.random() * width;
-      this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.7;
-      this.vy = (Math.random() - 0.5) * 0.7;
-      this.baseRadius = Math.random() * 2 + 1;
-      this.radius = this.baseRadius;
-      this.phase = Math.random() * Math.PI * 2;
-    }
+  function render(now) {
+    requestAnimationFrame(render);
 
-    update() {
-      this.x += this.vx;
-      this.y += this.vy;
-      this.phase += 0.02;
+    const elapsed = now - lastTime;
+    if (elapsed < fpsInterval) return;
+    lastTime = now - (elapsed % fpsInterval);
 
-      if (this.x < 0 || this.x > width) this.vx *= -1;
-      if (this.y < 0 || this.y > height) this.vy *= -1;
+    frame = (frame + 1) % totalTiles;
+    patternCtx.putImageData(noiseTiles[frame], 0, 0);
 
-      // Cursor spring repulsion
-      const dx = mouse.x - this.x;
-      const dy = mouse.y - this.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-
-      if (dist < mouse.radius) {
-        const force = (mouse.radius - dist) / mouse.radius;
-        this.x -= (dx / dist) * force * 4;
-        this.y -= (dy / dist) * force * 4;
-        this.radius = this.baseRadius * 1.5;
-      } else {
-        this.radius = this.baseRadius;
-      }
-    }
-
-    draw() {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(212, 255, 0, ${0.4 + Math.sin(this.phase) * 0.2})`;
-      ctx.shadowBlur = 10;
-      ctx.shadowColor = '#d4ff00';
-      ctx.fill();
-    }
-  }
-
-  for (let i = 0; i < nodeCount; i++) {
-    nodes.push(new KineticNode());
-  }
-
-  function render() {
     ctx.clearRect(0, 0, width, height);
-
-    // Smooth cursor interpolation
-    mouse.x += (mouse.targetX - mouse.x) * 0.08;
-    mouse.y += (mouse.targetY - mouse.y) * 0.08;
-
-    // Ambient radial aura at cursor
-    if (mouse.x > 0 && mouse.y > 0) {
-      const aura = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 320);
-      aura.addColorStop(0, 'rgba(212, 255, 0, 0.06)');
-      aura.addColorStop(0.5, 'rgba(212, 255, 0, 0.015)');
-      aura.addColorStop(1, 'rgba(5, 5, 7, 0)');
-      ctx.fillStyle = aura;
+    const pattern = ctx.createPattern(patternCanvas, 'repeat');
+    if (pattern) {
+      ctx.fillStyle = pattern;
       ctx.fillRect(0, 0, width, height);
     }
-
-    // Render shockwave ripples
-    for (let r = ripples.length - 1; r >= 0; r--) {
-      const rip = ripples[r];
-      rip.radius += rip.speed;
-      rip.alpha -= 0.008;
-
-      if (rip.alpha <= 0 || rip.radius >= rip.maxRadius) {
-        ripples.splice(r, 1);
-        continue;
-      }
-
-      ctx.beginPath();
-      ctx.arc(rip.x, rip.y, rip.radius, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(212, 255, 0, ${rip.alpha})`;
-      ctx.lineWidth = 1.5;
-      ctx.shadowBlur = 12;
-      ctx.shadowColor = '#d4ff00';
-      ctx.stroke();
-    }
-
-    // Connect node lattice lines
-    for (let i = 0; i < nodes.length; i++) {
-      nodes[i].update();
-      nodes[i].draw();
-
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-
-        if (dist < 120) {
-          ctx.beginPath();
-          ctx.moveTo(nodes[i].x, nodes[i].y);
-          ctx.lineTo(nodes[j].x, nodes[j].y);
-          ctx.strokeStyle = `rgba(212, 255, 0, ${0.15 * (1 - dist / 120)})`;
-          ctx.lineWidth = 0.8;
-          ctx.stroke();
-        }
-      }
-    }
-
-    requestAnimationFrame(render);
   }
 
-  render();
+  requestAnimationFrame(render);
 }
 
 /* ==========================================================================
-   2. SPECULAR 3D GYROSCOPIC TILT & SPOTLIGHT GLARE
+   2. FILM GRAIN TOGGLE HUD CONTROLLER
    ========================================================================== */
-function init3DSpecularTilt() {
-  const cards = document.querySelectorAll('.tilt-card, .match-card, .player-card, .monument-stage-card');
-  cards.forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
+function initGrainToggle() {
+  const toggleBtn = document.getElementById('grain-toggle-btn');
+  const canvas = document.getElementById('film-grain-canvas');
+  if (!toggleBtn || !canvas) return;
 
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
+  let isEnabled = true;
 
-      const rotateX = ((y - centerY) / centerY) * -6;
-      const rotateY = ((x - centerX) / centerX) * 6;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
-    });
+  toggleBtn.addEventListener('click', () => {
+    isEnabled = !isEnabled;
+    if (isEnabled) {
+      canvas.style.display = 'block';
+      toggleBtn.classList.add('active');
+      toggleBtn.innerHTML = '<span>GRAIN: 35MM [ON]</span>';
+    } else {
+      canvas.style.display = 'none';
+      toggleBtn.classList.remove('active');
+      toggleBtn.innerHTML = '<span>GRAIN: OFF</span>';
+    }
   });
 }
 
 /* ==========================================================================
-   3. ANIMATED NUMBER ROLLUPS (COUNTUP)
+   3. INTERACTIVE CURSOR SPOTLIGHT TRACKER
    ========================================================================== */
-function initNumberCounters() {
-  const counterElements = document.querySelectorAll('[data-count]');
-  if (!counterElements.length) return;
+function initCursorSpotlight() {
+  let ticking = false;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const target = entry.target;
-        const targetVal = parseFloat(target.getAttribute('data-count'));
-        const isFloat = target.getAttribute('data-count').includes('.');
-        const duration = 1200;
-        const startTime = performance.now();
-
-        function step(currentTime) {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const easeProgress = 1 - Math.pow(1 - progress, 3);
-          const currentVal = easeProgress * targetVal;
-
-          target.textContent = isFloat ? currentVal.toFixed(2) : Math.floor(currentVal);
-
-          if (progress < 1) {
-            requestAnimationFrame(step);
-          } else {
-            target.textContent = isFloat ? targetVal.toFixed(2) : targetVal;
-          }
-        }
-
-        requestAnimationFrame(step);
-        observer.unobserve(target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  counterElements.forEach((el) => observer.observe(el));
-}
-
-/* ==========================================================================
-   4. ESPNcricinfo INTERACTIVE TAB CONTROLLER
-   ========================================================================== */
-function initScorecardTabs() {
-  const tabButtons = document.querySelectorAll('.espn-tab-btn');
-  if (!tabButtons.length) return;
-
-  tabButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const targetId = btn.getAttribute('data-tab');
-
-      tabButtons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const tabContents = document.querySelectorAll('.espn-tab-content');
-      tabContents.forEach((content) => {
-        if (content.id === targetId) {
-          content.style.display = 'block';
-          content.style.opacity = '0';
-          setTimeout(() => {
-            content.style.transition = 'opacity 0.2s ease';
-            content.style.opacity = '1';
-          }, 10);
-        } else {
-          content.style.display = 'none';
-        }
+  window.addEventListener('pointermove', (e) => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+        document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+        ticking = false;
       });
-    });
-  });
+      ticking = true;
+    }
+  }, { passive: true });
 }
 
 /* ==========================================================================
-   5. MULTI-DIMENSIONAL FORMAT & SEASON FILTER
+   4. NEXT DERBY MATCH LIVE COUNTDOWN CLOCK
+   ========================================================================== */
+function initLiveCountdown() {
+  const daysEl = document.getElementById('hud-days');
+  const hoursEl = document.getElementById('hud-hours');
+  const minsEl = document.getElementById('hud-mins');
+  const secsEl = document.getElementById('hud-secs');
+
+  if (!daysEl || !hoursEl || !minsEl || !secsEl) return;
+
+  const targetDate = new Date('2026-09-06T09:30:00+05:30').getTime();
+
+  function update() {
+    const now = Date.now();
+    const diff = Math.max(0, targetDate - now);
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const m = Math.floor((diff / (1000 * 60)) % 60);
+    const s = Math.floor((diff / 1000) % 60);
+
+    daysEl.textContent = String(d).padStart(2, '0');
+    hoursEl.textContent = String(h).padStart(2, '0');
+    minsEl.textContent = String(m).padStart(2, '0');
+    secsEl.textContent = String(s).padStart(2, '0');
+  }
+
+  update();
+  setInterval(update, 1000);
+}
+
+/* ==========================================================================
+   5. MULTI-TIER FORMAT & SEASON FILTER ENGINE
    ========================================================================== */
 function initMatchFilters() {
-  const formatButtons = document.querySelectorAll('.format-filter-btn');
-  const seasonButtons = document.querySelectorAll('.season-filter-btn');
+  const formatButtons = document.querySelectorAll('.format-filter-pill');
+  const seasonButtons = document.querySelectorAll('.season-filter-pill');
+  const searchInput = document.getElementById('match-search-field');
   const matchCards = document.querySelectorAll('.match-card');
+  const countEl = document.getElementById('visible-matches-count');
+
   if (!matchCards.length) return;
 
   let activeFormat = 'all';
   let activeSeason = 'all';
+  let searchQuery = '';
 
   function applyFilters() {
     let visibleCount = 0;
+
     matchCards.forEach((card) => {
-      const format = (card.getAttribute('data-format') || '').toUpperCase();
+      const fmt = (card.getAttribute('data-format') || '').toUpperCase();
       const season = card.getAttribute('data-season') || '';
+      const text = card.textContent.toLowerCase();
 
-      const matchFormat = activeFormat === 'all' || 
-        (activeFormat === 'T20' && format.includes('T20')) || 
-        (activeFormat === 'ODI' && (format.includes('ODI') || format.includes('ONE-DAY')));
+      const formatMatches =
+        activeFormat === 'all' ||
+        (activeFormat === 'ODI' && (fmt.includes('ODI') || fmt.includes('ONE-DAY'))) ||
+        (activeFormat === 'T20' && fmt.includes('T20'));
 
-      const matchSeason = activeSeason === 'all' || season === activeSeason;
+      const seasonMatches = activeSeason === 'all' || season === activeSeason;
+      const searchMatches = !searchQuery || text.includes(searchQuery);
 
-      if (matchFormat && matchSeason) {
+      if (formatMatches && seasonMatches && searchMatches) {
         card.style.display = 'flex';
-        card.style.opacity = '1';
         visibleCount++;
       } else {
         card.style.display = 'none';
-        card.style.opacity = '0';
       }
     });
 
-    const countDisplay = document.getElementById('filter-matches-count');
-    if (countDisplay) {
-      countDisplay.textContent = visibleCount;
+    if (countEl) {
+      countEl.textContent = visibleCount;
     }
   }
 
@@ -337,7 +218,7 @@ function initMatchFilters() {
     btn.addEventListener('click', () => {
       formatButtons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      activeFormat = btn.getAttribute('data-format');
+      activeFormat = btn.getAttribute('data-format') || 'all';
       applyFilters();
     });
   });
@@ -346,37 +227,66 @@ function initMatchFilters() {
     btn.addEventListener('click', () => {
       seasonButtons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-      activeSeason = btn.getAttribute('data-season');
+      activeSeason = btn.getAttribute('data-season') || 'all';
       applyFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      applyFilters();
+    });
+  }
+}
+
+/* ==========================================================================
+   6. SQUAD ROLE FILTER & REAL-TIME SEARCH
+   ========================================================================== */
+function initSquadRoleFilter() {
+  const roleButtons = document.querySelectorAll('.role-filter-pill');
+  const playerCards = document.querySelectorAll('.jersey-player-card');
+  if (!roleButtons.length || !playerCards.length) return;
+
+  roleButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      roleButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      const targetRole = btn.getAttribute('data-role');
+
+      playerCards.forEach((card) => {
+        const cardRole = (card.getAttribute('data-role') || '').toLowerCase();
+        let show = false;
+
+        if (targetRole === 'all') {
+          show = true;
+        } else if (targetRole === 'captain') {
+          show = cardRole.includes('captain') || cardRole.includes('all-rounder');
+        } else if (targetRole === 'bat') {
+          show = cardRole.includes('batter') || cardRole.includes('bat');
+        } else if (targetRole === 'bowl') {
+          show = cardRole.includes('bowler') || cardRole.includes('bowl');
+        } else if (targetRole === 'wicket') {
+          show = cardRole.includes('wicket');
+        }
+
+        card.style.display = show ? 'flex' : 'none';
+      });
     });
   });
 }
 
 /* ==========================================================================
-   6. SQUAD ROLE FILTER
+   7. MOBILE NAVIGATION DRAWER CONTROLLER
    ========================================================================== */
-function initSquadRoleFilter() {
-  const filterBtns = document.querySelectorAll('#squad-filter-controls .role-btn');
-  const cards = document.querySelectorAll('#players-grid .player-card');
-  if (!filterBtns.length || !cards.length) return;
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const drawer = document.getElementById('mobile-menu-drawer');
+  if (!menuBtn || !drawer) return;
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filter = btn.getAttribute('data-filter');
-
-      cards.forEach((card) => {
-        const role = card.getAttribute('data-role') || '';
-        if (filter === 'all' || role.toLowerCase().includes(filter.toLowerCase())) {
-          card.style.display = 'flex';
-          card.style.opacity = '1';
-        } else {
-          card.style.display = 'none';
-          card.style.opacity = '0';
-        }
-      });
-    });
+  menuBtn.addEventListener('click', () => {
+    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', !isExpanded);
+    drawer.style.display = isExpanded ? 'none' : 'flex';
   });
 }

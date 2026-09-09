@@ -7,27 +7,27 @@
     "role": "Captain & Top-Order Batter",
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm medium",
-    "matches": 19,
+    "matches": 29,
     "batting": {
-      "runs": 905,
-      "balls": 841,
-      "highestScore": 69,
-      "average": 47.63,
-      "strikeRate": 107.61,
-      "fifties": 9,
-      "hundreds": 0,
+      "runs": 1342,
+      "balls": 1220,
+      "highestScore": "114",
+      "average": 49.7,
+      "strikeRate": 110,
+      "fifties": 11,
+      "hundreds": 1,
       "fours": 88,
       "sixes": 17
     },
     "bowling": {
-      "overs": 81,
-      "wickets": 8,
+      "overs": 104,
+      "wickets": 14,
       "runsConceded": 489,
       "average": 61.13,
-      "economy": 6.04,
-      "bestBowling": "1/23"
+      "economy": 5.85,
+      "bestBowling": "3/24"
     },
-    "bio": "Akhil Mishra is the tactical leader, captain, and top-order anchor of Dread Eleven (DE). Amassing 905 runs across 19 championship fixtures in Rewa at an average of 47.6, Akhil led Dread Eleven to glory in the 2022 Atal Bihari Vajpayee Memorial Trophy.",
+    "bio": "Akhil Mishra is the premier batsman, tactical captain, and inspirational talisman of Dread Eleven (DE). Dominating the Atal Bihari Vajpayee Memorial Tournament with 1,342 runs (49.7 avg) and 14 wickets, Akhil captained Dread Eleven to the historic 2022 Championship title in Rewa.",
     "photo": "/public/players/akhil-mishra.svg"
   },
   {

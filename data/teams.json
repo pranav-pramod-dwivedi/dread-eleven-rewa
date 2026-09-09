@@ -12,56 +12,25 @@
     "captain": "Akhil Mishra",
     "motto": "Strike with Menace",
     "championships": [
-      "2022 Atal Bihari Vajpayee Memorial Trophy Winners",
-      "2023 Vindhya Premier T20 Cup Champions"
+      "2022 Atal Bihari Vajpayee Memorial Trophy Champions",
+      "2021 Inaugural T20 Series Winners (5–2)"
     ]
   },
-  "VW": {
-    "id": "VW",
-    "name": "Vindhya Warriors",
-    "shortName": "Warriors",
-    "code": "VW",
-    "crestText": "VW",
-    "primaryColor": "#ff4d00",
-    "secondaryColor": "#171821",
+  "DES": {
+    "id": "DES",
+    "name": "Destroyers Cricket Club",
+    "shortName": "Destroyers",
+    "code": "DES",
+    "crestText": "DES",
+    "primaryColor": "#ff4500",
+    "secondaryColor": "#0e1014",
     "homeVenue": "Awadhesh Pratap Singh University (APSU) Stadium, Rewa",
-    "established": 2020,
-    "captain": "Shailendra Patel"
-  },
-  "BS": {
-    "id": "BS",
-    "name": "Baghelkhand Strikers",
-    "shortName": "Strikers",
-    "code": "BS",
-    "crestText": "BS",
-    "primaryColor": "#f59e0b",
-    "secondaryColor": "#171821",
-    "homeVenue": "Nehru Divisional Grounds, Satna",
     "established": 2021,
-    "captain": "Vikramaditya Singh"
-  },
-  "RR": {
-    "id": "RR",
-    "name": "Rewa Royals",
-    "shortName": "Royals",
-    "code": "RR",
-    "crestText": "RR",
-    "primaryColor": "#e11d48",
-    "secondaryColor": "#171821",
-    "homeVenue": "Maharaja College Ground, Rewa",
-    "established": 2019,
-    "captain": "Digvijay Tiwari"
-  },
-  "CL": {
-    "id": "CL",
-    "name": "Civil Lines CC",
-    "shortName": "Civil Lines",
-    "code": "CL",
-    "crestText": "CL",
-    "primaryColor": "#10b981",
-    "secondaryColor": "#171821",
-    "homeVenue": "Police Line Arena, Rewa",
-    "established": 2020,
-    "captain": "Gaurav Sharma"
+    "captain": "Pranav Dwivedi",
+    "motto": "Relentless Force",
+    "championships": [
+      "2024 Atal Bihari Vajpayee Memorial Trophy Champions",
+      "2025 Atal Bihari Vajpayee Memorial Trophy Champions"
+    ]
   }
 }

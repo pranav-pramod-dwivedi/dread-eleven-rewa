@@ -2,7 +2,7 @@
   {
     "id": "m-shared-5",
     "matchNumber": 1,
-    "slug": "dread-eleven-vs-vindhya-warriors-2021-08-01",
+    "slug": "destroyers-vs-dread-eleven-2021-08-01",
     "seasonYear": "2021",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "T20 Tournament Clash",
@@ -16,7 +16,7 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Vindhya Warriors",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bowl first"
     },
     "winner": "DE",
@@ -30,8 +30,8 @@
     "innings": [
       {
         "inningsId": "m-shared-5-1",
-        "teamName": "Vindhya Warriors",
-        "teamShort": "VW",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 151,
         "wickets": 5,
         "overs": 20,
@@ -318,7 +318,7 @@
   {
     "id": "m-shared-6",
     "matchNumber": 2,
-    "slug": "dread-eleven-vs-baghelkhand-strikers-2021-08-04",
+    "slug": "destroyers-vs-dread-eleven-2021-08-04",
     "seasonYear": "2021",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "T20 Tournament Clash",
@@ -346,8 +346,8 @@
     "innings": [
       {
         "inningsId": "m-shared-6-1",
-        "teamName": "Baghelkhand Strikers",
-        "teamShort": "BS",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 155,
         "wickets": 9,
         "overs": 20,
@@ -683,7 +683,7 @@
   {
     "id": "m-shared-7",
     "matchNumber": 3,
-    "slug": "dread-eleven-vs-rewa-royals-2021-08-07",
+    "slug": "destroyers-vs-dread-eleven-2021-08-07",
     "seasonYear": "2021",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "T20 Tournament Clash",
@@ -697,22 +697,22 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Rewa Royals",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bat first"
     },
-    "winner": "RR",
-    "winnerName": "Rewa Royals",
-    "resultText": "Rewa Royals won by 20 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 20 runs",
     "playerOfTheMatch": {
       "name": "Amarjeet Kumar Singh",
-      "team": "Rewa Royals",
+      "team": "Destroyers",
       "reason": "4/68 in 3 ov"
     },
     "innings": [
       {
         "inningsId": "m-shared-7-1",
-        "teamName": "Rewa Royals",
-        "teamShort": "RR",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 170,
         "wickets": 6,
         "overs": 20,
@@ -1028,7 +1028,7 @@
   {
     "id": "m-shared-8",
     "matchNumber": 4,
-    "slug": "dread-eleven-vs-civil-lines-cc-2021-08-11",
+    "slug": "destroyers-vs-dread-eleven-2021-08-11",
     "seasonYear": "2021",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "T20 Tournament Clash",
@@ -1056,8 +1056,8 @@
     "innings": [
       {
         "inningsId": "m-shared-8-1",
-        "teamName": "Civil Lines CC",
-        "teamShort": "CL",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 163,
         "wickets": 8,
         "overs": 20,
@@ -1383,7 +1383,7 @@
   {
     "id": "m-shared-9",
     "matchNumber": 5,
-    "slug": "dread-eleven-vs-vindhya-warriors-2021-08-15",
+    "slug": "destroyers-vs-dread-eleven-2021-08-15",
     "seasonYear": "2021",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "T20 Tournament Clash",
@@ -1397,7 +1397,7 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Vindhya Warriors",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bat first"
     },
     "winner": "DE",
@@ -1411,8 +1411,8 @@
     "innings": [
       {
         "inningsId": "m-shared-9-1",
-        "teamName": "Vindhya Warriors",
-        "teamShort": "VW",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 151,
         "wickets": 8,
         "overs": 20,
@@ -1709,7 +1709,7 @@
   {
     "id": "m-shared-10",
     "matchNumber": 6,
-    "slug": "dread-eleven-vs-baghelkhand-strikers-2021-08-20",
+    "slug": "destroyers-vs-dread-eleven-2021-08-20",
     "seasonYear": "2021",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "T20 Tournament Clash",
@@ -1737,8 +1737,8 @@
     "innings": [
       {
         "inningsId": "m-shared-10-1",
-        "teamName": "Baghelkhand Strikers",
-        "teamShort": "BS",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 149,
         "wickets": 9,
         "overs": 20,
@@ -2074,7 +2074,7 @@
   {
     "id": "m-shared-11",
     "matchNumber": 7,
-    "slug": "dread-eleven-vs-rewa-royals-2021-08-28",
+    "slug": "destroyers-vs-dread-eleven-2021-08-28",
     "seasonYear": "2021",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "T20 Tournament Clash",
@@ -2088,22 +2088,22 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Rewa Royals",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bowl first"
     },
-    "winner": "RR",
-    "winnerName": "Rewa Royals",
-    "resultText": "Rewa Royals won by 14 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 14 runs",
     "playerOfTheMatch": {
       "name": "Pranav Dwivedi",
-      "team": "Rewa Royals",
+      "team": "Destroyers",
       "reason": "53 runs off 23 balls"
     },
     "innings": [
       {
         "inningsId": "m-shared-11-1",
-        "teamName": "Rewa Royals",
-        "teamShort": "RR",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 183,
         "wickets": 10,
         "overs": 20,
@@ -2419,7 +2419,7 @@
   {
     "id": "m-shared-15",
     "matchNumber": 8,
-    "slug": "dread-eleven-vs-civil-lines-cc-2022-08-10",
+    "slug": "destroyers-vs-dread-eleven-2022-08-10",
     "seasonYear": "2022",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "2022 Championship Final",
@@ -2447,8 +2447,8 @@
     "innings": [
       {
         "inningsId": "m-shared-15-1",
-        "teamName": "Civil Lines CC",
-        "teamShort": "CL",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 155,
         "wickets": 9,
         "overs": 20,
@@ -2745,7 +2745,7 @@
   {
     "id": "m-shared-16",
     "matchNumber": 9,
-    "slug": "dread-eleven-vs-vindhya-warriors-2022-08-12",
+    "slug": "destroyers-vs-dread-eleven-2022-08-12",
     "seasonYear": "2022",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "T20 Tournament Clash",
@@ -2759,12 +2759,12 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Vindhya Warriors",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bat first"
     },
     "winner": "DE",
     "winnerName": "Dread Eleven",
-    "resultText": "Dread Eleven won by 0 wickets",
+    "resultText": "Dread Eleven won by 21 runs",
     "playerOfTheMatch": {
       "name": "Kuldeep Sen",
       "team": "Dread Eleven",
@@ -2773,8 +2773,8 @@
     "innings": [
       {
         "inningsId": "m-shared-16-1",
-        "teamName": "Vindhya Warriors",
-        "teamShort": "VW",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 162,
         "wickets": 6,
         "overs": 20,
@@ -3081,7 +3081,7 @@
   {
     "id": "m-shared-17",
     "matchNumber": 10,
-    "slug": "dread-eleven-vs-baghelkhand-strikers-2022-09-04",
+    "slug": "destroyers-vs-dread-eleven-2022-09-04",
     "seasonYear": "2022",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -3109,8 +3109,8 @@
     "innings": [
       {
         "inningsId": "m-shared-17-1",
-        "teamName": "Baghelkhand Strikers",
-        "teamShort": "BS",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 232,
         "wickets": 9,
         "overs": 50,
@@ -3446,7 +3446,7 @@
   {
     "id": "m-shared-18",
     "matchNumber": 11,
-    "slug": "dread-eleven-vs-rewa-royals-2022-09-07",
+    "slug": "destroyers-vs-dread-eleven-2022-09-07",
     "seasonYear": "2022",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -3460,22 +3460,22 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Rewa Royals",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bat first"
     },
-    "winner": "RR",
-    "winnerName": "Rewa Royals",
-    "resultText": "Rewa Royals won by 0 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 0 runs",
     "playerOfTheMatch": {
       "name": "Pranav Dwivedi",
-      "team": "Rewa Royals",
+      "team": "Destroyers",
       "reason": "3/55 in 10 ov"
     },
     "innings": [
       {
         "inningsId": "m-shared-18-1",
-        "teamName": "Rewa Royals",
-        "teamShort": "RR",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 278,
         "wickets": 6,
         "overs": 50,
@@ -3791,7 +3791,7 @@
   {
     "id": "m-shared-19",
     "matchNumber": 12,
-    "slug": "dread-eleven-vs-civil-lines-cc-2022-09-10",
+    "slug": "destroyers-vs-dread-eleven-2022-09-10",
     "seasonYear": "2022",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -3808,19 +3808,19 @@
       "winner": "Dread Eleven",
       "decision": "elected to bat first"
     },
-    "winner": "CL",
-    "winnerName": "Civil Lines CC",
-    "resultText": "Civil Lines CC won by 37 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 37 runs",
     "playerOfTheMatch": {
       "name": "Venkatesh Iyer",
-      "team": "Civil Lines CC",
+      "team": "Destroyers",
       "reason": "57 runs off 66 balls"
     },
     "innings": [
       {
         "inningsId": "m-shared-19-1",
-        "teamName": "Civil Lines CC",
-        "teamShort": "CL",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 271,
         "wickets": 8,
         "overs": 50,
@@ -4146,7 +4146,7 @@
   {
     "id": "m-shared-20",
     "matchNumber": 13,
-    "slug": "dread-eleven-vs-vindhya-warriors-2022-09-14",
+    "slug": "destroyers-vs-dread-eleven-2022-09-14",
     "seasonYear": "2022",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -4160,7 +4160,7 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Vindhya Warriors",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bowl first"
     },
     "winner": "DE",
@@ -4174,8 +4174,8 @@
     "innings": [
       {
         "inningsId": "m-shared-20-1",
-        "teamName": "Vindhya Warriors",
-        "teamShort": "VW",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 231,
         "wickets": 9,
         "overs": 50,
@@ -4511,7 +4511,7 @@
   {
     "id": "m-shared-21",
     "matchNumber": 14,
-    "slug": "dread-eleven-vs-baghelkhand-strikers-2022-09-18",
+    "slug": "destroyers-vs-dread-eleven-2022-09-18",
     "seasonYear": "2022",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -4528,19 +4528,19 @@
       "winner": "Dread Eleven",
       "decision": "elected to bat first"
     },
-    "winner": "BS",
-    "winnerName": "Baghelkhand Strikers",
-    "resultText": "Baghelkhand Strikers won by 54 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 54 runs",
     "playerOfTheMatch": {
       "name": "Pranav Dwivedi",
-      "team": "Baghelkhand Strikers",
+      "team": "Destroyers",
       "reason": "3/62 in 10 ov"
     },
     "innings": [
       {
         "inningsId": "m-shared-21-1",
-        "teamName": "Baghelkhand Strikers",
-        "teamShort": "BS",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 279,
         "wickets": 7,
         "overs": 50,
@@ -4856,7 +4856,7 @@
   {
     "id": "m-shared-27",
     "matchNumber": 15,
-    "slug": "dread-eleven-vs-rewa-royals-2023-09-05",
+    "slug": "destroyers-vs-dread-eleven-2023-09-05",
     "seasonYear": "2023",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -4870,12 +4870,12 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Rewa Royals",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bat first"
     },
     "winner": "DE",
     "winnerName": "Dread Eleven",
-    "resultText": "Dread Eleven won by 0 wickets",
+    "resultText": "Dread Eleven won by 84 runs",
     "playerOfTheMatch": {
       "name": "Prabhanshu Shukla",
       "team": "Dread Eleven",
@@ -4884,8 +4884,8 @@
     "innings": [
       {
         "inningsId": "m-shared-27-1",
-        "teamName": "Rewa Royals",
-        "teamShort": "RR",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 205,
         "wickets": 10,
         "overs": 50,
@@ -5241,7 +5241,7 @@
   {
     "id": "m-shared-28",
     "matchNumber": 16,
-    "slug": "dread-eleven-vs-civil-lines-cc-2023-09-08",
+    "slug": "destroyers-vs-dread-eleven-2023-09-08",
     "seasonYear": "2023",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -5260,7 +5260,7 @@
     },
     "winner": "DE",
     "winnerName": "Dread Eleven",
-    "resultText": "Dread Eleven won by 0 wickets",
+    "resultText": "Dread Eleven won by 57 runs",
     "playerOfTheMatch": {
       "name": "Akhil Mishra",
       "team": "Dread Eleven",
@@ -5269,8 +5269,8 @@
     "innings": [
       {
         "inningsId": "m-shared-28-1",
-        "teamName": "Civil Lines CC",
-        "teamShort": "CL",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 206,
         "wickets": 8,
         "overs": 50,
@@ -5616,7 +5616,7 @@
   {
     "id": "m-shared-29",
     "matchNumber": 17,
-    "slug": "dread-eleven-vs-vindhya-warriors-2023-09-12",
+    "slug": "destroyers-vs-dread-eleven-2023-09-12",
     "seasonYear": "2023",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -5630,22 +5630,22 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Vindhya Warriors",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bat first"
     },
-    "winner": "VW",
-    "winnerName": "Vindhya Warriors",
-    "resultText": "Vindhya Warriors won by 27 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 27 runs",
     "playerOfTheMatch": {
       "name": "Subhranshu Senapati",
-      "team": "Vindhya Warriors",
+      "team": "Destroyers",
       "reason": "5/51 in 7 ov"
     },
     "innings": [
       {
         "inningsId": "m-shared-29-1",
-        "teamName": "Vindhya Warriors",
-        "teamShort": "VW",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 279,
         "wickets": 6,
         "overs": 50,
@@ -5971,7 +5971,7 @@
   {
     "id": "m-shared-30",
     "matchNumber": 18,
-    "slug": "dread-eleven-vs-baghelkhand-strikers-2023-09-16",
+    "slug": "destroyers-vs-dread-eleven-2023-09-16",
     "seasonYear": "2023",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -5988,19 +5988,19 @@
       "winner": "Dread Eleven",
       "decision": "elected to bat first"
     },
-    "winner": "BS",
-    "winnerName": "Baghelkhand Strikers",
-    "resultText": "Baghelkhand Strikers won by 42 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 42 runs",
     "playerOfTheMatch": {
       "name": "Pranav Dwivedi",
-      "team": "Baghelkhand Strikers",
+      "team": "Destroyers",
       "reason": "3/60 in 10 ov"
     },
     "innings": [
       {
         "inningsId": "m-shared-30-1",
-        "teamName": "Baghelkhand Strikers",
-        "teamShort": "BS",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 274,
         "wickets": 7,
         "overs": 50,
@@ -6326,7 +6326,7 @@
   {
     "id": "m-shared-31",
     "matchNumber": 19,
-    "slug": "dread-eleven-vs-rewa-royals-2023-09-20",
+    "slug": "destroyers-vs-dread-eleven-2023-09-20",
     "seasonYear": "2023",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -6340,7 +6340,7 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Rewa Royals",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bowl first"
     },
     "winner": "DE",
@@ -6354,8 +6354,8 @@
     "innings": [
       {
         "inningsId": "m-shared-31-1",
-        "teamName": "Rewa Royals",
-        "teamShort": "RR",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 221,
         "wickets": 9,
         "overs": 50,
@@ -6681,7 +6681,7 @@
   {
     "id": "m-shared-40",
     "matchNumber": 20,
-    "slug": "dread-eleven-vs-civil-lines-cc-2024-09-05",
+    "slug": "destroyers-vs-dread-eleven-2024-09-05",
     "seasonYear": "2024",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -6709,8 +6709,8 @@
     "innings": [
       {
         "inningsId": "m-shared-40-1",
-        "teamName": "Civil Lines CC",
-        "teamShort": "CL",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 264,
         "wickets": 9,
         "overs": 50,
@@ -7046,7 +7046,7 @@
   {
     "id": "m-shared-41",
     "matchNumber": 21,
-    "slug": "dread-eleven-vs-vindhya-warriors-2024-09-08",
+    "slug": "destroyers-vs-dread-eleven-2024-09-08",
     "seasonYear": "2024",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -7060,22 +7060,22 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Vindhya Warriors",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bat first"
     },
-    "winner": "VW",
-    "winnerName": "Vindhya Warriors",
-    "resultText": "Vindhya Warriors won by 5 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 5 runs",
     "playerOfTheMatch": {
       "name": "Pranav Dwivedi",
-      "team": "Vindhya Warriors",
+      "team": "Destroyers",
       "reason": "3/66 in 10 ov"
     },
     "innings": [
       {
         "inningsId": "m-shared-41-1",
-        "teamName": "Vindhya Warriors",
-        "teamShort": "VW",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 257,
         "wickets": 6,
         "overs": 50,
@@ -7381,7 +7381,7 @@
   {
     "id": "m-shared-42",
     "matchNumber": 22,
-    "slug": "dread-eleven-vs-baghelkhand-strikers-2024-09-12",
+    "slug": "destroyers-vs-dread-eleven-2024-09-12",
     "seasonYear": "2024",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -7398,19 +7398,19 @@
       "winner": "Dread Eleven",
       "decision": "elected to bowl first"
     },
-    "winner": "BS",
-    "winnerName": "Baghelkhand Strikers",
-    "resultText": "Baghelkhand Strikers won by 2 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 2 runs",
     "playerOfTheMatch": {
       "name": "Anubhav Agarwal",
-      "team": "Baghelkhand Strikers",
+      "team": "Destroyers",
       "reason": "47 runs off 54 balls"
     },
     "innings": [
       {
         "inningsId": "m-shared-42-1",
-        "teamName": "Baghelkhand Strikers",
-        "teamShort": "BS",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 276,
         "wickets": 10,
         "overs": 50,
@@ -7737,7 +7737,7 @@
   {
     "id": "m-shared-43",
     "matchNumber": 23,
-    "slug": "dread-eleven-vs-rewa-royals-2024-09-16",
+    "slug": "destroyers-vs-dread-eleven-2024-09-16",
     "seasonYear": "2024",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -7751,22 +7751,22 @@
       "city": "Rewa"
     },
     "toss": {
-      "winner": "Rewa Royals",
+      "winner": "Destroyers Cricket Club",
       "decision": "elected to bat first"
     },
-    "winner": "RR",
-    "winnerName": "Rewa Royals",
-    "resultText": "Rewa Royals won by 18 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 18 runs",
     "playerOfTheMatch": {
       "name": "Pranav Dwivedi",
-      "team": "Rewa Royals",
+      "team": "Destroyers",
       "reason": "3/72 in 10 ov"
     },
     "innings": [
       {
         "inningsId": "m-shared-43-1",
-        "teamName": "Rewa Royals",
-        "teamShort": "RR",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 288,
         "wickets": 6,
         "overs": 50,
@@ -8063,7 +8063,7 @@
   {
     "id": "m-shared-44",
     "matchNumber": 24,
-    "slug": "dread-eleven-vs-civil-lines-cc-2024-09-20",
+    "slug": "destroyers-vs-dread-eleven-2024-09-20",
     "seasonYear": "2024",
     "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
     "stage": "50-Over Derby Match",
@@ -8080,19 +8080,19 @@
       "winner": "Dread Eleven",
       "decision": "elected to bat first"
     },
-    "winner": "CL",
-    "winnerName": "Civil Lines CC",
-    "resultText": "Civil Lines CC won by 8 runs",
+    "winner": "DES",
+    "winnerName": "Destroyers Cricket Club",
+    "resultText": "Destroyers won by 8 runs",
     "playerOfTheMatch": {
       "name": "Sagar Pratap Singh",
-      "team": "Civil Lines CC",
+      "team": "Destroyers",
       "reason": "5/60 in 7 ov"
     },
     "innings": [
       {
         "inningsId": "m-shared-44-1",
-        "teamName": "Civil Lines CC",
-        "teamShort": "CL",
+        "teamName": "Destroyers Cricket Club",
+        "teamShort": "DES",
         "runs": 233,
         "wickets": 6,
         "overs": 50,
@@ -8385,5 +8385,1141 @@
         ]
       }
     ]
+  },
+  {
+    "id": "m-de-des-2025-1",
+    "matchNumber": 25,
+    "slug": "destroyers-vs-dread-eleven-2025-09-04",
+    "seasonYear": "2025",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "ODI Series Match 1",
+    "format": "ODI",
+    "status": "completed",
+    "matchDate": "2025-09-04",
+    "time": "09:30 IST",
+    "venue": {
+      "id": "v-apsu",
+      "name": "Awadhesh Pratap Singh University (APSU) Stadium",
+      "city": "Rewa"
+    },
+    "toss": {
+      "winner": "Dread Eleven",
+      "decision": "elected to bat first"
+    },
+    "innings": [
+      {
+        "teamId": "DE",
+        "teamName": "Dread Eleven",
+        "runs": 248,
+        "wickets": 8,
+        "overs": 50,
+        "runRate": "4.96",
+        "batting": [
+          {
+            "playerId": "p-akhil-mishra",
+            "playerName": "Akhil Mishra",
+            "dismissal": "c sub b Pranav Dwivedi",
+            "runs": 72,
+            "balls": 84,
+            "fours": 7,
+            "sixes": 2,
+            "strikeRate": "85.71"
+          },
+          {
+            "playerId": "p-yash-dubey",
+            "playerName": "Yash Dubey",
+            "dismissal": "c & b Kuldeep Sen",
+            "runs": 54,
+            "balls": 68,
+            "fours": 5,
+            "sixes": 0,
+            "strikeRate": "79.41"
+          },
+          {
+            "playerId": "p-ritesh-shakya",
+            "playerName": "Ritesh Shakya",
+            "dismissal": "run out (Pranav Dwivedi)",
+            "runs": 42,
+            "balls": 46,
+            "fours": 3,
+            "sixes": 1,
+            "strikeRate": "91.30"
+          },
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "dismissal": "not out",
+            "runs": 38,
+            "balls": 32,
+            "fours": 4,
+            "sixes": 1,
+            "strikeRate": "118.75"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 42,
+            "wickets": 3,
+            "economy": "4.20"
+          },
+          {
+            "playerId": "p-kulwant-khejroliya",
+            "playerName": "Kulwant Khejroliya",
+            "overs": 10,
+            "maidens": 0,
+            "runs": 51,
+            "wickets": 2,
+            "economy": "5.10"
+          }
+        ]
+      },
+      {
+        "teamId": "DES",
+        "teamName": "Destroyers Cricket Club",
+        "runs": 252,
+        "wickets": 6,
+        "overs": 48.2,
+        "runRate": "5.21",
+        "batting": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "dismissal": "not out",
+            "runs": 88,
+            "balls": 82,
+            "fours": 9,
+            "sixes": 3,
+            "strikeRate": "107.32"
+          },
+          {
+            "playerId": "p-aryan-deshmukh",
+            "playerName": "Aryan Deshmukh",
+            "dismissal": "c Yash Dubey b Kuldeep Sen",
+            "runs": 64,
+            "balls": 74,
+            "fours": 6,
+            "sixes": 1,
+            "strikeRate": "86.49"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 48,
+            "wickets": 3,
+            "economy": "4.80"
+          },
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "overs": 9.2,
+            "maidens": 0,
+            "runs": 52,
+            "wickets": 2,
+            "economy": "5.57"
+          }
+        ]
+      }
+    ],
+    "winner": "DES",
+    "resultText": "Destroyers won by 4 wickets",
+    "playerOfTheMatch": {
+      "name": "Pranav Dwivedi",
+      "team": "Destroyers",
+      "reason": "88* (82) & 3/42"
+    }
+  },
+  {
+    "id": "m-de-des-2025-2",
+    "matchNumber": 26,
+    "slug": "destroyers-vs-dread-eleven-2025-09-08",
+    "seasonYear": "2025",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "ODI Series Match 2",
+    "format": "ODI",
+    "status": "completed",
+    "matchDate": "2025-09-08",
+    "time": "09:30 IST",
+    "venue": {
+      "id": "v-martand",
+      "name": "Martand School Ground No. 3",
+      "city": "Rewa"
+    },
+    "toss": {
+      "winner": "Destroyers",
+      "decision": "elected to bowl first"
+    },
+    "innings": [
+      {
+        "teamId": "DE",
+        "teamName": "Dread Eleven",
+        "runs": 235,
+        "wickets": 9,
+        "overs": 50,
+        "runRate": "4.70",
+        "batting": [
+          {
+            "playerId": "p-akhil-mishra",
+            "playerName": "Akhil Mishra",
+            "dismissal": "b Saransh Jain",
+            "runs": 61,
+            "balls": 78,
+            "fours": 6,
+            "sixes": 1,
+            "strikeRate": "78.21"
+          },
+          {
+            "playerId": "p-rishab-verma",
+            "playerName": "Rishab Verma",
+            "dismissal": "c & b Pranav Dwivedi",
+            "runs": 48,
+            "balls": 56,
+            "fours": 4,
+            "sixes": 1,
+            "strikeRate": "85.71"
+          },
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "dismissal": "not out",
+            "runs": 29,
+            "balls": 20,
+            "fours": 2,
+            "sixes": 2,
+            "strikeRate": "145.00"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-saransh-jain",
+            "playerName": "Saransh Jain",
+            "overs": 10,
+            "maidens": 2,
+            "runs": 38,
+            "wickets": 3,
+            "economy": "3.80"
+          },
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 45,
+            "wickets": 2,
+            "economy": "4.50"
+          }
+        ]
+      },
+      {
+        "teamId": "DES",
+        "teamName": "Destroyers Cricket Club",
+        "runs": 218,
+        "wickets": 10,
+        "overs": 47.4,
+        "runRate": "4.57",
+        "batting": [
+          {
+            "playerId": "p-aryan-deshmukh",
+            "playerName": "Aryan Deshmukh",
+            "dismissal": "c Yash Dubey b Kuldeep Sen",
+            "runs": 58,
+            "balls": 70,
+            "fours": 5,
+            "sixes": 1,
+            "strikeRate": "82.86"
+          },
+          {
+            "playerId": "p-shivam-shukla",
+            "playerName": "Shivam Shukla",
+            "dismissal": "b Anubhav Agarwal",
+            "runs": 44,
+            "balls": 52,
+            "fours": 4,
+            "sixes": 0,
+            "strikeRate": "84.62"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "overs": 9.4,
+            "maidens": 2,
+            "runs": 36,
+            "wickets": 4,
+            "economy": "3.72"
+          },
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 44,
+            "wickets": 3,
+            "economy": "4.40"
+          }
+        ]
+      }
+    ],
+    "winner": "DE",
+    "resultText": "Dread Eleven won by 17 runs",
+    "playerOfTheMatch": {
+      "name": "Kuldeep Sen",
+      "team": "Dread Eleven",
+      "reason": "4/36 (9.4 ov) & 29* (20)"
+    }
+  },
+  {
+    "id": "m-de-des-2025-3",
+    "matchNumber": 27,
+    "slug": "destroyers-vs-dread-eleven-2025-09-12",
+    "seasonYear": "2025",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "ODI Series Match 3",
+    "format": "ODI",
+    "status": "completed",
+    "matchDate": "2025-09-12",
+    "time": "09:30 IST",
+    "venue": {
+      "id": "v-apsu",
+      "name": "Awadhesh Pratap Singh University (APSU) Stadium",
+      "city": "Rewa"
+    },
+    "toss": {
+      "winner": "Destroyers",
+      "decision": "elected to bat first"
+    },
+    "innings": [
+      {
+        "teamId": "DES",
+        "teamName": "Destroyers Cricket Club",
+        "runs": 274,
+        "wickets": 7,
+        "overs": 50,
+        "runRate": "5.48",
+        "batting": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "dismissal": "c Akhil Mishra b Anubhav Agarwal",
+            "runs": 94,
+            "balls": 88,
+            "fours": 10,
+            "sixes": 3,
+            "strikeRate": "106.82"
+          },
+          {
+            "playerId": "p-shubham-sharma",
+            "playerName": "Shubham Sharma",
+            "dismissal": "b Kuldeep Sen",
+            "runs": 62,
+            "balls": 66,
+            "fours": 7,
+            "sixes": 1,
+            "strikeRate": "93.94"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "overs": 10,
+            "maidens": 0,
+            "runs": 58,
+            "wickets": 3,
+            "economy": "5.80"
+          },
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 49,
+            "wickets": 2,
+            "economy": "4.90"
+          }
+        ]
+      },
+      {
+        "teamId": "DE",
+        "teamName": "Dread Eleven",
+        "runs": 246,
+        "wickets": 10,
+        "overs": 48.1,
+        "runRate": "5.10",
+        "batting": [
+          {
+            "playerId": "p-akhil-mishra",
+            "playerName": "Akhil Mishra",
+            "dismissal": "c & b Pranav Dwivedi",
+            "runs": 68,
+            "balls": 72,
+            "fours": 6,
+            "sixes": 2,
+            "strikeRate": "94.44"
+          },
+          {
+            "playerId": "p-yash-dubey",
+            "playerName": "Yash Dubey",
+            "dismissal": "lbw b Saransh Jain",
+            "runs": 46,
+            "balls": 54,
+            "fours": 4,
+            "sixes": 0,
+            "strikeRate": "85.19"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "overs": 9.1,
+            "maidens": 1,
+            "runs": 44,
+            "wickets": 3,
+            "economy": "4.80"
+          },
+          {
+            "playerId": "p-saransh-jain",
+            "playerName": "Saransh Jain",
+            "overs": 10,
+            "maidens": 0,
+            "runs": 46,
+            "wickets": 3,
+            "economy": "4.60"
+          }
+        ]
+      }
+    ],
+    "winner": "DES",
+    "resultText": "Destroyers won by 28 runs",
+    "playerOfTheMatch": {
+      "name": "Pranav Dwivedi",
+      "team": "Destroyers",
+      "reason": "94 (88) & 3/44"
+    }
+  },
+  {
+    "id": "m-de-des-2025-4",
+    "matchNumber": 28,
+    "slug": "destroyers-vs-dread-eleven-2025-09-16",
+    "seasonYear": "2025",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "ODI Series Match 4",
+    "format": "ODI",
+    "status": "completed",
+    "matchDate": "2025-09-16",
+    "time": "09:30 IST",
+    "venue": {
+      "id": "v-martand",
+      "name": "Martand School Ground No. 3",
+      "city": "Rewa"
+    },
+    "toss": {
+      "winner": "Dread Eleven",
+      "decision": "elected to field first"
+    },
+    "innings": [
+      {
+        "teamId": "DES",
+        "teamName": "Destroyers Cricket Club",
+        "runs": 260,
+        "wickets": 8,
+        "overs": 50,
+        "runRate": "5.20",
+        "batting": [
+          {
+            "playerId": "p-shivam-shukla",
+            "playerName": "Shivam Shukla",
+            "dismissal": "c Yash Dubey b Kuldeep Sen",
+            "runs": 76,
+            "balls": 84,
+            "fours": 7,
+            "sixes": 2,
+            "strikeRate": "90.48"
+          },
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "dismissal": "c Akhil Mishra b Anubhav Agarwal",
+            "runs": 55,
+            "balls": 58,
+            "fours": 5,
+            "sixes": 1,
+            "strikeRate": "94.83"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 46,
+            "wickets": 3,
+            "economy": "4.60"
+          },
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "overs": 10,
+            "maidens": 0,
+            "runs": 54,
+            "wickets": 2,
+            "economy": "5.40"
+          }
+        ]
+      },
+      {
+        "teamId": "DE",
+        "teamName": "Dread Eleven",
+        "runs": 239,
+        "wickets": 10,
+        "overs": 47.3,
+        "runRate": "5.03",
+        "batting": [
+          {
+            "playerId": "p-akhil-mishra",
+            "playerName": "Akhil Mishra",
+            "dismissal": "c & b Pranav Dwivedi",
+            "runs": 58,
+            "balls": 64,
+            "fours": 5,
+            "sixes": 1,
+            "strikeRate": "90.63"
+          },
+          {
+            "playerId": "p-ritesh-shakya",
+            "playerName": "Ritesh Shakya",
+            "dismissal": "b Kulwant Khejroliya",
+            "runs": 44,
+            "balls": 48,
+            "fours": 4,
+            "sixes": 1,
+            "strikeRate": "91.67"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "overs": 9.3,
+            "maidens": 1,
+            "runs": 40,
+            "wickets": 4,
+            "economy": "4.21"
+          },
+          {
+            "playerId": "p-kulwant-khejroliya",
+            "playerName": "Kulwant Khejroliya",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 48,
+            "wickets": 3,
+            "economy": "4.80"
+          }
+        ]
+      }
+    ],
+    "winner": "DES",
+    "resultText": "Destroyers won by 21 runs",
+    "playerOfTheMatch": {
+      "name": "Pranav Dwivedi",
+      "team": "Destroyers",
+      "reason": "55 (58) & 4/40"
+    }
+  },
+  {
+    "id": "m-de-des-2025-5",
+    "matchNumber": 29,
+    "slug": "destroyers-vs-dread-eleven-2025-09-20",
+    "seasonYear": "2025",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "ODI Championship Final",
+    "format": "ODI",
+    "status": "completed",
+    "matchDate": "2025-09-20",
+    "time": "09:30 IST",
+    "venue": {
+      "id": "v-apsu",
+      "name": "Awadhesh Pratap Singh University (APSU) Stadium",
+      "city": "Rewa"
+    },
+    "toss": {
+      "winner": "Destroyers",
+      "decision": "elected to bat first"
+    },
+    "innings": [
+      {
+        "teamId": "DES",
+        "teamName": "Destroyers Cricket Club",
+        "runs": 285,
+        "wickets": 5,
+        "overs": 50,
+        "runRate": "5.70",
+        "batting": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "dismissal": "c Akhil Mishra b Kuldeep Sen",
+            "runs": 104,
+            "balls": 96,
+            "fours": 11,
+            "sixes": 4,
+            "strikeRate": "108.33"
+          },
+          {
+            "playerId": "p-aryan-deshmukh",
+            "playerName": "Aryan Deshmukh",
+            "dismissal": "c Yash Dubey b Anubhav Agarwal",
+            "runs": 74,
+            "balls": 80,
+            "fours": 8,
+            "sixes": 1,
+            "strikeRate": "92.50"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "overs": 10,
+            "maidens": 0,
+            "runs": 58,
+            "wickets": 2,
+            "economy": "5.80"
+          },
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 52,
+            "wickets": 2,
+            "economy": "5.20"
+          }
+        ]
+      },
+      {
+        "teamId": "DE",
+        "teamName": "Dread Eleven",
+        "runs": 253,
+        "wickets": 10,
+        "overs": 47.1,
+        "runRate": "5.36",
+        "batting": [
+          {
+            "playerId": "p-akhil-mishra",
+            "playerName": "Akhil Mishra",
+            "dismissal": "c sub b Pranav Dwivedi",
+            "runs": 82,
+            "balls": 86,
+            "fours": 8,
+            "sixes": 2,
+            "strikeRate": "95.35"
+          },
+          {
+            "playerId": "p-yash-dubey",
+            "playerName": "Yash Dubey",
+            "dismissal": "b Saransh Jain",
+            "runs": 51,
+            "balls": 56,
+            "fours": 5,
+            "sixes": 0,
+            "strikeRate": "91.07"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "overs": 9.1,
+            "maidens": 0,
+            "runs": 46,
+            "wickets": 4,
+            "economy": "5.02"
+          },
+          {
+            "playerId": "p-saransh-jain",
+            "playerName": "Saransh Jain",
+            "overs": 10,
+            "maidens": 1,
+            "runs": 45,
+            "wickets": 3,
+            "economy": "4.50"
+          }
+        ]
+      }
+    ],
+    "winner": "DES",
+    "resultText": "Destroyers won by 32 runs",
+    "playerOfTheMatch": {
+      "name": "Pranav Dwivedi",
+      "team": "Destroyers",
+      "reason": "104 (96) & 4/46"
+    }
+  },
+  {
+    "id": "m-de-des-2026-1",
+    "matchNumber": 30,
+    "slug": "destroyers-vs-dread-eleven-2026-02-10",
+    "seasonYear": "2026",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "T20 Derby Blast 1",
+    "format": "T20",
+    "status": "completed",
+    "matchDate": "2026-02-10",
+    "time": "14:00 IST",
+    "venue": {
+      "id": "v-apsu",
+      "name": "Awadhesh Pratap Singh University (APSU) Stadium",
+      "city": "Rewa"
+    },
+    "toss": {
+      "winner": "Dread Eleven",
+      "decision": "elected to field first"
+    },
+    "innings": [
+      {
+        "teamId": "DES",
+        "teamName": "Destroyers Cricket Club",
+        "runs": 188,
+        "wickets": 4,
+        "overs": 20,
+        "runRate": "9.40",
+        "batting": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "dismissal": "not out",
+            "runs": 76,
+            "balls": 44,
+            "fours": 7,
+            "sixes": 4,
+            "strikeRate": "172.73"
+          },
+          {
+            "playerId": "p-shubham-sharma",
+            "playerName": "Shubham Sharma",
+            "dismissal": "c Akhil Mishra b Kuldeep Sen",
+            "runs": 52,
+            "balls": 36,
+            "fours": 5,
+            "sixes": 2,
+            "strikeRate": "144.44"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 34,
+            "wickets": 2,
+            "economy": "8.50"
+          },
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 38,
+            "wickets": 1,
+            "economy": "9.50"
+          }
+        ]
+      },
+      {
+        "teamId": "DE",
+        "teamName": "Dread Eleven",
+        "runs": 172,
+        "wickets": 8,
+        "overs": 20,
+        "runRate": "8.60",
+        "batting": [
+          {
+            "playerId": "p-akhil-mishra",
+            "playerName": "Akhil Mishra",
+            "dismissal": "c & b Pranav Dwivedi",
+            "runs": 64,
+            "balls": 42,
+            "fours": 6,
+            "sixes": 3,
+            "strikeRate": "152.38"
+          },
+          {
+            "playerId": "p-yash-dubey",
+            "playerName": "Yash Dubey",
+            "dismissal": "b Kulwant Khejroliya",
+            "runs": 38,
+            "balls": 28,
+            "fours": 4,
+            "sixes": 1,
+            "strikeRate": "135.71"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 28,
+            "wickets": 3,
+            "economy": "7.00"
+          },
+          {
+            "playerId": "p-kulwant-khejroliya",
+            "playerName": "Kulwant Khejroliya",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 33,
+            "wickets": 2,
+            "economy": "8.25"
+          }
+        ]
+      }
+    ],
+    "winner": "DES",
+    "resultText": "Destroyers won by 16 runs",
+    "playerOfTheMatch": {
+      "name": "Pranav Dwivedi",
+      "team": "Destroyers",
+      "reason": "76* (44) & 3/28"
+    }
+  },
+  {
+    "id": "m-de-des-2026-2",
+    "matchNumber": 31,
+    "slug": "destroyers-vs-dread-eleven-2026-02-14",
+    "seasonYear": "2026",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "T20 Derby Blast 2",
+    "format": "T20",
+    "status": "completed",
+    "matchDate": "2026-02-14",
+    "time": "14:00 IST",
+    "venue": {
+      "id": "v-martand",
+      "name": "Martand School Ground No. 3",
+      "city": "Rewa"
+    },
+    "toss": {
+      "winner": "Destroyers",
+      "decision": "elected to bat first"
+    },
+    "innings": [
+      {
+        "teamId": "DES",
+        "teamName": "Destroyers Cricket Club",
+        "runs": 164,
+        "wickets": 7,
+        "overs": 20,
+        "runRate": "8.20",
+        "batting": [
+          {
+            "playerId": "p-shivam-shukla",
+            "playerName": "Shivam Shukla",
+            "dismissal": "b Kuldeep Sen",
+            "runs": 51,
+            "balls": 38,
+            "fours": 5,
+            "sixes": 2,
+            "strikeRate": "134.21"
+          },
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "dismissal": "c Yash Dubey b Anubhav Agarwal",
+            "runs": 38,
+            "balls": 26,
+            "fours": 3,
+            "sixes": 2,
+            "strikeRate": "146.15"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "overs": 4,
+            "maidens": 1,
+            "runs": 24,
+            "wickets": 3,
+            "economy": "6.00"
+          },
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 30,
+            "wickets": 2,
+            "economy": "7.50"
+          }
+        ]
+      },
+      {
+        "teamId": "DE",
+        "teamName": "Dread Eleven",
+        "runs": 168,
+        "wickets": 5,
+        "overs": 19.1,
+        "runRate": "8.76",
+        "batting": [
+          {
+            "playerId": "p-akhil-mishra",
+            "playerName": "Akhil Mishra",
+            "dismissal": "not out",
+            "runs": 78,
+            "balls": 48,
+            "fours": 8,
+            "sixes": 3,
+            "strikeRate": "162.50"
+          },
+          {
+            "playerId": "p-ritesh-shakya",
+            "playerName": "Ritesh Shakya",
+            "dismissal": "c & b Pranav Dwivedi",
+            "runs": 34,
+            "balls": 24,
+            "fours": 3,
+            "sixes": 1,
+            "strikeRate": "141.67"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 32,
+            "wickets": 2,
+            "economy": "8.00"
+          },
+          {
+            "playerId": "p-saransh-jain",
+            "playerName": "Saransh Jain",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 29,
+            "wickets": 1,
+            "economy": "7.25"
+          }
+        ]
+      }
+    ],
+    "winner": "DE",
+    "resultText": "Dread Eleven won by 5 wickets",
+    "playerOfTheMatch": {
+      "name": "Akhil Mishra",
+      "team": "Dread Eleven",
+      "reason": "78* (48) in match-winning chase"
+    }
+  },
+  {
+    "id": "m-de-des-2026-3",
+    "matchNumber": 32,
+    "slug": "destroyers-vs-dread-eleven-2026-02-18",
+    "seasonYear": "2026",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "T20 Derby Blast 3",
+    "format": "T20",
+    "status": "completed",
+    "matchDate": "2026-02-18",
+    "time": "14:00 IST",
+    "venue": {
+      "id": "v-apsu",
+      "name": "Awadhesh Pratap Singh University (APSU) Stadium",
+      "city": "Rewa"
+    },
+    "toss": {
+      "winner": "Dread Eleven",
+      "decision": "elected to bat first"
+    },
+    "innings": [
+      {
+        "teamId": "DE",
+        "teamName": "Dread Eleven",
+        "runs": 158,
+        "wickets": 8,
+        "overs": 20,
+        "runRate": "7.90",
+        "batting": [
+          {
+            "playerId": "p-yash-dubey",
+            "playerName": "Yash Dubey",
+            "dismissal": "c sub b Pranav Dwivedi",
+            "runs": 45,
+            "balls": 36,
+            "fours": 4,
+            "sixes": 1,
+            "strikeRate": "125.00"
+          },
+          {
+            "playerId": "p-akhil-mishra",
+            "playerName": "Akhil Mishra",
+            "dismissal": "lbw b Kulwant Khejroliya",
+            "runs": 42,
+            "balls": 32,
+            "fours": 4,
+            "sixes": 1,
+            "strikeRate": "131.25"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 26,
+            "wickets": 3,
+            "economy": "6.50"
+          },
+          {
+            "playerId": "p-kulwant-khejroliya",
+            "playerName": "Kulwant Khejroliya",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 30,
+            "wickets": 2,
+            "economy": "7.50"
+          }
+        ]
+      },
+      {
+        "teamId": "DES",
+        "teamName": "Destroyers Cricket Club",
+        "runs": 161,
+        "wickets": 4,
+        "overs": 18.3,
+        "runRate": "8.70",
+        "batting": [
+          {
+            "playerId": "p-pranav-dwivedi",
+            "playerName": "Pranav Dwivedi",
+            "dismissal": "not out",
+            "runs": 68,
+            "balls": 41,
+            "fours": 6,
+            "sixes": 3,
+            "strikeRate": "165.85"
+          },
+          {
+            "playerId": "p-aryan-deshmukh",
+            "playerName": "Aryan Deshmukh",
+            "dismissal": "c Yash Dubey b Kuldeep Sen",
+            "runs": 46,
+            "balls": 34,
+            "fours": 5,
+            "sixes": 1,
+            "strikeRate": "135.29"
+          }
+        ],
+        "bowling": [
+          {
+            "playerId": "p-kuldeep-sen",
+            "playerName": "Kuldeep Sen",
+            "overs": 4,
+            "maidens": 0,
+            "runs": 32,
+            "wickets": 2,
+            "economy": "8.00"
+          },
+          {
+            "playerId": "p-anubhav-agarwal",
+            "playerName": "Anubhav Agarwal",
+            "overs": 3.3,
+            "maidens": 0,
+            "runs": 36,
+            "wickets": 1,
+            "economy": "10.28"
+          }
+        ]
+      }
+    ],
+    "winner": "DES",
+    "resultText": "Destroyers won by 6 wickets",
+    "playerOfTheMatch": {
+      "name": "Pranav Dwivedi",
+      "team": "Destroyers",
+      "reason": "68* (41) & 3/26"
+    }
+  },
+  {
+    "id": "m-de-des-2026-4",
+    "matchNumber": 33,
+    "slug": "destroyers-vs-dread-eleven-2026-09-06",
+    "seasonYear": "2026",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "ODI Super Clash 1",
+    "format": "ODI",
+    "status": "upcoming",
+    "matchDate": "2026-09-06",
+    "time": "09:30 IST",
+    "venue": {
+      "id": "v-apsu",
+      "name": "Awadhesh Pratap Singh University (APSU) Stadium",
+      "city": "Rewa"
+    },
+    "toss": null,
+    "innings": [],
+    "winner": null,
+    "resultText": "Scheduled • 09:30 IST at APSU Stadium, Rewa",
+    "playerOfTheMatch": null
+  },
+  {
+    "id": "m-de-des-2026-5",
+    "matchNumber": 34,
+    "slug": "destroyers-vs-dread-eleven-2026-09-12",
+    "seasonYear": "2026",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "ODI Super Clash 2",
+    "format": "ODI",
+    "status": "upcoming",
+    "matchDate": "2026-09-12",
+    "time": "09:30 IST",
+    "venue": {
+      "id": "v-martand",
+      "name": "Martand School Ground No. 3",
+      "city": "Rewa"
+    },
+    "toss": null,
+    "innings": [],
+    "winner": null,
+    "resultText": "Scheduled • 09:30 IST at Martand Ground No. 3, Rewa",
+    "playerOfTheMatch": null
+  },
+  {
+    "id": "m-de-des-2026-6",
+    "matchNumber": 35,
+    "slug": "destroyers-vs-dread-eleven-2026-09-20",
+    "seasonYear": "2026",
+    "tournamentName": "Atal Bihari Vajpayee Memorial Tournament",
+    "stage": "2026 Grand Championship Final",
+    "format": "ODI",
+    "status": "upcoming",
+    "matchDate": "2026-09-20",
+    "time": "09:30 IST",
+    "venue": {
+      "id": "v-apsu",
+      "name": "Awadhesh Pratap Singh University (APSU) Stadium",
+      "city": "Rewa"
+    },
+    "toss": null,
+    "innings": [],
+    "winner": null,
+    "resultText": "Scheduled • 09:30 IST at APSU Stadium, Rewa",
+    "playerOfTheMatch": null
   }
 ]

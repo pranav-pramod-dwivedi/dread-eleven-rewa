@@ -1,0 +1,45 @@
+{
+  "headToHead": {
+    "totalMatches": 35,
+    "completedMatches": 32,
+    "upcomingMatches": 3,
+    "dreadElevenWins": 15,
+    "destroyersWins": 17,
+    "deWinPercentage": "46.9%",
+    "desWinPercentage": "53.1%",
+    "t20Matches": {
+      "total": 15,
+      "deWins": 9,
+      "desWins": 6
+    },
+    "odiMatches": {
+      "total": 17,
+      "deWins": 6,
+      "desWins": 11
+    }
+  },
+  "records": {
+    "highestTotal": {
+      "team": "Dread Eleven",
+      "score": "278/6",
+      "overs": "50.0",
+      "opponent": "Destroyers",
+      "season": "2022",
+      "venue": "APSU Stadium, Rewa"
+    },
+    "highestIndividualScore": {
+      "player": "Akhil Mishra",
+      "score": 114,
+      "balls": 98,
+      "season": "2022",
+      "opponent": "Destroyers"
+    },
+    "bestBowlingFigures": {
+      "player": "Kuldeep Sen",
+      "figures": "5/28",
+      "overs": 9.2,
+      "season": "2022",
+      "opponent": "Destroyers"
+    }
+  }
+}

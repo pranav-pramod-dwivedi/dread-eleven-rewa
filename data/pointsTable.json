@@ -1,69 +1,198 @@
 {
-  "allTime": [
+  "2021": [
+    {
+      "rank": 1,
+      "team": "Dread Eleven (Champions)",
+      "teamCode": "DE",
+      "played": 7,
+      "won": 5,
+      "lost": 2,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "+0.610",
+      "points": 10
+    },
+    {
+      "rank": 2,
+      "team": "Destroyers Cricket Club",
+      "teamCode": "DES",
+      "played": 7,
+      "won": 2,
+      "lost": 5,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "-0.610",
+      "points": 4
+    }
+  ],
+  "2022": [
+    {
+      "rank": 1,
+      "team": "Dread Eleven (Champions)",
+      "teamCode": "DE",
+      "played": 7,
+      "won": 4,
+      "lost": 3,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "+0.315",
+      "points": 8
+    },
+    {
+      "rank": 2,
+      "team": "Destroyers Cricket Club",
+      "teamCode": "DES",
+      "played": 7,
+      "won": 3,
+      "lost": 4,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "-0.315",
+      "points": 6
+    }
+  ],
+  "2023": [
     {
       "rank": 1,
       "team": "Dread Eleven",
       "teamCode": "DE",
-      "played": 24,
-      "won": 17,
-      "lost": 7,
+      "played": 5,
+      "won": 3,
+      "lost": 2,
       "tied": 0,
       "nr": 0,
-      "nrr": "+0.642",
-      "points": 34,
-      "form": ["W", "W", "W", "L", "W"]
+      "nrr": "+0.240",
+      "points": 6
     },
     {
       "rank": 2,
-      "team": "Vindhya Warriors",
-      "teamCode": "VW",
-      "played": 24,
-      "won": 14,
-      "lost": 10,
+      "team": "Destroyers Cricket Club",
+      "teamCode": "DES",
+      "played": 5,
+      "won": 2,
+      "lost": 3,
       "tied": 0,
       "nr": 0,
-      "nrr": "+0.210",
-      "points": 28,
-      "form": ["W", "L", "W", "W", "L"]
-    },
+      "nrr": "-0.240",
+      "points": 4
+    }
+  ],
+  "2024": [
     {
-      "rank": 3,
-      "team": "Baghelkhand Strikers",
-      "teamCode": "BS",
-      "played": 24,
-      "won": 12,
-      "lost": 12,
+      "rank": 1,
+      "team": "Destroyers Cricket Club",
+      "teamCode": "DES",
+      "played": 5,
+      "won": 4,
+      "lost": 1,
       "tied": 0,
       "nr": 0,
-      "nrr": "+0.015",
-      "points": 24,
-      "form": ["L", "W", "L", "W", "L"]
+      "nrr": "+0.485",
+      "points": 8
     },
     {
-      "rank": 4,
-      "team": "Rewa Royals",
-      "teamCode": "RR",
-      "played": 24,
-      "won": 10,
-      "lost": 14,
+      "rank": 2,
+      "team": "Dread Eleven",
+      "teamCode": "DE",
+      "played": 5,
+      "won": 1,
+      "lost": 4,
       "tied": 0,
       "nr": 0,
-      "nrr": "-0.280",
-      "points": 20,
-      "form": ["L", "L", "W", "L", "W"]
+      "nrr": "-0.485",
+      "points": 2
+    }
+  ],
+  "2025": [
+    {
+      "rank": 1,
+      "team": "Destroyers Cricket Club",
+      "teamCode": "DES",
+      "played": 5,
+      "won": 4,
+      "lost": 1,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "+0.540",
+      "points": 8
     },
     {
-      "rank": 5,
-      "team": "Civil Lines CC",
-      "teamCode": "CL",
-      "played": 24,
-      "won": 7,
+      "rank": 2,
+      "team": "Dread Eleven",
+      "teamCode": "DE",
+      "played": 5,
+      "won": 1,
+      "lost": 4,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "-0.540",
+      "points": 2
+    }
+  ],
+  "2026": [
+    {
+      "rank": 1,
+      "team": "Destroyers Cricket Club",
+      "teamCode": "DES",
+      "played": 3,
+      "won": 2,
+      "lost": 1,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "+0.420",
+      "points": 4
+    },
+    {
+      "rank": 2,
+      "team": "Dread Eleven",
+      "teamCode": "DE",
+      "played": 3,
+      "won": 1,
+      "lost": 2,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "-0.420",
+      "points": 2
+    }
+  ],
+  "allTime": [
+    {
+      "rank": 1,
+      "team": "Destroyers Cricket Club",
+      "teamCode": "DES",
+      "played": 32,
+      "won": 17,
+      "lost": 15,
+      "tied": 0,
+      "nr": 0,
+      "nrr": "+0.185",
+      "points": 34,
+      "form": [
+        "W",
+        "L",
+        "W",
+        "W",
+        "W"
+      ]
+    },
+    {
+      "rank": 2,
+      "team": "Dread Eleven",
+      "teamCode": "DE",
+      "played": 32,
+      "won": 15,
       "lost": 17,
       "tied": 0,
       "nr": 0,
-      "nrr": "-0.587",
-      "points": 14,
-      "form": ["L", "L", "L", "W", "L"]
+      "nrr": "-0.185",
+      "points": 30,
+      "form": [
+        "L",
+        "W",
+        "L",
+        "L",
+        "L"
+      ]
     }
   ]
 }
