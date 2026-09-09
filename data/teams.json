@@ -5,28 +5,63 @@
     "shortName": "Dread Eleven",
     "code": "DE",
     "crestText": "DE",
-    "primaryColor": "#00f0ff",
-    "secondaryColor": "#7000ff",
+    "primaryColor": "#d4ff00",
+    "secondaryColor": "#050507",
     "homeVenue": "Martand School Ground No. 3, Rewa",
     "established": 2021,
     "captain": "Akhil Mishra",
+    "motto": "Strike with Menace",
     "championships": [
-      "2022 Atal Bihari Vajpayee Memorial Trophy Winners"
+      "2022 Atal Bihari Vajpayee Memorial Trophy Winners",
+      "2023 Vindhya Premier T20 Cup Champions"
     ]
   },
-  "DES": {
-    "id": "DES",
-    "name": "Destroyers Cricket Club",
-    "shortName": "Destroyers",
-    "code": "DES",
-    "crestText": "DES",
-    "primaryColor": "#f56f00",
-    "secondaryColor": "#ffc300",
+  "VW": {
+    "id": "VW",
+    "name": "Vindhya Warriors",
+    "shortName": "Warriors",
+    "code": "VW",
+    "crestText": "VW",
+    "primaryColor": "#ff4d00",
+    "secondaryColor": "#171821",
     "homeVenue": "Awadhesh Pratap Singh University (APSU) Stadium, Rewa",
+    "established": 2020,
+    "captain": "Shailendra Patel"
+  },
+  "BS": {
+    "id": "BS",
+    "name": "Baghelkhand Strikers",
+    "shortName": "Strikers",
+    "code": "BS",
+    "crestText": "BS",
+    "primaryColor": "#f59e0b",
+    "secondaryColor": "#171821",
+    "homeVenue": "Nehru Divisional Grounds, Satna",
     "established": 2021,
-    "captain": "Pranav Dwivedi",
-    "championships": [
-      "2024 ODI Series Winners (4–1)"
-    ]
+    "captain": "Vikramaditya Singh"
+  },
+  "RR": {
+    "id": "RR",
+    "name": "Rewa Royals",
+    "shortName": "Royals",
+    "code": "RR",
+    "crestText": "RR",
+    "primaryColor": "#e11d48",
+    "secondaryColor": "#171821",
+    "homeVenue": "Maharaja College Ground, Rewa",
+    "established": 2019,
+    "captain": "Digvijay Tiwari"
+  },
+  "CL": {
+    "id": "CL",
+    "name": "Civil Lines CC",
+    "shortName": "Civil Lines",
+    "code": "CL",
+    "crestText": "CL",
+    "primaryColor": "#10b981",
+    "secondaryColor": "#171821",
+    "homeVenue": "Police Line Arena, Rewa",
+    "established": 2020,
+    "captain": "Gaurav Sharma"
   }
 }

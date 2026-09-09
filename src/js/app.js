@@ -200,7 +200,7 @@ function initKineticFluidCanvas() {
    2. SPECULAR 3D GYROSCOPIC TILT & SPOTLIGHT GLARE
    ========================================================================== */
 function init3DSpecularTilt() {
-  const cards = document.querySelectorAll('.tilt-card, .fixture-pro-card, .player-pro-card, .telemetry-stage-card');
+  const cards = document.querySelectorAll('.tilt-card, .match-card, .player-card, .monument-stage-card');
   cards.forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
@@ -299,7 +299,7 @@ function initScorecardTabs() {
 function initMatchFilters() {
   const formatButtons = document.querySelectorAll('.format-filter-btn');
   const seasonButtons = document.querySelectorAll('.season-filter-btn');
-  const matchCards = document.querySelectorAll('.fixture-pro-card');
+  const matchCards = document.querySelectorAll('.match-card');
   if (!matchCards.length) return;
 
   let activeFormat = 'all';
@@ -357,7 +357,7 @@ function initMatchFilters() {
    ========================================================================== */
 function initSquadRoleFilter() {
   const filterBtns = document.querySelectorAll('#squad-filter-controls .role-btn');
-  const cards = document.querySelectorAll('#players-grid .player-pro-card');
+  const cards = document.querySelectorAll('#players-grid .player-card');
   if (!filterBtns.length || !cards.length) return;
 
   filterBtns.forEach((btn) => {

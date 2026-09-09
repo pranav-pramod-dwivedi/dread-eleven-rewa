@@ -9,11 +9,17 @@
     "2021",
     "2022",
     "2023",
-    "2024",
-    "2025",
-    "2026"
+    "2024"
   ],
   "venues": [
+    {
+      "id": "v-martand",
+      "name": "Martand School Ground No. 3",
+      "city": "Rewa",
+      "state": "Madhya Pradesh",
+      "capacity": 5000,
+      "pitchType": "Dry Turf / High Velocity"
+    },
     {
       "id": "v-apsu",
       "name": "Awadhesh Pratap Singh University (APSU) Stadium",
@@ -23,12 +29,12 @@
       "pitchType": "Turf / Hard Bounce"
     },
     {
-      "id": "v-martand",
-      "name": "Martand School Ground No. 3",
-      "city": "Rewa",
+      "id": "v-nehru",
+      "name": "Nehru Divisional Grounds",
+      "city": "Satna",
       "state": "Madhya Pradesh",
-      "capacity": 5000,
-      "pitchType": "Dry Turf / Turning"
+      "capacity": 7500,
+      "pitchType": "Classic Red Soil"
     }
   ]
 }
