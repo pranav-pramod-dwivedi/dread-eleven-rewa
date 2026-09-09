@@ -1,41 +1,41 @@
 /* ==========================================================================
-   DREAD ELEVEN (DE) — AWWWARDS-WINNING PRO FRANCHISE CITADEL
-   Creative Direction: Imperial Knight Royalty x High-Velocity Championship Citadel
-   Palette: Deepest Royal Void (#0a0414), Imperial Gold (#ffd700), Velvet Amethyst (#240e46)
-   Crafted with 10+ Years UI/UX Senior Design Rigor • Zero AI-Slop
+   DREAD ELEVEN (DE) — OFFICIAL DIGITAL ARENA & MATCH CENTER
+   Inspired by: High-Velocity Motorsport & Pro Sports Digital Arenas (Dribbble Tier-1)
+   Colorway: Deep Obsidian Carbon (#08080c), Titanium Graphite (#14151a), 
+             Electric Volt Cyan (#00f0ff), Championship Gold (#eab308), Pure White (#ffffff)
+   Strictly Zero-AI-Slop • Independent Identity (NO KKR / NO KNIGHT TROPES)
    ========================================================================== */
 
 :root {
-  /* Surface Depths */
-  --c-void: #07020d;
-  --c-dark-900: #0d051a;
-  --c-dark-800: #140927;
-  --c-dark-700: #1d0e38;
-  --c-surface: #241144;
-  --c-surface-hover: #2f1758;
+  /* Surfaces */
+  --c-carbon: #07070a;
+  --c-dark-900: #0d0e12;
+  --c-dark-800: #14151b;
+  --c-dark-700: #1c1d24;
+  --c-surface: #242630;
+  --c-surface-hover: #2f313e;
 
   /* Borders */
-  --b-subtle: rgba(255, 215, 0, 0.12);
-  --b-medium: rgba(255, 215, 0, 0.28);
-  --b-bright: rgba(255, 215, 0, 0.7);
+  --b-subtle: rgba(255, 255, 255, 0.08);
+  --b-medium: rgba(255, 255, 255, 0.16);
+  --b-bright: rgba(0, 240, 255, 0.6);
 
   /* Accents */
-  --gold-300: #ffea79;
-  --gold-400: #ffd700;
-  --gold-500: #e5b800;
-  --gold-glow: rgba(255, 215, 0, 0.3);
-  --violet-400: #c084fc;
-  --violet-500: #a855f7;
-  --violet-glow: rgba(168, 85, 247, 0.3);
+  --c-cyan: #00f0ff;
+  --c-cyan-glow: rgba(0, 240, 255, 0.35);
+  --c-gold: #eab308;
+  --c-gold-glow: rgba(234, 179, 8, 0.3);
+  --c-red: #ff3344;
+  --c-emerald: #10b981;
 
   /* Typography */
+  --f-display: 'Bebas Neue', sans-serif;
   --f-hero: 'Syne', sans-serif;
-  --f-display: 'Chakra Petch', sans-serif;
-  --f-body: 'Space Grotesk', sans-serif;
+  --f-body: 'Plus Jakarta Sans', sans-serif;
   --f-mono: 'JetBrains Mono', monospace;
 
   --max-w: 1320px;
-  --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-snappy: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -45,8 +45,8 @@
 }
 
 html {
-  background-color: var(--c-void);
-  color: #f1f5f9;
+  background-color: var(--c-carbon);
+  color: #e2e8f0;
   font-family: var(--f-body);
   font-size: 16px;
   line-height: 1.6;
@@ -58,10 +58,26 @@ body {
   position: relative;
   overflow-x: hidden;
   background: 
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(168, 85, 247, 0.22), transparent 70%),
-    radial-gradient(ellipse 60% 40% at 85% 30%, rgba(255, 215, 0, 0.08), transparent 60%),
-    radial-gradient(ellipse 50% 50% at 15% 70%, rgba(147, 51, 234, 0.12), transparent 60%),
-    var(--c-void);
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(0, 240, 255, 0.08), transparent 70%),
+    radial-gradient(ellipse 50% 50% at 85% 20%, rgba(234, 179, 8, 0.05), transparent 60%),
+    var(--c-carbon);
+}
+
+/* Background Ambient Canvas */
+#ambient-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
 }
 
 .tabular {
@@ -73,62 +89,116 @@ body {
   width: 100%;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 1.75rem;
+  padding: 0 1.5rem;
 }
 
 /* ==========================================================================
-   1. TICKER & FLOATING TOP HUD
+   1. TOP MATCH BROADCAST TICKER CAROUSEL
    ========================================================================== */
-.de-top-ticker {
-  background: #040108;
+.top-match-ribbon {
+  background: #040406;
   border-bottom: 1px solid var(--b-subtle);
-  padding: 0.5rem 0;
-  font-family: var(--f-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  color: #94a3b8;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.top-match-ribbon::-webkit-scrollbar {
+  display: none;
 }
 
-.de-top-ticker-inner {
+.top-match-track {
+  display: inline-flex;
+  gap: 0.75rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.top-match-chip {
+  background: var(--c-dark-900);
+  border: 1px solid var(--b-subtle);
+  border-radius: 4px;
+  padding: 0.6rem 0.95rem;
+  min-width: 215px;
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: all 0.2s var(--ease-snappy);
+}
+.top-match-chip:hover {
+  border-color: var(--c-cyan);
+  background: var(--c-dark-800);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.chip-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  font-family: var(--f-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  color: #94a3b8;
 }
 
-.trophy-star-badge {
-  color: var(--gold-400);
-  font-weight: 700;
-  display: inline-flex;
+.format-badge {
+  font-family: var(--f-mono);
+  font-size: 0.625rem;
+  font-weight: 800;
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.format-badge.t20 {
+  background: rgba(0, 240, 255, 0.15);
+  color: var(--c-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+}
+.format-badge.odi {
+  background: rgba(234, 179, 8, 0.15);
+  color: var(--c-gold);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.chip-status {
+  font-weight: 800;
+}
+.chip-status.de-win {
+  color: var(--c-cyan);
+}
+.chip-status.des-win {
+  color: var(--c-red);
+}
+
+.chip-row {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.4rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #fff;
 }
-
-.pulse-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold-400);
-  box-shadow: 0 0 10px var(--gold-400);
-  animation: pulseGlow 2s infinite ease-in-out;
+.chip-score {
+  font-family: var(--f-mono);
+  font-weight: 700;
+  color: #94a3b8;
 }
-
-@keyframes pulseGlow {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
+.chip-score.lead {
+  color: #fff;
 }
 
 /* ==========================================================================
-   2. IMPERIAL SHIELD HEADER & NAVIGATION
+   2. SITE HEADER & NAVIGATION
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(10, 4, 20, 0.92);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(8, 8, 12, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--b-medium);
 }
 
@@ -136,454 +206,519 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 82px;
+  height: 78px;
 }
 
-.brand-crest-link {
+.brand-link {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 0.9rem;
   text-decoration: none;
   color: inherit;
 }
 
-.imperial-shield {
-  width: 52px;
-  height: 58px;
-  background: linear-gradient(145deg, #2b1452, #0d041a);
-  border: 2px solid var(--gold-400);
-  clip-path: polygon(50% 0%, 100% 20%, 100% 75%, 50% 100%, 0% 75%, 0% 20%);
+.brand-badge {
+  width: 46px;
+  height: 48px;
+  background: linear-gradient(145deg, #181a22, #08080c);
+  border: 2px solid var(--c-cyan);
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--f-display);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--gold-400);
-  box-shadow: 0 0 25px var(--gold-glow);
-  transition: transform 0.3s var(--ease-fluid);
+  font-size: 1.7rem;
+  color: var(--c-cyan);
+  box-shadow: 0 0 18px var(--c-cyan-glow);
+  transition: transform 0.25s var(--ease-snappy);
+}
+.brand-link:hover .brand-badge {
+  transform: scale(1.06);
 }
 
-.brand-crest-link:hover .imperial-shield {
-  transform: scale(1.05) rotate(2deg);
-}
-
-.brand-names {
+.brand-text {
   display: flex;
   flex-direction: column;
 }
 
-.brand-names h1 {
+.brand-name {
   font-family: var(--f-hero);
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   font-weight: 900;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: #fff;
   line-height: 1;
   text-transform: uppercase;
 }
-
-.brand-names h1 span {
-  color: var(--gold-400);
+.brand-name span {
+  color: var(--c-cyan);
 }
 
-.brand-names small {
+.brand-sub {
   font-family: var(--f-mono);
-  font-size: 0.65rem;
-  color: var(--violet-400);
-  letter-spacing: 0.1em;
+  font-size: 0.625rem;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-top: 2px;
 }
 
-/* Header Nav */
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .nav-link {
   font-family: var(--f-body);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: #cbd5e1;
-  padding: 0.55rem 0.95rem;
+  padding: 0.5rem 0.85rem;
   border-radius: 4px;
   text-decoration: none;
-  transition: all 0.2s var(--ease-fluid);
-  position: relative;
+  transition: all 0.2s var(--ease-snappy);
 }
-
 .nav-link:hover {
   color: #fff;
-  background: rgba(255, 215, 0, 0.08);
+  background: rgba(255, 255, 255, 0.06);
 }
-
 .nav-link.active {
   color: #000;
-  background: var(--gold-400);
+  background: var(--c-cyan);
   font-weight: 800;
-  box-shadow: 0 0 20px var(--gold-glow);
 }
 
-.btn-imperial-cta {
-  background: linear-gradient(135deg, var(--gold-400) 0%, #b8860b 100%);
+.btn-cta-gold {
+  background: var(--c-gold);
   color: #000;
-  padding: 0.65rem 1.4rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 4px;
-  font-family: var(--f-display);
-  font-size: 0.875rem;
+  font-family: var(--f-body);
+  font-size: 0.8125rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
   text-decoration: none;
-  border: 1px solid var(--gold-300);
-  box-shadow: 0 4px 18px var(--gold-glow);
-  transition: all 0.25s var(--ease-fluid);
+  transition: all 0.2s var(--ease-snappy);
 }
-
-.btn-imperial-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+.btn-cta-gold:hover {
   background: #fff;
-  color: #000;
-}
-
-.btn-outline-violet {
-  background: rgba(168, 85, 247, 0.08);
-  border: 1px solid var(--b-medium);
-  color: #fff;
-  padding: 0.65rem 1.4rem;
-  border-radius: 4px;
-  font-family: var(--f-display);
-  font-size: 0.875rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  transition: all 0.25s var(--ease-fluid);
-}
-
-.btn-outline-violet:hover {
-  border-color: var(--gold-400);
-  color: var(--gold-400);
-  background: rgba(255, 215, 0, 0.06);
+  transform: translateY(-1px);
 }
 
 /* ==========================================================================
-   3. AWWWARDS CINEMATIC HERO SECTION: 2022 CHAMPIONSHIP MONUMENT
+   3. HERO SECTION (ASPINSPORT / DRIBBLE HIGH IMPACT)
    ========================================================================== */
-.hero-monument-section {
+.hero-section {
+  padding: 5rem 0 4.5rem;
   position: relative;
-  padding: 5.5rem 0 5rem;
   overflow: hidden;
   border-bottom: 1px solid var(--b-subtle);
 }
 
-.hero-monument-grid {
+.hero-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
-  gap: 4rem;
+  gap: 3.5rem;
   align-items: center;
 }
 
-.laurel-kicker {
+.hero-pretitle {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  background: rgba(255, 215, 0, 0.1);
+  gap: 0.5rem;
+  background: rgba(0, 240, 255, 0.08);
   border: 1px solid var(--b-bright);
-  padding: 0.4rem 1.1rem;
-  border-radius: 50px;
+  padding: 0.35rem 0.9rem;
+  border-radius: 4px;
   font-family: var(--f-mono);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--gold-400);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--c-cyan);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
 }
 
-.hero-epic-title {
+.hero-headline {
   font-family: var(--f-hero);
-  font-size: clamp(3.2rem, 7vw, 6.2rem);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
   font-weight: 900;
   text-transform: uppercase;
-  line-height: 0.92;
-  letter-spacing: -0.01em;
+  line-height: 0.94;
   color: #fff;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.hero-headline span {
+  color: var(--c-cyan);
 }
 
-.hero-epic-title .gold-shimmer {
-  background: linear-gradient(90deg, #ffd700 0%, #fff 40%, #e5b800 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 0 35px var(--gold-glow);
-}
-
-.hero-prose-lead {
-  font-size: 1.125rem;
+.hero-lead {
+  font-size: 1.0625rem;
   color: #cbd5e1;
-  line-height: 1.75;
+  line-height: 1.7;
   max-width: 58ch;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.25rem;
 }
 
-.hero-actions-row {
+.hero-btn-row {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
-/* Championship Pedestal Card (Awwwards Trophy Showcase) */
-.championship-pedestal {
-  background: linear-gradient(160deg, #1d0a3d 0%, #0c0419 100%);
-  border: 2px solid var(--gold-400);
-  border-radius: 12px;
-  padding: 2.75rem 2.25rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 215, 0, 0.18);
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-}
-
-.pedestal-corner-accent {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, transparent 50%, rgba(255, 215, 0, 0.25) 50%);
-}
-
-.pedestal-title {
-  font-family: var(--f-mono);
-  font-size: 0.75rem;
+.btn-primary-cyan {
+  background: var(--c-cyan);
+  color: #000;
+  padding: 0.75rem 1.6rem;
+  border-radius: 4px;
+  font-family: var(--f-body);
+  font-size: 0.875rem;
   font-weight: 800;
-  color: var(--gold-400);
-  letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 20px var(--c-cyan-glow);
+  transition: all 0.2s var(--ease-snappy);
+}
+.btn-primary-cyan:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 240, 255, 0.6);
 }
 
-.pedestal-trophy-svg {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 1.5rem;
-  filter: drop-shadow(0 0 25px var(--gold-glow));
-  animation: floatTrophy 4s ease-in-out infinite;
+.btn-outline-titanium {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--b-medium);
+  color: #fff;
+  padding: 0.75rem 1.6rem;
+  border-radius: 4px;
+  font-family: var(--f-body);
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s var(--ease-snappy);
+}
+.btn-outline-titanium:hover {
+  border-color: var(--c-cyan);
+  color: var(--c-cyan);
+  background: rgba(0, 240, 255, 0.06);
 }
 
-@keyframes floatTrophy {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+/* Hero Showcase Card (3D Tilt) */
+.hero-telemetry-panel {
+  background: linear-gradient(160deg, var(--c-dark-800) 0%, var(--c-dark-900) 100%);
+  border: 1.5px solid var(--c-cyan);
+  border-radius: 8px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  position: relative;
+  transform-style: preserve-3d;
 }
 
-.pedestal-score-hero {
-  font-family: var(--f-hero);
-  font-size: 2.6rem;
-  font-weight: 900;
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--b-subtle);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  color: var(--c-cyan);
+  font-weight: 700;
+}
+
+.panel-score-huge {
+  font-family: var(--f-display);
+  font-size: 3.5rem;
   color: #fff;
   line-height: 1;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
-.pedestal-margin-text {
+.panel-badge {
+  display: inline-block;
+  background: rgba(0, 240, 255, 0.12);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: var(--c-cyan);
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.panel-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  border-top: 1px solid var(--b-subtle);
+  padding-top: 1.25rem;
+}
+
+.panel-stat-num {
   font-family: var(--f-display);
-  font-size: 1.15rem;
-  font-weight: 800;
-  color: var(--gold-400);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 1.75rem;
+  font-size: 2.2rem;
+  color: #fff;
+  line-height: 1;
 }
 
-.pedestal-countdown-widget {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid var(--b-subtle);
-  border-radius: 8px;
-  padding: 1.1rem;
-}
-
-.countdown-subhead {
+.panel-stat-lbl {
   font-family: var(--f-mono);
   font-size: 0.6875rem;
   color: #94a3b8;
   text-transform: uppercase;
-  margin-bottom: 0.6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.countdown-numbers-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.4rem;
-}
-
-.count-cell {
-  background: var(--c-surface);
-  border: 1px solid var(--b-subtle);
-  border-radius: 4px;
-  padding: 0.5rem 0.2rem;
-}
-
-.count-num {
-  font-family: var(--f-display);
-  font-size: 1.45rem;
-  font-weight: 900;
-  color: #fff;
-  line-height: 1;
-}
-
-.count-lbl {
-  font-family: var(--f-mono);
-  font-size: 0.5625rem;
-  color: var(--gold-400);
-  text-transform: uppercase;
 }
 
 /* ==========================================================================
-   4. METRIC TELEMETRY BAR
+   4. METRICS BAND
    ========================================================================== */
-.telemetry-band {
-  background: #090312;
-  border-top: 1px solid var(--b-subtle);
+.metrics-band {
+  background: #060608;
   border-bottom: 1px solid var(--b-subtle);
-  padding: 2rem 0;
+  padding: 2.25rem 0;
 }
 
-.telemetry-band-grid {
+.metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
 }
 
-.telemetry-item {
-  border-left: 3px solid var(--gold-400);
+.metric-card {
+  border-left: 2px solid var(--c-cyan);
   padding-left: 1.25rem;
 }
 
-.telemetry-item-val {
-  font-family: var(--f-hero);
-  font-size: 2.6rem;
-  font-weight: 900;
-  color: #fff;
+.metric-number {
+  font-family: var(--f-display);
+  font-size: 3.2rem;
   line-height: 1;
+  color: #fff;
 }
 
-.telemetry-item-lbl {
+.metric-label {
   font-family: var(--f-mono);
   font-size: 0.72rem;
   color: #94a3b8;
   text-transform: uppercase;
-  margin-top: 0.4rem;
+  margin-top: 0.35rem;
   letter-spacing: 0.05em;
 }
 
 /* ==========================================================================
-   5. SQUAD SECTION & DIE-CUT SHIELD CARDS
+   5. INTERACTIVE FIXTURES & RESULTS WITH FORMAT FILTERS
    ========================================================================== */
 .section-wrapper {
-  padding: 5.5rem 0;
+  padding: 5rem 0;
 }
 
-.section-headline-bar {
+.section-masthead {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 3.5rem;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  margin-bottom: 2.5rem;
   border-bottom: 1px solid var(--b-subtle);
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.section-pretag {
+.section-kicker {
   font-family: var(--f-mono);
-  font-size: 0.75rem;
-  color: var(--gold-400);
-  font-weight: 800;
+  font-size: 0.72rem;
+  color: var(--c-cyan);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-bottom: 0.4rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
 }
 
-.section-massive-title {
+.section-headline {
   font-family: var(--f-hero);
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 900;
   text-transform: uppercase;
   color: #fff;
-  line-height: 1;
+  line-height: 1.05;
 }
 
-.squad-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 2rem;
-}
-
-.shield-player-card {
-  background: linear-gradient(165deg, var(--c-dark-800) 0%, var(--c-dark-900) 100%);
+/* Format & Season Filter Bar */
+.filter-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  align-items: center;
+  background: var(--c-dark-900);
   border: 1px solid var(--b-subtle);
-  border-radius: 8px;
-  padding: 2.25rem 1.85rem;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+}
+
+.filter-group-label {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.filter-pill {
+  background: var(--c-dark-800);
+  border: 1px solid var(--b-medium);
+  color: #cbd5e1;
+  font-family: var(--f-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-snappy);
+}
+.filter-pill:hover {
+  color: #fff;
+  border-color: var(--c-cyan);
+}
+.filter-pill.active {
+  background: var(--c-cyan);
+  color: #000;
+  border-color: var(--c-cyan);
+  font-weight: 800;
+}
+
+/* Fixtures & Matches Grid */
+.fixtures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.75rem;
+}
+
+.match-fixture-card {
+  background: var(--c-dark-900);
+  border: 1px solid var(--b-medium);
+  border-radius: 6px;
+  padding: 1.85rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s var(--ease-snappy);
+  position: relative;
+}
+.match-fixture-card:hover {
+  border-color: var(--c-cyan);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 15px var(--c-cyan-glow);
+  transform: translateY(-3px);
+}
+
+.match-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.match-card-meta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 1.1rem;
+}
+
+.match-card-teams-box {
+  background: var(--c-dark-800);
+  border: 1px solid var(--b-subtle);
+  border-radius: 4px;
+  padding: 1.1rem;
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.team-score-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.team-name-bold {
+  font-family: var(--f-hero);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.match-outcome-strip {
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.1rem;
+}
+.match-outcome-strip.de-win {
+  background: rgba(0, 240, 255, 0.12);
+  color: var(--c-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+.match-outcome-strip.des-win {
+  background: rgba(255, 51, 68, 0.12);
+  color: var(--c-red);
+  border: 1px solid rgba(255, 51, 68, 0.3);
+}
+
+/* ==========================================================================
+   6. SQUAD CARDS
+   ========================================================================== */
+.player-card {
+  background: linear-gradient(165deg, var(--c-dark-900) 0%, var(--c-dark-800) 100%);
+  border: 1px solid var(--b-subtle);
+  border-radius: 6px;
+  padding: 2rem 1.75rem;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
-  transition: all 0.3s var(--ease-fluid);
+  transition: all 0.25s var(--ease-snappy);
+  transform-style: preserve-3d;
+}
+.player-card:hover {
+  border-color: var(--c-cyan);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 20px var(--c-cyan-glow);
 }
 
-.shield-player-card:hover {
-  border-color: var(--gold-400);
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 25px var(--gold-glow);
-  background: linear-gradient(165deg, var(--c-surface) 0%, var(--c-dark-800) 100%);
-}
-
-.player-shield-badge {
+.player-jersey {
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  width: 46px;
-  height: 50px;
-  background: var(--c-dark-700);
-  border: 1.5px solid var(--gold-400);
-  clip-path: polygon(50% 0%, 100% 20%, 100% 75%, 50% 100%, 0% 75%, 0% 20%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: var(--f-display);
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: var(--gold-400);
+  font-size: 2.2rem;
+  color: var(--c-cyan);
+  line-height: 1;
 }
 
-.player-role-tag {
+.player-role {
   font-family: var(--f-mono);
   font-size: 0.6875rem;
-  font-weight: 800;
-  color: var(--violet-400);
+  font-weight: 700;
+  color: var(--c-cyan);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
-.player-full-name {
+.player-name {
   font-family: var(--f-hero);
-  font-size: 1.95rem;
+  font-size: 1.8rem;
   font-weight: 900;
   text-transform: uppercase;
   color: #fff;
@@ -591,96 +726,56 @@ body {
   margin-bottom: 0.4rem;
 }
 
-.player-caps-meta {
+.player-meta {
   font-size: 0.8125rem;
   color: #94a3b8;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
-.player-stats-trio {
+.player-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.6rem;
+  gap: 0.5rem;
   border-top: 1px solid var(--b-subtle);
-  padding-top: 1.1rem;
+  padding-top: 1rem;
   margin-top: auto;
   text-align: center;
 }
 
-.player-stat-number {
+.stat-val {
   font-family: var(--f-display);
-  font-size: 1.65rem;
-  font-weight: 900;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: #fff;
   line-height: 1;
 }
 
-.player-stat-label {
+.stat-lbl {
   font-family: var(--f-mono);
   font-size: 0.625rem;
   color: #94a3b8;
   text-transform: uppercase;
-  margin-top: 0.25rem;
-}
-
-/* ==========================================================================
-   6. MATCH SCORECARDS & BROADCAST TABLES
-   ========================================================================== */
-.scorecard-table-wrap {
-  overflow-x: auto;
-  margin-bottom: 2rem;
-}
-
-.scorecard-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-}
-
-.scorecard-table th {
-  padding: 0.85rem 1rem;
-  text-align: left;
-  font-family: var(--f-mono);
-  font-size: 0.6875rem;
-  color: var(--gold-400);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-bottom: 2px solid var(--b-medium);
-  background: var(--c-dark-900);
-}
-
-.scorecard-table th.num, .scorecard-table td.num {
-  text-align: right;
-  font-family: var(--f-mono);
-}
-
-.scorecard-table td {
-  padding: 0.95rem 1rem;
-  border-bottom: 1px solid var(--b-subtle);
-}
-
-.scorecard-table tr:hover td {
-  background: rgba(255, 215, 0, 0.03);
+  margin-top: 0.2rem;
 }
 
 /* ==========================================================================
    7. FOOTER
    ========================================================================== */
 .site-footer {
-  background: #040108;
-  border-top: 2px solid var(--gold-400);
-  padding: 5rem 0 3rem;
+  background: #040406;
+  border-top: 2px solid var(--c-cyan);
+  padding: 4.5rem 0 2.5rem;
 }
 
-.footer-columns-grid {
+.footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.2fr;
-  gap: 3.5rem;
-  margin-bottom: 4rem;
+  gap: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 @media (max-width: 960px) {
-  .hero-monument-grid { grid-template-columns: 1fr; }
-  .footer-columns-grid { grid-template-columns: 1fr; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
   .header-nav { display: none; }
 }

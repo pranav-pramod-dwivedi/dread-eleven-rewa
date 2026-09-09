@@ -18,10 +18,10 @@
   <meta name="twitter:title" content="Telemetry &amp; Records | Dread Eleven (DE)">
   <meta name="twitter:description" content="Official statistical records for Dread Eleven in Rewa. Top run scorers, bowling figures, and strike rates.">
 
-  <!-- Fonts: Syne, Chakra Petch, Space Grotesk, JetBrains Mono -->
+  <!-- Typography: Syne, Bebas Neue, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700;800;900&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/css/styles.css">
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
@@ -29,25 +29,162 @@
   
 </head>
 <body>
+  <!-- Ambient Particle Constellation -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="content-wrapper">
 
 
-  <!-- Top Marquee Ticker -->
-  <div class="de-top-ticker">
-    <div class="container de-top-ticker-inner">
-      <div><span class="trophy-star-badge"><span class="pulse-dot"></span> ★ 2022 TOURNAMENT CHAMPIONS</span> • ATAL BIHARI VAJPAYEE MEMORIAL CUP</div>
-      <div>ALL-TIME DERBY LEAD: <strong style="color:var(--gold-400);">DE 13 – 11 DES (54.2% WR)</strong></div>
-      <div>CAPTAIN: AKHIL MISHRA (905 RUNS • 47.6 AVG)</div>
+  <!-- Top Broadcast Match Ribbon -->
+  <div class="top-match-ribbon" aria-label="Derby Match Ribbon">
+    <div class="top-match-track">
+      
+          <a href="/matches/destroyers-vs-dread-eleven-2024-09-20" class="top-match-chip">
+            <div class="chip-meta">
+              <span class="format-badge odi">ODI • 2024</span>
+              <span class="chip-status des-win">
+                DES WON
+              </span>
+            </div>
+            <div class="chip-row">
+              <span>Dread Eleven</span>
+              <span class="chip-score  tabular">225/9</span>
+            </div>
+            <div class="chip-row">
+              <span style="color: #94a3b8;">Destroyers</span>
+              <span class="chip-score lead tabular">233/6</span>
+            </div>
+          </a>
+        
+          <a href="/matches/destroyers-vs-dread-eleven-2024-09-16" class="top-match-chip">
+            <div class="chip-meta">
+              <span class="format-badge odi">ODI • 2024</span>
+              <span class="chip-status des-win">
+                DES WON
+              </span>
+            </div>
+            <div class="chip-row">
+              <span>Dread Eleven</span>
+              <span class="chip-score  tabular">270/9</span>
+            </div>
+            <div class="chip-row">
+              <span style="color: #94a3b8;">Destroyers</span>
+              <span class="chip-score lead tabular">288/6</span>
+            </div>
+          </a>
+        
+          <a href="/matches/destroyers-vs-dread-eleven-2024-09-12" class="top-match-chip">
+            <div class="chip-meta">
+              <span class="format-badge odi">ODI • 2024</span>
+              <span class="chip-status des-win">
+                DES WON
+              </span>
+            </div>
+            <div class="chip-row">
+              <span>Dread Eleven</span>
+              <span class="chip-score  tabular">274/9</span>
+            </div>
+            <div class="chip-row">
+              <span style="color: #94a3b8;">Destroyers</span>
+              <span class="chip-score lead tabular">276/10</span>
+            </div>
+          </a>
+        
+          <a href="/matches/destroyers-vs-dread-eleven-2024-09-08" class="top-match-chip">
+            <div class="chip-meta">
+              <span class="format-badge odi">ODI • 2024</span>
+              <span class="chip-status des-win">
+                DES WON
+              </span>
+            </div>
+            <div class="chip-row">
+              <span>Dread Eleven</span>
+              <span class="chip-score  tabular">252/7</span>
+            </div>
+            <div class="chip-row">
+              <span style="color: #94a3b8;">Destroyers</span>
+              <span class="chip-score lead tabular">257/6</span>
+            </div>
+          </a>
+        
+          <a href="/matches/destroyers-vs-dread-eleven-2024-09-05" class="top-match-chip">
+            <div class="chip-meta">
+              <span class="format-badge odi">ODI • 2024</span>
+              <span class="chip-status de-win">
+                DE WON
+              </span>
+            </div>
+            <div class="chip-row">
+              <span>Dread Eleven</span>
+              <span class="chip-score lead tabular">266/9</span>
+            </div>
+            <div class="chip-row">
+              <span style="color: #94a3b8;">Destroyers</span>
+              <span class="chip-score  tabular">264/9</span>
+            </div>
+          </a>
+        
+          <a href="/matches/destroyers-vs-dread-eleven-2023-09-20" class="top-match-chip">
+            <div class="chip-meta">
+              <span class="format-badge odi">ODI • 2023</span>
+              <span class="chip-status de-win">
+                DE WON
+              </span>
+            </div>
+            <div class="chip-row">
+              <span>Dread Eleven</span>
+              <span class="chip-score lead tabular">279/7</span>
+            </div>
+            <div class="chip-row">
+              <span style="color: #94a3b8;">Destroyers</span>
+              <span class="chip-score  tabular">221/9</span>
+            </div>
+          </a>
+        
+          <a href="/matches/destroyers-vs-dread-eleven-2023-09-16" class="top-match-chip">
+            <div class="chip-meta">
+              <span class="format-badge odi">ODI • 2023</span>
+              <span class="chip-status des-win">
+                DES WON
+              </span>
+            </div>
+            <div class="chip-row">
+              <span>Dread Eleven</span>
+              <span class="chip-score  tabular">232/9</span>
+            </div>
+            <div class="chip-row">
+              <span style="color: #94a3b8;">Destroyers</span>
+              <span class="chip-score lead tabular">274/7</span>
+            </div>
+          </a>
+        
+          <a href="/matches/destroyers-vs-dread-eleven-2023-09-12" class="top-match-chip">
+            <div class="chip-meta">
+              <span class="format-badge odi">ODI • 2023</span>
+              <span class="chip-status des-win">
+                DES WON
+              </span>
+            </div>
+            <div class="chip-row">
+              <span>Dread Eleven</span>
+              <span class="chip-score  tabular">252/10</span>
+            </div>
+            <div class="chip-row">
+              <span style="color: #94a3b8;">Destroyers</span>
+              <span class="chip-score lead tabular">279/6</span>
+            </div>
+          </a>
+        
     </div>
   </div>
 
-  <!-- Imperial Header -->
+  <!-- Header Navigation -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="brand-crest-link" aria-label="Dread Eleven Home">
-        <div class="imperial-shield">DE</div>
-        <div class="brand-names">
-          <h1>DREAD <span>ELEVEN</span></h1>
-          <small>Rewa Division Cricket Association (RDCA)</small>
+      <a href="/" class="brand-link" aria-label="Dread Eleven Home">
+        <div class="brand-badge">DE</div>
+        <div class="brand-text">
+          <span class="brand-name">DREAD <span>ELEVEN</span></span>
+          <span class="brand-sub">Atal Bihari Vajpayee Memorial Cup • Rewa</span>
         </div>
       </a>
 
@@ -58,7 +195,7 @@
           </a>
         
           <a href="/players" class="nav-link " >
-            Knight Squad
+            Roster
           </a>
         
           <a href="/fixtures" class="nav-link " >
@@ -66,7 +203,7 @@
           </a>
         
           <a href="/results" class="nav-link " >
-            Derby Log
+            Results
           </a>
         
           <a href="/points-table" class="nav-link " >
@@ -91,8 +228,8 @@
         
       </nav>
 
-      <a href="/about" class="btn-imperial-cta">
-        2022 Silverware
+      <a href="/about" class="btn-cta-gold">
+        2022 Champions
       </a>
     </div>
   </header>
@@ -100,112 +237,112 @@
 
 <section class="section-wrapper" style="padding-top: 4rem;">
   <div class="container">
-    <div class="section-headline-bar">
+    <div class="section-masthead">
       <div>
-        <div class="section-pretag">// PERFORMANCE RECORDS</div>
-        <h1 class="section-massive-title">Dread Eleven All-Time Records</h1>
-        <p style="color: #94a3b8; font-size: 1rem; margin-top: 0.4rem;">
+        <div class="section-kicker">// PERFORMANCE RECORDS</div>
+        <h1 class="section-headline">Dread Eleven All-Time Records</h1>
+        <p style="color: #94a3b8; font-size: 0.9375rem; margin-top: 0.4rem;">
           Verified performance records across all 24 clashes against Destroyers in Rewa.
         </p>
       </div>
     </div>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem;">
-      <div style="background: var(--c-dark-800); border: 1px solid var(--b-medium); border-radius: 8px; padding: 2rem;">
-        <h2 style="font-family: var(--f-hero); font-size: 1.8rem; color: #fff; text-transform: uppercase; margin-bottom: 1.25rem;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2.5rem;">
+      <div style="background: var(--c-dark-900); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.75rem;">
+        <h2 style="font-family: var(--f-hero); font-size: 1.6rem; color: #fff; text-transform: uppercase; margin-bottom: 1.1rem;">
           Top Run Scorers
         </h2>
-        <div class="scorecard-table-wrap">
-          <table class="scorecard-table">
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
             <thead>
-              <tr>
-                <th>Player</th>
-                <th class="num">Mat</th>
-                <th class="num">Runs</th>
-                <th class="num">Avg</th>
-                <th class="num">SR</th>
+              <tr style="border-bottom: 1px solid var(--b-medium); font-family: var(--f-mono); font-size: 0.6875rem; color: var(--c-cyan); text-transform: uppercase;">
+                <th style="text-align: left; padding: 0.75rem 1rem;">Player</th>
+                <th style="text-align: right; padding: 0.75rem 1rem;">Mat</th>
+                <th style="text-align: right; padding: 0.75rem 1rem;">Runs</th>
+                <th style="text-align: right; padding: 0.75rem 1rem;">Avg</th>
+                <th style="text-align: right; padding: 0.75rem 1rem;">SR</th>
               </tr>
             </thead>
             <tbody>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/akhil-mishra" style="color: inherit; text-decoration: none;">Akhil Mishra</a></td>
-                  <td class="num tabular">19</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">905</td>
-                  <td class="num tabular">47.63</td>
-                  <td class="num tabular">107.61</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/akhil-mishra" style="color: inherit; text-decoration: none;">Akhil Mishra</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">19</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">905</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">47.63</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">107.61</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/ritesh-shakya" style="color: inherit; text-decoration: none;">Ritesh Shakya</a></td>
-                  <td class="num tabular">6</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">249</td>
-                  <td class="num tabular">41.5</td>
-                  <td class="num tabular">101.22</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/ritesh-shakya" style="color: inherit; text-decoration: none;">Ritesh Shakya</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">249</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">41.5</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">101.22</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/kuldeep-sen" style="color: inherit; text-decoration: none;">Kuldeep Sen</a></td>
-                  <td class="num tabular">10</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">228</td>
-                  <td class="num tabular">22.8</td>
-                  <td class="num tabular">95.4</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/kuldeep-sen" style="color: inherit; text-decoration: none;">Kuldeep Sen</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">10</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">228</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">22.8</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">95.4</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/anubhav-agarwal" style="color: inherit; text-decoration: none;">Anubhav Agarwal</a></td>
-                  <td class="num tabular">7</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">208</td>
-                  <td class="num tabular">29.71</td>
-                  <td class="num tabular">86.31</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/anubhav-agarwal" style="color: inherit; text-decoration: none;">Anubhav Agarwal</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">7</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">208</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">29.71</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">86.31</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/yash-dubey" style="color: inherit; text-decoration: none;">Yash Dubey</a></td>
-                  <td class="num tabular">5</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">196</td>
-                  <td class="num tabular">39.2</td>
-                  <td class="num tabular">104.26</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/yash-dubey" style="color: inherit; text-decoration: none;">Yash Dubey</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">5</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">196</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">39.2</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">104.26</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/saransh-jain" style="color: inherit; text-decoration: none;">Saransh Jain</a></td>
-                  <td class="num tabular">6</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">183</td>
-                  <td class="num tabular">30.5</td>
-                  <td class="num tabular">87.14</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/saransh-jain" style="color: inherit; text-decoration: none;">Saransh Jain</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">183</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">30.5</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">87.14</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/prithviraj-singh-tomar" style="color: inherit; text-decoration: none;">Prithviraj Singh Tomar</a></td>
-                  <td class="num tabular">7</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">177</td>
-                  <td class="num tabular">25.29</td>
-                  <td class="num tabular">91.71</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/prithviraj-singh-tomar" style="color: inherit; text-decoration: none;">Prithviraj Singh Tomar</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">7</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">177</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">25.29</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">91.71</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/anant-verma" style="color: inherit; text-decoration: none;">Anant Verma</a></td>
-                  <td class="num tabular">7</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">163</td>
-                  <td class="num tabular">23.29</td>
-                  <td class="num tabular">88.59</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/anant-verma" style="color: inherit; text-decoration: none;">Anant Verma</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">7</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">163</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">23.29</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">88.59</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/naveen-singh-chouhan" style="color: inherit; text-decoration: none;">Naveen Singh Chouhan</a></td>
-                  <td class="num tabular">7</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">162</td>
-                  <td class="num tabular">23.14</td>
-                  <td class="num tabular">115.71</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/naveen-singh-chouhan" style="color: inherit; text-decoration: none;">Naveen Singh Chouhan</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">7</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">162</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">23.14</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">115.71</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/avesh-khan" style="color: inherit; text-decoration: none;">Avesh Khan</a></td>
-                  <td class="num tabular">6</td>
-                  <td class="num tabular font-bold" style="color: var(--gold-400);">145</td>
-                  <td class="num tabular">24.17</td>
-                  <td class="num tabular">87.35</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/avesh-khan" style="color: inherit; text-decoration: none;">Avesh Khan</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-cyan);">145</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">24.17</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">87.35</td>
                 </tr>
               
             </tbody>
@@ -213,101 +350,101 @@
         </div>
       </div>
 
-      <div style="background: var(--c-dark-800); border: 1px solid var(--b-medium); border-radius: 8px; padding: 2rem;">
-        <h2 style="font-family: var(--f-hero); font-size: 1.8rem; color: #fff; text-transform: uppercase; margin-bottom: 1.25rem;">
+      <div style="background: var(--c-dark-900); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.75rem;">
+        <h2 style="font-family: var(--f-hero); font-size: 1.6rem; color: #fff; text-transform: uppercase; margin-bottom: 1.1rem;">
           Top Wicket Takers
         </h2>
-        <div class="scorecard-table-wrap">
-          <table class="scorecard-table">
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
             <thead>
-              <tr>
-                <th>Bowler</th>
-                <th class="num">Mat</th>
-                <th class="num">Wkts</th>
-                <th class="num">Overs</th>
-                <th class="num">Eco</th>
+              <tr style="border-bottom: 1px solid var(--b-medium); font-family: var(--f-mono); font-size: 0.6875rem; color: var(--c-cyan); text-transform: uppercase;">
+                <th style="text-align: left; padding: 0.75rem 1rem;">Bowler</th>
+                <th style="text-align: right; padding: 0.75rem 1rem;">Mat</th>
+                <th style="text-align: right; padding: 0.75rem 1rem;">Wkts</th>
+                <th style="text-align: right; padding: 0.75rem 1rem;">Overs</th>
+                <th style="text-align: right; padding: 0.75rem 1rem;">Eco</th>
               </tr>
             </thead>
             <tbody>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/ashwin-das" style="color: inherit; text-decoration: none;">Ashwin Das</a></td>
-                  <td class="num tabular">10</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">16</td>
-                  <td class="num tabular">42</td>
-                  <td class="num tabular">9.26</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/ashwin-das" style="color: inherit; text-decoration: none;">Ashwin Das</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">10</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">16</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">42</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">9.26</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/kumar-kartikeya" style="color: inherit; text-decoration: none;">Kumar Kartikeya</a></td>
-                  <td class="num tabular">9</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">14</td>
-                  <td class="num tabular">38</td>
-                  <td class="num tabular">6.29</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/kumar-kartikeya" style="color: inherit; text-decoration: none;">Kumar Kartikeya</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">9</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">14</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">38</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6.29</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/kuldeep-sen" style="color: inherit; text-decoration: none;">Kuldeep Sen</a></td>
-                  <td class="num tabular">10</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">12</td>
-                  <td class="num tabular">56</td>
-                  <td class="num tabular">5.29</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/kuldeep-sen" style="color: inherit; text-decoration: none;">Kuldeep Sen</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">10</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">12</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">56</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">5.29</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/subhranshu-senapati" style="color: inherit; text-decoration: none;">Subhranshu Senapati</a></td>
-                  <td class="num tabular">10</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">9</td>
-                  <td class="num tabular">29</td>
-                  <td class="num tabular">9.31</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/subhranshu-senapati" style="color: inherit; text-decoration: none;">Subhranshu Senapati</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">10</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">9</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">29</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">9.31</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/prabhanshu-shukla" style="color: inherit; text-decoration: none;">Prabhanshu Shukla</a></td>
-                  <td class="num tabular">4</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">9</td>
-                  <td class="num tabular">27</td>
-                  <td class="num tabular">2.3</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/prabhanshu-shukla" style="color: inherit; text-decoration: none;">Prabhanshu Shukla</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">4</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">9</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">27</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">2.3</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/akhil-mishra" style="color: inherit; text-decoration: none;">Akhil Mishra</a></td>
-                  <td class="num tabular">19</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">8</td>
-                  <td class="num tabular">81</td>
-                  <td class="num tabular">6.04</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/akhil-mishra" style="color: inherit; text-decoration: none;">Akhil Mishra</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">19</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">8</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">81</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6.04</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/rohit-rajawat" style="color: inherit; text-decoration: none;">Rohit Rajawat</a></td>
-                  <td class="num tabular">6</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">8</td>
-                  <td class="num tabular">37</td>
-                  <td class="num tabular">6.46</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/rohit-rajawat" style="color: inherit; text-decoration: none;">Rohit Rajawat</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">8</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">37</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6.46</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/jaydev-singh" style="color: inherit; text-decoration: none;">Jaydev Singh</a></td>
-                  <td class="num tabular">6</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">8</td>
-                  <td class="num tabular">24</td>
-                  <td class="num tabular">9.71</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/jaydev-singh" style="color: inherit; text-decoration: none;">Jaydev Singh</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">8</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">24</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">9.71</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/amarjeet-kumar-singh" style="color: inherit; text-decoration: none;">Amarjeet Kumar Singh</a></td>
-                  <td class="num tabular">5</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">8</td>
-                  <td class="num tabular">27</td>
-                  <td class="num tabular">5.04</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/amarjeet-kumar-singh" style="color: inherit; text-decoration: none;">Amarjeet Kumar Singh</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">5</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">8</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">27</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">5.04</td>
                 </tr>
               
-                <tr>
-                  <td style="font-weight: 700; color: #fff;"><a href="/players/saransh-jain" style="color: inherit; text-decoration: none;">Saransh Jain</a></td>
-                  <td class="num tabular">6</td>
-                  <td class="num tabular font-bold" style="color: var(--violet-400);">7</td>
-                  <td class="num tabular">19</td>
-                  <td class="num tabular">12</td>
+                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                  <td style="padding: 0.85rem 1rem; font-weight: 700; color: #fff;"><a href="/players/saransh-jain" style="color: inherit; text-decoration: none;">Saransh Jain</a></td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">6</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono); font-weight: 700; color: var(--c-gold);">7</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">19</td>
+                  <td style="padding: 0.85rem 1rem; text-align: right; font-family: var(--f-mono);">12</td>
                 </tr>
               
             </tbody>
@@ -321,65 +458,64 @@
 
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-columns-grid">
+        <div class="footer-grid">
           <div>
-            <div class="brand-names" style="margin-bottom: 1rem;">
-              <h2 style="font-family: var(--f-hero); font-size: 2.2rem; color: #fff; text-transform: uppercase;">
-                DREAD <span style="color: var(--gold-400);">ELEVEN</span>
-              </h2>
+            <div class="brand-name" style="font-size: 2rem; margin-bottom: 0.75rem;">
+              DREAD <span>ELEVEN</span>
             </div>
             <p style="font-size: 0.9375rem; color: #94a3b8; max-width: 44ch; line-height: 1.75;">
               Official franchise portal of Dread Eleven (DE), captained by Akhil Mishra. 
-              Champions of the 2022 Atal Bihari Vajpayee Memorial Trophy and all-time series leaders against Destroyers under RDCA.
+              Champions of the 2022 Atal Bihari Vajpayee Memorial Trophy and all-time series leaders against Destroyers with 13 derby victories (54.2% WR).
             </p>
           </div>
 
           <div>
-            <h4 style="font-family: var(--f-display); font-size: 1rem; color: #fff; text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 800;">
-              Derby Center
+            <h4 style="font-family: var(--f-body); font-size: 0.9375rem; font-weight: 800; color: #fff; text-transform: uppercase; margin-bottom: 1.25rem;">
+              Match Center
             </h4>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.875rem; color: #94a3b8;">
-              <li><a href="/fixtures" style="color: inherit; text-decoration: none;">Upcoming Fixtures (2025–26)</a></li>
+              <li><a href="/fixtures" style="color: inherit; text-decoration: none;">T20 &amp; One Day Schedule</a></li>
               <li><a href="/results" style="color: inherit; text-decoration: none;">24 Derby Clashes Archive</a></li>
               <li><a href="/points-table" style="color: inherit; text-decoration: none;">Division Points Table</a></li>
-              <li><a href="/stats" style="color: inherit; text-decoration: none;">All-Time Records</a></li>
+              <li><a href="/stats" style="color: inherit; text-decoration: none;">Records &amp; Telemetry</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 style="font-family: var(--f-display); font-size: 1rem; color: #fff; text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 800;">
+            <h4 style="font-family: var(--f-body); font-size: 0.9375rem; font-weight: 800; color: #fff; text-transform: uppercase; margin-bottom: 1.25rem;">
               Franchise
             </h4>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.875rem; color: #94a3b8;">
-              <li><a href="/players" style="color: inherit; text-decoration: none;">Knight Squad (43 Players)</a></li>
-              <li><a href="/about" style="color: inherit; text-decoration: none;">2022 Title Defense</a></li>
+              <li><a href="/players" style="color: inherit; text-decoration: none;">Squad Roster (43 Players)</a></li>
+              <li><a href="/about" style="color: inherit; text-decoration: none;">2022 Silverware Dossier</a></li>
               <li><a href="/news" style="color: inherit; text-decoration: none;">Dispatches &amp; Media</a></li>
-              <li><a href="/contact" style="color: inherit; text-decoration: none;">Martand Ground Desk</a></li>
+              <li><a href="/contact" style="color: inherit; text-decoration: none;">Ground Administration</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 style="font-family: var(--f-display); font-size: 1rem; color: var(--gold-400); text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 800;">
-              Dread Legion
+            <h4 style="font-family: var(--f-body); font-size: 0.9375rem; font-weight: 800; color: var(--c-cyan); text-transform: uppercase; margin-bottom: 1.25rem;">
+              RDCA Accreditation
             </h4>
             <p style="font-size: 0.8125rem; color: #94a3b8; line-height: 1.6; margin-bottom: 1rem;">
-              Backing Akhil Mishra, Kuldeep Sen, and Kumar Kartikeya in the Atal Bihari Vajpayee Memorial Tournament.
+              Sanctioned by the Rewa Division Cricket Association (RDCA). Home venue: Martand School Ground No. 3 &amp; APSU Stadium.
             </p>
-            <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--gold-400); font-weight: 700;">
-              #DREADTHETITANS
+            <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--c-cyan); font-weight: 700;">
+              #DREADTHESTRIKE
             </div>
           </div>
         </div>
 
         <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--b-subtle); padding-top: 2rem; font-size: 0.8125rem; color: #64748b; flex-wrap: wrap; gap: 1rem;">
-          <div>&copy; 2021–2026 Dread Eleven (DE). Sanctioned under RDCA.</div>
-          <div>Martand Ground No. 3 &amp; APSU Stadium • Rewa, Madhya Pradesh</div>
+          <div>&copy; 2021–2024 Dread Eleven (DE). All 24 tournament encounters recorded under RDCA.</div>
+          <div>Martand Ground No. 3 • Rewa, Madhya Pradesh</div>
         </div>
       </div>
     </footer>
+  </div>
 
-    <script src="/src/js/app.js"></script>
-  </body>
-  </html>
+  <script src="/src/js/app.js"></script>
+</body>
+</html>
   
   

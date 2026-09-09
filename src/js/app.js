@@ -1,157 +1,307 @@
 /**
- * DREAD ELEVEN (DE) — CYBER RADAR & TELEMETRY ENGINE
- * 60fps HTML5 Canvas Radar Pulse & Quantum Constellation
+ * DREAD ELEVEN (DE) — HIGH-PERFORMANCE INTERACTIVE ENGINE
+ * Features:
+ * 1. Interactive Cursor-Gravity Particle Constellation Canvas (60fps)
+ * 2. 3D Tilt Physics on Cards
+ * 3. Animated Number Rollups (CountUp on Viewport Entry)
+ * 4. ESPNcricinfo Interactive Tab Controller (Scorecard / Match Info)
+ * 5. Format & Season Filter for One Day & T20 Fixtures
+ * 6. Squad Role Filter
  */
 
-(function () {
-  'use strict';
+document.addEventListener('DOMContentLoaded', () => {
+  initParticleCanvas();
+  init3DCardTilt();
+  initNumberCounters();
+  initScorecardTabs();
+  initMatchFilters();
+  initSquadRoleFilter();
+});
 
-  // 1. Radar Constellation Canvas
+/* ==========================================================================
+   1. INTERACTIVE CURSOR-GRAVITY PARTICLE CONSTELLATION CANVAS
+   ========================================================================== */
+function initParticleCanvas() {
   const canvas = document.getElementById('ambient-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+  if (!canvas) return;
 
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    });
+  const ctx = canvas.getContext('2d');
+  let width, height;
+  let particles = [];
+  const particleCount = window.innerWidth < 768 ? 35 : 75;
 
-    const nodes = [];
-    const NODE_COUNT = 45;
+  const mouse = { x: null, y: null, radius: 140 };
 
-    for (let i = 0; i < NODE_COUNT; i++) {
-      nodes.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.4,
-        vy: (Math.random() - 0.5) * 0.4,
-        radius: Math.random() * 2 + 1,
-        alpha: Math.random() * 0.5 + 0.2
-      });
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  window.addEventListener('mousemove', (e) => {
+    mouse.x = e.clientX;
+    mouse.y = e.clientY;
+  });
+
+  window.addEventListener('mouseleave', () => {
+    mouse.x = null;
+    mouse.y = null;
+  });
+
+  class Particle {
+    constructor() {
+      this.x = Math.random() * width;
+      this.y = Math.random() * height;
+      this.vx = (Math.random() - 0.5) * 0.8;
+      this.vy = (Math.random() - 0.5) * 0.8;
+      this.radius = Math.random() * 2 + 1;
+      this.baseColor = Math.random() > 0.4 ? 'rgba(0, 240, 255,' : 'rgba(255, 255, 255,';
     }
 
-    let angle = 0;
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
 
-    function render() {
-      ctx.clearRect(0, 0, width, height);
+      if (this.x < 0 || this.x > width) this.vx *= -1;
+      if (this.y < 0 || this.y > height) this.vy *= -1;
 
-      // Subtle background grid
-      ctx.strokeStyle = 'rgba(0, 240, 255, 0.02)';
-      ctx.lineWidth = 1;
-      const gridSize = 60;
-      for (let x = 0; x < width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, height);
-        ctx.stroke();
-      }
-      for (let y = 0; y < height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(width, y);
-        ctx.stroke();
-      }
-
-      // Draw nodes and connective cyber telemetry lines
-      for (let i = 0; i < nodes.length; i++) {
-        const n = nodes[i];
-        n.x += n.vx;
-        n.y += n.vy;
-
-        if (n.x < 0) n.x = width;
-        if (n.x > width) n.x = 0;
-        if (n.y < 0) n.y = height;
-        if (n.y > height) n.y = 0;
-
-        ctx.fillStyle = `rgba(0, 240, 255, ${n.alpha})`;
-        ctx.beginPath();
-        ctx.arc(n.x, n.y, n.radius, 0, Math.PI * 2);
-        ctx.fill();
-
-        for (let j = i + 1; j < nodes.length; j++) {
-          const n2 = nodes[j];
-          const dx = n.x - n2.x;
-          const dy = n.y - n2.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 130) {
-            ctx.strokeStyle = `rgba(0, 240, 255, ${(1 - dist / 130) * 0.15})`;
-            ctx.lineWidth = 0.75;
-            ctx.beginPath();
-            ctx.moveTo(n.x, n.y);
-            ctx.lineTo(n2.x, n2.y);
-            ctx.stroke();
-          }
+      if (mouse.x !== null && mouse.y !== null) {
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < mouse.radius) {
+          const force = (mouse.radius - dist) / mouse.radius;
+          this.x -= (dx / dist) * force * 3;
+          this.y -= (dy / dist) * force * 3;
         }
       }
-
-      requestAnimationFrame(render);
     }
 
-    render();
-  }
-
-  // 2. Countdown Timer
-  function initCountdown() {
-    const targetDate = new Date("2025-09-10T14:00:00+05:30").getTime();
-    const dEl = document.getElementById("cd-days");
-    const hEl = document.getElementById("cd-hours");
-    const mEl = document.getElementById("cd-mins");
-    const sEl = document.getElementById("cd-secs");
-    if (!dEl || !hEl || !mEl || !sEl) return;
-
-    function update() {
-      const now = new Date().getTime();
-      const diff = Math.max(0, targetDate - now);
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-      dEl.textContent = days;
-      hEl.textContent = String(hours).padStart(2, "0");
-      mEl.textContent = String(mins).padStart(2, "0");
-      sEl.textContent = String(secs).padStart(2, "0");
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.baseColor + '0.7)';
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = '#00f0ff';
+      ctx.fill();
     }
-    update();
-    setInterval(update, 1000);
   }
 
-  // 3. Squad Role Filter
-  function initSquadFilter() {
-    const container = document.getElementById("squad-filter-controls");
-    const grid = document.getElementById("players-grid");
-    if (!container || !grid) return;
+  for (let i = 0; i < particleCount; i++) {
+    particles.push(new Particle());
+  }
 
-    const buttons = container.querySelectorAll(".role-btn");
-    const cards = grid.querySelectorAll(".cyber-player-card");
+  function render() {
+    ctx.clearRect(0, 0, width, height);
 
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        buttons.forEach((b) => {
-          b.classList.remove("btn-cyber-primary");
-          b.classList.add("btn-cyber-outline");
-        });
-        btn.classList.remove("btn-cyber-outline");
-        btn.classList.add("btn-cyber-primary");
+    for (let i = 0; i < particles.length; i++) {
+      particles[i].update();
+      particles[i].draw();
 
-        const filter = btn.getAttribute("data-filter");
-        cards.forEach((card) => {
-          const role = card.getAttribute("data-role") || "";
-          if (filter === "all" || role.toLowerCase().includes(filter.toLowerCase())) {
-            card.style.display = "";
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < 110) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `rgba(0, 240, 255, ${0.18 * (1 - dist / 110)})`;
+          ctx.lineWidth = 0.8;
+          ctx.stroke();
+        }
+      }
+    }
+
+    requestAnimationFrame(render);
+  }
+
+  render();
+}
+
+/* ==========================================================================
+   2. 3D TILT PHYSICS ON CARDS
+   ========================================================================== */
+function init3DCardTilt() {
+  const cards = document.querySelectorAll('.tilt-card, .player-card, .hero-telemetry-panel');
+  cards.forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * -6;
+      const rotateY = ((x - centerX) / centerX) * 6;
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)';
+    });
+  });
+}
+
+/* ==========================================================================
+   3. ANIMATED NUMBER COUNTERS (COUNTUP ON ENTRY)
+   ========================================================================== */
+function initNumberCounters() {
+  const counterElements = document.querySelectorAll('[data-count]');
+  if (!counterElements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const targetVal = parseFloat(target.getAttribute('data-count'));
+        const isFloat = target.getAttribute('data-count').includes('.');
+        const duration = 1200;
+        const startTime = performance.now();
+
+        function step(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeProgress = 1 - Math.pow(1 - progress, 3);
+          const currentVal = easeProgress * targetVal;
+
+          target.textContent = isFloat ? currentVal.toFixed(2) : Math.floor(currentVal);
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
           } else {
-            card.style.display = "none";
+            target.textContent = isFloat ? targetVal.toFixed(2) : targetVal;
           }
-        });
+        }
+
+        requestAnimationFrame(step);
+        observer.unobserve(target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  counterElements.forEach((el) => observer.observe(el));
+}
+
+/* ==========================================================================
+   4. ESPNcricinfo INTERACTIVE TABS CONTROLLER (Scorecard / Match Info)
+   ========================================================================== */
+function initScorecardTabs() {
+  const tabButtons = document.querySelectorAll('.espn-tab-btn');
+  if (!tabButtons.length) return;
+
+  tabButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-tab');
+
+      tabButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const tabContents = document.querySelectorAll('.espn-tab-content');
+      tabContents.forEach((content) => {
+        if (content.id === targetId) {
+          content.style.display = 'block';
+          content.style.opacity = '0';
+          setTimeout(() => {
+            content.style.transition = 'opacity 0.2s ease';
+            content.style.opacity = '1';
+          }, 10);
+        } else {
+          content.style.display = 'none';
+        }
       });
     });
+  });
+}
+
+/* ==========================================================================
+   5. FORMAT & SEASON FILTER FOR ONE DAY & T20 FIXTURES
+   ========================================================================== */
+function initMatchFilters() {
+  const formatButtons = document.querySelectorAll('.format-filter-btn');
+  const seasonButtons = document.querySelectorAll('.season-filter-btn');
+  const matchCards = document.querySelectorAll('.match-fixture-card');
+  if (!matchCards.length) return;
+
+  let activeFormat = 'all';
+  let activeSeason = 'all';
+
+  function applyFilters() {
+    let visibleCount = 0;
+    matchCards.forEach((card) => {
+      const format = (card.getAttribute('data-format') || '').toUpperCase();
+      const season = card.getAttribute('data-season') || '';
+
+      const matchFormat = activeFormat === 'all' || 
+        (activeFormat === 'T20' && format.includes('T20')) || 
+        (activeFormat === 'ODI' && (format.includes('ODI') || format.includes('ONE-DAY')));
+
+      const matchSeason = activeSeason === 'all' || season === activeSeason;
+
+      if (matchFormat && matchSeason) {
+        card.style.display = 'flex';
+        card.style.opacity = '1';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+        card.style.opacity = '0';
+      }
+    });
+
+    const countDisplay = document.getElementById('filter-matches-count');
+    if (countDisplay) {
+      countDisplay.textContent = visibleCount;
+    }
   }
 
-  window.addEventListener("DOMContentLoaded", () => {
-    initCountdown();
-    initSquadFilter();
+  formatButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      formatButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFormat = btn.getAttribute('data-format');
+      applyFilters();
+    });
   });
-})();
+
+  seasonButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      seasonButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSeason = btn.getAttribute('data-season');
+      applyFilters();
+    });
+  });
+}
+
+/* ==========================================================================
+   6. SQUAD ROLE FILTER
+   ========================================================================== */
+function initSquadRoleFilter() {
+  const filterBtns = document.querySelectorAll('#squad-filter-controls .role-btn');
+  const cards = document.querySelectorAll('#players-grid .player-card');
+  if (!filterBtns.length || !cards.length) return;
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      cards.forEach((card) => {
+        const role = card.getAttribute('data-role') || '';
+        if (filter === 'all' || role.toLowerCase().includes(filter.toLowerCase())) {
+          card.style.display = 'flex';
+          card.style.opacity = '1';
+        } else {
+          card.style.display = 'none';
+          card.style.opacity = '0';
+        }
+      });
+    });
+  });
+}
