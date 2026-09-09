@@ -1,33 +1,27 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Derby Results Archive (2021–2024) | Dread Eleven (DE)</title>
+  <title>Derby Results Archive (24 Matches) | Dread Eleven (DE)</title>
   <meta name="description" content="Complete match records and scorecards for all 24 clashes between Dread Eleven (13 wins) and Destroyers in Rewa.">
   <link rel="canonical" href="http://127.0.0.1:8086/results">
 
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://127.0.0.1:8086/results">
-  <meta property="og:title" content="Derby Results Archive (2021–2024) | Dread Eleven (DE)">
+  <meta property="og:title" content="Derby Results Archive (24 Matches) | Dread Eleven (DE)">
   <meta property="og:description" content="Complete match records and scorecards for all 24 clashes between Dread Eleven (13 wins) and Destroyers in Rewa.">
-  <meta property="og:image" content="http://127.0.0.1:8086/public/de-hero.jpg">
   <meta property="og:site_name" content="Dread Eleven (DE)">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="http://127.0.0.1:8086/results">
-  <meta name="twitter:title" content="Derby Results Archive (2021–2024) | Dread Eleven (DE)">
+  <meta name="twitter:title" content="Derby Results Archive (24 Matches) | Dread Eleven (DE)">
   <meta name="twitter:description" content="Complete match records and scorecards for all 24 clashes between Dread Eleven (13 wins) and Destroyers in Rewa.">
-  <meta name="twitter:image" content="http://127.0.0.1:8086/public/de-hero.jpg">
 
-  <!-- Fonts Preconnect -->
+  <!-- Google Fonts: Chakra Petch & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;0,800;0,900;1,700;1,900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;0,800;0,900;1,700;1,900&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/css/styles.css">
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
@@ -35,1226 +29,1048 @@
   
 </head>
 <body>
-  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
-  <div class="content-wrapper">
-  
 
-  <!-- Top Marquee Ticker -->
-  <div class="top-ticker" aria-hidden="true" style="background:#02040a; border-bottom:1px solid rgba(0,240,255,0.15); padding:0.4rem 0; font-family:var(--f-mono); font-size:0.6875rem; letter-spacing:0.12em; color:var(--c-gray-400); overflow:hidden; white-space:nowrap;">
-    <div class="ticker-track" style="display:inline-flex; gap:3rem; animation:tickerScroll 28s linear infinite;">
-      <span style="display:inline-flex; align-items:center; gap:0.5rem;"><span class="live-dot"></span> DREAD ELEVEN (DE)</span>
-      <span style="display:inline-flex; align-items:center; gap:0.5rem;"><span class="live-dot"></span> ALL-TIME SERIES LEADERS: 13 WINS VS DESTROYERS</span>
-      <span style="display:inline-flex; align-items:center; gap:0.5rem;"><span class="live-dot"></span> 2022 CHAMPIONSHIP TITLE WINNERS</span>
-      <span style="display:inline-flex; align-items:center; gap:0.5rem;"><span class="live-dot"></span> CAPTAIN: AKHIL MISHRA (905 RUNS • 47.6 AVG)</span>
-      <span style="display:inline-flex; align-items:center; gap:0.5rem;"><span class="live-dot"></span> ATAL BIHARI VAJPAYEE MEMORIAL TOURNAMENT • REWA</span>
+
+  <!-- KKR-style Top Chant Bar -->
+  <div class="knight-top-bar">
+    <div class="container top-bar-inner">
+      <div><span class="gold-star-tag">★ 2022 TOURNAMENT CHAMPIONS</span> • ATAL BIHARI VAJPAYEE CUP</div>
+      <div>SERIES ADVANTAGE: <strong style="color:var(--kkr-gold-bright);">DE LEADS 13–11 (54.2%)</strong></div>
+      <div>CAPT. AKHIL MISHRA (905 RUNS • 47.6 AVG)</div>
     </div>
   </div>
 
-  <!-- Header Navigation -->
+  <!-- Royal Shield Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="brand-block" aria-label="Dread Eleven Home">
-        <svg class="brand-crest-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="50,4 94,28 94,72 50,96 6,72 6,28" fill="#060913" stroke="#00f0ff" stroke-width="4"/>
-          <polygon points="50,14 84,32 84,68 50,86 16,68 16,32" fill="#080e1e" stroke="#7928ca" stroke-width="1.5" stroke-dasharray="3 3"/>
-          <circle cx="50" cy="50" r="28" stroke="#00f0ff" stroke-width="1.5" stroke-opacity="0.4"/>
-          <text x="50" y="58" font-family="'Chakra Petch', sans-serif" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle">DE</text>
-        </svg>
-        <div class="brand-title-group">
-          <span class="brand-franchise-name">DREAD <span style="color:var(--c-cyan-neon);">ELEVEN</span></span>
-          <span class="brand-subline">Atal Bihari Vajpayee Cup • Rewa</span>
+      <a href="/" class="knight-brand-crest" aria-label="Dread Eleven Home">
+        <div class="shield-monogram">DE</div>
+        <div class="knight-title-group">
+          <h1>DREAD <span>ELEVEN</span></h1>
+          <div class="knight-subline">Rewa Division Cricket Association (RDCA)</div>
         </div>
       </a>
 
       <nav class="header-nav" aria-label="Main Navigation">
         
-          <a href="/" class="header-nav-link " >
+          <a href="/" class="nav-link " >
             Home
           </a>
         
-          <a href="/players" class="header-nav-link " >
-            Squad
+          <a href="/players" class="nav-link " >
+            Knight Squad
           </a>
         
-          <a href="/fixtures" class="header-nav-link " >
+          <a href="/fixtures" class="nav-link " >
             Fixtures
           </a>
         
-          <a href="/results" class="header-nav-link active" aria-current="page">
-            Results
+          <a href="/results" class="nav-link active" aria-current="page">
+            Derby Log
           </a>
         
-          <a href="/points-table" class="header-nav-link " >
-            Points Table
+          <a href="/points-table" class="nav-link " >
+            Standings
           </a>
         
-          <a href="/stats" class="header-nav-link " >
+          <a href="/stats" class="nav-link " >
             Stats
           </a>
         
-          <a href="/news" class="header-nav-link " >
+          <a href="/news" class="nav-link " >
             News
           </a>
         
-          <a href="/about" class="header-nav-link " >
-            About
+          <a href="/about" class="nav-link " >
+            The Lore
           </a>
         
-          <a href="/contact" class="header-nav-link " >
+          <a href="/contact" class="nav-link " >
             Contact
           </a>
         
       </nav>
 
-      <div class="header-status-badge">
-        <span class="live-dot"></span>
-        <span>CAPT. AKHIL MISHRA</span>
-      </div>
+      <a href="/about" class="btn-knight-gold">
+        2022 Trophy
+      </a>
     </div>
   </header>
   
 
-<section class="spotlight-banner-section" style="padding-top:4rem;">
+<section class="squad-section" style="padding-top: 4rem;">
   <div class="container">
-    <div class="section-masthead">
+    <div class="section-head">
       <div>
-        <p class="section-pretitle">Derby Ledger</p>
-        <h1 class="section-bigtitle">Derby Results Archive (24 Matches)</h1>
-        <p style="color:var(--c-gray-400); font-size:1rem; max-width:64ch; margin-top:0.4rem;">
+        <div class="section-tag">// HISTORICAL LEDGER</div>
+        <h1 class="section-title">Derby Results Archive (24 Matches)</h1>
+        <p style="color: var(--kkr-gray-400); font-size: 1rem; margin-top: 0.4rem;">
           Dread Eleven holds a commanding 13–11 all-time series advantage across 4 seasons in Rewa.
         </p>
       </div>
       <div>
-        <span class="tabular font-bold" style="font-family:var(--f-mono); font-size:1.1rem; color:var(--c-cyan-neon);">DE LEADS 13–11</span>
+        <span class="tabular font-bold" style="font-family: var(--f-display); font-size: 1.8rem; color: var(--kkr-gold-bright);">DE LEADS 13–11</span>
       </div>
     </div>
 
-    <div class="matches-pro-grid">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 1.75rem;">
       
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2021</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #1</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2021</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #1</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">01 Aug 2021</span> • <span>Martand School Ground No. 3</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">01 Aug 2021</strong> • <span>Martand School Ground No. 3</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  174/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  174/7 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  151/5 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  151/5 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 3 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Venkatesh Iyer</strong> (54 runs off 35 balls)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Venkatesh Iyer</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2021-08-01" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2021-08-01" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2021</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #2</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2021</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #2</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">04 Aug 2021</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">04 Aug 2021</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  170/8 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  170/8 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  155/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  155/9 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 2 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Amarjeet Kumar Singh</strong> (5/1 in 3 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Amarjeet Kumar Singh</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2021-08-04" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2021-08-04" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2021</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #3</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2021</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #3</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">07 Aug 2021</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">07 Aug 2021</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  150/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  150/9 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  170/6 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  170/6 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 20 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Amarjeet Kumar Singh</strong> (4/68 in 3 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Amarjeet Kumar Singh</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2021-08-07" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2021-08-07" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2021</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #4</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2021</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #4</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">11 Aug 2021</span> • <span>Martand School Ground No. 3</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">11 Aug 2021</strong> • <span>Martand School Ground No. 3</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  168/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  168/7 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  163/8 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  163/8 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 3 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Rohit Rajawat</strong> (3/37 in 2 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Rohit Rajawat</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2021-08-11" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2021-08-11" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2021</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #5</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2021</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #5</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">15 Aug 2021</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">15 Aug 2021</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  181/5 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  181/5 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  151/8 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  151/8 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 5 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Rajat Patidar</strong> (3/72 in 4 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Rajat Patidar</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2021-08-15" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2021-08-15" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2021</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #6</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2021</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #6</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">20 Aug 2021</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">20 Aug 2021</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  162/8 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  162/8 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  149/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  149/9 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 2 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Akhil Mishra</strong> (58 runs off 36 balls)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Akhil Mishra</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2021-08-20" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2021-08-20" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2021</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #7</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2021</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #7</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">28 Aug 2021</span> • <span>Martand School Ground No. 3</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">28 Aug 2021</strong> • <span>Martand School Ground No. 3</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  169/5 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  169/5 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  183/10 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  183/10 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 14 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Pranav Dwivedi</strong> (53 runs off 23 balls)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Pranav Dwivedi</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2021-08-28" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2021-08-28" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2022</span>
-              <span style="font-family:var(--f-brand); font-size:1rem; color:var(--c-cyan-neon);">2022 CHAMPIONSHIP FINAL</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2022</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); font-weight: 800;">👑 2022 FINAL</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">10 Aug 2022</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">10 Aug 2022</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  173/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  173/7 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  155/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  155/9 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 3 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Amarjeet Kumar Singh</strong> (3/71 in 4 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Amarjeet Kumar Singh</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2022-08-10" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2022-08-10" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag t20">T20 • SEASON 2022</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #9</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">T20 • SEASON 2022</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #9</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">12 Aug 2022</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">12 Aug 2022</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  183/10 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  183/10 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  162/6 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(20 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  162/6 <span style="font-size: 0.6875rem; font-weight: 400;">(20 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 0 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Kuldeep Sen</strong> (46 runs off 30 balls)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Kuldeep Sen</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2022-08-12" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2022-08-12" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2022</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #10</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2022</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #10</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">04 Sep 2022</span> • <span>Martand School Ground No. 3</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">04 Sep 2022</strong> • <span>Martand School Ground No. 3</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  234/8 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  234/8 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  232/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  232/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 2 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Mohd Arham Aquil</strong> (5/95 in 9 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Mohd Arham Aquil</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2022-09-04" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2022-09-04" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2022</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #11</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2022</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #11</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">07 Sep 2022</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">07 Sep 2022</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  278/8 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  278/8 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  278/6 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  278/6 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 0 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Pranav Dwivedi</strong> (3/55 in 10 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Pranav Dwivedi</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2022-09-07" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2022-09-07" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2022</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #12</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2022</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #12</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">10 Sep 2022</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">10 Sep 2022</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  234/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  234/7 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  271/8 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  271/8 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 37 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Venkatesh Iyer</strong> (57 runs off 66 balls)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Venkatesh Iyer</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2022-09-10" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2022-09-10" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2022</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #13</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2022</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #13</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">14 Sep 2022</span> • <span>Martand School Ground No. 3</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">14 Sep 2022</strong> • <span>Martand School Ground No. 3</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  261/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  261/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  231/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  231/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 1 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Subhranshu Senapati</strong> (7/69 in 7 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Subhranshu Senapati</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2022-09-14" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2022-09-14" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2022</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #14</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2022</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #14</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">18 Sep 2022</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">18 Sep 2022</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  225/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  225/7 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  279/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  279/7 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 54 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Pranav Dwivedi</strong> (3/62 in 10 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Pranav Dwivedi</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2022-09-18" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2022-09-18" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2023</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #15</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2023</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #15</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">05 Sep 2023</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">05 Sep 2023</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  289/10 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  289/10 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  205/10 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  205/10 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 0 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Prabhanshu Shukla</strong> (8/22 in 9 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Prabhanshu Shukla</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2023-09-05" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2023-09-05" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2023</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #16</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2023</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #16</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">08 Sep 2023</span> • <span>Martand School Ground No. 3</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">08 Sep 2023</strong> • <span>Martand School Ground No. 3</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  263/10 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  263/10 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  206/8 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  206/8 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 0 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Akhil Mishra</strong> (61 runs off 68 balls)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Akhil Mishra</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2023-09-08" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2023-09-08" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2023</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #17</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2023</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #17</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">12 Sep 2023</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">12 Sep 2023</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  252/10 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  252/10 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  279/6 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  279/6 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 27 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Subhranshu Senapati</strong> (5/51 in 7 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Subhranshu Senapati</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2023-09-12" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2023-09-12" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2023</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #18</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2023</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #18</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">16 Sep 2023</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">16 Sep 2023</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  232/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  232/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  274/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  274/7 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 42 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Pranav Dwivedi</strong> (3/60 in 10 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Pranav Dwivedi</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2023-09-16" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2023-09-16" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2023</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #19</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2023</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #19</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">20 Sep 2023</span> • <span>Martand School Ground No. 3</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">20 Sep 2023</strong> • <span>Martand School Ground No. 3</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  279/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  279/7 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  221/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  221/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 3 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Kumar Kartikeya</strong> (5/131 in 10 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Kumar Kartikeya</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2023-09-20" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2023-09-20" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2024</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #20</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2024</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #20</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">05 Sep 2024</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">05 Sep 2024</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name winner">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  266/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  266/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name ">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  264/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  264/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip de-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(255, 215, 0, 0.12); color: var(--kkr-gold-bright); border: 1px solid rgba(255, 215, 0, 0.3);">
               <span>Dread Eleven won by 1 wickets</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Rahul Batham</strong> (3/91 in 9 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Rahul Batham</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2024-09-05" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2024-09-05" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2024</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #21</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2024</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #21</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">08 Sep 2024</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">08 Sep 2024</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  252/7 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  252/7 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  257/6 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  257/6 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 5 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Pranav Dwivedi</strong> (3/66 in 10 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Pranav Dwivedi</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2024-09-08" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2024-09-08" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2024</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #22</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2024</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #22</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">12 Sep 2024</span> • <span>Martand School Ground No. 3</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">12 Sep 2024</strong> • <span>Martand School Ground No. 3</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  274/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  274/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  276/10 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  276/10 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 2 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Anubhav Agarwal</strong> (47 runs off 54 balls)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Anubhav Agarwal</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2024-09-12" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2024-09-12" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2024</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #23</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2024</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #23</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">16 Sep 2024</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">16 Sep 2024</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  270/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  270/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  288/6 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  288/6 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 18 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Pranav Dwivedi</strong> (3/72 in 10 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Pranav Dwivedi</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2024-09-16" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2024-09-16" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
         
-          <div class="cyber-match-card">
-            <div class="cyber-match-header">
-              <span class="pro-fmt-tag odi">ODI • SEASON 2024</span>
-              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">MATCH #24</span>
+          <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2rem; display: flex; flex-direction: column;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); background: rgba(255, 215, 0, 0.1); padding: 0.2rem 0.5rem; border-radius: 3px;">ODI • SEASON 2024</span>
+              <span style="font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gray-400);">MATCH #24</span>
             </div>
 
-            <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem;">
-              <span style="font-weight:700; color:#fff;">20 Sep 2024</span> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
+            <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem;">
+              <strong style="color: #fff;">20 Sep 2024</strong> • <span>Awadhesh Pratap Singh University (APSU) Stadium</span>
             </div>
 
-            <div class="cyber-scoreboard-box">
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle de">DE</div>
-                  <span class="cyber-team-name ">Dread Eleven</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  225/9 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+            <div style="background: var(--kkr-purple-surface); border: 1px solid var(--kkr-border-subtle); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: var(--kkr-gray-400);">Dread Eleven</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gray-400);">
+                  225/9 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
-
-              <div class="cyber-score-entry">
-                <div class="cyber-team-ident">
-                  <div class="cyber-team-circle des">DES</div>
-                  <span class="cyber-team-name winner">Destroyers</span>
-                </div>
-                <div class="cyber-score-numbers tabular">
-                  233/6 <span style="font-size:0.75rem; color:var(--c-gray-400); font-weight:400;">(50 ov)</span>
-                </div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-family: var(--f-display); font-size: 1.2rem; font-weight: 800; color: #fff;">Destroyers</span>
+                <span class="tabular" style="font-family: var(--f-mono); font-weight: 800; color: var(--kkr-gold-bright);">
+                  233/6 <span style="font-size: 0.6875rem; font-weight: 400;">(50 ov)</span>
+                </span>
               </div>
             </div>
 
-            <div class="pro-result-strip des-victory">
+            <div style="padding: 0.5rem 0.75rem; border-radius: 4px; font-family: var(--f-mono); font-size: 0.75rem; font-weight: 700; text-align: center; margin-bottom: 1.25rem; background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3);">
               <span>Destroyers won by 8 runs</span>
             </div>
 
             
-              <div style="font-size:0.75rem; color:var(--c-gray-400); margin-bottom:1rem; border-top:1px solid var(--b-subtle); padding-top:0.6rem;">
-                POTM: <strong style="color:var(--c-cyan-neon);">Sagar Pratap Singh</strong> (5/60 in 7 ov)
+              <div style="font-size: 0.75rem; color: var(--kkr-gray-400); margin-bottom: 1rem; border-top: 1px solid var(--kkr-border-subtle); padding-top: 0.5rem; font-family: var(--f-mono);">
+                POTM: <strong style="color: var(--kkr-gold-bright);">Sagar Pratap Singh</strong>
               </div>
             
 
-            <a href="/matches/destroyers-vs-dread-eleven-2024-09-20" class="btn-cyber btn-cyber-outline" style="margin-top:auto; font-size:0.75rem; padding:0.6rem 1rem;">
+            <a href="/matches/destroyers-vs-dread-eleven-2024-09-20" class="btn-knight-outline" style="margin-top: auto; font-size: 0.75rem; padding: 0.6rem 1rem; text-align: center;">
               <span>Scorecard Hub &rarr;</span>
             </a>
           </div>
@@ -1266,48 +1082,65 @@
 
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-columns">
+        <div class="footer-grid">
           <div>
-            <div class="brand-franchise-name" style="font-size: 2rem;">
-              DREAD <span style="color:var(--c-cyan-neon);">ELEVEN</span>
+            <div class="knight-title-group" style="margin-bottom: 0.75rem;">
+              <h2 style="font-family: var(--f-display); font-size: 2.3rem; color: #fff; text-transform: uppercase;">
+                DREAD <span>ELEVEN</span>
+              </h2>
             </div>
-            <p style="font-size:0.875rem; color:var(--c-gray-400); max-width:48ch; margin-top:0.75rem; line-height:1.7;">
-              Official franchise website for Dread Eleven (DE), captained by Akhil Mishra. 
-              2022 Atal Bihari Vajpayee Memorial Trophy winners under the Rewa Division Cricket Association (RDCA).
+            <p style="font-size: 0.9375rem; color: var(--kkr-gray-400); max-width: 44ch; line-height: 1.7;">
+              Official franchise portal of Dread Eleven (DE), captained by Akhil Mishra. 
+              Champions of the 2022 Atal Bihari Vajpayee Memorial Trophy and all-time series leaders against Destroyers under RDCA.
             </p>
           </div>
 
           <div>
-            <h4 style="font-family:var(--f-brand); font-size:1.2rem; color:#fff; text-transform:uppercase; margin-bottom:1rem;">Match Center</h4>
-            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem; color:var(--c-gray-400);">
-              <li><a href="/fixtures" style="color:inherit; text-decoration:none;">Upcoming Fixtures (2025–26)</a></li>
-              <li><a href="/results" style="color:inherit; text-decoration:none;">Completed Derby Archive</a></li>
-              <li><a href="/points-table" style="color:inherit; text-decoration:none;">Tournament Points Table</a></li>
-              <li><a href="/stats" style="color:inherit; text-decoration:none;">Dread Eleven Leaderboards</a></li>
+            <h4 style="font-family: var(--f-headline); font-size: 1rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem; font-weight: 800;">
+              Derby Center
+            </h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--kkr-gray-400);">
+              <li><a href="/fixtures" style="color: inherit; text-decoration: none;">2025–26 Fixtures</a></li>
+              <li><a href="/results" style="color: inherit; text-decoration: none;">24 Derby Clashes Archive</a></li>
+              <li><a href="/points-table" style="color: inherit; text-decoration: none;">Division Points Table</a></li>
+              <li><a href="/stats" style="color: inherit; text-decoration: none;">Performance Records</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 style="font-family:var(--f-brand); font-size:1.2rem; color:#fff; text-transform:uppercase; margin-bottom:1rem;">Franchise Dossier</h4>
-            <ul style="list-style:none; display:flex; flex-direction:column; gap:0.5rem; font-size:0.875rem; color:var(--c-gray-400);">
-              <li><a href="/players" style="color:inherit; text-decoration:none;">Dread Squad (43 Players)</a></li>
-              <li><a href="/about" style="color:inherit; text-decoration:none;">About Dread Eleven &amp; 2022 Title</a></li>
-              <li><a href="/news" style="color:inherit; text-decoration:none;">News &amp; Media Bulletins</a></li>
-              <li><a href="/contact" style="color:inherit; text-decoration:none;">Ground Info &amp; Inquiries</a></li>
+            <h4 style="font-family: var(--f-headline); font-size: 1rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem; font-weight: 800;">
+              Franchise
+            </h4>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--kkr-gray-400);">
+              <li><a href="/players" style="color: inherit; text-decoration: none;">Squad (43 Players)</a></li>
+              <li><a href="/about" style="color: inherit; text-decoration: none;">2022 Championship Victory</a></li>
+              <li><a href="/news" style="color: inherit; text-decoration: none;">Franchise Media</a></li>
+              <li><a href="/contact" style="color: inherit; text-decoration: none;">Martand Ground Desk</a></li>
             </ul>
+          </div>
+
+          <div>
+            <h4 style="font-family: var(--f-headline); font-size: 1rem; color: var(--kkr-gold-bright); text-transform: uppercase; margin-bottom: 1rem; font-weight: 800;">
+              Dread Legion
+            </h4>
+            <p style="font-size: 0.8125rem; color: var(--kkr-gray-400); line-height: 1.6; margin-bottom: 1rem;">
+              Stand with the Titans of Rewa. Backing Akhil Mishra, Kuldeep Sen, and Kumar Kartikeya.
+            </p>
+            <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--kkr-gold-bright); font-weight: 700;">
+              #DREADTHETITANS
+            </div>
           </div>
         </div>
 
-        <div style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--b-subtle); padding-top:2rem; font-size:0.75rem; color:var(--c-gray-600); flex-wrap:wrap; gap:1rem;">
-          <div>&copy; 2021–2026 Dread Eleven (DE). Sanctioned under RDCA.</div>
-          <div>Martand Ground No. 3 &amp; APSU Stadium • Rewa, Madhya Pradesh</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--kkr-border-subtle); padding-top: 2rem; font-size: 0.8125rem; color: var(--kkr-gray-600); flex-wrap: wrap; gap: 1rem;">
+          <div>&copy; 2021–2026 Dread Eleven (DE). All rights reserved.</div>
+          <div>Martand Ground No. 3 • Rewa, Madhya Pradesh</div>
         </div>
       </div>
     </footer>
-  </div>
 
-  <script src="/src/js/app.js"></script>
-</body>
-</html>
+    <script src="/src/js/app.js"></script>
+  </body>
+  </html>
   
   
