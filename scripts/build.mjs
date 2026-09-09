@@ -56,8 +56,31 @@ function esc(text) {
 // ------------------------------------------------------------
 // GLOBAL HTML TEMPLATE BLOCKS
 // ------------------------------------------------------------
-function renderHead({ title, description, canonicalUrl, ogType = 'website', jsonLd = null }) {
+function renderHead({ title, description, canonicalUrl, ogType = 'website', ogImage = '/public/images/de-crest.svg', jsonLd = null, breadcrumbs = null }) {
   const fullCanonical = canonicalUrl ? `${BASE_URL}${canonicalUrl}` : BASE_URL;
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage}`;
+
+  const jsonLdList = [];
+  if (jsonLd) {
+    if (Array.isArray(jsonLd)) {
+      jsonLdList.push(...jsonLd);
+    } else {
+      jsonLdList.push(jsonLd);
+    }
+  }
+
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    jsonLdList.push({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbs.map((b, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: b.name,
+        item: b.item.startsWith('http') ? b.item : `${BASE_URL}${b.item}`
+      }))
+    });
+  }
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -66,20 +89,33 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', json
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="${fullCanonical}">
+  <meta name="theme-color" content="#0b0b0b">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="${esc(ogType)}">
   <meta property="og:url" content="${fullCanonical}">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
+  <meta property="og:image" content="${fullOgImage}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Dread Eleven Cricket Club (DE)">
+  <meta property="og:locale" content="en_IN">
 
-  <!-- Twitter -->
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="${fullCanonical}">
   <meta name="twitter:title" content="${esc(title)}">
   <meta name="twitter:description" content="${esc(description)}">
+  <meta name="twitter:image" content="${fullOgImage}">
+  <meta name="twitter:site" content="@DreadElevenRewa">
+
+  <!-- Icons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+  <link rel="apple-touch-icon" href="/public/favicon.svg">
+  <link rel="manifest" href="/manifest.json">
 
   <!-- Typography Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,9 +123,8 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', json
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/css/styles.css">
-  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
 
-  ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
+  ${jsonLdList.map((item) => `<script type="application/ld+json">${JSON.stringify(item)}</script>`).join('\n  ')}
 </head>
 <body>
   <!-- Awwwards-Grade Procedural Film Grain & Noise Foreground FX -->
@@ -209,10 +244,27 @@ function renderFooter() {
               <li><a href="/contact#management">Club Management</a></li>
             </ul>
           </div>
+
+          <div class="footer-col">
+            <h4>Legal &amp; Policies</h4>
+            <ul class="footer-links">
+              <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms &amp; Conditions</a></li>
+              <li><a href="/about">Editorial Policy &amp; E-E-A-T</a></li>
+              <li><a href="/contact">Grievance Redressal</a></li>
+            </ul>
+          </div>
         </div>
 
         <div class="footer-bottom">
           <div>&copy; 2021–2026 Dread Eleven Cricket Club (DE) • Rewa Division Cricket Association (RDCA)</div>
+          <div style="display:flex; gap:1.25rem; align-items:center;">
+            <a href="https://instagram.com/dreadelevenrewa" target="_blank" rel="noopener noreferrer" style="color:var(--c-gray-400); text-decoration:none;">Instagram</a>
+            <span style="color:var(--c-gray-600);">•</span>
+            <a href="https://x.com/DreadElevenRewa" target="_blank" rel="noopener noreferrer" style="color:var(--c-gray-400); text-decoration:none;">X / Twitter</a>
+            <span style="color:var(--c-gray-600);">•</span>
+            <a href="https://youtube.com/@dreadelevenrewa" target="_blank" rel="noopener noreferrer" style="color:var(--c-gray-400); text-decoration:none;">YouTube</a>
+          </div>
           <div>Bespoke Cyber-Athletic Architecture • Forged in Rewa, Madhya Pradesh</div>
         </div>
 
@@ -740,7 +792,11 @@ ${renderHead({
   title: 'Dread Eleven Roster 2021–2026 | Player Roster (43 Players) | RDCA',
   description: 'Complete player directory for Dread Eleven Cricket Club (DE) in Rewa. Captain Akhil Mishra, batsmen, all-rounders, bowlers, and wicketkeepers with tournament statistics.',
   canonicalUrl: '/players',
-  jsonLd: squadJsonLd
+  jsonLd: squadJsonLd,
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Squad', item: '/players' }
+  ]
 })}
 ${renderHeader('squad')}
 
@@ -830,7 +886,12 @@ ${renderHead({
   title: `#${p.jerseyNumber} ${p.name} — Career Stats & Profile | Dread Eleven`,
   description: `Official player profile and career tournament statistics for ${p.name} (#${p.jerseyNumber}) of Dread Eleven. ${p.batting.runs} runs, ${p.bowling.wickets} wickets in Rewa division.`,
   canonicalUrl: `/players/${p.slug}`,
-  jsonLd: playerJsonLd
+  jsonLd: playerJsonLd,
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Squad', item: '/players' },
+    { name: `#${p.jerseyNumber} ${p.name}`, item: `/players/${p.slug}` }
+  ]
 })}
 ${renderHeader('squad')}
 
@@ -1091,7 +1152,11 @@ function generateMatchPages() {
 ${renderHead({
   title: 'Dread Eleven Upcoming Derby Fixtures (2026 Season) | Rewa Tournament',
   description: 'Schedule of upcoming Atal Bihari Vajpayee Memorial Tournament fixtures for Dread Eleven against Destroyers at APSU Stadium, Rewa.',
-  canonicalUrl: '/fixtures'
+  canonicalUrl: '/fixtures',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Fixtures', item: '/fixtures' }
+  ]
 })}
 ${renderHeader('fixtures')}
 ${renderMatchListSection(false)}
@@ -1104,7 +1169,11 @@ ${renderFooter()}
 ${renderHead({
   title: 'Match Results Archive (2021–2026) | Dread Eleven vs Destroyers',
   description: 'Official results archive of all completed matches between Dread Eleven and Destroyers in the Atal Bihari Vajpayee Memorial Tournament, Rewa.',
-  canonicalUrl: '/results'
+  canonicalUrl: '/results',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Results', item: '/results' }
+  ]
 })}
 ${renderHeader('results')}
 ${renderMatchListSection(true)}
@@ -1232,7 +1301,12 @@ ${renderHead({
   title: `Dread Eleven vs Destroyers (${formatDate(m.matchDate)}) — Official Scorecard`,
   description: `Official scorecard and performance breakdown for Dread Eleven vs Destroyers on ${formatDate(m.matchDate)} at ${m.venue.name}, Rewa. Atal Bihari Vajpayee Memorial Tournament.`,
   canonicalUrl: `/matches/${m.slug}`,
-  jsonLd: matchJsonLd
+  jsonLd: matchJsonLd,
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: isCompleted ? 'Results' : 'Fixtures', item: isCompleted ? '/results' : '/fixtures' },
+    { name: `${m.teamA} vs ${m.teamB} (${formatDate(m.matchDate)})`, item: `/matches/${m.slug}` }
+  ]
 })}
 ${renderHeader('results')}
 
@@ -1324,7 +1398,11 @@ function generatePointsTablePage() {
 ${renderHead({
   title: 'Tournament Points Table & Standings (2021–2026) | Dread Eleven',
   description: 'Official tournament points table across all editions of the Atal Bihari Vajpayee Memorial Tournament, Rewa. Standings for 2026, 2025, 2024, 2023, 2022, 2021, and All-Time.',
-  canonicalUrl: '/points-table'
+  canonicalUrl: '/points-table',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Standings', item: '/points-table' }
+  ]
 })}
 ${renderHeader('table')}
 
@@ -1567,7 +1645,11 @@ function generateStatsPage() {
 ${renderHead({
   title: 'All-Time Franchise Statistics & Records | Dread Eleven',
   description: 'Certified statistics and tournament records for Dread Eleven against Destroyers in Rewa. Top run scorers, leading wicket-takers, highest innings totals, and bowling milestones.',
-  canonicalUrl: '/stats'
+  canonicalUrl: '/stats',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Stats', item: '/stats' }
+  ]
 })}
 ${renderHeader('stats')}
 
@@ -1685,7 +1767,11 @@ function generateNewsPages() {
 ${renderHead({
   title: 'Tournament News & Press Releases | Dread Eleven',
   description: 'Official press releases, series reviews, squad announcements, and match reports for Dread Eleven in the Atal Bihari Vajpayee Memorial Tournament, Rewa.',
-  canonicalUrl: '/news'
+  canonicalUrl: '/news',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'News', item: '/news' }
+  ]
 })}
 ${renderHeader('news')}
 
@@ -1755,7 +1841,12 @@ ${renderHead({
   title: `${n.title} | Dread Eleven News`,
   description: n.summary,
   canonicalUrl: `/news/${n.slug}`,
-  jsonLd: articleJsonLd
+  jsonLd: articleJsonLd,
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'News', item: '/news' },
+    { name: n.title, item: `/news/${n.slug}` }
+  ]
 })}
 ${renderHeader('news')}
 
@@ -1800,7 +1891,7 @@ ${renderFooter()}
 }
 
 // ------------------------------------------------------------
-// 7. ABOUT (/about) & CONTACT (/contact) & 404 (404.html)
+// 7. ABOUT (/about) & CONTACT (/contact)
 // ------------------------------------------------------------
 function generateAboutAndContactPages() {
   const aboutDir = path.join(rootDir, 'about');
@@ -1812,12 +1903,21 @@ function generateAboutAndContactPages() {
 ${renderHead({
   title: 'About Dread Eleven | History, Martand Fortress & RDCA',
   description: 'History and identity of Dread Eleven (DE) in Rewa. Affiliation with Rewa Division Cricket Association (RDCA), home fortress Martand School Ground No. 3 & APSU Stadium, and franchise leadership.',
-  canonicalUrl: '/about'
+  canonicalUrl: '/about',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'About', item: '/about' }
+  ]
 })}
 ${renderHeader('about')}
 
 <section style="padding: 4rem 0;">
   <div class="container" style="max-width:900px;">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">
+      <a href="/" style="color:inherit; text-decoration:none;">Home</a> / <span style="color:var(--c-volt);">About Club</span>
+    </nav>
+
     <div class="hero-badge-strip">
       <span class="badge-brutalist badge-volt">EST. 2021 • REWA DIVISION</span>
       <span class="badge-brutalist badge-gold">2022 MEMORIAL TROPHY CHAMPIONS</span>
@@ -1875,12 +1975,21 @@ ${renderFooter()}
 ${renderHead({
   title: 'Contact Dread Eleven | RDCA & Scouting Desk',
   description: 'Official contact desk for Dread Eleven Cricket Club in Rewa, Madhya Pradesh. Media inquiries, academy registration, venue liaison, and RDCA communications.',
-  canonicalUrl: '/contact'
+  canonicalUrl: '/contact',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Contact', item: '/contact' }
+  ]
 })}
 ${renderHeader('contact')}
 
 <section style="padding: 4rem 0;">
   <div class="container" style="max-width:860px;">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">
+      <a href="/" style="color:inherit; text-decoration:none;">Home</a> / <span style="color:var(--c-volt);">Contact</span>
+    </nav>
+
     <div class="section-masthead">
       <div>
         <p class="section-pretitle">Official Communication Desk</p>
@@ -1891,30 +2000,11 @@ ${renderHeader('contact')}
       </div>
     </div>
 
-    <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm); margin-bottom:2.5rem;">
-      <h2 style="font-family:var(--f-athletic); font-size:1.85rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.5rem;">
-        Franchise Liaison Office
-      </h2>
-
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem;">
-        <div>
-          <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); text-transform:uppercase; font-weight:800; margin-bottom:0.25rem;">Divisional Governing Body</div>
-          <p style="color:var(--c-white); font-weight:700;">Rewa Division Cricket Association (RDCA)</p>
-          <p style="color:var(--c-gray-400); font-size:0.875rem;">District Pavilion, Rewa 486001, MP</p>
-        </div>
-
-        <div>
-          <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); text-transform:uppercase; font-weight:800; margin-bottom:0.25rem;">Franchise Captain</div>
-          <p style="color:var(--c-white); font-weight:700;">Akhil Mishra</p>
-          <p style="color:var(--c-gray-400); font-size:0.875rem;">Dread Eleven Talisman &amp; Batter</p>
-        </div>
-      </div>
-
-      <!-- Quick Inquiry Form -->
-      <form onsubmit="event.preventDefault(); alert('Inquiry received. The Dread Eleven management team will review your message.');">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem;">
+    <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm);">
+      <form onsubmit="event.preventDefault(); alert('Communication transmitted to Dread Eleven management.');">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
           <div>
-            <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.4rem;">Full Name</label>
+            <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.4rem;">Sender Name</label>
             <input type="text" required style="width:100%; background:var(--c-card-bg); border:1px solid var(--b-medium); color:var(--c-white); padding:0.75rem; border-radius:var(--radius-sm); outline:none;">
           </div>
           <div>
@@ -1940,30 +2030,203 @@ ${renderFooter()}
   `;
   fs.writeFileSync(path.join(contactDir, 'index.html'), contactHtml);
   console.log('Generated /contact/index.html');
+}
 
-  // Custom 404.html
+function generatePrivacyPage() {
+  const privacyDir = path.join(rootDir, 'privacy');
+  ensureDir(privacyDir);
+
+  const html = `
+${renderHead({
+  title: 'Privacy Policy | Dread Eleven Cricket Club (DE)',
+  description: 'Official privacy policy for Dread Eleven Cricket Club, detailing data protection standards, tournament newsletter processing, and visitor rights under Rewa Division Cricket Association regulations.',
+  canonicalUrl: '/privacy',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Privacy Policy', item: '/privacy' }
+  ]
+})}
+${renderHeader('')}
+
+<section style="padding: 4rem 0 5rem;">
+  <div class="container" style="max-width:880px;">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">
+      <a href="/" style="color:inherit; text-decoration:none;">Home</a> / <span style="color:var(--c-volt);">Privacy Policy</span>
+    </nav>
+
+    <div class="section-masthead" style="margin-bottom:2.5rem;">
+      <div>
+        <p class="section-pretitle">Governance &amp; Data Trust</p>
+        <h1 class="section-bigtitle">Privacy Policy</h1>
+        <p style="color:var(--c-gray-400); font-size:0.95rem; margin-top:0.5rem; font-family:var(--f-mono);">
+          Effective Date: 1 January 2026 • Sanctioned by Rewa Division Cricket Association
+        </p>
+      </div>
+    </div>
+
+    <div style="background:var(--c-surface); border:1px solid var(--b-medium); border-radius:var(--radius-sm); padding:2.5rem; display:flex; flex-direction:column; gap:2rem; line-height:1.75; color:var(--c-gray-300); font-size:0.95rem;">
+      <div>
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
+          1. Commitment to Fan &amp; Athlete Data Privacy
+        </h2>
+        <p>
+          Dread Eleven Cricket Club (&ldquo;DE&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;) operates in full compliance with Indian Information Technology (IT) laws and Digital Personal Data Protection standards. This Privacy Policy governs the collection, storage, and processing of telemetry, analytics, and inquiry correspondence across the official franchise domain (<code>dreadeleven.in</code>).
+        </p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
+          2. Information We Collect
+        </h2>
+        <ul style="padding-left:1.5rem; display:flex; flex-direction:column; gap:0.5rem;">
+          <li><strong>Tournament Inquiries:</strong> When submitting forms through our Contact desk, your name, email address, and inquiry text are logged solely to fulfill match-day inquiries and trial scheduling.</li>
+          <li><strong>Aggregated Site Telemetry:</strong> Anonymized Core Web Vitals, page visit counts, device classifications, and regional bandwidth telemetry to maintain 60 FPS client rendering.</li>
+          <li><strong>Cookies &amp; Local Storage:</strong> Essential session preferences such as filter toolbar states (T20 vs. ODI) and theme caching. No tracking pixels are sold or shared with third-party data brokers.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
+          3. Player Data &amp; Official Scorecards
+        </h2>
+        <p>
+          All player statistics, averages, and historical scorecards presented on this website are certified public tournament records sanctioned by the Rewa Division Cricket Association (RDCA) for the Atal Bihari Vajpayee Memorial Tournament.
+        </p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
+          4. Contact Our Data Protection Officer
+        </h2>
+        <p>
+          For privacy inquiries or deletion requests regarding newsletter subscriptions, contact our administration desk at:
+          <br>
+          <strong style="color:var(--c-volt); font-family:var(--f-mono);">privacy@dreadeleven.in</strong>
+          <br>
+          RDCA Pavilion, Martand Ground No. 3 / APSU Stadium, Rewa, Madhya Pradesh 486003.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+${renderFooter()}
+  `;
+
+  fs.writeFileSync(path.join(privacyDir, 'index.html'), html);
+  console.log('Generated /privacy/index.html');
+}
+
+function generateTermsPage() {
+  const termsDir = path.join(rootDir, 'terms');
+  ensureDir(termsDir);
+
+  const html = `
+${renderHead({
+  title: 'Terms & Conditions | Dread Eleven Cricket Club (DE)',
+  description: 'Official terms and conditions, match ticketing rules, stadium conduct policies, and intellectual property rights for Dread Eleven in Rewa.',
+  canonicalUrl: '/terms',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Terms & Conditions', item: '/terms' }
+  ]
+})}
+${renderHeader('')}
+
+<section style="padding: 4rem 0 5rem;">
+  <div class="container" style="max-width:880px;">
+    <!-- Breadcrumb -->
+    <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">
+      <a href="/" style="color:inherit; text-decoration:none;">Home</a> / <span style="color:var(--c-volt);">Terms &amp; Conditions</span>
+    </nav>
+
+    <div class="section-masthead" style="margin-bottom:2.5rem;">
+      <div>
+        <p class="section-pretitle">Legal Framework</p>
+        <h1 class="section-bigtitle">Terms &amp; Conditions</h1>
+        <p style="color:var(--c-gray-400); font-size:0.95rem; margin-top:0.5rem; font-family:var(--f-mono);">
+          Effective Date: 1 January 2026 • Sanctioned by Rewa Division Cricket Association
+        </p>
+      </div>
+    </div>
+
+    <div style="background:var(--c-surface); border:1px solid var(--b-medium); border-radius:var(--radius-sm); padding:2.5rem; display:flex; flex-direction:column; gap:2rem; line-height:1.75; color:var(--c-gray-300); font-size:0.95rem;">
+      <div>
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
+          1. Acceptance of Terms
+        </h2>
+        <p>
+          By accessing or using the official digital portal of Dread Eleven (<code>dreadeleven.in</code>), you agree to be bound by these Terms and Conditions and all applicable RDCA and MPCA tournament bylaws.
+        </p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
+          2. Intellectual Property &amp; Scorecard Data
+        </h2>
+        <p>
+          All trademarks, logos, team crests, player portraits, match analytics, and editorial reports published on this website are the proprietary property of Dread Eleven Cricket Club and its content licensors. Scorecard feeds may be referenced for journalistic purposes with appropriate attribution and canonical links.
+        </p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
+          3. Venue Code of Conduct
+        </h2>
+        <p>
+          Spectators attending Dread Eleven home matches at Martand Ground No. 3 or APSU Stadium must comply with zero-tolerance spectator decency rules, anti-corruption regulations, and venue security standards.
+        </p>
+      </div>
+
+      <div>
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
+          4. Governing Law
+        </h2>
+        <p>
+          These Terms are governed by and construed under the laws of the State of Madhya Pradesh, India. Any disputes arising hereunder shall be subject to the exclusive jurisdiction of the competent courts in Rewa, MP.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+${renderFooter()}
+  `;
+
+  fs.writeFileSync(path.join(termsDir, 'index.html'), html);
+  console.log('Generated /terms/index.html');
+}
+
+function generate404Page() {
   const notFoundHtml = `
 ${renderHead({
-  title: '404 Wicket Down — Page Not Found | Dread Eleven',
-  description: 'The requested page or cricket match scorecard could not be located in the Dread Eleven archive.',
-  canonicalUrl: '/404'
+  title: '404 — Page Not Found | Dread Eleven',
+  description: 'Looks like this ball went straight into the stands. Explore fixtures, squad profiles, or match results on the official Dread Eleven portal.',
+  canonicalUrl: '/404',
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: '404 Page Not Found', item: '/404' }
+  ]
 })}
 ${renderHeader()}
 
 <section style="padding: 6rem 0 8rem; text-align:center;">
-  <div class="container" style="max-width:640px;">
+  <div class="container" style="max-width:680px;">
     <div style="font-family:var(--f-athletic); font-size:8rem; color:var(--c-volt); line-height:0.9; margin-bottom:1rem;">
-      WICKET DOWN!
+      404
     </div>
     <h1 class="section-bigtitle" style="font-size:2.5rem; margin-bottom:1rem;">
-      404 • Boundary Not Found
+      404 — Page Not Found
     </h1>
-    <p style="color:var(--c-gray-400); font-size:1rem; line-height:1.6; margin-bottom:2.5rem;">
-      The requested scorecard or page has been dismissed. Check the URL or return to the official match center to explore 2021–2026 derby archives.
+    <p style="color:var(--c-gray-400); font-size:1.25rem; line-height:1.6; margin-bottom:2.5rem;">
+      Looks like this ball went straight into the stands.
     </p>
-    <div style="display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
-      <a href="/" class="btn-athletic btn-volt">Back to Home</a>
-      <a href="/results" class="btn-athletic btn-outline">Match Results Archive</a>
+    <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+      <a href="/" class="btn-athletic btn-volt">Go Home</a>
+      <a href="/fixtures" class="btn-athletic btn-outline">View Fixtures</a>
+      <a href="/players" class="btn-athletic btn-outline">View Squad</a>
+      <a href="/news" class="btn-athletic btn-outline">Latest News</a>
     </div>
   </div>
 </section>
@@ -1978,6 +2241,8 @@ ${renderFooter()}
 // 8. SITEMAP.XML & ROBOTS.TXT GENERATOR
 // ------------------------------------------------------------
 function generateSitemapAndRobots() {
+  const lastmod = '2026-09-09T21:45:00+05:30';
+
   const urls = [
     { loc: '/', changefreq: 'daily', priority: '1.0' },
     { loc: '/players', changefreq: 'daily', priority: '0.9' },
@@ -1987,7 +2252,9 @@ function generateSitemapAndRobots() {
     { loc: '/stats', changefreq: 'weekly', priority: '0.8' },
     { loc: '/news', changefreq: 'weekly', priority: '0.8' },
     { loc: '/about', changefreq: 'monthly', priority: '0.7' },
-    { loc: '/contact', changefreq: 'monthly', priority: '0.6' }
+    { loc: '/contact', changefreq: 'monthly', priority: '0.6' },
+    { loc: '/privacy', changefreq: 'yearly', priority: '0.5' },
+    { loc: '/terms', changefreq: 'yearly', priority: '0.5' }
   ];
 
   // Add all player pages (43 players)
@@ -2021,6 +2288,7 @@ function generateSitemapAndRobots() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url>
     <loc>${BASE_URL}${u.loc}</loc>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${u.changefreq}</changefreq>
     <priority>${u.priority}</priority>
   </url>`).join('\n')}
@@ -2034,7 +2302,16 @@ Allow: /
 Sitemap: ${BASE_URL}/sitemap.xml
 `;
   fs.writeFileSync(path.join(rootDir, 'robots.txt'), robotsTxt);
-  console.log(`Generated sitemap.xml with ${urls.length} indexable canonical URLs and robots.txt.`);
+
+  // Generate Netlify/Cloudflare redirects file for clean canonical paths
+  const redirectsContent = `/squad /players 301
+/match/* /matches/:splat 301
+/standing /points-table 301
+/standings /points-table 301
+`;
+  fs.writeFileSync(path.join(rootDir, '_redirects'), redirectsContent);
+
+  console.log(`Generated sitemap.xml with ${urls.length} indexable canonical URLs (with lastmod), robots.txt, and _redirects.`);
 }
 
 // ------------------------------------------------------------
@@ -2048,5 +2325,8 @@ generatePointsTablePage();
 generateStatsPage();
 generateNewsPages();
 generateAboutAndContactPages();
+generatePrivacyPage();
+generateTermsPage();
+generate404Page();
 generateSitemapAndRobots();
 console.log('=== BUILD COMPLETE! ALL PAGES GENERATED WITH $4K STUDIO CRAFT & ZERO BLUE ===');

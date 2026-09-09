@@ -1,0 +1,16 @@
+{
+  "name": "Dread Eleven Cricket Club (DE)",
+  "short_name": "Dread Eleven",
+  "description": "Official Cricket Franchise Website for Dread Eleven (DE) — Atal Bihari Vajpayee Memorial Tournament, Rewa | RDCA",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070709",
+  "theme_color": "#c8ff00",
+  "icons": [
+    {
+      "src": "/public/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

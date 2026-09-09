@@ -2,456 +2,559 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dreadeleven.in/</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/fixtures</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/results</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/points-table</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/stats</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/news</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/about</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/contact</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://dreadeleven.in/privacy</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://dreadeleven.in/terms</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://dreadeleven.in/players/akhil-mishra</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/ritesh-shakya</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/kuldeep-sen</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/anubhav-agarwal</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/yash-dubey</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/saransh-jain</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/prithviraj-singh-tomar</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/anant-verma</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/naveen-singh-chouhan</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/avesh-khan</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/venkatesh-iyer</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/subhranshu-senapati</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/ajay-rohera</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/radhakrishna-dwivedi</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/akshat-raghuwanshi</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/rohit-rajawat</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/himanshu-mantri</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/ramveer-singh-gurjar</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/shubham-sharma</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/mohd-arshad-khan</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/kumar-kartikeya</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/rajat-patidar</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/arshad-khan</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/saransh-surana</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/chanchal-rathore</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/mohd-arham-aquil</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/aryan-deshmukh</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/prabhanshu-shukla</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/rahul-batham</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/aditya-shrivastava</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/jaydev-singh</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/ankit-singh-kushwaha</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/kulwant-khejroliya</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/sagar-pratap-singh</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/ashwin-das</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/amarjeet-kumar-singh</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/atharv-mahajan</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/kanishk-dubey</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/shivam-shukla</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/harsh-gawli</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/sagar-solanki</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/aryan-shrivastava</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/players/aryan-dwivedi</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2021-08-01</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2021-08-04</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2021-08-07</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2021-08-11</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2021-08-15</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2021-08-20</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2021-08-28</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2022-08-10</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2022-08-12</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2022-09-04</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2022-09-07</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2022-09-10</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2022-09-14</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2022-09-18</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2023-09-05</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2023-09-08</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2023-09-12</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2023-09-16</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2023-09-20</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2024-09-05</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2024-09-08</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2024-09-12</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2024-09-16</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2024-09-20</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2025-09-04</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2025-09-08</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2025-09-12</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2025-09-16</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2025-09-20</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2026-02-10</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2026-02-14</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2026-02-18</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2026-09-06</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2026-09-12</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/matches/destroyers-vs-dread-eleven-2026-09-20</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/news/dread-eleven-tactical-camp-ahead-of-divisional-championship</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/news/championship-glory-dread-eleven-2022-final-triumph</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/news/pace-battery-kuldeep-sen-and-ashwin-das-spearhead-attack</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dreadeleven.in/news/akhil-mishra-900-run-mastery-rewa-records</loc>
+    <lastmod>2026-09-09T21:45:00+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
