@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dreadeleven.in/sitemap.xml
+Sitemap: https://dread-eleven-rewacricket.pages.dev/sitemap.xml

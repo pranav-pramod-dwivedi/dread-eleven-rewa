@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const BASE_URL = process.env.SITE_URL || 'https://dreadeleven.in';
+const BASE_URL = process.env.SITE_URL || 'https://dread-eleven-rewacricket.pages.dev';
 
 // Load Datasets
 const tournament = JSON.parse(fs.readFileSync(path.join(rootDir, 'data/tournament.json'), 'utf8'));
@@ -2017,7 +2017,7 @@ ${renderHeader('')}
           1. Commitment to Fan &amp; Athlete Data Privacy
         </h2>
         <p>
-          Dread Eleven Cricket Club (&ldquo;DE&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;) operates in full compliance with Indian Information Technology (IT) laws and Digital Personal Data Protection standards. This Privacy Policy governs the collection, storage, and processing of telemetry, analytics, and inquiry correspondence across the official franchise domain (<code>dreadeleven.in</code>).
+          Dread Eleven Cricket Club (&ldquo;DE&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;) operates in full compliance with Indian Information Technology (IT) laws and Digital Personal Data Protection standards. This Privacy Policy governs the collection, storage, and processing of telemetry, analytics, and inquiry correspondence across the official franchise domain (<code>dread-eleven-rewacricket.pages.dev</code>).
         </p>
       </div>
 
@@ -2048,7 +2048,7 @@ ${renderHeader('')}
         <p>
           For privacy inquiries or deletion requests regarding newsletter subscriptions, contact our administration desk at:
           <br>
-          <strong style="color:var(--c-volt); font-family:var(--f-mono);">privacy@dreadeleven.in</strong>
+          <strong style="color:var(--c-volt); font-family:var(--f-mono);">privacy@dread-eleven-rewacricket.pages.dev</strong>
           <br>
           RDCA Pavilion, Martand Ground No. 3 / APSU Stadium, Rewa, Madhya Pradesh 486003.
         </p>
@@ -2103,7 +2103,7 @@ ${renderHeader('')}
           1. Acceptance of Terms
         </h2>
         <p>
-          By accessing or using the official digital portal of Dread Eleven (<code>dreadeleven.in</code>), you agree to be bound by these Terms and Conditions and all applicable RDCA and MPCA tournament bylaws.
+          By accessing or using the official digital portal of Dread Eleven (<code>dread-eleven-rewacricket.pages.dev</code>), you agree to be bound by these Terms and Conditions and all applicable RDCA and MPCA tournament bylaws.
         </p>
       </div>
 
