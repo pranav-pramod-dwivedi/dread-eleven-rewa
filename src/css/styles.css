@@ -3727,8 +3727,6 @@ body {
   object-position: bottom center !important;
   display: block !important;
   filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.92)) !important;
-  mask-image: linear-gradient(to bottom, black 85%, transparent 100%) !important;
-  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%) !important;
 }
 
 /* Watermark: Contained on Right */
@@ -3775,4 +3773,11 @@ body {
 .hero-player-stat-hud {
   bottom: 10px !important;
   left: 10px !important;
+}
+
+/* Ensure Zero Mask Image or Vignette on Athlete */
+.athlete-cutout-img {
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.7)) !important;
 }
