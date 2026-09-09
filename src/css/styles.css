@@ -1,0 +1,766 @@
+/* ==========================================================================
+   DREAD ELEVEN (DE) — CYBER-STEALTH PRO SPORTS DESIGN SYSTEM
+   Tournament: Atal Bihari Vajpayee Memorial Tournament • Rewa (RDCA)
+   Aesthetic: Hyper-Precision Tactical Stealth / Deep Void & Electric Cyan / Ultraviolet
+   ========================================================================== */
+
+:root {
+  /* Surface & Base */
+  --c-void: #03060f;
+  --c-void-surface: #070d1a;
+  --c-card-bg: rgba(10, 18, 36, 0.75);
+  --c-card-bg-hover: rgba(14, 25, 50, 0.9);
+  --c-card-solid: #0b1426;
+
+  /* Brand Accents */
+  --c-cyan-neon: #00f0ff;
+  --c-cyan-glow: rgba(0, 240, 255, 0.35);
+  --c-cyan-dim: #008fa0;
+  --c-uv: #7928ca;
+  --c-uv-bright: #9e00ff;
+  --c-silver: #e2e8f0;
+  --c-gray-300: #cbd5e1;
+  --c-gray-400: #94a3b8;
+  --c-gray-600: #475569;
+  --c-emerald: #00ffaa;
+  --c-ruby: #ff0055;
+
+  /* Borders */
+  --b-subtle: rgba(0, 240, 255, 0.08);
+  --b-medium: rgba(0, 240, 255, 0.18);
+  --b-glow: rgba(0, 240, 255, 0.45);
+
+  /* Fonts */
+  --f-brand: 'Chakra Petch', sans-serif;
+  --f-display: 'Syne', sans-serif;
+  --f-body: 'Outfit', sans-serif;
+  --f-mono: 'JetBrains Mono', monospace;
+  --f-tech: 'Space Grotesk', sans-serif;
+
+  /* Layout */
+  --max-w: 1240px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--c-void);
+  color: var(--c-silver);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: radial-gradient(circle at 50% -20%, #0d1e3d 0%, var(--c-void) 70%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#ambient-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Typography Utilities */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--c-cyan-neon);
+  box-shadow: 0 0 10px var(--c-cyan-neon);
+  display: inline-block;
+  animation: pulseCyan 1.8s infinite;
+}
+
+@keyframes pulseCyan {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.35); opacity: 0.5; }
+}
+
+@keyframes tickerScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Site Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(4, 7, 17, 0.88);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--b-medium);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 1.5rem;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-crest-svg {
+  width: 44px;
+  height: 44px;
+  filter: drop-shadow(0 0 12px var(--c-cyan-glow));
+}
+
+.brand-franchise-name {
+  font-family: var(--f-brand);
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.brand-subline {
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  color: var(--c-cyan-neon);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 2px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.header-nav-link {
+  font-family: var(--f-brand);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--c-gray-400);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.5rem 0.85rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.header-nav-link:hover {
+  color: #fff;
+  background: rgba(0, 240, 255, 0.06);
+  border-color: var(--b-medium);
+}
+
+.header-nav-link.active {
+  color: var(--c-cyan-neon);
+  background: rgba(0, 240, 255, 0.1);
+  border-color: var(--b-glow);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+.header-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--c-cyan-neon);
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--b-medium);
+  padding: 0.35rem 0.75rem;
+  text-transform: uppercase;
+}
+
+/* Buttons */
+.btn-cyber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--f-brand);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.btn-cyber-primary {
+  background: var(--c-cyan-neon);
+  color: #03060f;
+  border: none;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+}
+
+.btn-cyber-primary:hover {
+  background: #fff;
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.btn-cyber-outline {
+  background: rgba(10, 18, 36, 0.8);
+  color: #fff;
+  border: 1px solid var(--b-medium);
+}
+
+.btn-cyber-outline:hover {
+  border-color: var(--c-cyan-neon);
+  color: var(--c-cyan-neon);
+  background: rgba(0, 240, 255, 0.08);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  padding: 6rem 0 5rem;
+  overflow: hidden;
+  border-bottom: 1px solid var(--b-medium);
+}
+
+.hero-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--f-brand);
+  font-weight: 900;
+  font-size: clamp(8rem, 20vw, 24rem);
+  color: rgba(0, 240, 255, 0.02);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.hero-grid-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 3.5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--c-cyan-neon);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid var(--b-medium);
+  padding: 0.35rem 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-headline-massive {
+  font-family: var(--f-brand);
+  font-size: clamp(3rem, 6.5vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.hero-gradient-text {
+  background: linear-gradient(135deg, #00f0ff 0%, #7928ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-statement {
+  font-size: 1.0625rem;
+  color: var(--c-gray-300);
+  line-height: 1.7;
+  max-width: 60ch;
+  margin-bottom: 2.25rem;
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Battle HUD Card */
+.battle-hud-card {
+  background: var(--c-card-bg);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--b-medium);
+  padding: 2.25rem;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 240, 255, 0.08);
+}
+
+.battle-hud-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--c-cyan-neon);
+  box-shadow: 0 0 10px var(--c-cyan-neon);
+}
+
+.hud-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hud-tag {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  color: var(--c-gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.hud-status-tag {
+  font-family: var(--f-brand);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+}
+
+.hud-clash-display {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.hud-team-column {
+  text-align: center;
+}
+
+.hud-team-emblem {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-brand);
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: 4px;
+}
+
+.hud-team-emblem.de {
+  background: #091326;
+  border: 2px solid var(--c-cyan-neon);
+  color: var(--c-cyan-neon);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.25);
+}
+
+.hud-team-emblem.des {
+  background: #18120d;
+  border: 2px solid #f56f00;
+  color: #f56f00;
+}
+
+.hud-team-name {
+  font-family: var(--f-brand);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.hud-win-count {
+  font-family: var(--f-brand);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1;
+  margin-top: 0.35rem;
+}
+
+.hud-vs-badge {
+  font-family: var(--f-mono);
+  font-size: 0.8125rem;
+  color: var(--c-gray-600);
+  font-weight: 900;
+}
+
+.hud-dominance-bar {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.hud-bar-de {
+  background: var(--c-cyan-neon);
+  box-shadow: 0 0 10px var(--c-cyan-neon);
+}
+
+.hud-bar-des {
+  background: #f56f00;
+}
+
+/* Sections */
+.spotlight-banner-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--b-medium);
+}
+
+.section-masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.section-pretitle {
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  color: var(--c-cyan-neon);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.section-bigtitle {
+  font-family: var(--f-brand);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #fff;
+  line-height: 1;
+}
+
+/* Player Cards Grid */
+.players-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 2rem;
+}
+
+.cyber-player-card {
+  background: var(--c-card-bg);
+  border: 1px solid var(--b-medium);
+  padding: 2rem 1.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+}
+
+.cyber-player-card:hover {
+  border-color: var(--c-cyan-neon);
+  background: var(--c-card-bg-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 240, 255, 0.15);
+}
+
+.cyber-jersey-num {
+  position: absolute;
+  top: -0.8rem;
+  right: 0.8rem;
+  font-family: var(--f-brand);
+  font-size: 7rem;
+  font-weight: 900;
+  color: rgba(0, 240, 255, 0.04);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.cyber-player-role {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  color: var(--c-cyan-neon);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.cyber-player-name {
+  font-family: var(--f-brand);
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.cyber-player-subtitle {
+  font-family: var(--f-tech);
+  font-size: 0.75rem;
+  color: var(--c-gray-400);
+  margin-bottom: 1.5rem;
+}
+
+.cyber-stats-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  border-top: 1px solid var(--b-subtle);
+  padding-top: 1rem;
+}
+
+.cyber-stat-val {
+  font-family: var(--f-brand);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.cyber-stat-lbl {
+  font-family: var(--f-mono);
+  font-size: 0.625rem;
+  color: var(--c-gray-400);
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+/* Scorecard Tables */
+.scorecard-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.scorecard-data-table th {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-cyan-neon);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--b-medium);
+  background: rgba(0, 240, 255, 0.03);
+}
+
+.scorecard-data-table th.num, .scorecard-data-table td.num {
+  text-align: right;
+}
+
+.scorecard-data-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--b-subtle);
+  color: var(--c-silver);
+}
+
+.scorecard-data-table tr:hover td {
+  background: rgba(0, 240, 255, 0.02);
+}
+
+/* Match Cards */
+.matches-pro-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 2rem;
+}
+
+.cyber-match-card {
+  background: var(--c-card-bg);
+  border: 1px solid var(--b-medium);
+  padding: 2rem;
+  position: relative;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  display: flex;
+  flex-direction: column;
+}
+
+.cyber-match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.pro-fmt-tag {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.pro-fmt-tag.t20 {
+  background: rgba(0, 240, 255, 0.12);
+  color: var(--c-cyan-neon);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.pro-fmt-tag.odi {
+  background: rgba(121, 40, 202, 0.15);
+  color: var(--c-uv-bright);
+  border: 1px solid rgba(121, 40, 202, 0.4);
+}
+
+.cyber-scoreboard-box {
+  background: var(--c-void-surface);
+  border: 1px solid var(--b-subtle);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cyber-score-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cyber-team-ident {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.cyber-team-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--f-brand);
+  font-size: 0.6875rem;
+  font-weight: 900;
+}
+
+.cyber-team-circle.de {
+  background: rgba(0, 240, 255, 0.15);
+  border: 1px solid var(--c-cyan-neon);
+  color: var(--c-cyan-neon);
+}
+
+.cyber-team-circle.des {
+  background: rgba(245, 111, 0, 0.15);
+  border: 1px solid #f56f00;
+  color: #f56f00;
+}
+
+.cyber-team-name {
+  font-family: var(--f-brand);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--c-gray-300);
+}
+
+.cyber-team-name.winner {
+  color: #fff;
+}
+
+.cyber-score-numbers {
+  font-family: var(--f-brand);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.pro-result-strip {
+  padding: 0.6rem 1rem;
+  font-family: var(--f-mono);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.pro-result-strip.de-victory {
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--c-cyan-neon);
+  border: 1px solid var(--b-glow);
+}
+
+.pro-result-strip.des-victory {
+  background: rgba(245, 111, 0, 0.1);
+  color: #f56f00;
+  border: 1px solid rgba(245, 111, 0, 0.3);
+}
+
+.site-footer {
+  border-top: 1px solid var(--b-medium);
+  background: #02040a;
+  padding: 5rem 0 3rem;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-grid-layout { grid-template-columns: 1fr; }
+  .footer-columns { grid-template-columns: 1fr; }
+  .header-nav { display: none; }
+}

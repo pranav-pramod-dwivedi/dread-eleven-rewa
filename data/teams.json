@@ -1,0 +1,32 @@
+{
+  "DE": {
+    "id": "DE",
+    "name": "Dread Eleven",
+    "shortName": "Dread Eleven",
+    "code": "DE",
+    "crestText": "DE",
+    "primaryColor": "#00f0ff",
+    "secondaryColor": "#7000ff",
+    "homeVenue": "Martand School Ground No. 3, Rewa",
+    "established": 2021,
+    "captain": "Akhil Mishra",
+    "championships": [
+      "2022 Atal Bihari Vajpayee Memorial Trophy Winners"
+    ]
+  },
+  "DES": {
+    "id": "DES",
+    "name": "Destroyers Cricket Club",
+    "shortName": "Destroyers",
+    "code": "DES",
+    "crestText": "DES",
+    "primaryColor": "#f56f00",
+    "secondaryColor": "#ffc300",
+    "homeVenue": "Awadhesh Pratap Singh University (APSU) Stadium, Rewa",
+    "established": 2021,
+    "captain": "Pranav Dwivedi",
+    "championships": [
+      "2024 ODI Series Winners (4–1)"
+    ]
+  }
+}

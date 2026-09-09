@@ -1,0 +1,21 @@
+{
+  "name": "dread-eleven-rewa",
+  "version": "1.0.0",
+  "description": "Official Cricket Franchise Website for Dread Eleven (DE) — Atal Bihari Vajpayee Memorial Tournament, Rewa | RDCA",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "keywords": [
+    "dread-eleven",
+    "rewa-cricket",
+    "rdca",
+    "atal-bihari-vajpayee-tournament",
+    "de-vs-des",
+    "akhil-mishra"
+  ],
+  "author": "Dread Eleven Cricket Club / Pranav Pramod Dwivedi",
+  "license": "ISC"
+}
