@@ -3652,3 +3652,127 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding-bottom: 0.5rem;
 }
+
+/* ==========================================================================
+   PERFECT VIEWPORT CONTAINMENT (PREVENT OVERFLOW & CLIPPING)
+   ========================================================================== */
+
+.broadcast-stadium-hero {
+  min-height: calc(96vh - 74px) !important;
+  max-height: calc(100vh - 74px);
+  padding: 1.75rem 0 0 !important;
+  overflow: hidden !important;
+}
+
+.hero-broadcast-grid {
+  align-items: flex-end !important;
+  margin-bottom: 0.75rem !important;
+  gap: 2.5rem !important;
+}
+
+.hero-command-col {
+  padding-bottom: 1rem !important;
+}
+
+.broadcast-giant-title {
+  font-size: clamp(4.2rem, 8vw, 6.8rem) !important;
+  line-height: 0.82 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.broadcast-subtitle {
+  font-size: 0.75rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.broadcast-match-slate {
+  padding: 1.25rem 1.5rem !important;
+}
+
+.slate-teams-battle {
+  margin-bottom: 1rem !important;
+  gap: 1.25rem !important;
+}
+
+.team-abbrev {
+  font-size: 2.25rem !important;
+}
+
+/* Athlete Column & Sizing: Perfectly Fitted */
+.hero-athlete-col {
+  height: 100% !important;
+  min-height: 480px !important;
+  max-height: calc(90vh - 130px) !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+.athlete-visual-wrapper {
+  height: 100% !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.athlete-cutout-img {
+  max-height: min(580px, calc(82vh - 120px)) !important;
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: bottom center !important;
+  display: block !important;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.92)) !important;
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%) !important;
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%) !important;
+}
+
+/* Watermark: Contained on Right */
+.athlete-watermark {
+  top: 5% !important;
+  right: 0% !important;
+  font-size: clamp(6.5rem, 13vw, 11rem) !important;
+  z-index: 1 !important;
+}
+
+/* HUD: Inside Column with Safe Inset */
+.hero-player-stat-hud {
+  bottom: 15px !important;
+  left: 0px !important;
+  max-width: 270px !important;
+  padding: 1rem 1.25rem !important;
+  z-index: 4 !important;
+}
+
+.hud-stat-highlight {
+  font-size: 1.85rem !important;
+}
+
+.hud-player-name {
+  font-size: 1.35rem !important;
+}
+
+/* Clean Single Score Bug */
+.broadcast-score-bug {
+  padding: 0.65rem 0 !important;
+}
+
+/* Refined Vertical Clearance for Athlete */
+.hero-athlete-col {
+  padding-top: 2.5rem !important;
+  max-height: calc(82vh - 90px) !important;
+}
+
+.athlete-cutout-img {
+  max-height: min(520px, calc(72vh - 90px)) !important;
+  margin-bottom: 0 !important;
+}
+
+.hero-player-stat-hud {
+  bottom: 10px !important;
+  left: 10px !important;
+}
