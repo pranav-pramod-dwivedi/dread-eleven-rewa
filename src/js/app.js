@@ -187,7 +187,9 @@ function initLiveCountdown() {
 function initMatchFilters() {
   const formatButtons = document.querySelectorAll('.format-filter-pill');
   const seasonButtons = document.querySelectorAll('.season-filter-pill');
+  const resultButtons = document.querySelectorAll('.result-filter-pill');
   const searchInput = document.getElementById('match-search-field');
+  const resetBtn = document.getElementById('match-filter-reset');
   const matchCards = document.querySelectorAll('.match-card');
   const countEl = document.getElementById('visible-matches-count');
 
@@ -195,6 +197,7 @@ function initMatchFilters() {
 
   let activeFormat = 'all';
   let activeSeason = 'all';
+  let activeResult = 'all';
   let searchQuery = '';
 
   function applyFilters() {
@@ -203,6 +206,7 @@ function initMatchFilters() {
     matchCards.forEach((card) => {
       const fmt = (card.getAttribute('data-format') || '').toUpperCase();
       const season = card.getAttribute('data-season') || '';
+      const result = card.getAttribute('data-result') || '';
       const text = card.textContent.toLowerCase();
 
       const formatMatches =
@@ -211,9 +215,10 @@ function initMatchFilters() {
         (activeFormat === 'T20' && fmt.includes('T20'));
 
       const seasonMatches = activeSeason === 'all' || season === activeSeason;
+      const resultMatches = activeResult === 'all' || result === activeResult;
       const searchMatches = !searchQuery || text.includes(searchQuery);
 
-      if (formatMatches && seasonMatches && searchMatches) {
+      if (formatMatches && seasonMatches && resultMatches && searchMatches) {
         card.style.display = 'flex';
         visibleCount++;
       } else {
@@ -244,9 +249,32 @@ function initMatchFilters() {
     });
   });
 
+  resultButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      resultButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeResult = btn.getAttribute('data-result') || 'all';
+      applyFilters();
+    });
+  });
+
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value.toLowerCase().trim();
+      applyFilters();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      activeFormat = 'all';
+      activeSeason = 'all';
+      activeResult = 'all';
+      searchQuery = '';
+      if (searchInput) searchInput.value = '';
+      formatButtons.forEach((b) => b.classList.toggle('active', b.getAttribute('data-format') === 'all'));
+      seasonButtons.forEach((b) => b.classList.toggle('active', b.getAttribute('data-season') === 'all'));
+      resultButtons.forEach((b) => b.classList.toggle('active', b.getAttribute('data-result') === 'all'));
       applyFilters();
     });
   }

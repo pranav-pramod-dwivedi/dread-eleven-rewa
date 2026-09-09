@@ -989,7 +989,15 @@ function generateMatchPages() {
         <button type="button" class="filter-pill-btn format-filter-pill" data-format="ODI">ODI (50-Over)</button>
         <button type="button" class="filter-pill-btn format-filter-pill" data-format="T20">T20 Blast</button>
 
-        <span class="filter-label" style="margin-left:1.5rem;">Season:</span>
+        <span class="filter-label" style="margin-left:1.5rem;">Result:</span>
+        <button type="button" class="filter-pill-btn result-filter-pill active" data-result="all">All</button>
+        <button type="button" class="filter-pill-btn result-filter-pill" data-result="win">DE Wins (${matches.filter(m => m.winner === 'DE').length})</button>
+        <button type="button" class="filter-pill-btn result-filter-pill" data-result="loss">DES Wins (${matches.filter(m => m.winner === 'DES').length})</button>
+        ${matches.filter(m => m.status === 'upcoming').length > 0 ? `<button type="button" class="filter-pill-btn result-filter-pill" data-result="upcoming">Upcoming (${matches.filter(m => m.status === 'upcoming').length})</button>` : ''}
+      </div>
+
+      <div class="filter-row">
+        <span class="filter-label">Season:</span>
         <button type="button" class="filter-pill-btn season-filter-pill active" data-season="all">All Seasons</button>
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2026">2026</button>
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2025">2025</button>
@@ -999,11 +1007,12 @@ function generateMatchPages() {
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2021">2021</button>
       </div>
 
-      <div class="filter-row">
-        <div class="search-input-wrap">
+      <div class="filter-row" style="display:flex; gap:1rem; align-items:center;">
+        <div class="search-input-wrap" style="flex:1;">
           <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" id="match-search-field" class="search-input-field" placeholder="Search by player, venue, or stage...">
         </div>
+        <button type="button" id="match-filter-reset" class="filter-pill-btn" style="white-space:nowrap;">Reset Filters</button>
       </div>
     </div>
 
@@ -1016,9 +1025,10 @@ function generateMatchPages() {
 
         const deInn = inn1.teamName.includes('Dread') ? inn1 : inn2;
         const desInn = inn1.teamName.includes('Dread') ? inn2 : inn1;
+        const resultAttr = isCompleted ? (isDeWinner ? 'win' : 'loss') : 'upcoming';
 
         return `
-        <a href="/matches/${m.slug}" class="match-card" data-format="${esc(m.format)}" data-season="${esc(m.seasonYear)}">
+        <a href="/matches/${m.slug}" class="match-card" data-format="${esc(m.format)}" data-season="${esc(m.seasonYear)}" data-result="${resultAttr}">
           <div class="match-card-meta">
             <span class="match-format-tag">${esc(m.format)} • Season ${esc(m.seasonYear)}</span>
             <span class="match-stage-text">${esc(m.stage)}</span>

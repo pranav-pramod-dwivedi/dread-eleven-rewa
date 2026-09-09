@@ -160,7 +160,15 @@
         <button type="button" class="filter-pill-btn format-filter-pill" data-format="ODI">ODI (50-Over)</button>
         <button type="button" class="filter-pill-btn format-filter-pill" data-format="T20">T20 Blast</button>
 
-        <span class="filter-label" style="margin-left:1.5rem;">Season:</span>
+        <span class="filter-label" style="margin-left:1.5rem;">Result:</span>
+        <button type="button" class="filter-pill-btn result-filter-pill active" data-result="all">All</button>
+        <button type="button" class="filter-pill-btn result-filter-pill" data-result="win">DE Wins (15)</button>
+        <button type="button" class="filter-pill-btn result-filter-pill" data-result="loss">DES Wins (17)</button>
+        <button type="button" class="filter-pill-btn result-filter-pill" data-result="upcoming">Upcoming (3)</button>
+      </div>
+
+      <div class="filter-row">
+        <span class="filter-label">Season:</span>
         <button type="button" class="filter-pill-btn season-filter-pill active" data-season="all">All Seasons</button>
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2026">2026</button>
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2025">2025</button>
@@ -170,17 +178,18 @@
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2021">2021</button>
       </div>
 
-      <div class="filter-row">
-        <div class="search-input-wrap">
+      <div class="filter-row" style="display:flex; gap:1rem; align-items:center;">
+        <div class="search-input-wrap" style="flex:1;">
           <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           <input type="text" id="match-search-field" class="search-input-field" placeholder="Search by player, venue, or stage...">
         </div>
+        <button type="button" id="match-filter-reset" class="filter-pill-btn" style="white-space:nowrap;">Reset Filters</button>
       </div>
     </div>
 
     <div class="matches-grid">
       
-        <a href="/matches/destroyers-vs-dread-eleven-2026-09-06" class="match-card" data-format="ODI" data-season="2026">
+        <a href="/matches/destroyers-vs-dread-eleven-2026-09-06" class="match-card" data-format="ODI" data-season="2026" data-result="upcoming">
           <div class="match-card-meta">
             <span class="match-format-tag">ODI • Season 2026</span>
             <span class="match-stage-text">ODI Super Clash 1</span>
@@ -228,7 +237,7 @@
           </div>
         </a>
         
-        <a href="/matches/destroyers-vs-dread-eleven-2026-09-12" class="match-card" data-format="ODI" data-season="2026">
+        <a href="/matches/destroyers-vs-dread-eleven-2026-09-12" class="match-card" data-format="ODI" data-season="2026" data-result="upcoming">
           <div class="match-card-meta">
             <span class="match-format-tag">ODI • Season 2026</span>
             <span class="match-stage-text">ODI Super Clash 2</span>
@@ -276,7 +285,7 @@
           </div>
         </a>
         
-        <a href="/matches/destroyers-vs-dread-eleven-2026-09-20" class="match-card" data-format="ODI" data-season="2026">
+        <a href="/matches/destroyers-vs-dread-eleven-2026-09-20" class="match-card" data-format="ODI" data-season="2026" data-result="upcoming">
           <div class="match-card-meta">
             <span class="match-format-tag">ODI • Season 2026</span>
             <span class="match-stage-text">2026 Grand Championship Final</span>
