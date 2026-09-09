@@ -1,17 +1,17 @@
 /* ==========================================================================
    DREAD ELEVEN (DE) — ATHLETIC BRUTALISM & MENACING PRECISION
    Awwwards & Dribbble Studio Grade ($4,000+ Custom Build)
-   Palette: Void Black (#050507), Acid Volt (#d4ff00), Trophy Gold (#f59e0b), Stadium White (#ffffff)
+   Palette: Void Black (#050505), Acid Volt (#d4ff00), Trophy Gold (#f59e0b), Stadium White (#ffffff)
    Strict Constraint: ABSOLUTELY ZERO BLUE. Pitch Void, Acid Volt, and Molten Gold.
    ========================================================================== */
 
 :root {
   /* Surfaces & Void (Strictly Zero Blue) */
-  --c-void: #050507;
-  --c-surface: #0a0c10;
-  --c-surface-elevated: #11131a;
-  --c-card-bg: #151822;
-  --c-card-hover: #1c202d;
+  --c-void: #050505;
+  --c-surface: #0c0c0c;
+  --c-surface-elevated: #121212;
+  --c-card-bg: #181818;
+  --c-card-hover: #222222;
 
   /* Brand Accents */
   --c-volt: #d4ff00;
@@ -26,11 +26,11 @@
   --c-emerald: #10b981;
   --c-crimson: #ff334b;
   --c-white: #ffffff;
-  --c-gray-100: #f3f4f6;
-  --c-gray-300: #d1d5db;
-  --c-gray-400: #9ca3af;
-  --c-gray-600: #4b5563;
-  --c-gray-800: #1f242e;
+  --c-gray-100: #f4f4f4;
+  --c-gray-300: #d4d4d4;
+  --c-gray-400: #a0a0a0;
+  --c-gray-600: #555555;
+  --c-gray-800: #2a2a2a;
 
   /* Hairlines & Borders */
   --b-subtle: rgba(255, 255, 255, 0.08);
@@ -127,7 +127,7 @@ body {
    TOP BROADCAST TICKER HUD
    ========================================================================== */
 .top-broadcast-ticker {
-  background: #020204;
+  background: #030303;
   border-bottom: 1px solid var(--b-medium);
   display: flex;
   align-items: center;
@@ -362,7 +362,7 @@ body {
 
 .btn-volt {
   background: var(--c-volt);
-  color: #050507;
+  color: #050505;
   border-color: var(--c-volt);
   box-shadow: 0 0 20px rgba(212, 255, 0, 0.25);
 }
@@ -387,7 +387,7 @@ body {
 
 .btn-gold {
   background: var(--c-gold);
-  color: #050507;
+  color: #050505;
   border-color: var(--c-gold);
 }
 
@@ -660,7 +660,7 @@ body {
 
 .rivalry-track {
   height: 32px;
-  background: #11131a;
+  background: #121212;
   border: 1px solid var(--b-medium);
   border-radius: var(--radius-xs);
   display: flex;
@@ -677,7 +677,7 @@ body {
   font-family: var(--f-mono);
   font-size: 0.75rem;
   font-weight: 800;
-  color: #050507;
+  color: #050505;
   white-space: nowrap;
 }
 
@@ -819,7 +819,7 @@ body {
 
 .filter-pill-btn.active {
   background: var(--c-volt);
-  color: #050507;
+  color: #050505;
   border-color: var(--c-volt);
   box-shadow: 0 0 12px rgba(212, 255, 0, 0.25);
 }
@@ -1194,7 +1194,7 @@ body {
   width: 38px;
   height: 38px;
   background: var(--c-volt);
-  color: #050507;
+  color: #050505;
   font-family: var(--f-athletic);
   font-weight: 900;
   font-size: 1.2rem;
@@ -1208,7 +1208,7 @@ body {
    FOOTER & MOBILE DOCK
    ========================================================================== */
 .site-footer {
-  background: #020204;
+  background: #030303;
   border-top: 1px solid var(--b-medium);
   padding: 5rem 0 3rem;
   margin-top: 4rem;

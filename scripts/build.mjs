@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const BASE_URL = 'http://127.0.0.1:8086';
+const BASE_URL = process.env.SITE_URL || 'https://dreadeleven.in';
 
 // Load Datasets
 const tournament = JSON.parse(fs.readFileSync(path.join(rootDir, 'data/tournament.json'), 'utf8'));
