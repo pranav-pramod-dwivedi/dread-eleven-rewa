@@ -116,7 +116,7 @@ function renderHeader(activeNav = '') {
   <header class="site-header">
     <div class="container nav-container">
       <a href="/" class="brand-crest" aria-label="Dread Eleven Cricket Club Home">
-        <div class="brand-crest-symbol">DE</div>
+        <img src="/public/images/de-crest.svg" alt="Dread Eleven CC Crest" class="brand-crest-shield-img" width="40" height="48">
         <div class="brand-title-wrap">
           <span class="brand-main-title">DREAD ELEVEN <span style="color:var(--c-volt);">CC</span></span>
           <span class="brand-sub-title">Atal Bihari Vajpayee Cup • Rewa</span>
@@ -319,38 +319,133 @@ ${renderHead({
 })}
 ${renderHeader('home')}
 
-<!-- Full-Screen Digital Stadium Hero -->
-<section class="digital-stadium-hero" id="stadium-hero">
-  <div class="stadium-floodlight-left" aria-hidden="true"></div>
-  <div class="stadium-floodlight-right" aria-hidden="true"></div>
+<!-- Asymmetric Broadcast Digital Stadium Hero -->
+<section class="broadcast-stadium-hero" id="stadium-hero">
+  <!-- Stadium Floodlight Flare Angled from Top Right -->
+  <div class="stadium-floodlight-flare" aria-hidden="true"></div>
 
-  <div class="stadium-crest-halo">
-    <div class="brand-monogram-shield">DE</div>
+  <div class="container hero-broadcast-grid">
+    <!-- LEFT COLUMN (60%): Match / Stakes Command -->
+    <div class="hero-command-col">
+      <!-- High-Contrast Over-title Tag -->
+      <div class="broadcast-overtitle">
+        <span class="broadcast-pill-badge">ATAL BIHARI VAJPAYEE CUP 2026</span>
+        <span class="broadcast-match-round">ROUND 4 • DERBY CLASH</span>
+      </div>
+
+      <!-- Giant Stacked Typography with Brushed Metallic Texture -->
+      <h1 class="broadcast-giant-title">
+        DREAD <br>
+        <span class="text-metallic">ELEVEN</span>
+      </h1>
+
+      <p class="broadcast-subtitle">
+        THE HUNT BEGINS • APSU STADIUM, REWA • CAPT. AKHIL MISHRA (#01)
+      </p>
+
+      <!-- Broadcast Lower-Third Match Hub Slate -->
+      <div class="broadcast-match-slate">
+        <div class="slate-header-row">
+          <span class="slate-status-pill"><span class="pulse-beacon red"></span> MATCHDAY 04</span>
+          <span class="slate-ground-info">APSU STADIUM • 31°C • DRY DECK</span>
+        </div>
+
+        <div class="slate-teams-battle">
+          <div class="slate-team-card">
+            <div class="team-meta">
+              <span class="team-abbrev volt">DRD</span>
+              <span class="team-fullname">Dread Eleven</span>
+            </div>
+            <div class="team-form-strip">
+              <span class="form-pill win">W</span>
+              <span class="form-pill win">W</span>
+              <span class="form-pill win">W</span>
+              <span class="form-pill loss">L</span>
+              <span class="form-pill win">W</span>
+            </div>
+          </div>
+
+          <div class="slate-vs-badge">VS</div>
+
+          <div class="slate-team-card">
+            <div class="team-meta">
+              <span class="team-abbrev">DST</span>
+              <span class="team-fullname">Destroyers CC</span>
+            </div>
+            <div class="team-form-strip">
+              <span class="form-pill loss">L</span>
+              <span class="form-pill win">W</span>
+              <span class="form-pill win">W</span>
+              <span class="form-pill loss">L</span>
+              <span class="form-pill loss">L</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slate-footer-row">
+          <div class="slate-timing-spec">
+            <span class="timing-date">06 SEP 2026</span>
+            <span class="timing-time">09:30 IST • TOSS 09:00</span>
+          </div>
+          <a href="/matches/destroyers-vs-dread-eleven-2026-09-06" class="btn-broadcast-cta">
+            <span>ENTER MATCH CENTRE &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN (40%): Hero Athlete Cutout & Z-Axis Depth -->
+    <div class="hero-athlete-col">
+      <!-- Translucent Giant Watermark Typography in Background -->
+      <div class="athlete-watermark" aria-hidden="true">
+        <span>DREAD</span>
+        <span class="watermark-number">01</span>
+      </div>
+
+      <!-- Athlete SVG Cutout in Explosive Cricket Stroke -->
+      <div class="athlete-visual-wrapper">
+        <img src="/public/images/athlete-cutout.svg" alt="Captain Akhil Mishra in explosive cricket stroke" class="athlete-cutout-img" loading="eager" width="560" height="700">
+      </div>
+
+      <!-- Floating Broadcast Player Stat HUD Pinned to Athlete -->
+      <div class="hero-player-stat-hud">
+        <div class="hud-top-label">
+          <span class="hud-badge-potm">PLAYER OF THE MOMENT</span>
+          <span class="hud-jersey-num">#01</span>
+        </div>
+        <h3 class="hud-player-name">AKHIL MISHRA</h3>
+        <div class="hud-player-role">PREMIER BATTER &amp; CAPTAIN</div>
+        <div class="hud-telemetry-row">
+          <div class="hud-stat-highlight">74* <small>(42)</small></div>
+          <div class="hud-stat-secondary">
+            <span>SR 176.2</span>
+            <span>8x4 • 3x6</span>
+          </div>
+        </div>
+        <div class="hud-form-row">
+          <span class="hud-form-label">FORM:</span>
+          <span class="hud-form-dots">● ● ● ● ○</span>
+          <span class="hud-form-status">HOT</span>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <h1 class="stadium-giant-headline">DREAD ELEVEN</h1>
-  <div class="hunt-begins-tagline">THE HUNT BEGINS • PRO CRICKET FRANCHISE</div>
-
-  <!-- Match Cockpit Card -->
-  <div class="stadium-next-match-cockpit">
-    <div class="cockpit-team">
-      <span class="team-code" style="color:var(--c-volt);">DREAD ELEVEN</span>
-      <span class="team-sub">CAPT. AKHIL MISHRA</span>
-    </div>
-    <div class="cockpit-vs">VS</div>
-    <div class="cockpit-team">
-      <span class="team-code">DESTROYERS</span>
-      <span class="team-sub">ATAL BIHARI VAJPAYEE TROPHY</span>
-    </div>
-    <div class="cockpit-meta">
-      <span class="cockpit-meta-date">${formatDate(nextMatch.matchDate)} • ${nextMatch.time || '09:30 IST'}</span>
-      <span class="cockpit-meta-venue">${esc(nextMatch.venue.name)}</span>
+  <!-- Persistent Full-Bleed Live Broadcast Pulse Strip -->
+  <div class="broadcast-live-ticker-strip">
+    <div class="container ticker-flex-wrap">
+      <div class="ticker-live-indicator">
+        <span class="pulse-beacon red"></span>
+        <strong>MATCHDAY TELEMETRY</strong>
+      </div>
+      <div class="ticker-content-line">
+        <span class="ticker-highlight">NEXT BLOCKBUSTER:</span> DREAD ELEVEN (17 WINS) vs DESTROYERS (15 WINS) • 06 SEP 2026 • APSU STADIUM • TOSS AT 09:00 IST • PITCH REPORT: HARD DECK, PACER CARRY
+      </div>
+      <a href="/matches/destroyers-vs-dread-eleven-2026-09-06" class="ticker-quick-link">
+        <span>SCORECARD &amp; LIVE ODDS &rarr;</span>
+      </a>
     </div>
   </div>
-
-  <a href="#live-pulse" class="scroll-stadium-cue">
-    <span>&darr; SCROLL TO ENTER THE DIGITAL STADIUM</span>
-  </a>
 </section>
 
 <!-- The Live Pulse Match Centre -->

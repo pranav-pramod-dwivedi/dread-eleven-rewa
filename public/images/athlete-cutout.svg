@@ -1,0 +1,127 @@
+<svg class="hero-athlete-cutout-svg" viewBox="0 0 600 750" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="athleteVoltRim" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E6FD53" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#222A38" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="jerseyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#182130"/>
+      <stop offset="50%" stop-color="#0F1522"/>
+      <stop offset="100%" stop-color="#080C14"/>
+    </linearGradient>
+    <linearGradient id="batGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D1A153"/>
+      <stop offset="50%" stop-color="#AA7D35"/>
+      <stop offset="100%" stop-color="#5C3D15"/>
+    </linearGradient>
+    <radialGradient id="impactGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E6FD53" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E6FD53" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="athleteGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Impact Aura / Ball Blast Wave -->
+  <circle cx="170" cy="270" r="140" fill="url(#impactGlow)"/>
+  <circle cx="170" cy="270" r="8" fill="#FFFFFF" stroke="#E6FD53" stroke-width="4"/>
+  <!-- Motion Blur Streaks -->
+  <path d="M170 270 L90 290 M170 270 L110 320 M170 270 L80 250" stroke="#E6FD53" stroke-width="2" stroke-dasharray="6 8" opacity="0.7"/>
+
+  <!-- Cricket Bat in Mid-Flow -->
+  <g transform="rotate(-35 250 280)">
+    <!-- Bat Handle -->
+    <rect x="238" y="80" width="14" height="95" rx="4" fill="#1C2433" stroke="#E6FD53" stroke-width="1.5"/>
+    <line x1="238" y1="95" x2="252" y2="95" stroke="#E6FD53" stroke-width="2"/>
+    <line x1="238" y1="115" x2="252" y2="115" stroke="#E6FD53" stroke-width="2"/>
+    <line x1="238" y1="135" x2="252" y2="135" stroke="#E6FD53" stroke-width="2"/>
+    <line x1="238" y1="155" x2="252" y2="155" stroke="#E6FD53" stroke-width="2"/>
+    <!-- Bat Blade -->
+    <path d="M232 175 L258 175 L264 390 C264 405 255 415 245 415 C235 415 226 405 226 390 Z" fill="url(#batGrad)" stroke="url(#athleteVoltRim)" stroke-width="2"/>
+    <!-- Bat Spine & Brand Decal -->
+    <path d="M245 180 L245 405" stroke="#FFE494" stroke-width="3" opacity="0.8"/>
+    <rect x="233" y="220" width="24" height="60" fill="#0A0D14"/>
+    <text x="245" y="255" fill="#E6FD53" font-family="'Bebas Neue', sans-serif" font-size="14" font-weight="900" text-anchor="middle" letter-spacing="1">DREAD</text>
+  </g>
+
+  <!-- Front Batting Leg & Pad (Cover Drive Stance) -->
+  <g id="front-leg">
+    <!-- Thigh Guard & Trousers -->
+    <path d="M280 430 L340 440 L370 540 L310 540 Z" fill="#0E1420" stroke="#26334A" stroke-width="2"/>
+    <!-- Cricket Batting Pad -->
+    <path d="M310 520 C325 520 375 520 380 535 L395 680 C395 700 375 710 350 710 C325 710 305 700 305 680 L300 535 C300 520 305 520 310 520 Z" fill="#111722" stroke="url(#athleteVoltRim)" stroke-width="3"/>
+    <!-- Pad Vertical Cane Ribs -->
+    <line x1="320" y1="535" x2="325" y2="685" stroke="#26334A" stroke-width="4"/>
+    <line x1="335" y1="535" x2="340" y2="695" stroke="#E6FD53" stroke-width="4"/>
+    <line x1="350" y1="535" x2="355" y2="695" stroke="#26334A" stroke-width="4"/>
+    <line x1="365" y1="535" x2="370" y2="685" stroke="#26334A" stroke-width="4"/>
+    <!-- Knee Roll (Knee Cap on Pad) -->
+    <rect x="310" y="580" width="70" height="22" rx="6" fill="#1B2436" stroke="#E6FD53" stroke-width="1.5"/>
+    <!-- Spikes / Cricket Shoe -->
+    <path d="M315 690 L395 690 L425 730 L315 730 Z" fill="#0A0D14" stroke="#E6FD53" stroke-width="2"/>
+  </g>
+
+  <!-- Back Leg (Bracing Anchor) -->
+  <g id="back-leg">
+    <path d="M220 450 L270 450 L260 570 L190 650 L160 635 L220 540 Z" fill="#0A0E17" stroke="#1F293D" stroke-width="2"/>
+    <path d="M175 625 L215 665 L180 705 L135 685 Z" fill="#0E1422" stroke="#2A364F" stroke-width="2"/>
+  </g>
+
+  <!-- Athletic Torso & Jersey #01 -->
+  <g id="torso">
+    <!-- Main Body Shape leaning forward -->
+    <path d="M260 250 L360 270 L340 450 L240 440 Z" fill="url(#jerseyGrad)" stroke="#2A374F" stroke-width="2"/>
+    <!-- Volt Jersey Side Panels & Accent Lines -->
+    <path d="M335 275 L360 270 L340 450 L325 445 Z" fill="#E6FD53" opacity="0.9"/>
+    <!-- Jersey Collar -->
+    <path d="M285 245 L325 250 L320 275 L285 270 Z" fill="#E6FD53"/>
+    <!-- Jersey Name & Number 01 -->
+    <text x="285" y="360" fill="#FFFFFF" font-family="'Bebas Neue', sans-serif" font-size="78" font-weight="900" letter-spacing="-2" transform="rotate(8 285 360)">01</text>
+    <text x="275" y="295" fill="#A4B3CB" font-family="'Bebas Neue', sans-serif" font-size="20" font-weight="700" letter-spacing="4" transform="rotate(8 275 295)">MISHRA</text>
+  </g>
+
+  <!-- Lead Left Arm Driving Through Ball -->
+  <g id="lead-arm">
+    <!-- Shoulder -->
+    <path d="M340 270 C370 270 395 300 390 335 L360 395 L320 380 L340 320 Z" fill="#101725" stroke="#26334A" stroke-width="2"/>
+    <!-- Forearm with Sweatband -->
+    <path d="M360 395 L300 405 L280 370 L335 360 Z" fill="#0C101A" stroke="#212C40" stroke-width="2"/>
+    <rect x="315" y="375" width="25" height="20" rx="3" fill="#E6FD53" transform="rotate(15 315 375)"/>
+    <!-- Batting Glove -->
+    <path d="M290 390 C290 375 270 370 255 385 L245 420 C255 435 285 430 295 415 Z" fill="#FFFFFF" stroke="#E6FD53" stroke-width="2"/>
+    <rect x="260" y="390" width="12" height="6" rx="2" fill="#0A0D14"/>
+    <rect x="275" y="395" width="12" height="6" rx="2" fill="#0A0D14"/>
+  </g>
+
+  <!-- Trail Right Arm Pulling Handle -->
+  <g id="trail-arm">
+    <path d="M255 260 L200 290 L220 340 L265 315 Z" fill="#0D131F" stroke="#202A3D" stroke-width="2"/>
+    <path d="M220 340 L250 410 L275 395 L250 335 Z" fill="#0A0E17" stroke="#1B2333" stroke-width="2"/>
+    <!-- Top Hand Batting Glove -->
+    <path d="M235 395 C235 380 250 370 265 380 L270 415 C260 425 240 420 235 395 Z" fill="#FFFFFF" stroke="#E6FD53" stroke-width="2"/>
+  </g>
+
+  <!-- Cricket Helmet & Head Stance (Eyes on the Ball) -->
+  <g id="helmet-head">
+    <!-- Neck -->
+    <path d="M295 225 L325 230 L320 255 L290 250 Z" fill="#A47855"/>
+    <!-- Modern Aerodynamic Helmet Shell -->
+    <path d="M280 180 C280 140 320 130 355 145 C385 160 385 195 380 220 L315 230 C290 230 280 205 280 180 Z" fill="#0A0E18" stroke="url(#athleteVoltRim)" stroke-width="2.5"/>
+    <!-- Helmet Peak / Sun Visor -->
+    <path d="M270 185 L320 180 L310 195 L260 198 Z" fill="#1B2436" stroke="#E6FD53" stroke-width="1.5"/>
+    <!-- Steel Protective Grille Faceguard -->
+    <path d="M275 195 L270 235 L330 240 L345 205" fill="none" stroke="#AAB6CC" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="270" y1="208" x2="340" y2="212" stroke="#AAB6CC" stroke-width="2.5"/>
+    <line x1="272" y1="220" x2="335" y2="224" stroke="#AAB6CC" stroke-width="2.5"/>
+    <circle cx="270" cy="235" r="4" fill="#E6FD53"/>
+    <!-- Athlete Eye Concentration (Visible through visor) -->
+    <ellipse cx="298" cy="188" rx="6" ry="3" fill="#FFFFFF"/>
+    <circle cx="296" cy="188" r="2" fill="#000000"/>
+  </g>
+
+  <!-- Dynamic Rim Light Highlighter Paths (Stadium Floodlight Reflection) -->
+  <path d="M355 145 C385 160 385 195 380 220 L370 270 L395 300 L390 335 L360 395 M380 535 L395 680 L425 730" fill="none" stroke="#E6FD53" stroke-width="3" filter="url(#athleteGlow)" opacity="0.75"/>
+</svg>

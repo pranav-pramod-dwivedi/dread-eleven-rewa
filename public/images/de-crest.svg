@@ -1,0 +1,34 @@
+<svg viewBox="0 0 160 190" width="160" height="190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldRamp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6FD53"/>
+      <stop offset="100%" stop-color="#9DB800"/>
+    </linearGradient>
+    <linearGradient id="darkMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#182232"/>
+      <stop offset="100%" stop-color="#080C14"/>
+    </linearGradient>
+    <filter id="crestDrop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Angular Shield Body -->
+  <polygon points="80,6 152,32 152,112 80,182 8,112 8,32" fill="url(#darkMetal)" stroke="url(#goldRamp)" stroke-width="5" stroke-linejoin="miter" filter="url(#crestDrop)"/>
+  <!-- Inner Metallic Chamfer -->
+  <polygon points="80,16 142,38 142,107 80,168 18,107 18,38" fill="#0D131E" stroke="#26334A" stroke-width="2"/>
+  <!-- Top Geometric Crown -->
+  <polygon points="80,24 130,42 130,48 80,30 30,48 30,42" fill="url(#goldRamp)"/>
+
+  <!-- Aggressive Angular Faceted D E Monogram -->
+  <!-- Letter D -->
+  <path d="M36 60 H62 C74 60 82 68 82 82 C82 96 74 104 62 104 H36 V60 Z M47 70 V94 H61 C67 94 71 90 71 82 C71 74 67 70 61 70 H47 Z" fill="#FFFFFF"/>
+  <!-- Letter E with Volt Bevel -->
+  <path d="M88 60 H120 V70 H99 V77 H116 V86 H99 V94 H120 V104 H88 V60 Z" fill="url(#goldRamp)"/>
+
+  <!-- Crossed Cricket Bails / Chevron Accent -->
+  <polygon points="80,114 116,128 110,132 80,121 50,132 44,128" fill="#E6FD53"/>
+  <text x="80" y="150" fill="#FFFFFF" font-family="'Bebas Neue', sans-serif" font-size="18" font-weight="900" text-anchor="middle" letter-spacing="6">REWA</text>
+  <!-- Three Championship Stars (2022 Champion) -->
+  <polygon points="80,160 82,166 88,166 83,170 85,176 80,172 75,176 77,170 72,166 78,166" fill="#E6FD53"/>
+</svg>
