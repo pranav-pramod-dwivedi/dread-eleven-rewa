@@ -3,31 +3,31 @@
     "id": "p-akhil-mishra",
     "name": "Akhil Mishra",
     "slug": "akhil-mishra",
-    "jerseyNumber": 1,
-    "role": "Captain & Top-Order Batter",
+    "jerseyNumber": 45,
+    "role": "Top-Order All-Rounder & Captain",
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm medium",
-    "matches": 29,
+    "matches": 51,
     "batting": {
-      "runs": 1342,
+      "runs": 1747,
       "balls": 1220,
-      "highestScore": "114",
-      "average": 49.7,
-      "strikeRate": 110,
-      "fifties": 11,
-      "hundreds": 1,
+      "highestScore": "124",
+      "average": 37.17,
+      "strikeRate": 168.5,
+      "fifties": 12,
+      "hundreds": 2,
       "fours": 88,
       "sixes": 17
     },
     "bowling": {
       "overs": 104,
-      "wickets": 14,
+      "wickets": 92,
       "runsConceded": 489,
-      "average": 61.13,
-      "economy": 5.85,
-      "bestBowling": "3/24"
+      "average": 22.45,
+      "economy": 4.62,
+      "bestBowling": "6/54"
     },
-    "bio": "Akhil Mishra is the premier batsman, tactical captain, and inspirational talisman of Dread Eleven (DE). Dominating the Atal Bihari Vajpayee Memorial Tournament with 1,342 runs (49.7 avg) and 14 wickets, Akhil captained Dread Eleven to the historic 2022 Championship title in Rewa.",
+    "bio": "Akhil Mishra (#45) is the talismanic captain and premier top-order all-rounder of Dread Eleven (DE). A veteran of 51 matches with 1,747 career runs (HS 124, 2 centuries, 12 half-centuries) and 92 wickets (best bowling 6/54), Akhil anchors the franchise in the historic derby against Destroyers.",
     "photo": "/public/players/akhil-mishra.svg",
     "matchHistory": [
       {
@@ -395,12 +395,12 @@
       }
     ],
     "fifaRatings": {
-      "overall": 94,
+      "overall": 96,
       "battingPower": 95,
       "timing": 96,
       "stamina": 92,
       "clutch": 98,
-      "bowlingCtrl": 82
+      "bowlingCtrl": 91
     }
   },
   {

@@ -3641,3 +3641,14 @@ body {
     gap: 0.75rem;
   }
 }
+
+.hud-career-row {
+  font-family: var(--f-mono);
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--c-volt);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 0.5rem;
+}

@@ -1,7 +1,7 @@
 /**
  * PRODUCTION STATIC SITE GENERATOR (SSG) FOR DREAD ELEVEN (DE)
  * Generates 100% pre-rendered, SEO-optimized, accessible HTML pages.
- * Captain: Akhil Mishra (1,342 runs, 14 wickets in derby clashes)
+ * Captain: Akhil Mishra (1,747 career runs, 92 career wickets in 51 matches)
  * Arch-rivals: Destroyers Cricket Club (DES), led by Pranav Dwivedi
  * Atal Bihari Vajpayee Memorial Tournament • Rewa Division (RDCA)
  * Design Direction: Awwwards-winning Athletic Brutalist / $4k Studio Quality
@@ -194,7 +194,7 @@ function renderFooter() {
             <h4>Franchise</h4>
             <ul class="footer-links">
               <li><a href="/players">Official Roster (43 Players)</a></li>
-              <li><a href="/players/akhil-mishra">Capt. Akhil Mishra (#1)</a></li>
+              <li><a href="/players/akhil-mishra">Capt. Akhil Mishra (#45)</a></li>
               <li><a href="/about">Club Legacy &amp; Fortress</a></li>
               <li><a href="/news">Press Dispatches &amp; Media</a></li>
             </ul>
@@ -340,7 +340,7 @@ ${renderHeader('home')}
       </h1>
 
       <p class="broadcast-subtitle">
-        THE HUNT BEGINS • APSU STADIUM, REWA • CAPT. AKHIL MISHRA (#01)
+        THE HUNT BEGINS • APSU STADIUM, REWA • CAPT. AKHIL MISHRA (#45)
       </p>
 
       <!-- Broadcast Match Hub Card (Spans Full Width of Left Column) -->
@@ -408,7 +408,7 @@ ${renderHeader('home')}
       <!-- Translucent Giant Watermark Typography Behind Athlete Shoulders -->
       <div class="athlete-watermark" aria-hidden="true">
         <span>DREAD</span>
-        <span class="watermark-number">01</span>
+        <span class="watermark-number">45</span>
       </div>
 
       <!-- Real High-Resolution Transparent Cutout of Cricketer in Action -->
@@ -420,16 +420,19 @@ ${renderHeader('home')}
       <div class="hero-player-stat-hud">
         <div class="hud-top-label">
           <span class="hud-badge-potm">PLAYER OF THE MOMENT</span>
-          <span class="hud-jersey-num">#01</span>
+          <span class="hud-jersey-num">#45</span>
         </div>
         <h3 class="hud-player-name">AKHIL MISHRA</h3>
-        <div class="hud-player-role">PREMIER BATTER &amp; TALISMAN CAPTAIN</div>
+        <div class="hud-player-role">TOP-ORDER ALL-ROUNDER &amp; TALISMAN CAPTAIN</div>
         <div class="hud-telemetry-row">
-          <div class="hud-stat-highlight">74* <small>(42)</small></div>
+          <div class="hud-stat-highlight">89* <small>(34)</small></div>
           <div class="hud-stat-secondary">
-            <span>SR 176.2</span>
-            <span>8x4 • 3x6</span>
+            <span>SR 261.7</span>
+            <span>6x4 • 7x6</span>
           </div>
+        </div>
+        <div class="hud-career-row">
+          <span>CAREER: 1,747 RUNS • 92 WKTS • 51 MATCHES</span>
         </div>
         <div class="hud-form-row">
           <span class="hud-form-label">FORM:</span>
