@@ -18,10 +18,10 @@
   <meta name="twitter:title" content="Tournament Points Table &amp; Standings | Dread Eleven (DE)">
   <meta name="twitter:description" content="Official standings and points table for the Atal Bihari Vajpayee Memorial Tournament, Rewa. Dread Eleven leads with 13 wins.">
 
-  <!-- Google Fonts: Chakra Petch & Outfit -->
+  <!-- Fonts: Syne, Chakra Petch, Space Grotesk, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,600;0,700;0,800;0,900;1,700;1,900&family=JetBrains+Mono:wght@500;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700;800;900&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/src/css/styles.css">
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
@@ -31,23 +31,23 @@
 <body>
 
 
-  <!-- KKR-style Top Chant Bar -->
-  <div class="knight-top-bar">
-    <div class="container top-bar-inner">
-      <div><span class="gold-star-tag">★ 2022 TOURNAMENT CHAMPIONS</span> • ATAL BIHARI VAJPAYEE CUP</div>
-      <div>SERIES ADVANTAGE: <strong style="color:var(--kkr-gold-bright);">DE LEADS 13–11 (54.2%)</strong></div>
-      <div>CAPT. AKHIL MISHRA (905 RUNS • 47.6 AVG)</div>
+  <!-- Top Marquee Ticker -->
+  <div class="de-top-ticker">
+    <div class="container de-top-ticker-inner">
+      <div><span class="trophy-star-badge"><span class="pulse-dot"></span> ★ 2022 TOURNAMENT CHAMPIONS</span> • ATAL BIHARI VAJPAYEE MEMORIAL CUP</div>
+      <div>ALL-TIME DERBY LEAD: <strong style="color:var(--gold-400);">DE 13 – 11 DES (54.2% WR)</strong></div>
+      <div>CAPTAIN: AKHIL MISHRA (905 RUNS • 47.6 AVG)</div>
     </div>
   </div>
 
-  <!-- Royal Shield Header -->
+  <!-- Imperial Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="knight-brand-crest" aria-label="Dread Eleven Home">
-        <div class="shield-monogram">DE</div>
-        <div class="knight-title-group">
+      <a href="/" class="brand-crest-link" aria-label="Dread Eleven Home">
+        <div class="imperial-shield">DE</div>
+        <div class="brand-names">
           <h1>DREAD <span>ELEVEN</span></h1>
-          <div class="knight-subline">Rewa Division Cricket Association (RDCA)</div>
+          <small>Rewa Division Cricket Association (RDCA)</small>
         </div>
       </a>
 
@@ -74,7 +74,7 @@
           </a>
         
           <a href="/stats" class="nav-link " >
-            Stats
+            Telemetry
           </a>
         
           <a href="/news" class="nav-link " >
@@ -82,7 +82,7 @@
           </a>
         
           <a href="/about" class="nav-link " >
-            The Lore
+            About
           </a>
         
           <a href="/contact" class="nav-link " >
@@ -91,74 +91,73 @@
         
       </nav>
 
-      <a href="/about" class="btn-knight-gold">
-        2022 Trophy
+      <a href="/about" class="btn-imperial-cta">
+        2022 Silverware
       </a>
     </div>
   </header>
   
 
-<section class="squad-section" style="padding-top: 4rem;">
+<section class="section-wrapper" style="padding-top: 4rem;">
   <div class="container">
-    <div class="section-head">
+    <div class="section-headline-bar">
       <div>
-        <div class="section-tag">// DIVISION TABLE</div>
-        <h1 class="section-title">Tournament Points Table</h1>
-        <p style="color: var(--kkr-gray-400); font-size: 1rem; margin-top: 0.4rem;">
+        <div class="section-pretag">// DIVISION TABLE</div>
+        <h1 class="section-massive-title">Tournament Points Table</h1>
+        <p style="color: #94a3b8; font-size: 1rem; margin-top: 0.4rem;">
           Sanctioned standings across all editions of the Atal Bihari Vajpayee Memorial Tournament in Rewa.
         </p>
       </div>
     </div>
 
-    <!-- All-Time Standings -->
-    <div style="background: var(--kkr-purple-card); border: 1px solid var(--kkr-border); border-radius: 8px; padding: 2.5rem; margin-bottom: 3rem;">
-      <h2 style="font-family: var(--f-display); font-size: 1.85rem; color: #fff; text-transform: uppercase; margin-bottom: 1.5rem;">
+    <div style="background: var(--c-dark-800); border: 1px solid var(--b-medium); border-radius: 10px; padding: 2.75rem; margin-bottom: 3rem;">
+      <h2 style="font-family: var(--f-hero); font-size: 2rem; color: #fff; text-transform: uppercase; margin-bottom: 1.5rem;">
         All-Time Derby Table (2021–2024 • 24 Encounters)
       </h2>
 
-      <div style="overflow-x: auto;">
-        <table style="width: 100%; border-collapse: collapse; font-size: 0.875rem;">
+      <div class="scorecard-table-wrap">
+        <table class="scorecard-table">
           <thead>
-            <tr style="border-bottom: 2px solid var(--kkr-border);">
-              <th style="padding: 0.75rem; text-align: left; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">Pos</th>
-              <th style="padding: 0.75rem; text-align: left; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">Franchise</th>
-              <th style="padding: 0.75rem; text-align: right; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">P</th>
-              <th style="padding: 0.75rem; text-align: right; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">W</th>
-              <th style="padding: 0.75rem; text-align: right; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">L</th>
-              <th style="padding: 0.75rem; text-align: right; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">T</th>
-              <th style="padding: 0.75rem; text-align: right; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">NR</th>
-              <th style="padding: 0.75rem; text-align: right; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">NRR</th>
-              <th style="padding: 0.75rem; text-align: right; font-family: var(--f-mono); font-size: 0.6875rem; color: var(--kkr-gold-bright); text-transform: uppercase;">Pts</th>
+            <tr>
+              <th>Pos</th>
+              <th>Franchise</th>
+              <th class="num">P</th>
+              <th class="num">W</th>
+              <th class="num">L</th>
+              <th class="num">T</th>
+              <th class="num">NR</th>
+              <th class="num">NRR</th>
+              <th class="num">Pts</th>
             </tr>
           </thead>
           <tbody>
             
-              <tr style="border-bottom: 1px solid var(--kkr-border-subtle);">
-                <td style="padding: 0.9rem 0.75rem; font-weight: 800; font-family: var(--f-mono); color: var(--kkr-gold-bright);">1</td>
-                <td style="padding: 0.9rem 0.75rem; font-weight: 800; color: #fff; font-family: var(--f-display); font-size: 1.4rem;">
-                  Dread Eleven <span style="color: var(--kkr-gold-bright); font-size: 0.75rem; margin-left: 0.5rem;">👑 SERIES LEADER</span>
+              <tr>
+                <td style="font-weight: 800; font-family: var(--f-mono); color: var(--gold-400);">1</td>
+                <td style="font-weight: 800; color: #fff; font-family: var(--f-hero); font-size: 1.45rem;">
+                  Dread Eleven <span style="color: var(--gold-400); font-size: 0.75rem; margin-left: 0.5rem;">👑 SERIES LEADER</span>
                 </td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; font-weight: 800;" class="tabular">24</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; font-weight: 800; color: var(--kkr-gold-bright);" class="tabular">13</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; color: #f87171;" class="tabular">11</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right;" class="tabular">0</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right;" class="tabular">0</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; font-family: var(--f-mono);" class="tabular">+0.142</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; font-weight: 900; color: var(--kkr-gold-bright); font-size: 1.3rem;" class="tabular">26</td>
+                <td class="num tabular font-bold">24</td>
+                <td class="num tabular font-bold" style="color: var(--gold-400);">13</td>
+                <td class="num tabular" style="color: #f87171;">11</td>
+                <td class="num tabular">0</td>
+                <td class="num tabular">0</td>
+                <td class="num tabular font-mono">+0.142</td>
+                <td class="num tabular font-bold" style="color: var(--gold-400); font-size: 1.3rem;">26</td>
               </tr>
             
-              <tr style="border-bottom: 1px solid var(--kkr-border-subtle);">
-                <td style="padding: 0.9rem 0.75rem; font-weight: 800; font-family: var(--f-mono); color: #fff;">2</td>
-                <td style="padding: 0.9rem 0.75rem; font-weight: 800; color: #fff; font-family: var(--f-display); font-size: 1.4rem;">
+              <tr>
+                <td style="font-weight: 800; font-family: var(--f-mono); color: #fff;">2</td>
+                <td style="font-weight: 800; color: #fff; font-family: var(--f-hero); font-size: 1.45rem;">
                   Destroyers Cricket Club 
                 </td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; font-weight: 800;" class="tabular">24</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; font-weight: 800; color: var(--kkr-gold-bright);" class="tabular">11</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; color: #f87171;" class="tabular">13</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right;" class="tabular">0</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right;" class="tabular">0</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; font-family: var(--f-mono);" class="tabular">-0.142</td>
-                <td style="padding: 0.9rem 0.75rem; text-align: right; font-weight: 900; color: var(--kkr-gold-bright); font-size: 1.3rem;" class="tabular">22</td>
+                <td class="num tabular font-bold">24</td>
+                <td class="num tabular font-bold" style="color: var(--gold-400);">11</td>
+                <td class="num tabular" style="color: #f87171;">13</td>
+                <td class="num tabular">0</td>
+                <td class="num tabular">0</td>
+                <td class="num tabular font-mono">-0.142</td>
+                <td class="num tabular font-bold" style="color: var(--gold-400); font-size: 1.3rem;">22</td>
               </tr>
             
           </tbody>
@@ -171,59 +170,59 @@
 
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-grid">
+        <div class="footer-columns-grid">
           <div>
-            <div class="knight-title-group" style="margin-bottom: 0.75rem;">
-              <h2 style="font-family: var(--f-display); font-size: 2.3rem; color: #fff; text-transform: uppercase;">
-                DREAD <span>ELEVEN</span>
+            <div class="brand-names" style="margin-bottom: 1rem;">
+              <h2 style="font-family: var(--f-hero); font-size: 2.2rem; color: #fff; text-transform: uppercase;">
+                DREAD <span style="color: var(--gold-400);">ELEVEN</span>
               </h2>
             </div>
-            <p style="font-size: 0.9375rem; color: var(--kkr-gray-400); max-width: 44ch; line-height: 1.7;">
+            <p style="font-size: 0.9375rem; color: #94a3b8; max-width: 44ch; line-height: 1.75;">
               Official franchise portal of Dread Eleven (DE), captained by Akhil Mishra. 
               Champions of the 2022 Atal Bihari Vajpayee Memorial Trophy and all-time series leaders against Destroyers under RDCA.
             </p>
           </div>
 
           <div>
-            <h4 style="font-family: var(--f-headline); font-size: 1rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem; font-weight: 800;">
+            <h4 style="font-family: var(--f-display); font-size: 1rem; color: #fff; text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 800;">
               Derby Center
             </h4>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--kkr-gray-400);">
-              <li><a href="/fixtures" style="color: inherit; text-decoration: none;">2025–26 Fixtures</a></li>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.875rem; color: #94a3b8;">
+              <li><a href="/fixtures" style="color: inherit; text-decoration: none;">Upcoming Fixtures (2025–26)</a></li>
               <li><a href="/results" style="color: inherit; text-decoration: none;">24 Derby Clashes Archive</a></li>
               <li><a href="/points-table" style="color: inherit; text-decoration: none;">Division Points Table</a></li>
-              <li><a href="/stats" style="color: inherit; text-decoration: none;">Performance Records</a></li>
+              <li><a href="/stats" style="color: inherit; text-decoration: none;">All-Time Records</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 style="font-family: var(--f-headline); font-size: 1rem; color: #fff; text-transform: uppercase; margin-bottom: 1rem; font-weight: 800;">
+            <h4 style="font-family: var(--f-display); font-size: 1rem; color: #fff; text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 800;">
               Franchise
             </h4>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.875rem; color: var(--kkr-gray-400);">
-              <li><a href="/players" style="color: inherit; text-decoration: none;">Squad (43 Players)</a></li>
-              <li><a href="/about" style="color: inherit; text-decoration: none;">2022 Championship Victory</a></li>
-              <li><a href="/news" style="color: inherit; text-decoration: none;">Franchise Media</a></li>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.65rem; font-size: 0.875rem; color: #94a3b8;">
+              <li><a href="/players" style="color: inherit; text-decoration: none;">Knight Squad (43 Players)</a></li>
+              <li><a href="/about" style="color: inherit; text-decoration: none;">2022 Title Defense</a></li>
+              <li><a href="/news" style="color: inherit; text-decoration: none;">Dispatches &amp; Media</a></li>
               <li><a href="/contact" style="color: inherit; text-decoration: none;">Martand Ground Desk</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 style="font-family: var(--f-headline); font-size: 1rem; color: var(--kkr-gold-bright); text-transform: uppercase; margin-bottom: 1rem; font-weight: 800;">
+            <h4 style="font-family: var(--f-display); font-size: 1rem; color: var(--gold-400); text-transform: uppercase; margin-bottom: 1.25rem; font-weight: 800;">
               Dread Legion
             </h4>
-            <p style="font-size: 0.8125rem; color: var(--kkr-gray-400); line-height: 1.6; margin-bottom: 1rem;">
-              Stand with the Titans of Rewa. Backing Akhil Mishra, Kuldeep Sen, and Kumar Kartikeya.
+            <p style="font-size: 0.8125rem; color: #94a3b8; line-height: 1.6; margin-bottom: 1rem;">
+              Backing Akhil Mishra, Kuldeep Sen, and Kumar Kartikeya in the Atal Bihari Vajpayee Memorial Tournament.
             </p>
-            <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--kkr-gold-bright); font-weight: 700;">
+            <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--gold-400); font-weight: 700;">
               #DREADTHETITANS
             </div>
           </div>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--kkr-border-subtle); padding-top: 2rem; font-size: 0.8125rem; color: var(--kkr-gray-600); flex-wrap: wrap; gap: 1rem;">
-          <div>&copy; 2021–2026 Dread Eleven (DE). All rights reserved.</div>
-          <div>Martand Ground No. 3 • Rewa, Madhya Pradesh</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--b-subtle); padding-top: 2rem; font-size: 0.8125rem; color: #64748b; flex-wrap: wrap; gap: 1rem;">
+          <div>&copy; 2021–2026 Dread Eleven (DE). Sanctioned under RDCA.</div>
+          <div>Martand Ground No. 3 &amp; APSU Stadium • Rewa, Madhya Pradesh</div>
         </div>
       </div>
     </footer>
