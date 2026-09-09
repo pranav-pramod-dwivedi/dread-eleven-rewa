@@ -1,17 +1,17 @@
 /**
- * DREAD ELEVEN (DE) — HIGH-PERFORMANCE INTERACTIVE ENGINE
- * Features:
- * 1. Interactive Cursor-Gravity Particle Constellation Canvas (60fps)
- * 2. 3D Tilt Physics on Cards
- * 3. Animated Number Rollups (CountUp on Viewport Entry)
- * 4. ESPNcricinfo Interactive Tab Controller (Scorecard / Match Info)
- * 5. Format & Season Filter for One Day & T20 Fixtures
+ * DREAD ELEVEN (DE) — AWWWARDS SITE OF THE YEAR INTERACTIVE ENGINE
+ * 
+ * 1. Kinetic Fluid Aura & Velocity Shockwave Mesh Canvas (60fps)
+ * 2. Specular 3D Gyroscopic Tilt & Spotlight Glare
+ * 3. Animated Number Rollups (countUp on viewport entry)
+ * 4. Multi-Dimensional One Day & T20 Format & Season Filter
+ * 5. ESPNcricinfo Interactive Tab Controller
  * 6. Squad Role Filter
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initParticleCanvas();
-  init3DCardTilt();
+  initKineticFluidCanvas();
+  init3DSpecularTilt();
   initNumberCounters();
   initScorecardTabs();
   initMatchFilters();
@@ -19,18 +19,34 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. INTERACTIVE CURSOR-GRAVITY PARTICLE CONSTELLATION CANVAS
+   1. KINETIC FLUID AURA & VELOCITY SHOCKWAVE MESH CANVAS
    ========================================================================== */
-function initParticleCanvas() {
+function initKineticFluidCanvas() {
   const canvas = document.getElementById('ambient-canvas');
   if (!canvas) return;
 
+  // Respect prefers-reduced-motion
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    canvas.style.display = 'none';
+    return;
+  }
+
   const ctx = canvas.getContext('2d');
   let width, height;
-  let particles = [];
-  const particleCount = window.innerWidth < 768 ? 35 : 75;
+  let ripples = [];
+  let nodes = [];
+  const nodeCount = window.innerWidth < 768 ? 25 : 55;
 
-  const mouse = { x: null, y: null, radius: 140 };
+  let mouse = {
+    x: -1000,
+    y: -1000,
+    targetX: -1000,
+    targetY: -1000,
+    lastX: -1000,
+    lastY: -1000,
+    speed: 0,
+    radius: 190
+  };
 
   function resize() {
     width = canvas.width = window.innerWidth;
@@ -40,75 +56,134 @@ function initParticleCanvas() {
   resize();
 
   window.addEventListener('mousemove', (e) => {
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
+    mouse.targetX = e.clientX;
+    mouse.targetY = e.clientY;
+
+    const dx = e.clientX - mouse.lastX;
+    const dy = e.clientY - mouse.lastY;
+    mouse.speed = Math.sqrt(dx * dx + dy * dy);
+    mouse.lastX = e.clientX;
+    mouse.lastY = e.clientY;
+
+    // High velocity trigger shockwave ripple
+    if (mouse.speed > 28 && ripples.length < 6) {
+      ripples.push({
+        x: e.clientX,
+        y: e.clientY,
+        radius: 10,
+        maxRadius: Math.min(mouse.speed * 4, 180),
+        alpha: 0.35,
+        speed: 4.5
+      });
+    }
   });
 
   window.addEventListener('mouseleave', () => {
-    mouse.x = null;
-    mouse.y = null;
+    mouse.targetX = -1000;
+    mouse.targetY = -1000;
+    mouse.speed = 0;
   });
 
-  class Particle {
+  class KineticNode {
     constructor() {
       this.x = Math.random() * width;
       this.y = Math.random() * height;
-      this.vx = (Math.random() - 0.5) * 0.8;
-      this.vy = (Math.random() - 0.5) * 0.8;
-      this.radius = Math.random() * 2 + 1;
-      this.baseColor = Math.random() > 0.4 ? 'rgba(0, 240, 255,' : 'rgba(255, 255, 255,';
+      this.vx = (Math.random() - 0.5) * 0.7;
+      this.vy = (Math.random() - 0.5) * 0.7;
+      this.baseRadius = Math.random() * 2 + 1;
+      this.radius = this.baseRadius;
+      this.phase = Math.random() * Math.PI * 2;
     }
 
     update() {
       this.x += this.vx;
       this.y += this.vy;
+      this.phase += 0.02;
 
       if (this.x < 0 || this.x > width) this.vx *= -1;
       if (this.y < 0 || this.y > height) this.vy *= -1;
 
-      if (mouse.x !== null && mouse.y !== null) {
-        const dx = mouse.x - this.x;
-        const dy = mouse.y - this.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < mouse.radius) {
-          const force = (mouse.radius - dist) / mouse.radius;
-          this.x -= (dx / dist) * force * 3;
-          this.y -= (dy / dist) * force * 3;
-        }
+      // Cursor spring repulsion
+      const dx = mouse.x - this.x;
+      const dy = mouse.y - this.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < mouse.radius) {
+        const force = (mouse.radius - dist) / mouse.radius;
+        this.x -= (dx / dist) * force * 4;
+        this.y -= (dy / dist) * force * 4;
+        this.radius = this.baseRadius * 1.5;
+      } else {
+        this.radius = this.baseRadius;
       }
     }
 
     draw() {
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-      ctx.fillStyle = this.baseColor + '0.7)';
-      ctx.shadowBlur = 8;
-      ctx.shadowColor = '#00f0ff';
+      ctx.fillStyle = `rgba(212, 255, 0, ${0.4 + Math.sin(this.phase) * 0.2})`;
+      ctx.shadowBlur = 10;
+      ctx.shadowColor = '#d4ff00';
       ctx.fill();
     }
   }
 
-  for (let i = 0; i < particleCount; i++) {
-    particles.push(new Particle());
+  for (let i = 0; i < nodeCount; i++) {
+    nodes.push(new KineticNode());
   }
 
   function render() {
     ctx.clearRect(0, 0, width, height);
 
-    for (let i = 0; i < particles.length; i++) {
-      particles[i].update();
-      particles[i].draw();
+    // Smooth cursor interpolation
+    mouse.x += (mouse.targetX - mouse.x) * 0.08;
+    mouse.y += (mouse.targetY - mouse.y) * 0.08;
 
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
+    // Ambient radial aura at cursor
+    if (mouse.x > 0 && mouse.y > 0) {
+      const aura = ctx.createRadialGradient(mouse.x, mouse.y, 0, mouse.x, mouse.y, 320);
+      aura.addColorStop(0, 'rgba(212, 255, 0, 0.06)');
+      aura.addColorStop(0.5, 'rgba(212, 255, 0, 0.015)');
+      aura.addColorStop(1, 'rgba(5, 5, 7, 0)');
+      ctx.fillStyle = aura;
+      ctx.fillRect(0, 0, width, height);
+    }
+
+    // Render shockwave ripples
+    for (let r = ripples.length - 1; r >= 0; r--) {
+      const rip = ripples[r];
+      rip.radius += rip.speed;
+      rip.alpha -= 0.008;
+
+      if (rip.alpha <= 0 || rip.radius >= rip.maxRadius) {
+        ripples.splice(r, 1);
+        continue;
+      }
+
+      ctx.beginPath();
+      ctx.arc(rip.x, rip.y, rip.radius, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(212, 255, 0, ${rip.alpha})`;
+      ctx.lineWidth = 1.5;
+      ctx.shadowBlur = 12;
+      ctx.shadowColor = '#d4ff00';
+      ctx.stroke();
+    }
+
+    // Connect node lattice lines
+    for (let i = 0; i < nodes.length; i++) {
+      nodes[i].update();
+      nodes[i].draw();
+
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 110) {
+        if (dist < 120) {
           ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(0, 240, 255, ${0.18 * (1 - dist / 110)})`;
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(212, 255, 0, ${0.15 * (1 - dist / 120)})`;
           ctx.lineWidth = 0.8;
           ctx.stroke();
         }
@@ -122,10 +197,10 @@ function initParticleCanvas() {
 }
 
 /* ==========================================================================
-   2. 3D TILT PHYSICS ON CARDS
+   2. SPECULAR 3D GYROSCOPIC TILT & SPOTLIGHT GLARE
    ========================================================================== */
-function init3DCardTilt() {
-  const cards = document.querySelectorAll('.tilt-card, .player-card, .hero-telemetry-panel');
+function init3DSpecularTilt() {
+  const cards = document.querySelectorAll('.tilt-card, .fixture-pro-card, .player-pro-card, .telemetry-stage-card');
   cards.forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
@@ -138,7 +213,7 @@ function init3DCardTilt() {
       const rotateX = ((y - centerY) / centerY) * -6;
       const rotateY = ((x - centerX) / centerX) * 6;
 
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-3px)`;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
     });
 
     card.addEventListener('mouseleave', () => {
@@ -148,7 +223,7 @@ function init3DCardTilt() {
 }
 
 /* ==========================================================================
-   3. ANIMATED NUMBER COUNTERS (COUNTUP ON ENTRY)
+   3. ANIMATED NUMBER ROLLUPS (COUNTUP)
    ========================================================================== */
 function initNumberCounters() {
   const counterElements = document.querySelectorAll('[data-count]');
@@ -188,7 +263,7 @@ function initNumberCounters() {
 }
 
 /* ==========================================================================
-   4. ESPNcricinfo INTERACTIVE TABS CONTROLLER (Scorecard / Match Info)
+   4. ESPNcricinfo INTERACTIVE TAB CONTROLLER
    ========================================================================== */
 function initScorecardTabs() {
   const tabButtons = document.querySelectorAll('.espn-tab-btn');
@@ -219,12 +294,12 @@ function initScorecardTabs() {
 }
 
 /* ==========================================================================
-   5. FORMAT & SEASON FILTER FOR ONE DAY & T20 FIXTURES
+   5. MULTI-DIMENSIONAL FORMAT & SEASON FILTER
    ========================================================================== */
 function initMatchFilters() {
   const formatButtons = document.querySelectorAll('.format-filter-btn');
   const seasonButtons = document.querySelectorAll('.season-filter-btn');
-  const matchCards = document.querySelectorAll('.match-fixture-card');
+  const matchCards = document.querySelectorAll('.fixture-pro-card');
   if (!matchCards.length) return;
 
   let activeFormat = 'all';
@@ -282,7 +357,7 @@ function initMatchFilters() {
    ========================================================================== */
 function initSquadRoleFilter() {
   const filterBtns = document.querySelectorAll('#squad-filter-controls .role-btn');
-  const cards = document.querySelectorAll('#players-grid .player-card');
+  const cards = document.querySelectorAll('#players-grid .player-pro-card');
   if (!filterBtns.length || !cards.length) return;
 
   filterBtns.forEach((btn) => {
