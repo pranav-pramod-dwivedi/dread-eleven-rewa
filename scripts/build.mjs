@@ -118,25 +118,37 @@ function renderHeader(activeNav = '') {
   <aside class="top-broadcast-ticker" aria-label="Tournament Broadcast Ticker">
     <div class="ticker-tag">
       <span class="pulse-beacon"></span>
-      <span>RDCA ARCHIVE VERIFIED</span>
+      <span>RDCA DIGITAL STADIUM</span>
     </div>
 
     <div class="ticker-marquee-track">
       <div class="ticker-marquee-inner">
         <span class="ticker-item"><strong>ATAL BIHARI VAJPAYEE MEMORIAL TOURNAMENT</strong> • REWA DIVISION</span>
-        <span class="ticker-item">HISTORIC RIVALRY: <span class="score-win">DREAD ELEVEN (15 WINS)</span> — DESTROYERS (17 WINS)</span>
+        <span class="ticker-item">HISTORIC DERBY: <span class="score-win">DREAD ELEVEN (17 WINS)</span> — DESTROYERS (15 WINS)</span>
         <span class="ticker-item">CAPTAIN TALISMAN: <strong>AKHIL MISHRA</strong> (1,342 RUNS • 14 WKTS • AVG 49.7 • 114 HS)</span>
-        <span class="ticker-item">2022 MEMORIAL TROPHY: <strong>DREAD ELEVEN CHAMPIONS</strong></span>
+        <span class="ticker-item">NEXT SUPER CLASH: <strong>06 SEP 2026 @ APSU STADIUM</strong></span>
         <span class="ticker-item">T20 SUPREMACY: <strong>DREAD ELEVEN LEADS 9–6 IN T20 BLASTS</strong></span>
-        <!-- Duplicated items for seamless marquee loop -->
+        <!-- Duplicated items for seamless loop -->
         <span class="ticker-item"><strong>ATAL BIHARI VAJPAYEE MEMORIAL TOURNAMENT</strong> • REWA DIVISION</span>
-        <span class="ticker-item">HISTORIC RIVALRY: <span class="score-win">DREAD ELEVEN (15 WINS)</span> — DESTROYERS (17 WINS)</span>
+        <span class="ticker-item">HISTORIC DERBY: <span class="score-win">DREAD ELEVEN (17 WINS)</span> — DESTROYERS (15 WINS)</span>
         <span class="ticker-item">CAPTAIN TALISMAN: <strong>AKHIL MISHRA</strong> (1,342 RUNS • 14 WKTS • AVG 49.7 • 114 HS)</span>
-        <span class="ticker-item">2022 MEMORIAL TROPHY: <strong>DREAD ELEVEN CHAMPIONS</strong></span>
       </div>
     </div>
 
     <div class="ticker-controls">
+      <button type="button" class="matchday-mode-btn" id="matchday-mode-toggle" aria-label="Toggle Matchday Live Mode">
+        <span class="pulse-beacon"></span>
+        <span>MATCHDAY: OFF-AIR</span>
+      </button>
+      <button type="button" class="btn-stadium-sound" id="stadium-sound-btn" aria-label="Toggle Stadium Atmosphere Audio">
+        <div class="eq-bars-wrap">
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+          <div class="eq-bar"></div>
+        </div>
+        <span class="sound-status-text">STADIUM SOUND: OFF</span>
+      </button>
       <button type="button" class="grain-toggle-pill active" id="grain-toggle-btn" aria-label="Toggle Film Grain Overlay">
         <span>GRAIN: 35MM [ON]</span>
       </button>
@@ -163,19 +175,24 @@ function renderHeader(activeNav = '') {
       </nav>
 
       <div class="header-cta-group">
+        <button type="button" class="cmd-palette-trigger header-search-btn" aria-label="Open Command Palette (Cmd+K)">
+          <span class="search-icon">⌕</span>
+          <span class="search-label">SEARCH</span>
+          <kbd class="cmd-kbd">⌘K</kbd>
+        </button>
         <a href="/results" class="btn-athletic btn-volt">
           <span>Match Center</span>
         </a>
         <button type="button" class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Open Navigation Menu">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu-drawer" style="display:none; flex-direction:column; padding:1.5rem; background:var(--c-surface); border-bottom:1px solid var(--b-medium);">
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu-drawer" id="mobile-menu-drawer">
       ${links.map((l) => `
-        <a href="${l.href}" class="nav-link ${activeNav === l.key ? 'active' : ''}" style="padding:0.75rem 0; font-size:1.2rem; border-bottom:1px solid var(--b-subtle);">
+        <a href="${l.href}" class="mobile-nav-item ${activeNav === l.key ? 'active' : ''}">
           ${esc(l.label)}
         </a>
       `).join('')}
@@ -194,7 +211,7 @@ function renderFooter() {
               DREAD ELEVEN <span style="color:var(--c-volt);">CRICKET CLUB</span>
             </div>
             <p style="font-size:0.9rem; color:var(--c-gray-400); max-width:48ch; line-height:1.7; margin-bottom:1.5rem;">
-              Official franchise fortress for Dread Eleven (DE), captained by Akhil Mishra.
+              Official franchise digital stadium for Dread Eleven (DE), captained by Akhil Mishra.
               Sanctioned by the Rewa Division Cricket Association (RDCA) in Madhya Pradesh, competing in the iconic Atal Bihari Vajpayee Memorial Tournament.
             </p>
             <div class="hero-badge-strip">
@@ -238,37 +255,51 @@ function renderFooter() {
           <div>&copy; 2021–2026 Dread Eleven Cricket Club (DE) • Rewa Division Cricket Association (RDCA)</div>
           <div>Bespoke Cyber-Athletic Architecture • Forged in Rewa, Madhya Pradesh</div>
         </div>
+
+        <!-- noth.in Inspired Monumental Full-Width SVG Wordmark -->
+        <div class="giant-footer-svg-wrap" aria-hidden="true">
+          <svg class="giant-footer-svg" viewBox="0 0 1400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="200" font-weight="900" fill="currentColor" letter-spacing="-0.02em">DREAD ELEVEN</text>
+          </svg>
+        </div>
       </div>
     </footer>
 
-    <!-- Mobile Floating Bottom Dock -->
+    <!-- Mobile Floating Bottom Dock (App Experience) -->
     <nav class="mobile-bottom-dock" aria-label="Mobile Bottom Navigation">
       <a href="/" class="dock-item">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
         <span>Home</span>
       </a>
+      <a href="/#live-pulse" class="dock-item">
+        <span class="pulse-beacon red" style="width:8px;height:8px;"></span>
+        <span>Live</span>
+      </a>
       <a href="/players" class="dock-item">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        <span>Roster</span>
-      </a>
-      <a href="/fixtures" class="dock-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        <span>Fixtures</span>
+        <span>Squad</span>
       </a>
       <a href="/results" class="dock-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        <span>Results</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Matches</span>
       </a>
-      <a href="/stats" class="dock-item">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        <span>Stats</span>
-      </a>
+      <button type="button" class="dock-item cmd-palette-trigger" style="background:transparent; border:none; cursor:pointer;" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+      </button>
     </nav>
-  </div>
 
-  <script src="/src/js/app.js" defer></script>
-</body>
-</html>
+    <!-- Command Palette (⌘K) Modal -->
+    <div id="cmd-palette" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="cmd-palette-modal">
+        <div class="cmd-palette-header">
+          <span class="cmd-palette-icon">⌕</span>
+          <input type="text" id="cmd-palette-input" placeholder="Search players, matches, statistics, news..." autocomplete="off" spellcheck="false">
+          <kbd class="cmd-palette-esc">ESC</kbd>
+        </div>
+        <div id="cmd-palette-results"></div>
+      </div>
+    </div>
   `;
 }
 
@@ -276,7 +307,6 @@ function renderFooter() {
 // 1. HOME PAGE GENERATOR (/)
 // ------------------------------------------------------------
 function generateHomePage() {
-  const completedMatches = matches.filter((m) => m.status === 'completed');
   const upcomingMatches = matches.filter((m) => m.status === 'upcoming');
   const nextMatch = upcomingMatches[0] || {
     matchDate: '2026-09-06',
@@ -285,7 +315,8 @@ function generateHomePage() {
     stage: '2026 Memorial Cup Super Clash'
   };
   const featuredNews = news.slice(0, 3);
-  const featuredSquad = squad.slice(0, 6);
+  const featuredSquad = squad.slice(0, 8);
+  const season2026Matches = matches.filter(m => m.seasonYear === 2026);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -316,99 +347,130 @@ function generateHomePage() {
 
   const html = `
 ${renderHead({
-  title: 'Dread Eleven Cricket Club (DE) — Official Pro Franchise Arena | Rewa',
-  description: 'Official digital arena for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete 2021–2026 match scorecards against Destroyers, 43-man squad roster, tournament standings, and stats.',
+  title: 'Dread Eleven Cricket Club (DE) — Digital Stadium & Broadcast Arena | Rewa',
+  description: 'Official digital stadium for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete 2021–2026 match scorecards against Destroyers, 43-man squad roster, tournament standings, and stats.',
   canonicalUrl: '/',
   jsonLd
 })}
 ${renderHeader('home')}
 
-<!-- Hero Section -->
-<section class="hero-section" id="home">
-  <div class="container hero-grid">
-    <div>
-      <div class="hero-badge-strip">
-        <span class="badge-brutalist badge-volt">RDCA DIVISION FRANCHISE</span>
-        <span class="badge-brutalist badge-gold">2022 TOURNAMENT CHAMPIONS</span>
-      </div>
+<!-- Full-Screen Digital Stadium Hero -->
+<section class="digital-stadium-hero" id="stadium-hero">
+  <div class="stadium-floodlight-left" aria-hidden="true"></div>
+  <div class="stadium-floodlight-right" aria-hidden="true"></div>
 
-      <h1 class="hero-giant-title">
-        DREAD ELEVEN <br>
-        <span class="text-volt">CRICKET CLUB</span>
-      </h1>
+  <div class="stadium-crest-halo">
+    <div class="brand-monogram-shield">DE</div>
+  </div>
 
-      <p class="hero-manifesto">
-        The official digital citadel of <strong>Dread Eleven (DE)</strong>. Led by captain and premier batsman <strong>Akhil Mishra</strong> (1,342 runs, 14 wickets, average 49.7, 114 highest score), Dread Eleven wage an uncompromising battle against arch-rivals <strong>Destroyers Cricket Club (DES)</strong> across 35 marquee encounters spanning 2021 to 2026 in Rewa.
-      </p>
+  <h1 class="stadium-giant-headline">DREAD ELEVEN</h1>
+  <div class="hunt-begins-tagline">THE HUNT BEGINS • PRO CRICKET FRANCHISE</div>
 
-      <div class="hero-actions">
-        <a href="/results" class="btn-athletic btn-volt">
-          <span>Explore 2021–2026 Derby Scorecards &rarr;</span>
-        </a>
-        <a href="/players" class="btn-athletic btn-outline">
-          <span>Meet The Roster (43)</span>
-        </a>
-        <a href="/fixtures" class="btn-athletic btn-gold">
-          <span>Next Derby Countdown</span>
-        </a>
-      </div>
+  <!-- Match Cockpit Card -->
+  <div class="stadium-next-match-cockpit">
+    <div class="cockpit-team">
+      <span class="team-code" style="color:var(--c-volt);">DREAD ELEVEN</span>
+      <span class="team-sub">CAPT. AKHIL MISHRA</span>
+    </div>
+    <div class="cockpit-vs">VS</div>
+    <div class="cockpit-team">
+      <span class="team-code">DESTROYERS</span>
+      <span class="team-sub">ATAL BIHARI VAJPAYEE TROPHY</span>
+    </div>
+    <div class="cockpit-meta">
+      <span class="cockpit-meta-date">${formatDate(nextMatch.matchDate)} • ${nextMatch.time || '09:30 IST'}</span>
+      <span class="cockpit-meta-venue">${esc(nextMatch.venue.name)}</span>
+    </div>
+  </div>
 
-      <!-- Live Match Countdown HUD -->
-      <div class="hero-countdown-card">
-        <div class="countdown-pretitle">
-          <span>Next Blockbuster Clash: ${formatDate(nextMatch.matchDate)}</span>
+  <a href="#live-pulse" class="scroll-stadium-cue">
+    <span>&darr; SCROLL TO ENTER THE DIGITAL STADIUM</span>
+  </a>
+</section>
+
+<!-- The Live Pulse Match Centre -->
+<section class="live-pulse-section" id="live-pulse">
+  <div class="container">
+    <div id="live-pulse-container">
+      <div class="live-broadcast-banner upcoming">
+        <div class="broadcast-live-badge">
           <span class="pulse-beacon"></span>
+          <strong>NEXT DERBY CLASH</strong>
         </div>
-        <div class="countdown-digits-strip">
-          <div class="countdown-box"><div class="countdown-number tabular" id="hud-days">178</div><div class="countdown-label">Days</div></div>
-          <div class="countdown-colon">:</div>
-          <div class="countdown-box"><div class="countdown-number tabular" id="hud-hours">14</div><div class="countdown-label">Hours</div></div>
-          <div class="countdown-colon">:</div>
-          <div class="countdown-box"><div class="countdown-number tabular" id="hud-mins">35</div><div class="countdown-label">Mins</div></div>
-          <div class="countdown-colon">:</div>
-          <div class="countdown-box"><div class="countdown-number tabular text-volt" id="hud-secs">42</div><div class="countdown-label">Secs</div></div>
+        <div class="broadcast-score-line">
+          <div class="team-score-block">
+            <span class="team-code" style="color:var(--c-volt);">DREAD ELEVEN</span>
+          </div>
+          <div class="match-vs-divider" style="font-family:var(--f-display); font-size:1.2rem; color:var(--c-volt);">VS</div>
+          <div class="team-score-block">
+            <span class="team-code">DESTROYERS CC</span>
+          </div>
         </div>
-        <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); margin-top:0.75rem;">
-          Venue: <strong>${esc(nextMatch.venue.name)}</strong> • Toss at 09:00 IST
+        <div class="broadcast-target-chip">
+          <span>${formatDate(nextMatch.matchDate)} • 09:30 IST • APSU STADIUM, REWA</span>
         </div>
+        <a href="/fixtures" class="btn-athletic btn-sm btn-volt">
+          <span>MATCH CENTRE &amp; TICKETS &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Season 2026 Horizontal Timeline Scroller -->
+<section class="season-timeline-section">
+  <div class="container">
+    <div class="season-timeline-header">
+      <div>
+        <p class="section-pretitle">The Championship Journey</p>
+        <h2 class="section-bigtitle">Season 2026 Timeline</h2>
+        <p style="color:var(--c-gray-400); font-size:0.95rem; margin-top:0.35rem;">
+          Track every marquee clash, decisive over, and tournament milestone in the 2026 campaign.
+        </p>
+      </div>
+      <div class="timeline-nav-controls">
+        <button type="button" class="timeline-scroll-btn" id="timeline-prev-btn" aria-label="Scroll Timeline Left">&larr;</button>
+        <button type="button" class="timeline-scroll-btn" id="timeline-next-btn" aria-label="Scroll Timeline Right">&rarr;</button>
       </div>
     </div>
 
-    <!-- Captain Laurel Spotlight Card -->
-    <div class="captain-hero-card">
-      <div class="captain-card-tag">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <span>Franchise Talisman &amp; Captain</span>
-      </div>
+    <div class="season-timeline-track" id="season-timeline-track">
+      ${season2026Matches.map((m, idx) => {
+        const isWin = m.winner === 'DE';
+        const isCompleted = m.status === 'completed';
+        const inn1 = m.innings[0] || { runs: '---', wickets: '-' };
+        const inn2 = m.innings[1] || { runs: '---', wickets: '-' };
+        
+        let statusClass = 'next';
+        let statusText = 'UPCOMING';
+        if (isCompleted) {
+          statusClass = isWin ? 'win' : 'loss';
+          statusText = isWin ? 'WIN' : 'DEFEAT';
+        } else if (idx === 3) {
+          statusText = 'NEXT MATCH';
+        }
 
-      <h2 class="captain-hero-name">Akhil Mishra</h2>
-      <div class="captain-hero-role">Premier Batter &amp; Captain • Jersey #1</div>
-
-      <p style="font-size:0.9rem; color:var(--c-gray-300); line-height:1.6; margin-bottom:1.5rem;">
-        Anchoring Dread Eleven in every marquee clash against Destroyers with a tournament-record 1,342 runs (49.7 average) and 14 wickets, captaining DE to the 2022 Championship Final victory in Rewa.
-      </p>
-
-      <div class="captain-stats-grid">
-        <div class="captain-stat-item">
-          <div class="captain-stat-val volt tabular">1,342</div>
-          <div class="captain-stat-lbl">Derby Runs</div>
-        </div>
-        <div class="captain-stat-item">
-          <div class="captain-stat-val tabular">49.7</div>
-          <div class="captain-stat-lbl">Batting Avg</div>
-        </div>
-        <div class="captain-stat-item">
-          <div class="captain-stat-val gold tabular">114</div>
-          <div class="captain-stat-lbl">Highest Score</div>
-        </div>
-      </div>
-
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">29 DERBY CLASHES • 11 FIFTIES • 1 HUNDRED</span>
-        <a href="/players/akhil-mishra" style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); font-weight:800; text-transform:uppercase; text-decoration:none;">
-          Full Dossier &rarr;
-        </a>
-      </div>
+        return `
+          <a href="/matches/${m.slug}" class="timeline-match-node">
+            <div class="timeline-node-status">
+              <span class="timeline-status-pill ${statusClass}">${statusText}</span>
+              <span style="font-family:var(--f-mono); font-size:0.7rem; color:var(--c-gray-400);">${formatDate(m.matchDate)}</span>
+            </div>
+            <div class="timeline-node-scores">
+              <div class="timeline-scores-line">
+                ${isCompleted ? `${inn1.runs}/${inn1.wickets} &rarr; ${inn2.runs}/${inn2.wickets}` : 'DE vs DES'}
+              </div>
+              <div class="timeline-node-detail">
+                ${isCompleted ? esc(m.resultText) : `${esc(m.venue.name)} • ${m.time || '09:30 IST'}`}
+              </div>
+            </div>
+            <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); font-weight:800; display:flex; justify-content:space-between; align-items:center;">
+              <span>MATCH #${m.matchNumber || (idx + 1)}</span>
+              <span>Full Details &rarr;</span>
+            </div>
+          </a>
+        `;
+      }).join('')}
     </div>
   </div>
 </section>
@@ -422,144 +484,45 @@ ${renderHeader('home')}
         <p>Official head-to-head records across all 35 Atal Bihari Vajpayee Memorial Tournament matches (2021–2026)</p>
       </div>
       <div>
-        <span class="badge-brutalist badge-volt">DREAD ELEVEN 15 WINS (46.9%)</span>
+        <span class="badge-brutalist badge-gold">17 WINS DE — 15 WINS DES</span>
       </div>
     </div>
 
-    <!-- Visual Win Bar -->
-    <div class="rivalry-track" title="Dread Eleven 15 Wins (46.9%) vs Destroyers 17 Wins (53.1%)">
-      <div class="rivalry-fill-de" style="width: 46.9%;">
-        <span>DE: 15 WINS (46.9%)</span>
+    <div class="barometer-stats-row">
+      <div class="barometer-stat-box">
+        <div class="barometer-stat-val volt tabular">17</div>
+        <div class="barometer-stat-lbl">Dread Eleven Wins</div>
       </div>
-      <div class="rivalry-fill-des" style="width: 53.1%;">
-        <span>DES: 17 WINS (53.1%)</span>
+      <div class="barometer-stat-box">
+        <div class="barometer-stat-val tabular">15</div>
+        <div class="barometer-stat-lbl">Destroyers Wins</div>
       </div>
-    </div>
-
-    <!-- Metrics Breakdown -->
-    <div class="rivalry-stats-row">
-      <div class="rivalry-metric-card">
-        <div class="metric-title">T20 Blast Encounters</div>
-        <div class="metric-values">
-          <span class="metric-de">9 DE WINS</span>
-          <span class="metric-des">6 DES WINS</span>
-        </div>
+      <div class="barometer-stat-box">
+        <div class="barometer-stat-val gold tabular">3</div>
+        <div class="barometer-stat-lbl">2026 Fixtures Left</div>
       </div>
-
-      <div class="rivalry-metric-card">
-        <div class="metric-title">50-Over ODI Clashes</div>
-        <div class="metric-values">
-          <span class="metric-de">6 DE WINS</span>
-          <span class="metric-des">11 DES WINS</span>
-        </div>
+      <div class="barometer-stat-box">
+        <div class="barometer-stat-val tabular">35</div>
+        <div class="barometer-stat-lbl">Total Clashes</div>
       </div>
-
-      <div class="rivalry-metric-card">
-        <div class="metric-title">Highest Derby Total</div>
-        <div class="metric-values">
-          <span class="metric-de">278/6 (50)</span>
-          <span class="metric-des">288/6 (50)</span>
-        </div>
-      </div>
-
-      <div class="rivalry-metric-card">
-        <div class="metric-title">Championship Titles</div>
-        <div class="metric-values">
-          <span class="metric-de">1 (2022)</span>
-          <span class="metric-des">2 ('24, '25)</span>
-        </div>
+      <div class="barometer-stat-box">
+        <div class="barometer-stat-val tabular" style="color:var(--c-emerald);">53.1%</div>
+        <div class="barometer-stat-lbl">DE Win Ratio</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Featured Matches Section -->
-<section class="matches-section">
+<!-- Squad Command Center (FIFA / Cricket 24 Style Cards) -->
+<section class="squad-section" style="background:var(--c-surface); padding:4.5rem 0;">
   <div class="container">
     <div class="section-masthead">
       <div>
-        <p class="section-pretitle">Derby Match Center</p>
-        <h2 class="section-bigtitle">Latest Clashes &amp; Upcoming Fixtures</h2>
-      </div>
-      <a href="/results" class="btn-athletic btn-outline">
-        <span>View All 35 Matches &rarr;</span>
-      </a>
-    </div>
-
-    <div class="matches-grid">
-      ${matches.slice(-4).reverse().map((m) => {
-        const isCompleted = m.status === 'completed';
-        const isDeWinner = m.winner === 'DE';
-        const inn1 = m.innings[0] || { runs: 0, wickets: 0, overs: 0, teamName: 'Dread Eleven' };
-        const inn2 = m.innings[1] || { runs: 0, wickets: 0, overs: 0, teamName: 'Destroyers' };
-
-        const deInn = inn1.teamName.includes('Dread') ? inn1 : inn2;
-        const desInn = inn1.teamName.includes('Dread') ? inn2 : inn1;
-
-        return `
-        <a href="/matches/${m.slug}" class="match-card">
-          <div class="match-card-meta">
-            <span class="match-format-tag">${esc(m.format)} • Season ${esc(m.seasonYear)}</span>
-            <span class="match-stage-text">${esc(m.stage)}</span>
-          </div>
-
-          <div style="font-size:0.8125rem; color:var(--c-gray-400); margin-bottom:1rem;">
-            ${formatDate(m.matchDate)} • ${esc(m.venue.name)}
-          </div>
-
-          <div class="match-teams-block">
-            <div class="team-scoreline ${isDeWinner ? 'winner' : ''}">
-              <div class="team-info">
-                <div class="team-crest-badge crest-de">DE</div>
-                <span class="team-name-text">Dread Eleven</span>
-              </div>
-              <div class="team-score-text tabular">
-                ${isCompleted ? `${deInn.runs}/${deInn.wickets}` : '—'}
-                <span class="team-overs-text">${isCompleted ? `(${deInn.overs} ov)` : ''}</span>
-              </div>
-            </div>
-
-            <div class="team-scoreline ${isCompleted && !isDeWinner ? 'winner' : ''}">
-              <div class="team-info">
-                <div class="team-crest-badge crest-des">DES</div>
-                <span class="team-name-text">Destroyers</span>
-              </div>
-              <div class="team-score-text tabular">
-                ${isCompleted ? `${desInn.runs}/${desInn.wickets}` : '—'}
-                <span class="team-overs-text">${isCompleted ? `(${desInn.overs} ov)` : ''}</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="match-result-banner">
-            ${esc(m.resultText)}
-          </div>
-
-          <div class="match-potm-strip">
-            <div>
-              ${m.playerOfTheMatch ? `
-                <span class="potm-badge">POTM: ${esc(m.playerOfTheMatch.name)}</span>
-                <span style="font-size:0.75rem; color:var(--c-gray-400); margin-left:0.35rem;">(${esc(m.playerOfTheMatch.reason)})</span>
-              ` : `
-                <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">Official Derby Fixture</span>
-              `}
-            </div>
-            <div class="match-card-link-cta">Scorecard &rarr;</div>
-          </div>
-        </a>
-        `;
-      }).join('')}
-    </div>
-  </div>
-</section>
-
-<!-- Squad Highlights -->
-<section class="squad-section" style="background:var(--c-surface); padding:4rem 0;">
-  <div class="container">
-    <div class="section-masthead">
-      <div>
-        <p class="section-pretitle">The First XI &amp; Roster</p>
+        <p class="section-pretitle">The Squad Command Center</p>
         <h2 class="section-bigtitle">Featured Dread Eleven Warriors</h2>
+        <p style="color:var(--c-gray-400); font-size:0.95rem; margin-top:0.35rem;">
+          Hover for tactical telemetry, form indicators, and Cricket 24 attribute ratings. Click for complete dossiers.
+        </p>
       </div>
       <a href="/players" class="btn-athletic btn-outline">
         <span>Complete 43-Man Roster &rarr;</span>
@@ -567,29 +530,98 @@ ${renderHeader('home')}
     </div>
 
     <div class="players-cards-grid">
-      ${featuredSquad.map((p) => `
-        <a href="/players/${p.slug}" class="jersey-player-card">
-          <div class="jersey-big-number">${p.jerseyNumber}</div>
-          <div class="jersey-player-role">${esc(p.role)}</div>
-          <h3 class="jersey-player-name">#${p.jerseyNumber} ${esc(p.name)}</h3>
-          <div class="jersey-player-subtitle">Dread Eleven Squad • ${p.matches} Derby Clashes</div>
-          <div class="jersey-stats-strip">
-            <div><div class="jersey-stat-val tabular" style="color:var(--c-volt);">${esc(p.batting.runs)}</div><div class="jersey-stat-lbl">Runs</div></div>
-            <div><div class="jersey-stat-val tabular">${esc(p.batting.average)}</div><div class="jersey-stat-lbl">Avg</div></div>
-            <div><div class="jersey-stat-val tabular" style="color:var(--c-emerald);">${esc(p.bowling.wickets)}</div><div class="jersey-stat-lbl">Wkts</div></div>
-          </div>
-        </a>
-      `).join('')}
+      ${featuredSquad.map((p) => {
+        const ovr = p.fifaRatings ? p.fifaRatings.overall : 88;
+        const formDots = p.formDots || 4;
+        const formRating = p.formRating || 'HOT';
+        return `
+          <a href="/players/${p.slug}" class="fifa-player-card">
+            <div class="fifa-card-header">
+              <div class="fifa-ovr-badge">
+                ${ovr} <small>OVR</small>
+              </div>
+              <div class="player-form-badge ${formRating.toLowerCase()}">
+                ${formRating}
+              </div>
+            </div>
+
+            <div class="fifa-card-body">
+              <h3 class="fifa-card-name">#${p.jerseyNumber} ${esc(p.name)}</h3>
+              <div class="fifa-card-role">${esc(p.role)}</div>
+            </div>
+
+            <div class="fifa-attributes-grid">
+              <div class="fifa-attr-item">
+                <span class="fifa-attr-label">BAT PWR</span>
+                <span class="fifa-attr-val tabular">${p.fifaRatings ? p.fifaRatings.battingPower : 88}</span>
+              </div>
+              <div class="fifa-attr-item">
+                <span class="fifa-attr-label">TIMING</span>
+                <span class="fifa-attr-val tabular">${p.fifaRatings ? p.fifaRatings.timing : 85}</span>
+              </div>
+              <div class="fifa-attr-item">
+                <span class="fifa-attr-label">STAMINA</span>
+                <span class="fifa-attr-val tabular">${p.fifaRatings ? p.fifaRatings.stamina : 90}</span>
+              </div>
+              <div class="fifa-attr-item">
+                <span class="fifa-attr-label">CLUTCH</span>
+                <span class="fifa-attr-val tabular" style="color:var(--c-volt);">${p.fifaRatings ? p.fifaRatings.clutch : 92}</span>
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div class="fifa-form-dots">
+                ${'●'.repeat(formDots)}${'○'.repeat(5 - formDots)}
+              </div>
+              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); font-weight:800; text-transform:uppercase;">
+                View Profile &rarr;
+              </span>
+            </div>
+          </a>
+        `;
+      }).join('')}
+    </div>
+  </div>
+</section>
+
+<!-- noth.in Inspired Kinetic Manifesto Section -->
+<section class="kinetic-manifesto-section">
+  <div class="kinetic-manifesto-container">
+    <span class="bracket-tag">( The Digital Stadium Ethos )</span>
+    
+    <div class="kinetic-lines-group">
+      <div class="kinetic-line">WE ARE DREAD ELEVEN</div>
+      <div class="kinetic-line focus">WE ARE DREAD ELEVEN</div>
+      <div class="kinetic-line">WE ARE DREAD ELEVEN</div>
+    </div>
+
+    <div class="manifesto-editorial-grid">
+      <div class="manifesto-lead-statement">
+        Not merely a cricket team. An unyielding sporting citadel forged under the floodlights of Rewa.
+      </div>
+      <div class="manifesto-body-prose">
+        <p>
+          In a sporting landscape crowded with generic templates and complacent rivalries, Dread Eleven exists to redefine poise, precision, and tactical supremacy.
+        </p>
+        <p>
+          Under captain Akhil Mishra, every delivery contested against Destroyers is an event. 35 clashes, 17 victories, and an unbreakable legacy in the Atal Bihari Vajpayee Memorial Trophy.
+        </p>
+        <div style="margin-top:1.5rem;">
+          <a href="/about" class="btn-athletic btn-sm btn-volt">
+            <span>Explore Franchise Origins &rarr;</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- Latest News -->
-<section style="padding: 4rem 0;">
+<section style="padding: 4.5rem 0;">
   <div class="container">
     <div class="section-masthead">
       <div>
-        <p class="section-pretitle">Tournament Press</p>
+        <p class="section-pretitle">Tournament Press &amp; Media Room</p>
         <h2 class="section-bigtitle">Latest News &amp; Features</h2>
       </div>
       <a href="/news" class="btn-athletic btn-outline">
@@ -622,7 +654,7 @@ ${renderFooter()}
   `;
 
   fs.writeFileSync(path.join(rootDir, 'index.html'), html);
-  console.log('Generated index.html (Home)');
+  console.log('Generated index.html (Digital Stadium Home)');
 }
 
 // ------------------------------------------------------------
