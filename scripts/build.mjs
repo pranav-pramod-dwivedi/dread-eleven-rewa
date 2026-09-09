@@ -300,6 +300,11 @@ function renderFooter() {
         <div id="cmd-palette-results"></div>
       </div>
     </div>
+  </div> <!-- /content-wrapper -->
+
+  <script src="/src/js/app.js" defer></script>
+</body>
+</html>
   `;
 }
 
