@@ -218,8 +218,8 @@ function renderFooter() {
           <div class="footer-col">
             <h4>Match Hub</h4>
             <ul class="footer-links">
-              <li><a href="/fixtures">2026 Memorial Cup Fixtures</a></li>
-              <li><a href="/results">Completed Results Archive (2021–2026)</a></li>
+              <li><a href="/fixtures">Tournament Fixtures &amp; Schedule</a></li>
+              <li><a href="/results">Completed Results Archive (2021–2024)</a></li>
               <li><a href="/points-table">Multi-Season Points Table</a></li>
               <li><a href="/stats">Franchise &amp; Derby Records</a></li>
             </ul>
@@ -324,16 +324,11 @@ function renderFooter() {
 // 1. HOME PAGE GENERATOR (/)
 // ------------------------------------------------------------
 function generateHomePage() {
-  const upcomingMatches = matches.filter((m) => m.status === 'upcoming');
-  const nextMatch = upcomingMatches[0] || {
-    matchDate: '2026-09-06',
-    time: '09:30 IST',
-    venue: { name: 'APSU Stadium, Rewa' },
-    stage: '2026 Memorial Cup Super Clash'
-  };
+  const completedMatches = matches.filter((m) => m.status === 'completed');
+  const latestMatch = completedMatches[completedMatches.length - 1] || matches[matches.length - 1];
   const featuredNews = news.slice(0, 3);
   const featuredSquad = squad.slice(0, 8);
-  const season2026Matches = matches.filter(m => m.seasonYear === 2026);
+  const recentTournamentMatches = matches.slice(-6);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -365,7 +360,7 @@ function generateHomePage() {
   const html = `
 ${renderHead({
   title: 'Dread Eleven Cricket Club (DE) — Digital Stadium & Broadcast Arena | Rewa',
-  description: 'Official digital stadium for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete 2021–2026 match scorecards against Destroyers, 43-man squad roster, tournament standings, and stats.',
+  description: 'Official digital stadium for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete 2021–2024 match scorecards against Destroyers, 43-man squad roster, tournament standings, and stats.',
   canonicalUrl: '/',
   jsonLd
 })}
@@ -381,8 +376,8 @@ ${renderHeader('home')}
     <div class="hero-command-col">
       <!-- High-Contrast Over-title Tag -->
       <div class="broadcast-overtitle">
-        <span class="broadcast-pill-badge">ATAL BIHARI VAJPAYEE CUP 2026</span>
-        <span class="broadcast-match-round">ROUND 4 • DERBY CLASH</span>
+        <span class="broadcast-pill-badge">ATAL BIHARI VAJPAYEE MEMORIAL TOURNAMENT</span>
+        <span class="broadcast-match-round">RDCA DERBY • MATCH 24 ARCHIVE</span>
       </div>
 
       <!-- Giant Stacked High-Contrast Condensed Typography -->
@@ -399,12 +394,12 @@ ${renderHeader('home')}
       <div class="broadcast-match-slate">
         <div class="slate-header-row">
           <div class="slate-status-group">
-            <span class="pulse-beacon red"></span>
-            <span class="slate-status-text">MATCHDAY 04 LIVE BUG</span>
+            <span class="pulse-beacon gold"></span>
+            <span class="slate-status-text">OFFICIAL RDCA DERBY ARCHIVE</span>
           </div>
           <div class="slate-ground-spec">
             <span>APSU STADIUM</span>
-            <span class="slate-deck-badge">DRY DECK • 31°C</span>
+            <span class="slate-deck-badge">ODI DERBY • COMPLETED</span>
           </div>
         </div>
 
@@ -416,10 +411,10 @@ ${renderHeader('home')}
             </div>
             <div class="team-form-strip">
               <span class="form-pill win">W</span>
-              <span class="form-pill win">W</span>
-              <span class="form-pill win">W</span>
               <span class="form-pill loss">L</span>
-              <span class="form-pill win">W</span>
+              <span class="form-pill loss">L</span>
+              <span class="form-pill loss">L</span>
+              <span class="form-pill loss">L</span>
             </div>
           </div>
 
@@ -437,18 +432,18 @@ ${renderHeader('home')}
               <span class="form-pill loss">L</span>
               <span class="form-pill win">W</span>
               <span class="form-pill win">W</span>
-              <span class="form-pill loss">L</span>
-              <span class="form-pill loss">L</span>
+              <span class="form-pill win">W</span>
+              <span class="form-pill win">W</span>
             </div>
           </div>
         </div>
 
         <div class="slate-footer-row">
           <div class="slate-timing-spec">
-            <span class="timing-date">06 SEP 2026</span>
-            <span class="timing-time">09:30 IST • TOSS 09:00</span>
+            <span class="timing-date">20 SEP 2024</span>
+            <span class="timing-time">50-OVER DERBY • RESULT: DES WON BY 8 RUNS</span>
           </div>
-          <a href="/matches/destroyers-vs-dread-eleven-2026-09-06" class="btn-broadcast-cta">
+          <a href="/matches/destroyers-vs-dread-eleven-2024-09-20" class="btn-broadcast-cta">
             <span>ENTER MATCH CENTRE &rarr;</span>
           </a>
         </div>
@@ -484,7 +479,7 @@ ${renderHeader('home')}
           </div>
         </div>
         <div class="hud-career-row">
-          <span>CAREER: 1,747 RUNS • 92 WKTS • 51 MATCHES</span>
+          <span>TOURNAMENT: 905 RUNS • 8 WKTS • 19 MATCHES</span>
         </div>
         <div class="hud-form-row">
           <span class="hud-form-label">FORM:</span>
@@ -499,8 +494,8 @@ ${renderHeader('home')}
   <div class="broadcast-score-bug" id="live-pulse">
     <div class="container score-bug-grid">
       <div class="bug-tag">
-        <span class="pulse-beacon red"></span>
-        <span>MATCHDAY PULSE</span>
+        <span class="pulse-beacon gold"></span>
+        <span>LATEST DERBY</span>
       </div>
       <div class="bug-teams">
         <span class="bug-team-name volt">DREAD ELEVEN</span>
@@ -508,32 +503,32 @@ ${renderHeader('home')}
         <span class="bug-team-name">DESTROYERS</span>
       </div>
       <div class="bug-schedule">
-        <span class="bug-date">06 SEP</span>
-        <span class="bug-time">09:30 IST</span>
+        <span class="bug-date">20 SEP 2024</span>
+        <span class="bug-time">COMPLETED</span>
       </div>
       <div class="bug-venue">
         <span>APSU STADIUM</span>
       </div>
       <div class="bug-pitch">
         <span class="pitch-dot"></span>
-        <span>PITCH: HARD DECK</span>
+        <span>DES WON BY 8 RUNS</span>
       </div>
-      <a href="/matches/destroyers-vs-dread-eleven-2026-09-06" class="bug-cta">
-        <span>LIVE ODYSSEY &rarr;</span>
+      <a href="/matches/destroyers-vs-dread-eleven-2024-09-20" class="bug-cta">
+        <span>VIEW SCORECARD &rarr;</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- Season 2026 Horizontal Timeline Scroller -->
+<!-- Tournament Journey Horizontal Timeline Scroller -->
 <section class="season-timeline-section">
   <div class="container">
     <div class="season-timeline-header">
       <div>
         <p class="section-pretitle">The Championship Journey</p>
-        <h2 class="section-bigtitle">Season 2026 Timeline</h2>
+        <h2 class="section-bigtitle">Tournament Clash Timeline</h2>
         <p style="color:var(--c-gray-400); font-size:0.95rem; margin-top:0.35rem;">
-          Track every marquee clash, decisive over, and tournament milestone in the 2026 campaign.
+          Track marquee clashes, decisive overs, and tournament milestones across the Atal Bihari Vajpayee Memorial Tournament.
         </p>
       </div>
       <div class="timeline-nav-controls">
@@ -543,20 +538,14 @@ ${renderHeader('home')}
     </div>
 
     <div class="season-timeline-track" id="season-timeline-track">
-      ${season2026Matches.map((m, idx) => {
+      ${recentTournamentMatches.map((m, idx) => {
         const isWin = m.winner === 'DE';
         const isCompleted = m.status === 'completed';
         const inn1 = m.innings[0] || { runs: '---', wickets: '-' };
         const inn2 = m.innings[1] || { runs: '---', wickets: '-' };
         
-        let statusClass = 'next';
-        let statusText = 'UPCOMING';
-        if (isCompleted) {
-          statusClass = isWin ? 'win' : 'loss';
-          statusText = isWin ? 'WIN' : 'DEFEAT';
-        } else if (idx === 3) {
-          statusText = 'NEXT MATCH';
-        }
+        let statusClass = isWin ? 'win' : 'loss';
+        let statusText = isWin ? 'DE WIN' : 'DES WIN';
 
         return `
           <a href="/matches/${m.slug}" class="timeline-match-node">
@@ -566,14 +555,14 @@ ${renderHeader('home')}
             </div>
             <div class="timeline-node-scores">
               <div class="timeline-scores-line">
-                ${isCompleted ? `${inn1.runs}/${inn1.wickets} &rarr; ${inn2.runs}/${inn2.wickets}` : 'DE vs DES'}
+                ${inn1.runs}/${inn1.wickets} &rarr; ${inn2.runs}/${inn2.wickets}
               </div>
               <div class="timeline-node-detail">
-                ${isCompleted ? esc(m.resultText) : `${esc(m.venue.name)} • ${m.time || '09:30 IST'}`}
+                ${esc(m.resultText)}
               </div>
             </div>
             <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); font-weight:800; display:flex; justify-content:space-between; align-items:center;">
-              <span>MATCH #${m.matchNumber || (idx + 1)}</span>
+              <span>MATCH #${m.matchNumber || (idx + 1)} (${m.seasonYear})</span>
               <span>Full Details &rarr;</span>
             </div>
           </a>
@@ -589,32 +578,32 @@ ${renderHeader('home')}
     <div class="barometer-header">
       <div class="barometer-title-group">
         <h2>DE vs DES Derby Rivalry Barometer</h2>
-        <p>Official head-to-head records across all 35 Atal Bihari Vajpayee Memorial Tournament matches (2021–2026)</p>
+        <p>Official head-to-head records across all 24 Atal Bihari Vajpayee Memorial Tournament matches (2021–2024)</p>
       </div>
       <div>
-        <span class="badge-brutalist badge-gold">17 WINS DE — 15 WINS DES</span>
+        <span class="badge-brutalist badge-gold">13 WINS DE — 11 WINS DES</span>
       </div>
     </div>
 
     <div class="barometer-stats-row">
       <div class="barometer-stat-box">
-        <div class="barometer-stat-val volt tabular">17</div>
+        <div class="barometer-stat-val volt tabular">13</div>
         <div class="barometer-stat-lbl">Dread Eleven Wins</div>
       </div>
       <div class="barometer-stat-box">
-        <div class="barometer-stat-val tabular">15</div>
+        <div class="barometer-stat-val tabular">11</div>
         <div class="barometer-stat-lbl">Destroyers Wins</div>
       </div>
       <div class="barometer-stat-box">
-        <div class="barometer-stat-val gold tabular">3</div>
-        <div class="barometer-stat-lbl">2026 Fixtures Left</div>
+        <div class="barometer-stat-val gold tabular">1</div>
+        <div class="barometer-stat-lbl">2022 Champion Title</div>
       </div>
       <div class="barometer-stat-box">
-        <div class="barometer-stat-val tabular">35</div>
+        <div class="barometer-stat-val tabular">24</div>
         <div class="barometer-stat-lbl">Total Clashes</div>
       </div>
       <div class="barometer-stat-box">
-        <div class="barometer-stat-val tabular" style="color:var(--c-emerald);">53.1%</div>
+        <div class="barometer-stat-val tabular" style="color:var(--c-emerald);">54.2%</div>
         <div class="barometer-stat-lbl">DE Win Ratio</div>
       </div>
     </div>
@@ -712,7 +701,7 @@ ${renderHeader('home')}
           In a sporting landscape crowded with generic templates and complacent rivalries, Dread Eleven exists to redefine poise, precision, and tactical supremacy.
         </p>
         <p>
-          Under captain Akhil Mishra, every delivery contested against Destroyers is an event. 35 clashes, 17 victories, and an unbreakable legacy in the Atal Bihari Vajpayee Memorial Trophy.
+          Under captain Akhil Mishra, every delivery contested against Destroyers is an event. 24 clashes, 13 victories, and an unbreakable legacy in the Atal Bihari Vajpayee Memorial Trophy.
         </p>
         <div style="margin-top:1.5rem;">
           <a href="/about" class="btn-athletic btn-sm btn-volt">
@@ -789,7 +778,7 @@ function generateSquadPages() {
 
   const squadHtml = `
 ${renderHead({
-  title: 'Dread Eleven Roster 2021–2026 | Player Roster (43 Players) | RDCA',
+  title: 'Dread Eleven Squad (43 Players) | Atal Bihari Memorial Tournament | RDCA',
   description: 'Complete player directory for Dread Eleven Cricket Club (DE) in Rewa. Captain Akhil Mishra, batsmen, all-rounders, bowlers, and wicketkeepers with tournament statistics.',
   canonicalUrl: '/players',
   jsonLd: squadJsonLd,
@@ -1022,15 +1011,15 @@ function generateMatchPages() {
   ensureDir(resultsDir);
 
   function renderMatchListSection(isResultsPage) {
-    const listMatches = isResultsPage ? matches.filter((m) => m.status === 'completed') : matches.filter((m) => m.status === 'upcoming');
+    const listMatches = isResultsPage ? matches.filter((m) => m.status === 'completed') : matches;
 
     return `
 <section class="matches-section" style="padding-top:4rem;">
   <div class="container">
     <div class="section-masthead">
       <div>
-        <p class="section-pretitle">${isResultsPage ? 'HISTORICAL DERBY ARCHIVE (2021–2026)' : 'TOURNAMENT SCHEDULE (2026)'}</p>
-        <h1 class="section-bigtitle">${isResultsPage ? `Match Results Archive (${listMatches.length} Matches)` : `Upcoming Derby Fixtures (${listMatches.length} Matches)`}</h1>
+        <p class="section-pretitle">${isResultsPage ? 'HISTORICAL DERBY ARCHIVE (2021–2024)' : 'TOURNAMENT FIXTURES &amp; SCHEDULE'}</p>
+        <h1 class="section-bigtitle">${isResultsPage ? `Match Results Archive (${listMatches.length} Matches)` : `Tournament Fixtures &amp; Schedule (${listMatches.length} Matches)`}</h1>
         <p style="color:var(--c-gray-400); font-size:1rem; max-width:64ch; margin-top:0.4rem;">
           Sanctioned Atal Bihari Vajpayee Memorial Tournament encounters between Dread Eleven and Destroyers in Rewa.
         </p>
@@ -1041,6 +1030,16 @@ function generateMatchPages() {
         </span>
       </div>
     </div>
+
+    ${!isResultsPage ? `
+    <div style="background:rgba(204,255,0,0.06); border:1px solid rgba(204,255,0,0.25); padding:1rem 1.5rem; margin-bottom:2rem; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem; border-radius:var(--radius-sm);">
+      <div>
+        <strong style="color:var(--c-volt); font-size:0.9rem; text-transform:uppercase; font-family:var(--f-mono);">Tournament Cycle Status:</strong>
+        <span style="color:var(--c-gray-300); font-size:0.875rem; margin-left:0.5rem;">All 24 matches across the 2021–2024 tournament editions have concluded. Subsequent fixture dates will be announced following official RDCA ratification.</span>
+      </div>
+      <a href="/results" style="color:var(--c-volt); font-size:0.85rem; font-family:var(--f-mono); text-decoration:none; font-weight:700;">View Results Archive &rarr;</a>
+    </div>
+    ` : ''}
 
     <!-- Multi-tier Filter Toolbar -->
     <div class="filters-toolbar">
@@ -1060,8 +1059,6 @@ function generateMatchPages() {
       <div class="filter-row">
         <span class="filter-label">Season:</span>
         <button type="button" class="filter-pill-btn season-filter-pill active" data-season="all">All Seasons</button>
-        <button type="button" class="filter-pill-btn season-filter-pill" data-season="2026">2026</button>
-        <button type="button" class="filter-pill-btn season-filter-pill" data-season="2025">2025</button>
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2024">2024</button>
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2023">2023</button>
         <button type="button" class="filter-pill-btn season-filter-pill" data-season="2022">2022</button>
@@ -1150,8 +1147,8 @@ function generateMatchPages() {
   // Generate /fixtures/index.html
   const fixturesHtml = `
 ${renderHead({
-  title: 'Dread Eleven Upcoming Derby Fixtures (2026 Season) | Rewa Tournament',
-  description: 'Schedule of upcoming Atal Bihari Vajpayee Memorial Tournament fixtures for Dread Eleven against Destroyers at APSU Stadium, Rewa.',
+  title: 'Dread Eleven Tournament Fixtures & Schedule | Rewa Cricket',
+  description: 'Official schedule and fixtures of the Atal Bihari Vajpayee Memorial Tournament for Dread Eleven against Destroyers in Rewa.',
   canonicalUrl: '/fixtures',
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -1167,7 +1164,7 @@ ${renderFooter()}
   // Generate /results/index.html
   const resultsHtml = `
 ${renderHead({
-  title: 'Match Results Archive (2021–2026) | Dread Eleven vs Destroyers',
+  title: 'Match Results Archive (2021–2024) | Dread Eleven vs Destroyers',
   description: 'Official results archive of all completed matches between Dread Eleven and Destroyers in the Atal Bihari Vajpayee Memorial Tournament, Rewa.',
   canonicalUrl: '/results',
   breadcrumbs: [
@@ -1181,7 +1178,7 @@ ${renderFooter()}
   `;
   fs.writeFileSync(path.join(resultsDir, 'index.html'), resultsHtml);
 
-  // Generate individual match pages (/matches/[slug]) for ALL 35 matches
+  // Generate individual match pages (/matches/[slug]) for ALL 24 matches
   matches.forEach((m) => {
     const matchPageDir = path.join(matchesDir, m.slug);
     ensureDir(matchPageDir);
@@ -1370,7 +1367,7 @@ ${renderHeader('results')}
           Fixture Scheduled
         </h2>
         <p style="color:var(--c-gray-400); font-size:1rem; max-width:56ch; margin:0 auto 2rem; line-height:1.6;">
-          This fixture is slated for the upcoming 2026 Memorial Cup cycle at <strong>${esc(m.venue.name)}</strong>. Complete live scores, ball-by-ball analysis, and player performances will populate immediately following the match.
+          This fixture is slated for the upcoming tournament cycle at <strong>${esc(m.venue.name)}</strong>. Complete live scores, ball-by-ball analysis, and player performances will populate immediately following the match.
         </p>
         <a href="/fixtures" class="btn-athletic btn-volt">Back to Full Fixtures Schedule</a>
       </div>
@@ -1396,8 +1393,8 @@ function generatePointsTablePage() {
 
   const html = `
 ${renderHead({
-  title: 'Tournament Points Table & Standings (2021–2026) | Dread Eleven',
-  description: 'Official tournament points table across all editions of the Atal Bihari Vajpayee Memorial Tournament, Rewa. Standings for 2026, 2025, 2024, 2023, 2022, 2021, and All-Time.',
+  title: 'Tournament Points Table & Standings (2021–2024) | Dread Eleven',
+  description: 'Official tournament points table across all editions of the Atal Bihari Vajpayee Memorial Tournament, Rewa. Standings for 2024, 2023, 2022, 2021, and All-Time.',
   canonicalUrl: '/points-table',
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -1413,7 +1410,7 @@ ${renderHeader('table')}
         <p class="section-pretitle">Official RDCA Standings</p>
         <h1 class="section-bigtitle">Tournament Points Table</h1>
         <p style="color:var(--c-gray-400); font-size:1rem; max-width:64ch; margin-top:0.4rem;">
-          Certified standings and qualification records across all six seasons of the Atal Bihari Vajpayee Memorial Tournament in Rewa.
+          Certified standings and qualification records across all four editions of the Atal Bihari Vajpayee Memorial Tournament in Rewa.
         </p>
       </div>
     </div>
@@ -1422,9 +1419,9 @@ ${renderHeader('table')}
     <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm); margin-bottom:3rem;">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
         <h2 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase;">
-          All-Time Derby Leaderboard (2021–2026 • 32 Completed Clashes)
+          All-Time Derby Leaderboard (2021–2024 • 24 Completed Clashes)
         </h2>
-        <span class="badge-brutalist badge-volt">32 DERBY MATCHES</span>
+        <span class="badge-brutalist badge-volt">24 DERBY MATCHES</span>
       </div>
 
       <div class="scorecard-table-wrap">
@@ -1465,57 +1462,6 @@ ${renderHeader('table')}
 
     <!-- Season by Season Standings Grid -->
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(440px, 1fr)); gap:2rem;">
-      <!-- 2026 Season -->
-      <div style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
-        <h3 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">
-          Season 2026 (Silver Jubilee Tournament Cycle)
-        </h3>
-        <div class="scorecard-table-wrap">
-          <table class="cricket-table">
-            <thead>
-              <tr><th>Team</th><th style="text-align:right;">P</th><th style="text-align:right;">W</th><th style="text-align:right;">L</th><th style="text-align:right;">NRR</th><th style="text-align:right;">Pts</th></tr>
-            </thead>
-            <tbody>
-              ${(pointsTable['2026'] || []).map((r) => `
-                <tr>
-                  <td style="font-weight:700; color:var(--c-white);">${esc(r.team)}</td>
-                  <td class="tabular" style="text-align:right;">${r.played}</td>
-                  <td class="tabular" style="text-align:right; color:var(--c-emerald); font-weight:700;">${r.won}</td>
-                  <td class="tabular" style="text-align:right; color:var(--c-crimson);">${r.lost}</td>
-                  <td class="tabular font-mono" style="text-align:right;">${r.nrr}</td>
-                  <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">${r.points}</td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- 2025 Season -->
-      <div style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
-        <h3 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">
-          Season 2025 (50-Over ODI Series)
-        </h3>
-        <div class="scorecard-table-wrap">
-          <table class="cricket-table">
-            <thead>
-              <tr><th>Team</th><th style="text-align:right;">P</th><th style="text-align:right;">W</th><th style="text-align:right;">L</th><th style="text-align:right;">NRR</th><th style="text-align:right;">Pts</th></tr>
-            </thead>
-            <tbody>
-              ${(pointsTable['2025'] || []).map((r) => `
-                <tr>
-                  <td style="font-weight:700; color:var(--c-white);">${esc(r.team)}</td>
-                  <td class="tabular" style="text-align:right;">${r.played}</td>
-                  <td class="tabular" style="text-align:right; color:var(--c-emerald); font-weight:700;">${r.won}</td>
-                  <td class="tabular" style="text-align:right; color:var(--c-crimson);">${r.lost}</td>
-                  <td class="tabular font-mono" style="text-align:right;">${r.nrr}</td>
-                  <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">${r.points}</td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        </div>
-      </div>
 
       <!-- 2024 Season -->
       <div style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
@@ -1657,10 +1603,10 @@ ${renderHeader('stats')}
   <div class="container">
     <div class="section-masthead">
       <div>
-        <p class="section-pretitle">The Record Books (2021–2026)</p>
+        <p class="section-pretitle">The Record Books (2021–2024)</p>
         <h1 class="section-bigtitle">Dread Eleven Franchise Records</h1>
         <p style="color:var(--c-gray-400); font-size:1rem; max-width:64ch; margin-top:0.4rem;">
-          Verified tournament records across all 35 clashes against Destroyers under the Rewa Division Cricket Association (RDCA).
+          Verified tournament records across all 24 clashes against Destroyers under the Rewa Division Cricket Association (RDCA).
         </p>
       </div>
     </div>
@@ -1670,25 +1616,25 @@ ${renderHeader('stats')}
       <div class="podium-card podium-volt">
         <div class="podium-rank-badge">1</div>
         <div class="metric-title">All-Time Run Scorer</div>
-        <h3 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase;">Akhil Mishra</h3>
-        <div class="metric-de tabular" style="font-size:2.5rem; margin:0.5rem 0;">1,342 Runs</div>
-        <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">Average: 49.7 • 11 Fifties • 1 Hundred (114 HS)</div>
+        <h3 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase;">${esc(topRunScorers[0].name)}</h3>
+        <div class="metric-de tabular" style="font-size:2.5rem; margin:0.5rem 0;">${topRunScorers[0].batting.runs} Runs</div>
+        <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">Average: ${topRunScorers[0].batting.average} • ${topRunScorers[0].batting.fifties} Fifties • HS ${topRunScorers[0].batting.highestScore}</div>
       </div>
 
       <div class="podium-card">
         <div class="podium-rank-badge" style="background:var(--c-surface); color:var(--c-white); border:1px solid var(--b-medium);">2</div>
         <div class="metric-title">Second Leading Scorer</div>
-        <h3 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase;">Ritesh Shakya</h3>
-        <div class="metric-de tabular" style="font-size:2.5rem; margin:0.5rem 0; color:var(--c-white);">560 Runs</div>
-        <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">Average: 38.2 • 4 Fifties</div>
+        <h3 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase;">${esc(topRunScorers[1].name)}</h3>
+        <div class="metric-de tabular" style="font-size:2.5rem; margin:0.5rem 0; color:var(--c-white);">${topRunScorers[1].batting.runs} Runs</div>
+        <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">Average: ${topRunScorers[1].batting.average} • ${topRunScorers[1].batting.fifties} Fifties • HS ${topRunScorers[1].batting.highestScore}</div>
       </div>
 
       <div class="podium-card">
         <div class="podium-rank-badge" style="background:var(--c-surface); color:var(--c-white); border:1px solid var(--b-medium);">3</div>
         <div class="metric-title">Third Leading Scorer</div>
-        <h3 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase;">Yash Dubey</h3>
-        <div class="metric-de tabular" style="font-size:2.5rem; margin:0.5rem 0; color:var(--c-white);">512 Runs</div>
-        <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">Average: 36.5 • 3 Fifties</div>
+        <h3 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase;">${esc(topRunScorers[2].name)}</h3>
+        <div class="metric-de tabular" style="font-size:2.5rem; margin:0.5rem 0; color:var(--c-white);">${topRunScorers[2].batting.runs} Runs</div>
+        <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">Average: ${topRunScorers[2].batting.average} • ${topRunScorers[2].batting.fifties} Fifties • HS ${topRunScorers[2].batting.highestScore}</div>
       </div>
     </div>
 
@@ -1932,7 +1878,7 @@ ${renderHeader('about')}
         Forged in 2021 in the heart of Rewa, Madhya Pradesh, <strong>Dread Eleven (DE)</strong> embodies the aggressive, clinical edge of Vindhya cricket. Sanctioned by the <strong>Rewa Division Cricket Association (RDCA)</strong>, Dread Eleven compete annually in the prestigious <strong>Atal Bihari Vajpayee Memorial Tournament</strong>.
       </p>
       <p style="margin-bottom:1.5rem;">
-        The club's defining trial is its epic derby with <strong>Destroyers Cricket Club (DES)</strong>. Spanning 35 fiercely contested clashes from 2021 to 2026 across both T20 Blast and 50-over ODI formats, Dread Eleven captured the pinnacle of glory on <strong>12 August 2022</strong>, lifting the Atal Bihari Vajpayee Memorial Trophy Championship title at APSU Stadium.
+        The club's defining trial is its epic derby with <strong>Destroyers Cricket Club (DES)</strong>. Spanning 24 fiercely contested clashes from 2021 to 2024 across both T20 Blast and 50-over ODI formats, Dread Eleven captured the pinnacle of glory on <strong>12 August 2022</strong>, lifting the Atal Bihari Vajpayee Memorial Trophy Championship title at APSU Stadium.
       </p>
       <p style="margin-bottom:1.5rem;">
         Captained by top-order master <strong>Akhil Mishra</strong>, Dread Eleven play with venomous intent, utilizing the sharp spin and abrasive pace of Martand School Ground No. 3 to dismantle opposing batting lineups.
@@ -2266,7 +2212,7 @@ function generateSitemapAndRobots() {
     });
   });
 
-  // Add all match pages (35 matches)
+  // Add all match pages (24 matches)
   matches.forEach((m) => {
     urls.push({
       loc: `/matches/${m.slug}`,

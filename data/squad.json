@@ -7,27 +7,27 @@
     "role": "Top-Order All-Rounder & Captain",
     "battingStyle": "Right-hand bat",
     "bowlingStyle": "Right-arm medium",
-    "matches": 51,
+    "matches": 19,
     "batting": {
-      "runs": 1747,
-      "balls": 1220,
-      "highestScore": "124",
-      "average": 37.17,
-      "strikeRate": 168.5,
-      "fifties": 12,
-      "hundreds": 2,
+      "runs": 905,
+      "balls": 841,
+      "highestScore": 69,
+      "average": 47.63,
+      "strikeRate": 107.61,
+      "fifties": 9,
+      "hundreds": 0,
       "fours": 88,
       "sixes": 17
     },
     "bowling": {
-      "overs": 104,
-      "wickets": 92,
+      "overs": 81,
+      "wickets": 8,
       "runsConceded": 489,
-      "average": 22.45,
-      "economy": 4.62,
-      "bestBowling": "6/54"
+      "average": 61.12,
+      "economy": 6.04,
+      "bestBowling": "1/23"
     },
-    "bio": "Akhil Mishra (#45) is the talismanic captain and premier top-order all-rounder of Dread Eleven (DE). A veteran of 51 matches with 1,747 career runs (HS 124, 2 centuries, 12 half-centuries) and 92 wickets (best bowling 6/54), Akhil anchors the franchise in the historic derby against Destroyers.",
+    "bio": "Akhil Mishra (#45) is the talismanic captain and premier top-order all-rounder of Dread Eleven (DE). In the Atal Bihari Vajpayee Memorial Tournament, he has amassed 905 runs and 8 wickets across 19 derby encounters, leading Dread Eleven with distinction in the historic rivalry against Destroyers.",
     "photo": "/public/players/akhil-mishra.svg",
     "matchHistory": [
       {
@@ -238,160 +238,62 @@
         "sixes": 0,
         "sr": 88.9,
         "dismissal": "b Ritesh Shakya"
-      },
-      {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 72,
-        "balls": 84,
-        "fours": 7,
-        "sixes": 2,
-        "sr": "85.71",
-        "dismissal": "c sub b Pranav Dwivedi"
-      },
-      {
-        "date": "2025-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 61,
-        "balls": 78,
-        "fours": 6,
-        "sixes": 1,
-        "sr": "78.21",
-        "dismissal": "b Saransh Jain"
-      },
-      {
-        "date": "2025-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 68,
-        "balls": 72,
-        "fours": 6,
-        "sixes": 2,
-        "sr": "94.44",
-        "dismissal": "c & b Pranav Dwivedi"
-      },
-      {
-        "date": "2025-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 58,
-        "balls": 64,
-        "fours": 5,
-        "sixes": 1,
-        "sr": "90.63",
-        "dismissal": "c & b Pranav Dwivedi"
-      },
-      {
-        "date": "2025-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 82,
-        "balls": 86,
-        "fours": 8,
-        "sixes": 2,
-        "sr": "95.35",
-        "dismissal": "c sub b Pranav Dwivedi"
-      },
-      {
-        "date": "2026-02-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-10",
-        "opponent": "Destroyers CC",
-        "runs": 64,
-        "balls": 42,
-        "fours": 6,
-        "sixes": 3,
-        "sr": "152.38",
-        "dismissal": "c & b Pranav Dwivedi"
-      },
-      {
-        "date": "2026-02-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-14",
-        "opponent": "Destroyers CC",
-        "runs": 78,
-        "balls": 48,
-        "fours": 8,
-        "sixes": 3,
-        "sr": "162.50",
-        "dismissal": "not out"
-      },
-      {
-        "date": "2026-02-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-18",
-        "opponent": "Destroyers CC",
-        "runs": 42,
-        "balls": 32,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "131.25",
-        "dismissal": "lbw b Kulwant Khejroliya"
       }
     ],
     "formRating": "HOT",
     "formDots": 5,
     "last5Scores": [
-      58,
-      82,
-      64,
-      78,
-      42
+      25,
+      50,
+      37,
+      69,
+      48
     ],
     "last5Matches": [
       {
-        "date": "2025-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 58,
-        "balls": 64,
-        "fours": 5,
-        "sixes": 1,
-        "sr": "90.63",
-        "dismissal": "c & b Pranav Dwivedi"
+        "matchId": "m-shared-29",
+        "date": "2023-09-12",
+        "opponent": "Destroyers",
+        "runs": 25,
+        "balls": 30,
+        "wickets": 0,
+        "overs": 4
       },
       {
-        "date": "2025-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 82,
-        "balls": 86,
-        "fours": 8,
-        "sixes": 2,
-        "sr": "95.35",
-        "dismissal": "c sub b Pranav Dwivedi"
+        "matchId": "m-shared-30",
+        "date": "2023-09-16",
+        "opponent": "Destroyers",
+        "runs": 50,
+        "balls": 55,
+        "wickets": 1,
+        "overs": 5
       },
       {
-        "date": "2026-02-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-10",
-        "opponent": "Destroyers CC",
-        "runs": 64,
-        "balls": 42,
-        "fours": 6,
-        "sixes": 3,
-        "sr": "152.38",
-        "dismissal": "c & b Pranav Dwivedi"
+        "matchId": "m-shared-31",
+        "date": "2023-09-20",
+        "opponent": "Destroyers",
+        "runs": 37,
+        "balls": 41,
+        "wickets": 0,
+        "overs": 4
       },
       {
-        "date": "2026-02-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-14",
-        "opponent": "Destroyers CC",
-        "runs": 78,
-        "balls": 48,
-        "fours": 8,
-        "sixes": 3,
-        "sr": "162.50",
-        "dismissal": "not out"
+        "matchId": "m-shared-40",
+        "date": "2024-09-05",
+        "opponent": "Destroyers",
+        "runs": 69,
+        "balls": 75,
+        "wickets": 1,
+        "overs": 6
       },
       {
-        "date": "2026-02-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-18",
-        "opponent": "Destroyers CC",
-        "runs": 42,
-        "balls": 32,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "131.25",
-        "dismissal": "lbw b Kulwant Khejroliya"
+        "matchId": "m-shared-41",
+        "date": "2024-09-08",
+        "opponent": "Destroyers",
+        "runs": 48,
+        "balls": 54,
+        "wickets": 0,
+        "overs": 5
       }
     ],
     "fifaRatings": {
@@ -416,7 +318,7 @@
       "runs": 249,
       "balls": 246,
       "highestScore": 85,
-      "average": 41.5,
+      "average": 49.8,
       "strikeRate": 101.22,
       "fifties": 1,
       "hundreds": 0,
@@ -565,105 +467,62 @@
         "sixes": 1,
         "sr": 84.6,
         "dismissal": "b Ramveer Singh Gurjar"
-      },
-      {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 42,
-        "balls": 46,
-        "fours": 3,
-        "sixes": 1,
-        "sr": "91.30",
-        "dismissal": "run out (Pranav Dwivedi)"
-      },
-      {
-        "date": "2025-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 44,
-        "balls": 48,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "91.67",
-        "dismissal": "b Kulwant Khejroliya"
-      },
-      {
-        "date": "2026-02-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-14",
-        "opponent": "Destroyers CC",
-        "runs": 34,
-        "balls": 24,
-        "fours": 3,
-        "sixes": 1,
-        "sr": "141.67",
-        "dismissal": "c & b Pranav Dwivedi"
       }
     ],
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
-      31,
-      11,
-      42,
-      44,
-      34
+      33,
+      45,
+      85,
+      18,
+      19
     ],
     "last5Matches": [
       {
-        "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 31,
-        "balls": 36,
-        "fours": 3,
-        "sixes": 3,
-        "sr": 86.1,
-        "dismissal": "b Kumar Kartikeya"
+        "matchId": "m-shared-10",
+        "date": "2021-08-20",
+        "opponent": "Destroyers",
+        "runs": 33,
+        "balls": 21,
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 11,
-        "balls": 13,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 84.6,
-        "dismissal": "b Ramveer Singh Gurjar"
+        "matchId": "m-shared-17",
+        "date": "2022-09-04",
+        "opponent": "Destroyers",
+        "runs": 45,
+        "balls": 52,
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 42,
-        "balls": 46,
-        "fours": 3,
-        "sixes": 1,
-        "sr": "91.30",
-        "dismissal": "run out (Pranav Dwivedi)"
+        "matchId": "m-shared-21",
+        "date": "2022-09-18",
+        "opponent": "Destroyers",
+        "runs": 85,
+        "balls": 98,
+        "wickets": 1,
+        "overs": 8
       },
       {
-        "date": "2025-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 44,
-        "balls": 48,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "91.67",
-        "dismissal": "b Kulwant Khejroliya"
+        "matchId": "m-shared-28",
+        "date": "2023-09-08",
+        "opponent": "Destroyers",
+        "runs": 18,
+        "balls": 21,
+        "wickets": 1,
+        "overs": 7
       },
       {
-        "date": "2026-02-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-14",
-        "opponent": "Destroyers CC",
-        "runs": 34,
-        "balls": 24,
-        "fours": 3,
-        "sixes": 1,
-        "sr": "141.67",
-        "dismissal": "c & b Pranav Dwivedi"
+        "matchId": "m-shared-30",
+        "date": "2023-09-16",
+        "opponent": "Destroyers",
+        "runs": 19,
+        "balls": 22,
+        "wickets": 2,
+        "overs": 9
       }
     ],
     "fifaRatings": {
@@ -688,7 +547,7 @@
       "runs": 228,
       "balls": 239,
       "highestScore": 89,
-      "average": 22.8,
+      "average": 28.5,
       "strikeRate": 95.4,
       "fifties": 1,
       "hundreds": 0,
@@ -815,83 +674,62 @@
         "sixes": 0,
         "sr": 83.3,
         "dismissal": "c Mohd Arshad Khan b Sagar Pratap Singh"
-      },
-      {
-        "date": "2025-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 29,
-        "balls": 20,
-        "fours": 2,
-        "sixes": 2,
-        "sr": "145.00",
-        "dismissal": "not out"
       }
     ],
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      89,
       33,
       33,
       3,
-      5,
-      29
+      5
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-31",
+        "date": "2023-09-20",
+        "opponent": "Destroyers",
+        "runs": 89,
+        "balls": 102,
+        "wickets": 0,
+        "overs": 9
+      },
+      {
+        "matchId": "m-shared-40",
         "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 33,
         "balls": 38,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 86.8,
-        "dismissal": "c Akshat Raghuwanshi b Aryan Deshmukh"
+        "wickets": 2,
+        "overs": 9
       },
       {
+        "matchId": "m-shared-41",
         "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 33,
         "balls": 38,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 86.8,
-        "dismissal": "c Naveen Singh Chouhan b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-42",
         "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 3,
         "balls": 3,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "lbw b Ashwin Das"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-44",
         "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 5,
         "balls": 6,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 83.3,
-        "dismissal": "c Mohd Arshad Khan b Sagar Pratap Singh"
-      },
-      {
-        "date": "2025-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 29,
-        "balls": 20,
-        "fours": 2,
-        "sixes": 2,
-        "sr": "145.00",
-        "dismissal": "not out"
+        "wickets": 2,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -916,7 +754,7 @@
       "runs": 208,
       "balls": 241,
       "highestScore": 92,
-      "average": 29.71,
+      "average": 52,
       "strikeRate": 86.31,
       "fifties": 2,
       "hundreds": 0,
@@ -1076,83 +914,62 @@
         "sixes": 10,
         "sr": 86.8,
         "dismissal": "st Chanchal Rathore b Sagar Pratap Singh"
-      },
-      {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 38,
-        "balls": 32,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "118.75",
-        "dismissal": "not out"
       }
     ],
     "formRating": "HOT",
     "formDots": 5,
     "last5Scores": [
+      46,
+      51,
+      0,
       18,
-      47,
-      52,
-      92,
-      38
+      92
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-28",
+        "date": "2023-09-08",
+        "opponent": "Destroyers",
+        "runs": 46,
+        "balls": 53,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-29",
+        "date": "2023-09-12",
+        "opponent": "Destroyers",
+        "runs": 51,
+        "balls": 59,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-31",
+        "date": "2023-09-20",
+        "opponent": "Destroyers",
+        "runs": 0,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-41",
         "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 18,
         "balls": 21,
-        "fours": 1,
-        "sixes": 2,
-        "sr": 85.7,
-        "dismissal": "not out"
+        "wickets": 2,
+        "overs": 10
       },
       {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 47,
-        "balls": 54,
-        "fours": 4,
-        "sixes": 5,
-        "sr": 87,
-        "dismissal": "lbw b Saransh Jain"
-      },
-      {
-        "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 52,
-        "balls": 60,
-        "fours": 4,
-        "sixes": 6,
-        "sr": 86.7,
-        "dismissal": "st Chanchal Rathore b Shivam Shukla"
-      },
-      {
+        "matchId": "m-shared-44",
         "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 92,
         "balls": 106,
-        "fours": 7,
-        "sixes": 10,
-        "sr": 86.8,
-        "dismissal": "st Chanchal Rathore b Sagar Pratap Singh"
-      },
-      {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 38,
-        "balls": 32,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "118.75",
-        "dismissal": "not out"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -1304,127 +1121,62 @@
         "sixes": 2,
         "sr": 88.9,
         "dismissal": "b Rohit Rajawat"
-      },
-      {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 54,
-        "balls": 68,
-        "fours": 5,
-        "sixes": 0,
-        "sr": "79.41",
-        "dismissal": "c & b Kuldeep Sen"
-      },
-      {
-        "date": "2025-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 46,
-        "balls": 54,
-        "fours": 4,
-        "sixes": 0,
-        "sr": "85.19",
-        "dismissal": "lbw b Saransh Jain"
-      },
-      {
-        "date": "2025-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 51,
-        "balls": 56,
-        "fours": 5,
-        "sixes": 0,
-        "sr": "91.07",
-        "dismissal": "b Saransh Jain"
-      },
-      {
-        "date": "2026-02-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-10",
-        "opponent": "Destroyers CC",
-        "runs": 38,
-        "balls": 28,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "135.71",
-        "dismissal": "b Kulwant Khejroliya"
-      },
-      {
-        "date": "2026-02-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-18",
-        "opponent": "Destroyers CC",
-        "runs": 45,
-        "balls": 36,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "125.00",
-        "dismissal": "c sub b Pranav Dwivedi"
       }
     ],
     "formRating": "HOT",
     "formDots": 5,
     "last5Scores": [
-      54,
-      46,
-      51,
-      38,
-      45
+      42,
+      31,
+      48,
+      42,
+      33
     ],
     "last5Matches": [
       {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 54,
-        "balls": 68,
-        "fours": 5,
-        "sixes": 0,
-        "sr": "79.41",
-        "dismissal": "c & b Kuldeep Sen"
+        "matchId": "m-shared-8",
+        "date": "2021-08-11",
+        "opponent": "Destroyers",
+        "runs": 42,
+        "balls": 27,
+        "wickets": 2,
+        "overs": 4
       },
       {
-        "date": "2025-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 46,
-        "balls": 54,
-        "fours": 4,
-        "sixes": 0,
-        "sr": "85.19",
-        "dismissal": "lbw b Saransh Jain"
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": 31,
+        "balls": 20,
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2025-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 51,
-        "balls": 56,
-        "fours": 5,
-        "sixes": 0,
-        "sr": "91.07",
-        "dismissal": "b Saransh Jain"
+        "matchId": "m-shared-19",
+        "date": "2022-09-10",
+        "opponent": "Destroyers",
+        "runs": 48,
+        "balls": 55,
+        "wickets": 0,
+        "overs": 10
       },
       {
-        "date": "2026-02-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-10",
-        "opponent": "Destroyers CC",
-        "runs": 38,
-        "balls": 28,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "135.71",
-        "dismissal": "b Kulwant Khejroliya"
+        "matchId": "m-shared-28",
+        "date": "2023-09-08",
+        "opponent": "Destroyers",
+        "runs": 42,
+        "balls": 48,
+        "wickets": 1,
+        "overs": 9
       },
       {
-        "date": "2026-02-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-18",
-        "opponent": "Destroyers CC",
-        "runs": 45,
-        "balls": 36,
-        "fours": 4,
-        "sixes": 1,
-        "sr": "125.00",
-        "dismissal": "c sub b Pranav Dwivedi"
+        "matchId": "m-shared-40",
+        "date": "2024-09-05",
+        "opponent": "Destroyers",
+        "runs": 33,
+        "balls": 38,
+        "wickets": 2,
+        "overs": 7
       }
     ],
     "fifaRatings": {
@@ -1449,7 +1201,7 @@
       "runs": 183,
       "balls": 210,
       "highestScore": 62,
-      "average": 30.5,
+      "average": 36.6,
       "strikeRate": 87.14,
       "fifties": 2,
       "hundreds": 0,
@@ -1581,67 +1333,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
-      1,
+      30,
+      3,
       35,
       52,
-      12,
       62
     ],
     "last5Matches": [
       {
-        "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "st Chanchal Rathore b Kumar Kartikeya"
+        "matchId": "m-shared-21",
+        "date": "2022-09-18",
+        "opponent": "Destroyers",
+        "runs": 30,
+        "balls": 35,
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-28",
+        "date": "2023-09-08",
+        "opponent": "Destroyers",
+        "runs": 3,
+        "balls": 3,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-40",
         "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 35,
         "balls": 40,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.5,
-        "dismissal": "b Kanishk Dubey"
+        "wickets": 0,
+        "overs": 9
       },
       {
+        "matchId": "m-shared-42",
         "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 52,
         "balls": 60,
-        "fours": 4,
-        "sixes": 6,
-        "sr": 86.7,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": 7,
+        "overs": 10
       },
       {
-        "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 12,
-        "balls": 14,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "not out"
-      },
-      {
+        "matchId": "m-shared-44",
         "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 62,
         "balls": 71,
-        "fours": 4,
-        "sixes": 7,
-        "sr": 87.3,
-        "dismissal": "c Venkatesh Iyer b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -1666,7 +1408,7 @@
       "runs": 177,
       "balls": 193,
       "highestScore": 74,
-      "average": 25.29,
+      "average": 29.5,
       "strikeRate": 91.71,
       "fifties": 2,
       "hundreds": 0,
@@ -1776,67 +1518,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
+      20,
+      28,
       53,
-      8,
       74,
-      0,
       1
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": 20,
+        "balls": 13,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-17",
+        "date": "2022-09-04",
+        "opponent": "Destroyers",
+        "runs": 28,
+        "balls": 32,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-19",
         "date": "2022-09-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-10",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 53,
         "balls": 61,
-        "fours": 4,
-        "sixes": 6,
-        "sr": 86.9,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2022-09-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-14",
-        "opponent": "Destroyers CC",
-        "runs": 8,
-        "balls": 9,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 88.9,
-        "dismissal": "st Chanchal Rathore b Mohd Arham Aquil"
-      },
-      {
+        "matchId": "m-shared-27",
         "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 74,
         "balls": 85,
-        "fours": 6,
-        "sixes": 8,
-        "sr": 87.1,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 0,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 0,
-        "dismissal": "st Chanchal Rathore b Kuldeep Sen"
-      },
-      {
+        "matchId": "m-shared-44",
         "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "b Ajay Rohera"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -1861,7 +1593,7 @@
       "runs": 163,
       "balls": 184,
       "highestScore": 95,
-      "average": 23.29,
+      "average": 40.75,
       "strikeRate": 88.59,
       "fifties": 2,
       "hundreds": 0,
@@ -1993,67 +1725,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
-      2,
+      5,
+      1,
       59,
       3,
-      8,
       95
     ],
     "last5Matches": [
       {
-        "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 2,
-        "balls": 2,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Saransh Jain b Kuldeep Sen"
+        "matchId": "m-shared-17",
+        "date": "2022-09-04",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-18",
+        "date": "2022-09-07",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 1,
+        "overs": 9
+      },
+      {
+        "matchId": "m-shared-29",
         "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 59,
         "balls": 68,
-        "fours": 4,
-        "sixes": 7,
-        "sr": 86.8,
-        "dismissal": "not out"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-30",
         "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 3,
         "balls": 3,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Sagar Pratap Singh b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 8,
-        "balls": 9,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 88.9,
-        "dismissal": "c Ajay Rohera b Saransh Jain"
-      },
-      {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 95,
         "balls": 109,
-        "fours": 6,
-        "sixes": 11,
-        "sr": 87.2,
-        "dismissal": "b Rohit Rajawat"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -2078,7 +1800,7 @@
       "runs": 162,
       "balls": 140,
       "highestScore": 53,
-      "average": 23.14,
+      "average": 32.4,
       "strikeRate": 115.71,
       "fifties": 1,
       "hundreds": 0,
@@ -2199,67 +1921,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      53,
       6,
       9,
-      23,
       31,
       24
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-15",
+        "date": "2022-08-10",
+        "opponent": "Destroyers",
+        "runs": 53,
+        "balls": 34,
+        "wickets": 2,
+        "overs": 4
+      },
+      {
+        "matchId": "m-shared-21",
         "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 6,
         "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "st Chanchal Rathore b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-31",
         "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 9,
         "balls": 10,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 90,
-        "dismissal": "not out"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 23,
-        "balls": 26,
-        "fours": 1,
-        "sixes": 3,
-        "sr": 88.5,
-        "dismissal": "c Aryan Deshmukh b Ramveer Singh Gurjar"
-      },
-      {
+        "matchId": "m-shared-42",
         "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 31,
         "balls": 36,
-        "fours": 3,
-        "sixes": 3,
-        "sr": 86.1,
-        "dismissal": "lbw b Anant Verma"
+        "wickets": 0,
+        "overs": 10
       },
       {
+        "matchId": "m-shared-44",
         "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 24,
         "balls": 28,
-        "fours": 1,
-        "sixes": 3,
-        "sr": 85.7,
-        "dismissal": "c Sagar Pratap Singh b Harsh Gawli"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -2284,7 +1996,7 @@
       "runs": 145,
       "balls": 166,
       "highestScore": 56,
-      "average": 24.17,
+      "average": 29,
       "strikeRate": 87.35,
       "fifties": 2,
       "hundreds": 0,
@@ -2416,67 +2128,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
-      37,
-      25,
+      56,
+      2,
+      22,
       53,
-      11,
-      1
+      11
     ],
     "last5Matches": [
       {
-        "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
-        "runs": 37,
-        "balls": 43,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 86,
-        "dismissal": "b Kuldeep Sen"
+        "matchId": "m-shared-17",
+        "date": "2022-09-04",
+        "opponent": "Destroyers",
+        "runs": 56,
+        "balls": 64,
+        "wickets": 2,
+        "overs": 9
       },
       {
-        "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 25,
-        "balls": 29,
-        "fours": 1,
-        "sixes": 3,
-        "sr": 86.2,
-        "dismissal": "lbw b Prabhanshu Shukla"
+        "matchId": "m-shared-19",
+        "date": "2022-09-10",
+        "opponent": "Destroyers",
+        "runs": 2,
+        "balls": 2,
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-20",
+        "date": "2022-09-14",
+        "opponent": "Destroyers",
+        "runs": 22,
+        "balls": 25,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-29",
         "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 53,
         "balls": 61,
-        "fours": 4,
-        "sixes": 6,
-        "sr": 86.9,
-        "dismissal": "c Pranav Dwivedi b Subhranshu Senapati"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-30",
         "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 11,
         "balls": 13,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 84.6,
-        "dismissal": "c Kumar Kartikeya b Subhranshu Senapati"
-      },
-      {
-        "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "not out"
+        "wickets": 1,
+        "overs": 7
       }
     ],
     "fifaRatings": {
@@ -2633,67 +2335,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
-      13,
+      54,
+      10,
+      12,
       8,
-      55,
-      58,
-      33
+      58
     ],
     "last5Matches": [
       {
-        "date": "2022-09-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-14",
-        "opponent": "Destroyers CC",
-        "runs": 13,
-        "balls": 15,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 86.7,
-        "dismissal": "b Subhranshu Senapati"
+        "matchId": "m-shared-5",
+        "date": "2021-08-01",
+        "opponent": "Destroyers",
+        "runs": 54,
+        "balls": 35,
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-6",
+        "date": "2021-08-04",
+        "opponent": "Destroyers",
+        "runs": 10,
+        "balls": 7,
+        "wickets": 0,
+        "overs": 2
+      },
+      {
+        "matchId": "m-shared-18",
+        "date": "2022-09-07",
+        "opponent": "Destroyers",
+        "runs": 12,
+        "balls": 14,
+        "wickets": 1,
+        "overs": 10
+      },
+      {
+        "matchId": "m-shared-27",
         "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 8,
         "balls": 9,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 88.9,
-        "dismissal": "c & b Pranav Dwivedi"
+        "wickets": 0,
+        "overs": 9
       },
       {
-        "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 55,
-        "balls": 63,
-        "fours": 4,
-        "sixes": 6,
-        "sr": 87.3,
-        "dismissal": "b Ritesh Shakya"
-      },
-      {
+        "matchId": "m-shared-31",
         "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 58,
         "balls": 67,
-        "fours": 5,
-        "sixes": 6,
-        "sr": 86.6,
-        "dismissal": "b Pranav Dwivedi"
-      },
-      {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 33,
-        "balls": 38,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 86.8,
-        "dismissal": "lbw b Yash Dubey"
+        "wickets": 2,
+        "overs": 8
       }
     ],
     "fifaRatings": {
@@ -2718,7 +2410,7 @@
       "runs": 140,
       "balls": 114,
       "highestScore": 70,
-      "average": 14,
+      "average": 20,
       "strikeRate": 122.81,
       "fifties": 1,
       "hundreds": 0,
@@ -2894,67 +2586,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      1,
+      1,
       3,
-      30,
-      49,
       4,
       11
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-18",
+        "date": "2022-09-07",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": 0,
+        "overs": 9
+      },
+      {
+        "matchId": "m-shared-19",
+        "date": "2022-09-10",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-20",
         "date": "2022-09-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-14",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 3,
         "balls": 3,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": 7,
+        "overs": 7
       },
       {
-        "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 30,
-        "balls": 35,
-        "fours": 3,
-        "sixes": 3,
-        "sr": 85.7,
-        "dismissal": "b Ashwin Das"
-      },
-      {
-        "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 49,
-        "balls": 56,
-        "fours": 4,
-        "sixes": 5,
-        "sr": 87.5,
-        "dismissal": "b Kulwant Khejroliya"
-      },
-      {
+        "matchId": "m-shared-40",
         "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 4,
         "balls": 5,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 80,
-        "dismissal": "not out"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 11,
         "balls": 13,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 84.6,
-        "dismissal": "lbw b Himanshu Mantri"
+        "wickets": 0,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -2979,7 +2661,7 @@
       "runs": 133,
       "balls": 147,
       "highestScore": 55,
-      "average": 19,
+      "average": 26.6,
       "strikeRate": 90.48,
       "fifties": 1,
       "hundreds": 0,
@@ -3122,67 +2804,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
+      40,
+      15,
       10,
       1,
-      34,
-      55,
-      40
+      55
     ],
     "last5Matches": [
       {
-        "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 10,
-        "balls": 12,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 83.3,
-        "dismissal": "c Pranav Dwivedi b Harsh Gawli"
-      },
-      {
-        "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "lbw b Sagar Pratap Singh"
-      },
-      {
-        "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 34,
-        "balls": 39,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.2,
-        "dismissal": "not out"
-      },
-      {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 55,
-        "balls": 63,
-        "fours": 4,
-        "sixes": 6,
-        "sr": 87.3,
-        "dismissal": "c Aryan Deshmukh b Anant Verma"
-      },
-      {
-        "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-19",
+        "date": "2022-09-10",
+        "opponent": "Destroyers",
         "runs": 40,
         "balls": 46,
-        "fours": 4,
-        "sixes": 4,
-        "sr": 87,
-        "dismissal": "c Akshat Raghuwanshi b Kuldeep Sen"
+        "wickets": 0,
+        "overs": 9
+      },
+      {
+        "matchId": "m-shared-20",
+        "date": "2022-09-14",
+        "opponent": "Destroyers",
+        "runs": 15,
+        "balls": 17,
+        "wickets": 0,
+        "overs": 9
+      },
+      {
+        "matchId": "m-shared-27",
+        "date": "2023-09-05",
+        "opponent": "Destroyers",
+        "runs": 10,
+        "balls": 12,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-28",
+        "date": "2023-09-08",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-42",
+        "date": "2024-09-12",
+        "opponent": "Destroyers",
+        "runs": 55,
+        "balls": 63,
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -3207,7 +2879,7 @@
       "runs": 129,
       "balls": 149,
       "highestScore": 60,
-      "average": 21.5,
+      "average": 32.25,
       "strikeRate": 86.58,
       "fifties": 1,
       "hundreds": 0,
@@ -3350,67 +3022,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
+      15,
       12,
       60,
-      11,
       38,
       4
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-29",
         "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 12,
         "balls": 14,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c & b Rahul Batham"
+        "wickets": 0,
+        "overs": 9
       },
       {
+        "matchId": "m-shared-31",
         "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 60,
         "balls": 69,
-        "fours": 4,
-        "sixes": 7,
-        "sr": 87,
-        "dismissal": "c & b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 11,
-        "balls": 13,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 84.6,
-        "dismissal": "c Mohd Arham Aquil b Saransh Jain"
+        "matchId": "m-shared-41",
+        "date": "2024-09-08",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 0,
+        "overs": 8
       },
       {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 38,
         "balls": 44,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 86.4,
-        "dismissal": "lbw b Himanshu Mantri"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-44",
         "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 4,
         "balls": 5,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 80,
-        "dismissal": "c Harsh Gawli b Sagar Pratap Singh"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -3435,7 +3097,7 @@
       "runs": 126,
       "balls": 120,
       "highestScore": 50,
-      "average": 21,
+      "average": 31.5,
       "strikeRate": 105,
       "fifties": 1,
       "hundreds": 0,
@@ -3556,67 +3218,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
-      24,
+      50,
+      1,
       43,
-      29,
       31,
       1
     ],
     "last5Matches": [
       {
-        "date": "2022-09-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-10",
-        "opponent": "Destroyers CC",
-        "runs": 24,
-        "balls": 28,
-        "fours": 1,
-        "sixes": 3,
-        "sr": 85.7,
-        "dismissal": "st Chanchal Rathore b Arshad Khan"
-      },
-      {
-        "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 43,
-        "balls": 49,
-        "fours": 3,
-        "sixes": 5,
-        "sr": 87.8,
-        "dismissal": "not out"
-      },
-      {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 29,
-        "balls": 33,
-        "fours": 2,
-        "sixes": 3,
-        "sr": 87.9,
-        "dismissal": "c Shubham Sharma b Kuldeep Sen"
-      },
-      {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 31,
-        "balls": 36,
-        "fours": 3,
-        "sixes": 3,
-        "sr": 86.1,
-        "dismissal": "c Pranav Dwivedi b Anubhav Agarwal"
-      },
-      {
-        "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-7",
+        "date": "2021-08-07",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "lbw b Sagar Pratap Singh"
+        "wickets": 0,
+        "overs": 4
+      },
+      {
+        "matchId": "m-shared-11",
+        "date": "2021-08-28",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 0,
+        "overs": 4
+      },
+      {
+        "matchId": "m-shared-28",
+        "date": "2023-09-08",
+        "opponent": "Destroyers",
+        "runs": 43,
+        "balls": 49,
+        "wickets": 1,
+        "overs": 9
+      },
+      {
+        "matchId": "m-shared-42",
+        "date": "2024-09-12",
+        "opponent": "Destroyers",
+        "runs": 31,
+        "balls": 36,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-44",
+        "date": "2024-09-20",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": 2,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -3641,7 +3293,7 @@
       "runs": 114,
       "balls": 116,
       "highestScore": 83,
-      "average": 19,
+      "average": 38,
       "strikeRate": 98.28,
       "fifties": 1,
       "hundreds": 0,
@@ -3740,67 +3392,56 @@
     "formRating": "HOT",
     "formDots": 5,
     "last5Scores": [
-      29,
-      69,
       1,
-      83,
-      48
+      29,
+      1,
+      83
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-8",
         "date": "2021-08-11",
-        "matchSlug": "destroyers-vs-dread-eleven-2021-08-11",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 29,
         "balls": 19,
-        "fours": 2,
-        "sixes": 3,
-        "sr": 152.6,
-        "dismissal": "c Himanshu Mantri b Anubhav Agarwal"
+        "wickets": 3,
+        "overs": 2
       },
       {
-        "date": "2022-08-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-08-10",
-        "opponent": "Destroyers CC",
-        "runs": 69,
-        "balls": 45,
-        "fours": 5,
-        "sixes": 8,
-        "sr": 153.3,
-        "dismissal": "st Chanchal Rathore b Arshad Khan"
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 2,
+        "overs": 4
       },
       {
+        "matchId": "m-shared-17",
         "date": "2022-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-04",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "b Atharv Mahajan"
+        "wickets": 1,
+        "overs": 10
       },
       {
+        "matchId": "m-shared-20",
         "date": "2022-09-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-14",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 83,
         "balls": 95,
-        "fours": 6,
-        "sixes": 9,
-        "sr": 87.4,
-        "dismissal": "not out"
+        "wickets": 0,
+        "overs": 10
       },
       {
-        "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 48,
-        "balls": 55,
-        "fours": 4,
-        "sixes": 5,
-        "sr": 87.3,
-        "dismissal": "c Rajat Patidar b Akhil Mishra"
+        "matchId": "m-shared-44",
+        "date": "2024-09-20",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 1,
+        "overs": 9
       }
     ],
     "fifaRatings": {
@@ -3825,7 +3466,7 @@
       "runs": 112,
       "balls": 126,
       "highestScore": 45,
-      "average": 16,
+      "average": 18.67,
       "strikeRate": 88.89,
       "fifties": 0,
       "hundreds": 0,
@@ -3979,67 +3620,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      45,
       1,
       38,
       3,
-      19,
-      6
+      19
     ],
     "last5Matches": [
       {
-        "date": "2022-09-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-14",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-18",
+        "date": "2022-09-07",
+        "opponent": "Destroyers",
+        "runs": 45,
+        "balls": 52,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-19",
+        "date": "2022-09-10",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "b Subhranshu Senapati"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-30",
         "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 38,
         "balls": 44,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 86.4,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-31",
         "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 3,
         "balls": 3,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "not out"
+        "wickets": 1,
+        "overs": 10
       },
       {
+        "matchId": "m-shared-42",
         "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 19,
         "balls": 22,
-        "fours": 1,
-        "sixes": 2,
-        "sr": 86.4,
-        "dismissal": "st Chanchal Rathore b Pranav Dwivedi"
-      },
-      {
-        "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 6,
-        "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c Avesh Khan b Ankit Singh Kushwaha"
+        "wickets": 2,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -4064,7 +3695,7 @@
       "runs": 110,
       "balls": 96,
       "highestScore": 62,
-      "average": 13.75,
+      "average": 18.33,
       "strikeRate": 114.58,
       "fifties": 1,
       "hundreds": 0,
@@ -4218,67 +3849,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      7,
       4,
       9,
       6,
-      10,
-      33
+      10
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-21",
+        "date": "2022-09-18",
+        "opponent": "Destroyers",
+        "runs": 7,
+        "balls": 8,
+        "wickets": 1,
+        "overs": 10
+      },
+      {
+        "matchId": "m-shared-30",
         "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 4,
         "balls": 5,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 80,
-        "dismissal": "lbw b Subhranshu Senapati"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-40",
         "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 9,
         "balls": 10,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 90,
-        "dismissal": "c Venkatesh Iyer b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-41",
         "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 6,
         "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "not out"
+        "wickets": 4,
+        "overs": 8
       },
       {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 10,
         "balls": 12,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 83.3,
-        "dismissal": "b Pranav Dwivedi"
-      },
-      {
-        "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 33,
-        "balls": 38,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 86.8,
-        "dismissal": "c Rohit Rajawat b Akshat Raghuwanshi"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -4303,7 +3924,7 @@
       "runs": 108,
       "balls": 119,
       "highestScore": 51,
-      "average": 27,
+      "average": 36,
       "strikeRate": 90.76,
       "fifties": 1,
       "hundreds": 0,
@@ -4441,94 +4062,52 @@
         "sixes": 4,
         "sr": 86.7,
         "dismissal": "not out"
-      },
-      {
-        "date": "2025-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 62,
-        "balls": 66,
-        "fours": 7,
-        "sixes": 1,
-        "sr": "93.94",
-        "dismissal": "b Kuldeep Sen"
-      },
-      {
-        "date": "2026-02-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-10",
-        "opponent": "Destroyers CC",
-        "runs": 52,
-        "balls": 36,
-        "fours": 5,
-        "sixes": 2,
-        "sr": "144.44",
-        "dismissal": "c Akhil Mishra b Kuldeep Sen"
       }
     ],
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
-      23,
-      41,
-      39,
-      62,
-      52
+      12,
+      4,
+      51,
+      41
     ],
     "last5Matches": [
       {
-        "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 23,
-        "balls": 26,
-        "fours": 1,
-        "sixes": 3,
-        "sr": 88.5,
-        "dismissal": "st Chanchal Rathore b Venkatesh Iyer"
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": 12,
+        "balls": 8,
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-17",
+        "date": "2022-09-04",
+        "opponent": "Destroyers",
+        "runs": 4,
+        "balls": 5,
+        "wickets": 1,
+        "overs": 8
+      },
+      {
+        "matchId": "m-shared-18",
+        "date": "2022-09-07",
+        "opponent": "Destroyers",
+        "runs": 51,
+        "balls": 59,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-41",
         "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 41,
         "balls": 47,
-        "fours": 2,
-        "sixes": 5,
-        "sr": 87.2,
-        "dismissal": "st Chanchal Rathore b Yash Dubey"
-      },
-      {
-        "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 39,
-        "balls": 45,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 86.7,
-        "dismissal": "not out"
-      },
-      {
-        "date": "2025-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 62,
-        "balls": 66,
-        "fours": 7,
-        "sixes": 1,
-        "sr": "93.94",
-        "dismissal": "b Kuldeep Sen"
-      },
-      {
-        "date": "2026-02-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-10",
-        "opponent": "Destroyers CC",
-        "runs": 52,
-        "balls": 36,
-        "fours": 5,
-        "sixes": 2,
-        "sr": "144.44",
-        "dismissal": "c Akhil Mishra b Kuldeep Sen"
+        "wickets": 0,
+        "overs": 9
       }
     ],
     "fifaRatings": {
@@ -4553,7 +4132,7 @@
       "runs": 106,
       "balls": 97,
       "highestScore": 55,
-      "average": 26.5,
+      "average": 35.33,
       "strikeRate": 109.28,
       "fifties": 1,
       "hundreds": 0,
@@ -4674,67 +4253,47 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      1,
+      41,
+      9,
       55,
-      1,
-      4,
-      20
+      1
     ],
     "last5Matches": [
       {
-        "date": "2022-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Saransh Jain b Mohd Arham Aquil"
+        "matchId": "m-shared-9",
+        "date": "2021-08-15",
+        "opponent": "Destroyers",
+        "runs": 41,
+        "balls": 27,
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": 9,
+        "balls": 6,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-18",
         "date": "2022-09-07",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-07",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 55,
         "balls": 63,
-        "fours": 4,
-        "sixes": 6,
-        "sr": 87.3,
-        "dismissal": "not out"
+        "wickets": 2,
+        "overs": 9
       },
       {
+        "matchId": "m-shared-29",
         "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Saransh Surana b Subhranshu Senapati"
-      },
-      {
-        "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 4,
-        "balls": 5,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 80,
-        "dismissal": "c Kulwant Khejroliya b Ritesh Shakya"
-      },
-      {
-        "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 20,
-        "balls": 23,
-        "fours": 2,
-        "sixes": 2,
-        "sr": 87,
-        "dismissal": "lbw b Akshat Raghuwanshi"
+        "wickets": 1,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -4759,7 +4318,7 @@
       "runs": 104,
       "balls": 99,
       "highestScore": 51,
-      "average": 11.56,
+      "average": 14.86,
       "strikeRate": 105.05,
       "fifties": 1,
       "hundreds": 0,
@@ -4935,67 +4494,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      12,
+      51,
       6,
-      1,
       0,
-      1,
-      4
+      1
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-15",
+        "date": "2022-08-10",
+        "opponent": "Destroyers",
+        "runs": 12,
+        "balls": 8,
+        "wickets": 2,
+        "overs": 3
+      },
+      {
+        "matchId": "m-shared-18",
+        "date": "2022-09-07",
+        "opponent": "Destroyers",
+        "runs": 51,
+        "balls": 59,
+        "wickets": 2,
+        "overs": 8
+      },
+      {
+        "matchId": "m-shared-28",
         "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 6,
         "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c Radhakrishna Dwivedi b Sagar Pratap Singh"
+        "wickets": 2,
+        "overs": 9
       },
       {
-        "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c & b Avesh Khan"
-      },
-      {
+        "matchId": "m-shared-31",
         "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 0,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 0,
-        "dismissal": "c Ritesh Shakya b Yash Dubey"
+        "wickets": 5,
+        "overs": 10
       },
       {
+        "matchId": "m-shared-40",
         "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Ankit Singh Kushwaha b Aryan Deshmukh"
-      },
-      {
-        "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 4,
-        "balls": 5,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 80,
-        "dismissal": "c Radhakrishna Dwivedi b Anubhav Agarwal"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -5020,7 +4569,7 @@
       "runs": 103,
       "balls": 115,
       "highestScore": 35,
-      "average": 10.3,
+      "average": 12.88,
       "strikeRate": 89.57,
       "fifties": 0,
       "hundreds": 0,
@@ -5208,66 +4757,56 @@
     "formDots": 3,
     "last5Scores": [
       11,
+      11,
       35,
       3,
-      5,
       34
     ],
     "last5Matches": [
       {
-        "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-27",
+        "date": "2023-09-05",
+        "opponent": "Destroyers",
         "runs": 11,
         "balls": 13,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 84.6,
-        "dismissal": "c Ankit Singh Kushwaha b Pranav Dwivedi"
+        "wickets": 0,
+        "overs": 10
       },
       {
+        "matchId": "m-shared-29",
+        "date": "2023-09-12",
+        "opponent": "Destroyers",
+        "runs": 11,
+        "balls": 13,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-30",
         "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 35,
         "balls": 40,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.5,
-        "dismissal": "c Saransh Jain b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-31",
         "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 3,
         "balls": 3,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "lbw b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 5,
-        "balls": 6,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 83.3,
-        "dismissal": "b Ramveer Singh Gurjar"
-      },
-      {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 34,
         "balls": 39,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.2,
-        "dismissal": "st Chanchal Rathore b Saransh Jain"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -5292,7 +4831,7 @@
       "runs": 101,
       "balls": 117,
       "highestScore": 38,
-      "average": 12.63,
+      "average": 33.67,
       "strikeRate": 86.32,
       "fifties": 0,
       "hundreds": 0,
@@ -5392,66 +4931,56 @@
     "formDots": 4,
     "last5Scores": [
       1,
-      29,
+      1,
       38,
       31,
       30
     ],
     "last5Matches": [
       {
-        "date": "2021-08-11",
-        "matchSlug": "destroyers-vs-dread-eleven-2021-08-11",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "not out"
+        "matchId": "m-shared-19",
+        "date": "2022-09-10",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 2,
+        "overs": 10
       },
       {
-        "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
-        "runs": 29,
-        "balls": 33,
-        "fours": 2,
-        "sixes": 3,
-        "sr": 87.9,
-        "dismissal": "not out"
-      },
-      {
+        "matchId": "m-shared-27",
         "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 38,
         "balls": 44,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 86.4,
-        "dismissal": "b Kulwant Khejroliya"
+        "wickets": 1,
+        "overs": 9
       },
       {
+        "matchId": "m-shared-28",
         "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 31,
         "balls": 36,
-        "fours": 3,
-        "sixes": 3,
-        "sr": 86.1,
-        "dismissal": "lbw b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-30",
         "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 30,
         "balls": 35,
-        "fours": 3,
-        "sixes": 3,
-        "sr": 85.7,
-        "dismissal": "not out"
+        "wickets": 0,
+        "overs": 10
+      },
+      {
+        "matchId": "m-shared-42",
+        "date": "2024-09-12",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 1,
+        "overs": 9
       }
     ],
     "fifaRatings": {
@@ -5476,7 +5005,7 @@
       "runs": 88,
       "balls": 78,
       "highestScore": 38,
-      "average": 17.6,
+      "average": 22,
       "strikeRate": 112.82,
       "fifties": 0,
       "hundreds": 0,
@@ -5586,67 +5115,56 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      9,
       38,
-      1,
-      12,
       14,
       27
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-5",
+        "date": "2021-08-01",
+        "opponent": "Destroyers",
+        "runs": 9,
+        "balls": 6,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-16",
         "date": "2022-08-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-08-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 38,
         "balls": 25,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 152,
-        "dismissal": "c Ramveer Singh Gurjar b Harsh Gawli"
+        "wickets": 0,
+        "overs": 4
       },
       {
-        "date": "2022-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "st Chanchal Rathore b Mohd Arham Aquil"
-      },
-      {
-        "date": "2022-09-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-10",
-        "opponent": "Destroyers CC",
-        "runs": 12,
-        "balls": 14,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "lbw b Jaydev Singh"
-      },
-      {
+        "matchId": "m-shared-21",
         "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 14,
         "balls": 16,
-        "fours": 0,
-        "sixes": 2,
-        "sr": 87.5,
-        "dismissal": "b Harsh Gawli"
+        "wickets": 1,
+        "overs": 9
       },
       {
+        "matchId": "m-shared-40",
         "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 27,
         "balls": 31,
-        "fours": 2,
-        "sixes": 3,
-        "sr": 87.1,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": 1,
+        "overs": 10
+      },
+      {
+        "matchId": "m-shared-41",
+        "date": "2024-09-08",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 0,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -5671,7 +5189,7 @@
       "runs": 88,
       "balls": 79,
       "highestScore": 34,
-      "average": 14.67,
+      "average": 22,
       "strikeRate": 111.39,
       "fifties": 0,
       "hundreds": 0,
@@ -5781,67 +5299,57 @@
     "formRating": "WARM",
     "formDots": 4,
     "last5Scores": [
+      32,
+      12,
       1,
-      95,
-      23,
       34,
       8
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-7",
+        "date": "2021-08-07",
+        "opponent": "Destroyers",
+        "runs": 32,
+        "balls": 21,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-10",
+        "date": "2021-08-20",
+        "opponent": "Destroyers",
+        "runs": 12,
+        "balls": 8,
+        "wickets": 2,
+        "overs": 2
+      },
+      {
+        "matchId": "m-shared-18",
         "date": "2022-09-07",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-07",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c & b Ramveer Singh Gurjar"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
-        "runs": 95,
-        "balls": 109,
-        "fours": 6,
-        "sixes": 11,
-        "sr": 87.2,
-        "dismissal": "b Kuldeep Sen"
-      },
-      {
-        "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 23,
-        "balls": 26,
-        "fours": 1,
-        "sixes": 3,
-        "sr": 88.5,
-        "dismissal": "not out"
-      },
-      {
+        "matchId": "m-shared-41",
         "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 34,
         "balls": 39,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.2,
-        "dismissal": "c Mohd Arshad Khan b Ritesh Shakya"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 8,
         "balls": 9,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 88.9,
-        "dismissal": "c Sagar Pratap Singh b Kanishk Dubey"
+        "wickets": 2,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -5866,7 +5374,7 @@
       "runs": 88,
       "balls": 101,
       "highestScore": 43,
-      "average": 14.67,
+      "average": 17.6,
       "strikeRate": 87.13,
       "fifties": 0,
       "hundreds": 0,
@@ -6020,67 +5528,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      6,
-      11,
+      0,
       1,
+      36,
       43,
       8
     ],
     "last5Matches": [
       {
-        "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
-        "runs": 6,
-        "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "not out"
-      },
-      {
-        "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 11,
-        "balls": 13,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 84.6,
-        "dismissal": "c Sagar Pratap Singh b Prabhanshu Shukla"
-      },
-      {
-        "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-17",
+        "date": "2022-09-04",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "st Chanchal Rathore b Akshat Raghuwanshi"
+        "wickets": 5,
+        "overs": 9
       },
       {
+        "matchId": "m-shared-19",
+        "date": "2022-09-10",
+        "opponent": "Destroyers",
+        "runs": 36,
+        "balls": 41,
+        "wickets": 1,
+        "overs": 10
+      },
+      {
+        "matchId": "m-shared-20",
+        "date": "2022-09-14",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 1,
+        "overs": 8
+      },
+      {
+        "matchId": "m-shared-40",
         "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 43,
         "balls": 49,
-        "fours": 3,
-        "sixes": 5,
-        "sr": 87.8,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-42",
         "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 8,
         "balls": 9,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 88.9,
-        "dismissal": "b Aryan Deshmukh"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -6276,116 +5774,62 @@
         "sixes": 7,
         "sr": 87,
         "dismissal": "b Chanchal Rathore"
-      },
-      {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 64,
-        "balls": 74,
-        "fours": 6,
-        "sixes": 1,
-        "sr": "86.49",
-        "dismissal": "c Yash Dubey b Kuldeep Sen"
-      },
-      {
-        "date": "2025-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 58,
-        "balls": 70,
-        "fours": 5,
-        "sixes": 1,
-        "sr": "82.86",
-        "dismissal": "c Yash Dubey b Kuldeep Sen"
-      },
-      {
-        "date": "2025-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 74,
-        "balls": 80,
-        "fours": 8,
-        "sixes": 1,
-        "sr": "92.50",
-        "dismissal": "c Yash Dubey b Anubhav Agarwal"
-      },
-      {
-        "date": "2026-02-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-18",
-        "opponent": "Destroyers CC",
-        "runs": 46,
-        "balls": 34,
-        "fours": 5,
-        "sixes": 1,
-        "sr": "135.29",
-        "dismissal": "c Yash Dubey b Kuldeep Sen"
       }
     ],
     "formRating": "HOT",
     "formDots": 5,
     "last5Scores": [
-      67,
-      64,
-      58,
-      74,
-      46
+      2,
+      43,
+      14,
+      7,
+      1
     ],
     "last5Matches": [
       {
-        "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 67,
-        "balls": 77,
-        "fours": 6,
-        "sixes": 7,
-        "sr": 87,
-        "dismissal": "b Chanchal Rathore"
+        "matchId": "m-shared-6",
+        "date": "2021-08-04",
+        "opponent": "Destroyers",
+        "runs": 2,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2025-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 64,
-        "balls": 74,
-        "fours": 6,
-        "sixes": 1,
-        "sr": "86.49",
-        "dismissal": "c Yash Dubey b Kuldeep Sen"
+        "matchId": "m-shared-15",
+        "date": "2022-08-10",
+        "opponent": "Destroyers",
+        "runs": 43,
+        "balls": 28,
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2025-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 58,
-        "balls": 70,
-        "fours": 5,
-        "sixes": 1,
-        "sr": "82.86",
-        "dismissal": "c Yash Dubey b Kuldeep Sen"
+        "matchId": "m-shared-20",
+        "date": "2022-09-14",
+        "opponent": "Destroyers",
+        "runs": 14,
+        "balls": 16,
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2025-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 74,
-        "balls": 80,
-        "fours": 8,
-        "sixes": 1,
-        "sr": "92.50",
-        "dismissal": "c Yash Dubey b Anubhav Agarwal"
+        "matchId": "m-shared-21",
+        "date": "2022-09-18",
+        "opponent": "Destroyers",
+        "runs": 7,
+        "balls": 8,
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2026-02-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-18",
-        "opponent": "Destroyers CC",
-        "runs": 46,
-        "balls": 34,
-        "fours": 5,
-        "sixes": 1,
-        "sr": "135.29",
-        "dismissal": "c Yash Dubey b Kuldeep Sen"
+        "matchId": "m-shared-41",
+        "date": "2024-09-08",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -6410,7 +5854,7 @@
       "runs": 66,
       "balls": 61,
       "highestScore": 35,
-      "average": 16.5,
+      "average": 33,
       "strikeRate": 108.2,
       "fifties": 0,
       "hundreds": 0,
@@ -6542,67 +5986,46 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      30,
       35,
-      1,
-      6,
-      38,
       1
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-8",
+        "date": "2021-08-11",
+        "opponent": "Destroyers",
+        "runs": 30,
+        "balls": 20,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-27",
         "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 35,
         "balls": 40,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.5,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": 8,
+        "overs": 9
       },
       {
-        "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c & b Himanshu Mantri"
+        "matchId": "m-shared-29",
+        "date": "2023-09-12",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 0,
+        "overs": 8
       },
       {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 6,
-        "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c Subhranshu Senapati b Rahul Batham"
-      },
-      {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 38,
-        "balls": 44,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 86.4,
-        "dismissal": "b Saransh Jain"
-      },
-      {
+        "matchId": "m-shared-44",
         "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "b Ajay Rohera"
+        "wickets": 1,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -6627,7 +6050,7 @@
       "runs": 63,
       "balls": 65,
       "highestScore": 45,
-      "average": 12.6,
+      "average": 15.75,
       "strikeRate": 96.92,
       "fifties": 0,
       "hundreds": 0,
@@ -6803,67 +6226,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      26,
-      0,
       1,
-      45,
-      35
+      1,
+      15,
+      1,
+      45
     ],
     "last5Matches": [
       {
-        "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 26,
-        "balls": 30,
-        "fours": 2,
-        "sixes": 3,
-        "sr": 86.7,
-        "dismissal": "lbw b Ashwin Das"
-      },
-      {
-        "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 0,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 0,
-        "dismissal": "b Kumar Kartikeya"
-      },
-      {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-5",
+        "date": "2021-08-01",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Anant Verma b Ankit Singh Kushwaha"
+        "wickets": 0,
+        "overs": 4
       },
       {
+        "matchId": "m-shared-10",
+        "date": "2021-08-20",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-11",
+        "date": "2021-08-28",
+        "opponent": "Destroyers",
+        "runs": 15,
+        "balls": 10,
+        "wickets": 1,
+        "overs": 3
+      },
+      {
+        "matchId": "m-shared-40",
+        "date": "2024-09-05",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": 3,
+        "overs": 9
+      },
+      {
+        "matchId": "m-shared-41",
         "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 45,
         "balls": 52,
-        "fours": 3,
-        "sixes": 5,
-        "sr": 86.5,
-        "dismissal": "st Chanchal Rathore b Yash Dubey"
-      },
-      {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 35,
-        "balls": 40,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.5,
-        "dismissal": "not out"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -6888,7 +6301,7 @@
       "runs": 62,
       "balls": 57,
       "highestScore": 29,
-      "average": 12.4,
+      "average": 15.5,
       "strikeRate": 108.77,
       "fifties": 0,
       "hundreds": 0,
@@ -7020,67 +6433,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      1,
-      17,
-      10,
+      0,
+      29,
+      4,
       10,
       19
     ],
     "last5Matches": [
       {
-        "date": "2022-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 1,
+        "matchId": "m-shared-5",
+        "date": "2021-08-01",
+        "opponent": "Destroyers",
+        "runs": 0,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "lbw b Mohd Arham Aquil"
+        "wickets": 2,
+        "overs": 4
       },
       {
-        "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 17,
-        "balls": 20,
-        "fours": 1,
-        "sixes": 2,
-        "sr": 85,
-        "dismissal": "c & b Sagar Pratap Singh"
+        "matchId": "m-shared-11",
+        "date": "2021-08-28",
+        "opponent": "Destroyers",
+        "runs": 29,
+        "balls": 19,
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": 4,
+        "balls": 3,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-30",
         "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 10,
         "balls": 12,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 83.3,
-        "dismissal": "st Chanchal Rathore b Mohd Arshad Khan"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 10,
-        "balls": 12,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 83.3,
-        "dismissal": "b Himanshu Mantri"
-      },
-      {
+        "matchId": "m-shared-44",
         "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 19,
         "balls": 22,
-        "fours": 1,
-        "sixes": 2,
-        "sr": 86.4,
-        "dismissal": "c Ajay Rohera b Sagar Pratap Singh"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -7105,7 +6508,7 @@
       "runs": 59,
       "balls": 61,
       "highestScore": 30,
-      "average": 9.83,
+      "average": 11.8,
       "strikeRate": 96.72,
       "fifties": 0,
       "hundreds": 0,
@@ -7116,7 +6519,7 @@
       "overs": 24,
       "wickets": 8,
       "runsConceded": 233,
-      "average": 29.13,
+      "average": 29.12,
       "economy": 9.71,
       "bestBowling": "5/170"
     },
@@ -7237,67 +6640,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      21,
+      1,
+      9,
+      7,
       12,
-      2,
-      17,
       30
     ],
     "last5Matches": [
       {
-        "date": "2022-09-04",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-04",
-        "opponent": "Destroyers CC",
-        "runs": 21,
-        "balls": 24,
-        "fours": 2,
-        "sixes": 2,
-        "sr": 87.5,
-        "dismissal": "c Anubhav Agarwal b Rohit Rajawat"
+        "matchId": "m-shared-9",
+        "date": "2021-08-15",
+        "opponent": "Destroyers",
+        "runs": 9,
+        "balls": 6,
+        "wickets": 2,
+        "overs": 4
       },
       {
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": 7,
+        "balls": 5,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-18",
         "date": "2022-09-07",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-07",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 12,
         "balls": 14,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "lbw b Ajay Rohera"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2022-09-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-14",
-        "opponent": "Destroyers CC",
-        "runs": 2,
-        "balls": 2,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "st Chanchal Rathore b Subhranshu Senapati"
+        "matchId": "m-shared-19",
+        "date": "2022-09-10",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 5,
+        "overs": 7
       },
       {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 17,
-        "balls": 20,
-        "fours": 1,
-        "sixes": 2,
-        "sr": 85,
-        "dismissal": "lbw b Rahul Batham"
-      },
-      {
+        "matchId": "m-shared-42",
         "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 30,
         "balls": 35,
-        "fours": 3,
-        "sixes": 3,
-        "sr": 85.7,
-        "dismissal": "c Rahul Batham b Atharv Mahajan"
+        "wickets": 0,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -7432,67 +6825,47 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      0,
-      34,
-      21,
+      12,
       2,
+      34,
       6
     ],
     "last5Matches": [
       {
-        "date": "2022-09-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-14",
-        "opponent": "Destroyers CC",
-        "runs": 0,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 0,
-        "dismissal": "b Subhranshu Senapati"
+        "matchId": "m-shared-11",
+        "date": "2021-08-28",
+        "opponent": "Destroyers",
+        "runs": 12,
+        "balls": 8,
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": 2,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-21",
         "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 34,
         "balls": 39,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.2,
-        "dismissal": "c Mohd Arshad Khan b Rahul Batham"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 21,
-        "balls": 24,
-        "fours": 2,
-        "sixes": 2,
-        "sr": 87.5,
-        "dismissal": "c Avesh Khan b Ashwin Das"
-      },
-      {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 2,
-        "balls": 2,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Saransh Surana b Akhil Mishra"
-      },
-      {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 6,
         "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c Kumar Kartikeya b Saransh Jain"
+        "wickets": 2,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -7638,67 +7011,37 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      10,
       1,
-      6,
       12,
       37
     ],
     "last5Matches": [
       {
-        "date": "2022-09-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-10",
-        "opponent": "Destroyers CC",
-        "runs": 10,
-        "balls": 12,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 83.3,
-        "dismissal": "not out"
-      },
-      {
-        "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-10",
+        "date": "2021-08-20",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "lbw b Prabhanshu Shukla"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 6,
-        "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c Mohd Arshad Khan b Kanishk Dubey"
-      },
-      {
+        "matchId": "m-shared-30",
         "date": "2023-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 12,
         "balls": 14,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c & b Kuldeep Sen"
+        "wickets": 2,
+        "overs": 10
       },
       {
+        "matchId": "m-shared-42",
         "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 37,
         "balls": 43,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 86,
-        "dismissal": "c Aryan Deshmukh b Anubhav Agarwal"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -7855,67 +7198,37 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      8,
-      20,
-      1,
-      32,
+      17,
+      11,
       20
     ],
     "last5Matches": [
       {
-        "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 8,
-        "balls": 9,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 88.9,
-        "dismissal": "not out"
+        "matchId": "m-shared-15",
+        "date": "2022-08-10",
+        "opponent": "Destroyers",
+        "runs": 17,
+        "balls": 11,
+        "wickets": 1,
+        "overs": 4
       },
       {
+        "matchId": "m-shared-27",
+        "date": "2023-09-05",
+        "opponent": "Destroyers",
+        "runs": 11,
+        "balls": 13,
+        "wickets": 1,
+        "overs": 8
+      },
+      {
+        "matchId": "m-shared-29",
         "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 20,
         "balls": 23,
-        "fours": 2,
-        "sixes": 2,
-        "sr": 87,
-        "dismissal": "b Subhranshu Senapati"
-      },
-      {
-        "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Venkatesh Iyer b Kumar Kartikeya"
-      },
-      {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 32,
-        "balls": 37,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 86.5,
-        "dismissal": "c Himanshu Mantri b Saransh Jain"
-      },
-      {
-        "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 20,
-        "balls": 23,
-        "fours": 2,
-        "sixes": 2,
-        "sr": 87,
-        "dismissal": "lbw b Ankit Singh Kushwaha"
+        "wickets": null,
+        "overs": null
       }
     ],
     "fifaRatings": {
@@ -7940,7 +7253,7 @@
       "runs": 47,
       "balls": 52,
       "highestScore": 18,
-      "average": 4.7,
+      "average": 6.71,
       "strikeRate": 90.38,
       "fifties": 0,
       "hundreds": 0,
@@ -8105,67 +7418,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      18,
       1,
       5,
       6,
-      12,
       11
     ],
     "last5Matches": [
       {
-        "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-20",
+        "date": "2022-09-14",
+        "opponent": "Destroyers",
+        "runs": 18,
+        "balls": 21,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-21",
+        "date": "2022-09-18",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Ritesh Shakya b Yash Dubey"
+        "wickets": 2,
+        "overs": 8
       },
       {
+        "matchId": "m-shared-29",
         "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 5,
         "balls": 6,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 83.3,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": 4,
+        "overs": 9
       },
       {
+        "matchId": "m-shared-41",
         "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 6,
         "balls": 7,
-        "fours": 0,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c Kumar Kartikeya b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 12,
-        "balls": 14,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "b Saransh Jain"
-      },
-      {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 11,
         "balls": 13,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 84.6,
-        "dismissal": "lbw b Pranav Dwivedi"
+        "wickets": 0,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -8190,7 +7493,7 @@
       "runs": 39,
       "balls": 33,
       "highestScore": 26,
-      "average": 7.8,
+      "average": 13,
       "strikeRate": 118.18,
       "fifties": 0,
       "hundreds": 0,
@@ -8292,64 +7595,53 @@
       1,
       26,
       0,
-      12,
-      3
+      12
     ],
     "last5Matches": [
       {
-        "date": "2021-08-28",
-        "matchSlug": "destroyers-vs-dread-eleven-2021-08-28",
-        "opponent": "Destroyers CC",
+        "matchId": "m-shared-6",
+        "date": "2021-08-04",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Sagar Pratap Singh b Ashwin Das"
+        "wickets": 5,
+        "overs": 3
       },
       {
+        "matchId": "m-shared-15",
         "date": "2022-08-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-08-10",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 26,
         "balls": 17,
-        "fours": 2,
-        "sixes": 3,
-        "sr": 152.9,
-        "dismissal": "b Harsh Gawli"
+        "wickets": 3,
+        "overs": 4
       },
       {
+        "matchId": "m-shared-18",
         "date": "2022-09-07",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-07",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 0,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 0,
-        "dismissal": "b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-20",
         "date": "2022-09-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-14",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 12,
         "balls": 14,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c Prabhanshu Shukla b Pranav Dwivedi"
+        "wickets": 0,
+        "overs": 10
       },
       {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 3,
-        "balls": 3,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "b Kuldeep Sen"
+        "matchId": "m-shared-44",
+        "date": "2024-09-20",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 0,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -8374,7 +7666,7 @@
       "runs": 26,
       "balls": 18,
       "highestScore": 24,
-      "average": 6.5,
+      "average": 8.67,
       "strikeRate": 144.44,
       "fifties": 0,
       "hundreds": 0,
@@ -8495,67 +7787,46 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      24,
       1,
-      51,
-      29,
-      2,
       1
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-5",
+        "date": "2021-08-01",
+        "opponent": "Destroyers",
+        "runs": 24,
+        "balls": 16,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-6",
+        "date": "2021-08-04",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-29",
         "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Shivam Shukla b Subhranshu Senapati"
+        "wickets": null,
+        "overs": null
       },
       {
-        "date": "2023-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 51,
-        "balls": 59,
-        "fours": 3,
-        "sixes": 6,
-        "sr": 86.4,
-        "dismissal": "not out"
-      },
-      {
-        "date": "2024-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 29,
-        "balls": 33,
-        "fours": 2,
-        "sixes": 3,
-        "sr": 87.9,
-        "dismissal": "st Chanchal Rathore b Saransh Jain"
-      },
-      {
-        "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 2,
-        "balls": 2,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Ashwin Das b Chanchal Rathore"
-      },
-      {
-        "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Radhakrishna Dwivedi b Kuldeep Sen"
+        "matchId": "m-shared-30",
+        "date": "2023-09-16",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 0,
+        "overs": 9
       }
     ],
     "fifaRatings": {
@@ -8723,67 +7994,57 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
+      1,
+      1,
       12,
       1,
-      1,
-      51,
-      24
+      1
     ],
     "last5Matches": [
       {
+        "matchId": "m-shared-11",
+        "date": "2021-08-28",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": 2,
+        "overs": 3
+      },
+      {
+        "matchId": "m-shared-20",
+        "date": "2022-09-14",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": null,
+        "overs": null
+      },
+      {
+        "matchId": "m-shared-27",
         "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 12,
         "balls": 14,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 85.7,
-        "dismissal": "c Aditya Shrivastava b Kulwant Khejroliya"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-28",
         "date": "2023-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-08",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Shubham Sharma b Pranav Dwivedi"
+        "wickets": null,
+        "overs": null
       },
       {
+        "matchId": "m-shared-29",
         "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c & b Subhranshu Senapati"
-      },
-      {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 51,
-        "balls": 59,
-        "fours": 3,
-        "sixes": 6,
-        "sr": 86.4,
-        "dismissal": "st Chanchal Rathore b Rahul Batham"
-      },
-      {
-        "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 24,
-        "balls": 28,
-        "fours": 1,
-        "sixes": 3,
-        "sr": 85.7,
-        "dismissal": "c Anant Verma b Shivam Shukla"
+        "wickets": 1,
+        "overs": 10
       }
     ],
     "fifaRatings": {
@@ -8902,105 +8163,22 @@
         "sixes": 1,
         "sr": 83.3,
         "dismissal": "c Rohit Rajawat b Pranav Dwivedi"
-      },
-      {
-        "date": "2025-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 44,
-        "balls": 52,
-        "fours": 4,
-        "sixes": 0,
-        "sr": "84.62",
-        "dismissal": "b Anubhav Agarwal"
-      },
-      {
-        "date": "2025-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 76,
-        "balls": 84,
-        "fours": 7,
-        "sixes": 2,
-        "sr": "90.48",
-        "dismissal": "c Yash Dubey b Kuldeep Sen"
-      },
-      {
-        "date": "2026-02-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-14",
-        "opponent": "Destroyers CC",
-        "runs": 51,
-        "balls": 38,
-        "fours": 5,
-        "sixes": 2,
-        "sr": "134.21",
-        "dismissal": "b Kuldeep Sen"
       }
     ],
     "formRating": "HOT",
     "formDots": 5,
     "last5Scores": [
-      89,
-      10,
-      44,
-      76,
-      51
+      10
     ],
     "last5Matches": [
       {
-        "date": "2024-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 89,
-        "balls": 102,
-        "fours": 6,
-        "sixes": 10,
-        "sr": 87.3,
-        "dismissal": "c Anubhav Agarwal b Ramveer Singh Gurjar"
-      },
-      {
+        "matchId": "m-shared-43",
         "date": "2024-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-16",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 10,
         "balls": 12,
-        "fours": 1,
-        "sixes": 1,
-        "sr": 83.3,
-        "dismissal": "c Rohit Rajawat b Pranav Dwivedi"
-      },
-      {
-        "date": "2025-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-08",
-        "opponent": "Destroyers CC",
-        "runs": 44,
-        "balls": 52,
-        "fours": 4,
-        "sixes": 0,
-        "sr": "84.62",
-        "dismissal": "b Anubhav Agarwal"
-      },
-      {
-        "date": "2025-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2025-09-16",
-        "opponent": "Destroyers CC",
-        "runs": 76,
-        "balls": 84,
-        "fours": 7,
-        "sixes": 2,
-        "sr": "90.48",
-        "dismissal": "c Yash Dubey b Kuldeep Sen"
-      },
-      {
-        "date": "2026-02-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-14",
-        "opponent": "Destroyers CC",
-        "runs": 51,
-        "balls": 38,
-        "fours": 5,
-        "sixes": 2,
-        "sr": "134.21",
-        "dismissal": "b Kuldeep Sen"
+        "wickets": 2,
+        "overs": 9
       }
     ],
     "fifaRatings": {
@@ -9135,67 +8313,17 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      15,
-      5,
-      39,
-      35,
-      2
+      1
     ],
     "last5Matches": [
       {
-        "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
-        "runs": 15,
-        "balls": 17,
-        "fours": 0,
-        "sixes": 2,
-        "sr": 88.2,
-        "dismissal": "b Ashwin Das"
-      },
-      {
-        "date": "2023-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 5,
-        "balls": 6,
-        "fours": 1,
-        "sixes": 0,
-        "sr": 83.3,
-        "dismissal": "b Prabhanshu Shukla"
-      },
-      {
-        "date": "2023-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2023-09-12",
-        "opponent": "Destroyers CC",
-        "runs": 39,
-        "balls": 45,
-        "fours": 3,
-        "sixes": 4,
-        "sr": 86.7,
-        "dismissal": "not out"
-      },
-      {
-        "date": "2024-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-05",
-        "opponent": "Destroyers CC",
-        "runs": 35,
-        "balls": 40,
-        "fours": 2,
-        "sixes": 4,
-        "sr": 87.5,
-        "dismissal": "not out"
-      },
-      {
-        "date": "2024-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2024-09-20",
-        "opponent": "Destroyers CC",
-        "runs": 2,
-        "balls": 2,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "not out"
+        "matchId": "m-shared-9",
+        "date": "2021-08-15",
+        "opponent": "Destroyers",
+        "runs": 1,
+        "balls": 1,
+        "wickets": 0,
+        "overs": 3
       }
     ],
     "fifaRatings": {
@@ -9286,55 +8414,17 @@
     "formRating": "STEADY",
     "formDots": 3,
     "last5Scores": [
-      1,
-      1,
-      1,
-      21
+      1
     ],
     "last5Matches": [
       {
-        "date": "2021-08-11",
-        "matchSlug": "destroyers-vs-dread-eleven-2021-08-11",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "lbw b Rohit Rajawat"
-      },
-      {
-        "date": "2022-08-10",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-08-10",
-        "opponent": "Destroyers CC",
-        "runs": 1,
-        "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c Aryan Deshmukh b Naveen Singh Chouhan"
-      },
-      {
+        "matchId": "m-shared-16",
         "date": "2022-08-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-08-12",
-        "opponent": "Destroyers CC",
+        "opponent": "Destroyers",
         "runs": 1,
         "balls": 1,
-        "fours": 0,
-        "sixes": 0,
-        "sr": 100,
-        "dismissal": "c & b Harsh Gawli"
-      },
-      {
-        "date": "2022-09-18",
-        "matchSlug": "destroyers-vs-dread-eleven-2022-09-18",
-        "opponent": "Destroyers CC",
-        "runs": 21,
-        "balls": 24,
-        "fours": 2,
-        "sixes": 2,
-        "sr": 87.5,
-        "dismissal": "c Kuldeep Sen b Ramveer Singh Gurjar"
+        "wickets": 1,
+        "overs": 4
       }
     ],
     "fifaRatings": {
@@ -9379,20 +8469,16 @@
     "matchHistory": [],
     "formRating": "WARM",
     "formDots": 4,
-    "last5Scores": [
-      38
-    ],
+    "last5Scores": [],
     "last5Matches": [
       {
-        "date": "2026-02-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-14",
-        "opponent": "Destroyers CC",
-        "runs": 38,
-        "balls": 24,
-        "fours": 4,
-        "sixes": 1,
-        "sr": 158.3,
-        "dismissal": "c Pranav b Bowler"
+        "matchId": "m-shared-16",
+        "date": "2022-08-12",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 1,
+        "overs": 4
       }
     ],
     "fifaRatings": {
@@ -9437,20 +8523,16 @@
     "matchHistory": [],
     "formRating": "WARM",
     "formDots": 4,
-    "last5Scores": [
-      38
-    ],
+    "last5Scores": [],
     "last5Matches": [
       {
-        "date": "2026-02-14",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-02-14",
-        "opponent": "Destroyers CC",
-        "runs": 38,
-        "balls": 24,
-        "fours": 4,
-        "sixes": 1,
-        "sr": 158.3,
-        "dismissal": "c Pranav b Bowler"
+        "matchId": "m-shared-31",
+        "date": "2023-09-20",
+        "opponent": "Destroyers",
+        "runs": null,
+        "balls": null,
+        "wickets": 1,
+        "overs": 8
       }
     ],
     "fifaRatings": {

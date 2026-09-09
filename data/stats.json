@@ -1,45 +1,55 @@
 {
-  "headToHead": {
-    "totalMatches": 35,
-    "completedMatches": 32,
-    "upcomingMatches": 3,
-    "dreadElevenWins": 15,
-    "destroyersWins": 17,
-    "deWinPercentage": "46.9%",
-    "desWinPercentage": "53.1%",
-    "t20Matches": {
-      "total": 15,
-      "deWins": 9,
-      "desWins": 6
-    },
-    "odiMatches": {
-      "total": 17,
-      "deWins": 6,
-      "desWins": 11
-    }
+  "totalMatches": 24,
+  "completedMatches": 24,
+  "upcomingMatches": 0,
+  "desWins": 11,
+  "deWins": 13,
+  "desWinPercentage": "45.8%",
+  "deWinPercentage": "54.2%",
+  "t20": {
+    "total": 9,
+    "desWins": 2,
+    "deWins": 7
+  },
+  "odi": {
+    "total": 15,
+    "desWins": 9,
+    "deWins": 6
+  },
+  "seasons": [
+    "2024",
+    "2023",
+    "2022",
+    "2021"
+  ],
+  "trophyFinal": {
+    "matchId": "m-shared-15",
+    "title": "2022 Championship Final",
+    "winner": "Dread Eleven (DE)",
+    "date": "2022-08-10"
   },
   "records": {
     "highestTotal": {
       "team": "Dread Eleven",
-      "score": "278/6",
+      "score": "289",
       "overs": "50.0",
-      "opponent": "Destroyers",
-      "season": "2022",
+      "opponent": "Destroyers Cricket Club",
+      "season": "2023",
       "venue": "APSU Stadium, Rewa"
     },
     "highestIndividualScore": {
-      "player": "Akhil Mishra",
-      "score": 114,
-      "balls": 98,
+      "player": "Pranav Dwivedi",
+      "score": 102,
+      "balls": 108,
       "season": "2022",
-      "opponent": "Destroyers"
+      "opponent": "Dread Eleven"
     },
     "bestBowlingFigures": {
-      "player": "Kuldeep Sen",
-      "figures": "5/28",
-      "overs": 9.2,
+      "player": "Pranav Dwivedi",
+      "figures": "8/39",
+      "overs": 14,
       "season": "2022",
-      "opponent": "Destroyers"
+      "opponent": "Dread Eleven"
     }
   }
 }
