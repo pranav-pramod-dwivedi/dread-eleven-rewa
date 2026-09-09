@@ -2274,6 +2274,29 @@ body {
   box-shadow: 0 0 35px rgba(215, 255, 0, 0.2);
 }
 
+/* Header Live Navigation Pill */
+.nav-live-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(255, 42, 68, 0.12);
+  border: 1px solid rgba(255, 42, 68, 0.35);
+  border-radius: var(--radius-xs);
+  padding: 0.45rem 0.85rem;
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--c-crimson);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: all 0.2s var(--ease-snappy);
+}
+.nav-live-pill:hover {
+  background: rgba(255, 42, 68, 0.22);
+  border-color: var(--c-crimson);
+  box-shadow: 0 0 15px rgba(255, 42, 68, 0.35);
+}
+
 /* Header Search & Cmd+K Button */
 .header-search-btn {
   display: inline-flex;

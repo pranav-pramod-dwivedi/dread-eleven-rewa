@@ -102,60 +102,17 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', json
 
 function renderHeader(activeNav = '') {
   const links = [
-    { label: 'Home', href: '/', key: 'home' },
-    { label: 'Roster', href: '/players', key: 'squad' },
+    { label: 'Squad', href: '/players', key: 'squad' },
+    { label: 'Matches', href: '/results', key: 'results' },
     { label: 'Fixtures', href: '/fixtures', key: 'fixtures' },
-    { label: 'Results', href: '/results', key: 'results' },
-    { label: 'Points Table', href: '/points-table', key: 'table' },
+    { label: 'Standings', href: '/points-table', key: 'table' },
     { label: 'Stats', href: '/stats', key: 'stats' },
-    { label: 'News', href: '/news', key: 'news' },
-    { label: 'About', href: '/about', key: 'about' },
-    { label: 'Contact', href: '/contact', key: 'contact' }
+    { label: 'Media', href: '/news', key: 'news' },
+    { label: 'Club', href: '/about', key: 'about' }
   ];
 
   return `
-  <!-- Top Broadcast Ticker HUD -->
-  <aside class="top-broadcast-ticker" aria-label="Tournament Broadcast Ticker">
-    <div class="ticker-tag">
-      <span class="pulse-beacon"></span>
-      <span>RDCA DIGITAL STADIUM</span>
-    </div>
-
-    <div class="ticker-marquee-track">
-      <div class="ticker-marquee-inner">
-        <span class="ticker-item"><strong>ATAL BIHARI VAJPAYEE MEMORIAL TOURNAMENT</strong> • REWA DIVISION</span>
-        <span class="ticker-item">HISTORIC DERBY: <span class="score-win">DREAD ELEVEN (17 WINS)</span> — DESTROYERS (15 WINS)</span>
-        <span class="ticker-item">CAPTAIN TALISMAN: <strong>AKHIL MISHRA</strong> (1,342 RUNS • 14 WKTS • AVG 49.7 • 114 HS)</span>
-        <span class="ticker-item">NEXT SUPER CLASH: <strong>06 SEP 2026 @ APSU STADIUM</strong></span>
-        <span class="ticker-item">T20 SUPREMACY: <strong>DREAD ELEVEN LEADS 9–6 IN T20 BLASTS</strong></span>
-        <!-- Duplicated items for seamless loop -->
-        <span class="ticker-item"><strong>ATAL BIHARI VAJPAYEE MEMORIAL TOURNAMENT</strong> • REWA DIVISION</span>
-        <span class="ticker-item">HISTORIC DERBY: <span class="score-win">DREAD ELEVEN (17 WINS)</span> — DESTROYERS (15 WINS)</span>
-        <span class="ticker-item">CAPTAIN TALISMAN: <strong>AKHIL MISHRA</strong> (1,342 RUNS • 14 WKTS • AVG 49.7 • 114 HS)</span>
-      </div>
-    </div>
-
-    <div class="ticker-controls">
-      <button type="button" class="matchday-mode-btn" id="matchday-mode-toggle" aria-label="Toggle Matchday Live Mode">
-        <span class="pulse-beacon"></span>
-        <span>MATCHDAY: OFF-AIR</span>
-      </button>
-      <button type="button" class="btn-stadium-sound" id="stadium-sound-btn" aria-label="Toggle Stadium Atmosphere Audio">
-        <div class="eq-bars-wrap">
-          <div class="eq-bar"></div>
-          <div class="eq-bar"></div>
-          <div class="eq-bar"></div>
-          <div class="eq-bar"></div>
-        </div>
-        <span class="sound-status-text">STADIUM SOUND: OFF</span>
-      </button>
-      <button type="button" class="grain-toggle-pill active" id="grain-toggle-btn" aria-label="Toggle Film Grain Overlay">
-        <span>GRAIN: 35MM [ON]</span>
-      </button>
-    </div>
-  </aside>
-
-  <!-- Franchise Header Navigation -->
+  <!-- Franchise Header Navigation (Clean Floating Digital Stadium Nav) -->
   <header class="site-header">
     <div class="container nav-container">
       <a href="/" class="brand-crest" aria-label="Dread Eleven Cricket Club Home">
@@ -175,14 +132,15 @@ function renderHeader(activeNav = '') {
       </nav>
 
       <div class="header-cta-group">
+        <a href="/#live-pulse" class="nav-live-pill" aria-label="Jump to Live Match Centre">
+          <span class="pulse-beacon red"></span>
+          <span>LIVE</span>
+        </a>
         <button type="button" class="cmd-palette-trigger header-search-btn" aria-label="Open Command Palette (Cmd+K)">
           <span class="search-icon">⌕</span>
           <span class="search-label">SEARCH</span>
           <kbd class="cmd-kbd">⌘K</kbd>
         </button>
-        <a href="/results" class="btn-athletic btn-volt">
-          <span>Match Center</span>
-        </a>
         <button type="button" class="mobile-nav-toggle" id="mobile-menu-btn" aria-label="Open Navigation Menu">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
@@ -191,11 +149,13 @@ function renderHeader(activeNav = '') {
 
     <!-- Mobile Menu Drawer -->
     <div class="mobile-menu-drawer" id="mobile-menu-drawer">
+      <a href="/" class="mobile-nav-item ${activeNav === 'home' ? 'active' : ''}">Home</a>
       ${links.map((l) => `
         <a href="${l.href}" class="mobile-nav-item ${activeNav === l.key ? 'active' : ''}">
           ${esc(l.label)}
         </a>
       `).join('')}
+      <a href="/contact" class="mobile-nav-item ${activeNav === 'contact' ? 'active' : ''}">Contact &amp; Trials</a>
     </div>
   </header>
   `;
