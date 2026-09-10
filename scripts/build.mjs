@@ -1160,11 +1160,11 @@ ${renderHeader('squad')}
       <!-- Search Suggestions Chips -->
       <div style="display:flex; flex-wrap:wrap; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
         <span style="font-family:var(--f-mono); font-size:0.7rem; color:var(--c-volt); font-weight:800; text-transform:uppercase;">Search Suggestions:</span>
-        <button type="button" class="squad-suggest-chip" data-search="Akhil Mishra">⚡ Capt. Akhil Mishra</button>
-        <button type="button" class="squad-suggest-chip" data-search="Kuldeep Sen">💨 Kuldeep Sen</button>
-        <button type="button" class="squad-suggest-chip" data-search="Venkatesh Iyer">🏏 Venkatesh Iyer</button>
+        <button type="button" class="squad-suggest-chip" data-search="Akhil Mishra">Capt. Akhil Mishra</button>
+        <button type="button" class="squad-suggest-chip" data-search="Kuldeep Sen"> Kuldeep Sen</button>
+        <button type="button" class="squad-suggest-chip" data-search="Venkatesh Iyer"> Venkatesh Iyer</button>
         <button type="button" class="squad-suggest-chip" data-search="Rajat Patidar">⭐ Rajat Patidar</button>
-        <button type="button" class="squad-suggest-chip" data-search="Kumar Kartikeya">🌀 Kumar Kartikeya</button>
+        <button type="button" class="squad-suggest-chip" data-search="Kumar Kartikeya"> Kumar Kartikeya</button>
         <button type="button" class="squad-suggest-chip" data-search="Captain">Captains</button>
         <button type="button" class="squad-suggest-chip" data-search="All-Rounder">All-Rounders</button>
         <button type="button" class="squad-suggest-chip" data-search="Bowler">Bowlers</button>
@@ -3855,7 +3855,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '⌂',
+    icon: '',
     title: 'Dread Eleven Home Arena & Digital Stadium',
     subtitle: 'Official club headquarters, live countdown, latest derby climax & highlights',
     url: '/',
@@ -3864,7 +3864,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '♟',
+    icon: '',
     title: 'Squad Roster (43 Players)',
     subtitle: 'Official 43-man tournament squad for Dread Eleven Cricket Club',
     url: '/players/',
@@ -3873,7 +3873,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '📅',
+    icon: '',
     title: 'Fixtures & Rivalry Schedule',
     subtitle: 'Upcoming clash schedule, 2026 championship derbies, venue directions & match timing',
     url: '/fixtures/',
@@ -3882,7 +3882,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '🏆',
+    icon: '',
     title: 'Derby Results & Match Archive (34 Matches)',
     subtitle: 'Complete scorecard archive of all 34 rivalry clashes between DE and DES (2021-2026)',
     url: '/results/',
@@ -3891,7 +3891,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '📊',
+    icon: '',
     title: 'Points Table & Tournament Standings',
     subtitle: 'Net run rate, bonus points, season championship telemetry (2021-2026)',
     url: '/points-table/',
@@ -3900,7 +3900,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '📈',
+    icon: '',
     title: 'Statistical Leaderboards & Record Books',
     subtitle: 'Most runs, most wickets, highest team totals, individual centuries & economy leaders',
     url: '/stats/',
@@ -3909,7 +3909,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '📰',
+    icon: '',
     title: 'Media, Press Room & Match Reports',
     subtitle: 'Exclusive match post-mortems, tactical analysis, player interviews',
     url: '/news/',
@@ -3918,7 +3918,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '🏛️',
+    icon: '',
     title: 'Club Heritage, Constitution & Rewa Division',
     subtitle: 'Franchise philosophy, stadium details, connection with RDCA and Atal Bihari Vajpayee Tournament',
     url: '/about/',
@@ -3927,7 +3927,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Page',
     badge: 'page',
-    icon: '✉️',
+    icon: '',
     title: 'Trials & Contact Portal',
     subtitle: 'Player selection trials, academy enrollment, media inquiries & club office',
     url: '/contact/',
@@ -3938,7 +3938,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Venue',
     badge: 'venue',
-    icon: '📍',
+    icon: '',
     title: 'APSU Stadium, Rewa (Awadhesh Pratap Singh University)',
     subtitle: 'Premier cricket venue in Rewa, capacity 15,000, host to championship finals',
     url: '/fixtures/',
@@ -3947,7 +3947,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Venue',
     badge: 'venue',
-    icon: '🏟️',
+    icon: '',
     title: 'Martand School Ground No. 3, Rewa',
     subtitle: 'Historic spin-friendly turf, spiritual home of the Rewa Derby',
     url: '/fixtures/',
@@ -3982,7 +3982,7 @@ function generateSearchIndex() {
     index.push({
       type: 'Player',
       badge: 'player',
-      icon: isCapt ? '⚡' : '🏏',
+      icon: '',
       title: `${p.name} (#${p.jerseyNumber}) — ${p.role}`,
       subtitle: `${p.role} • ${runs} runs (Avg ${avg}) • ${wkts} wickets (BB ${bb})`,
       url: `/players/${p.slug}`,
@@ -4037,7 +4037,7 @@ function generateSearchIndex() {
     index.push({
       type: 'Match',
       badge: 'match',
-      icon: '🏏',
+      icon: '',
       title: titleStr,
       subtitle: subtitleStr,
       url: `/matches/${m.slug}`,
@@ -4050,7 +4050,7 @@ function generateSearchIndex() {
     index.push({
       type: 'News',
       badge: 'news',
-      icon: '📰',
+      icon: '',
       title: n.title,
       subtitle: `${formatDate(n.date)} • By ${n.author || 'DE Media'} • ${n.category || 'Article'}`,
       url: `/news/${n.slug}`,
@@ -4062,7 +4062,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Record',
     badge: 'record',
-    icon: '👑',
+    icon: '',
     title: 'All-Time Leading Run Scorer: Pranav Dwivedi (1,998 runs)',
     subtitle: 'Destroyers captain has amassed 1,998 tournament runs with 2 centuries & 18 fifties',
     url: '/stats/',
@@ -4071,7 +4071,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Record',
     badge: 'record',
-    icon: '👑',
+    icon: '',
     title: 'Dread Eleven Leading Run Scorer: Akhil Mishra (1,378 runs)',
     subtitle: 'Dread Eleven skipper with 1,378 runs (44.5 avg, 12 fifties, 1 century) in 28 derbies',
     url: '/players/akhil-mishra/',
@@ -4080,7 +4080,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Record',
     badge: 'record',
-    icon: '🎯',
+    icon: '',
     title: 'Leading Wicket-Taker: Kuldeep Sen (98 wickets)',
     subtitle: 'Express pacer with 98 wickets at 14.8 avg and 3 five-wicket hauls for Dread Eleven',
     url: '/players/kuldeep-sen/',
@@ -4089,7 +4089,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Record',
     badge: 'record',
-    icon: '💥',
+    icon: '',
     title: 'Highest Team Total: Destroyers 242/4 (20 ov)',
     subtitle: 'Set at APSU Stadium Rewa during the 2025 Championship season',
     url: '/stats/',
@@ -4098,7 +4098,7 @@ function generateSearchIndex() {
   index.push({
     type: 'Record',
     badge: 'record',
-    icon: '💥',
+    icon: '',
     title: 'Highest Dread Eleven Chase: 218/5 vs Destroyers (19.4 ov)',
     subtitle: 'Historic 2023 season thriller sealed by Akhil Mishra & Venkatesh Iyer',
     url: '/stats/',

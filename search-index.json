@@ -2,7 +2,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "⌂",
+    "icon": "",
     "title": "Dread Eleven Home Arena & Digital Stadium",
     "subtitle": "Official club headquarters, live countdown, latest derby climax & highlights",
     "url": "/",
@@ -11,7 +11,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "♟",
+    "icon": "",
     "title": "Squad Roster (43 Players)",
     "subtitle": "Official 43-man tournament squad for Dread Eleven Cricket Club",
     "url": "/players/",
@@ -20,7 +20,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "📅",
+    "icon": "",
     "title": "Fixtures & Rivalry Schedule",
     "subtitle": "Upcoming clash schedule, 2026 championship derbies, venue directions & match timing",
     "url": "/fixtures/",
@@ -29,7 +29,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "🏆",
+    "icon": "",
     "title": "Derby Results & Match Archive (34 Matches)",
     "subtitle": "Complete scorecard archive of all 34 rivalry clashes between DE and DES (2021-2026)",
     "url": "/results/",
@@ -38,7 +38,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "📊",
+    "icon": "",
     "title": "Points Table & Tournament Standings",
     "subtitle": "Net run rate, bonus points, season championship telemetry (2021-2026)",
     "url": "/points-table/",
@@ -47,7 +47,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "📈",
+    "icon": "",
     "title": "Statistical Leaderboards & Record Books",
     "subtitle": "Most runs, most wickets, highest team totals, individual centuries & economy leaders",
     "url": "/stats/",
@@ -56,7 +56,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "📰",
+    "icon": "",
     "title": "Media, Press Room & Match Reports",
     "subtitle": "Exclusive match post-mortems, tactical analysis, player interviews",
     "url": "/news/",
@@ -65,7 +65,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "🏛️",
+    "icon": "",
     "title": "Club Heritage, Constitution & Rewa Division",
     "subtitle": "Franchise philosophy, stadium details, connection with RDCA and Atal Bihari Vajpayee Tournament",
     "url": "/about/",
@@ -74,7 +74,7 @@
   {
     "type": "Page",
     "badge": "page",
-    "icon": "✉️",
+    "icon": "",
     "title": "Trials & Contact Portal",
     "subtitle": "Player selection trials, academy enrollment, media inquiries & club office",
     "url": "/contact/",
@@ -83,7 +83,7 @@
   {
     "type": "Venue",
     "badge": "venue",
-    "icon": "📍",
+    "icon": "",
     "title": "APSU Stadium, Rewa (Awadhesh Pratap Singh University)",
     "subtitle": "Premier cricket venue in Rewa, capacity 15,000, host to championship finals",
     "url": "/fixtures/",
@@ -92,7 +92,7 @@
   {
     "type": "Venue",
     "badge": "venue",
-    "icon": "🏟️",
+    "icon": "",
     "title": "Martand School Ground No. 3, Rewa",
     "subtitle": "Historic spin-friendly turf, spiritual home of the Rewa Derby",
     "url": "/fixtures/",
@@ -101,7 +101,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "⚡",
+    "icon": "",
     "title": "Akhil Mishra (#45) — Top-Order All-Rounder & Captain",
     "subtitle": "Top-Order All-Rounder & Captain • 1378 runs (Avg 44.5) • 38 wickets (BB 4/28)",
     "url": "/players/akhil-mishra",
@@ -110,7 +110,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Ritesh Shakya (#12) — Player",
     "subtitle": "Player • 620 runs (Avg 34.4) • 8 wickets (BB 2/22)",
     "url": "/players/ritesh-shakya",
@@ -119,7 +119,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Kuldeep Sen (#7) — Express Fast Bowler",
     "subtitle": "Express Fast Bowler • 180 runs (Avg 15) • 74 wickets (BB 5/18)",
     "url": "/players/kuldeep-sen",
@@ -128,7 +128,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Anubhav Agarwal (#13) — Player",
     "subtitle": "Player • 208 runs (Avg 52) • 3 wickets (BB 2/24)",
     "url": "/players/anubhav-agarwal",
@@ -137,7 +137,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Yash Dubey (#18) — Wicketkeeper",
     "subtitle": "Wicketkeeper • 1460 runs (Avg 50.3) • 7 wickets (BB 2/16)",
     "url": "/players/yash-dubey",
@@ -146,7 +146,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "⚡",
+    "icon": "",
     "title": "Saransh Jain (#24) — Captain",
     "subtitle": "Captain • 580 runs (Avg 29) • 52 wickets (BB 4/31)",
     "url": "/players/saransh-jain",
@@ -155,7 +155,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "⚡",
+    "icon": "",
     "title": "Prithviraj Singh Tomar (#22) — Captain",
     "subtitle": "Captain • 177 runs (Avg 29.5) • 2 wickets (BB 2/6)",
     "url": "/players/prithviraj-singh-tomar",
@@ -164,7 +164,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Anant Verma (#5) — Wicketkeeper",
     "subtitle": "Wicketkeeper • 163 runs (Avg 40.8) • 2 wickets (BB 1/22)",
     "url": "/players/anant-verma",
@@ -173,7 +173,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Naveen Singh Chouhan (#28) — Player",
     "subtitle": "Player • 162 runs (Avg 32.4) • 3 wickets (BB 2/8)",
     "url": "/players/naveen-singh-chouhan",
@@ -182,7 +182,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Avesh Khan (#99) — Player",
     "subtitle": "Player • 240 runs (Avg 18.5) • 65 wickets (BB 4/22)",
     "url": "/players/avesh-khan",
@@ -191,7 +191,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "⚡",
+    "icon": "",
     "title": "Venkatesh Iyer (#34) — Captain",
     "subtitle": "Captain • 142 runs (Avg 28.4) • 3 wickets (BB 2/23)",
     "url": "/players/venkatesh-iyer",
@@ -200,7 +200,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Subhranshu Senapati (#8) — Player",
     "subtitle": "Player • 980 runs (Avg 39.2) • 15 wickets (BB 3/28)",
     "url": "/players/subhranshu-senapati",
@@ -209,7 +209,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Ajay Rohera (#40) — Wicketkeeper",
     "subtitle": "Wicketkeeper • 133 runs (Avg 26.6) • 0 wickets (BB 0/0)",
     "url": "/players/ajay-rohera",
@@ -218,7 +218,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Radhakrishna Dwivedi (#43) — Player",
     "subtitle": "Player • 129 runs (Avg 32.2) • 0 wickets (BB 0/0)",
     "url": "/players/radhakrishna-dwivedi",
@@ -227,7 +227,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Akshat Raghuwanshi (#46) — Player",
     "subtitle": "Player • 126 runs (Avg 31.5) • 3 wickets (BB 2/109)",
     "url": "/players/akshat-raghuwanshi",
@@ -236,7 +236,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Rohit Rajawat (#14) — Player",
     "subtitle": "Player • 114 runs (Avg 38) • 8 wickets (BB 3/37)",
     "url": "/players/rohit-rajawat",
@@ -245,7 +245,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Himanshu Mantri (#22) — Wicketkeeper",
     "subtitle": "Wicketkeeper • 112 runs (Avg 18.7) • 5 wickets (BB 2/10)",
     "url": "/players/himanshu-mantri",
@@ -254,7 +254,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Ramveer Singh Gurjar (#55) — Player",
     "subtitle": "Player • 780 runs (Avg 35.5) • 10 wickets (BB 2/18)",
     "url": "/players/ramveer-singh-gurjar",
@@ -263,7 +263,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "⚡",
+    "icon": "",
     "title": "Shubham Sharma (#58) — Captain",
     "subtitle": "Captain • 108 runs (Avg 36) • 1 wickets (BB 1/1)",
     "url": "/players/shubham-sharma",
@@ -272,7 +272,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Mohd Arshad Khan (#61) — Player",
     "subtitle": "Player • 106 runs (Avg 35.3) • 3 wickets (BB 2/14)",
     "url": "/players/mohd-arshad-khan",
@@ -281,7 +281,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Kumar Kartikeya (#19) — Lead Spin Bowler",
     "subtitle": "Lead Spin Bowler • 320 runs (Avg 21.3) • 44 wickets (BB 4/36)",
     "url": "/players/kumar-kartikeya",
@@ -290,7 +290,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Rajat Patidar (#67) — Batsman",
     "subtitle": "Batsman • 103 runs (Avg 12.9) • 4 wickets (BB 3/72)",
     "url": "/players/rajat-patidar",
@@ -299,7 +299,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "⚡",
+    "icon": "",
     "title": "Arshad Khan (#70) — Captain",
     "subtitle": "Captain • 101 runs (Avg 33.7) • 5 wickets (BB 2/18)",
     "url": "/players/arshad-khan",
@@ -308,7 +308,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Saransh Surana (#73) — Player",
     "subtitle": "Player • 88 runs (Avg 22) • 4 wickets (BB 1/20)",
     "url": "/players/saransh-surana",
@@ -317,7 +317,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Chanchal Rathore (#76) — Player",
     "subtitle": "Player • 88 runs (Avg 22) • 4 wickets (BB 2/1)",
     "url": "/players/chanchal-rathore",
@@ -326,7 +326,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Mohd Arham Aquil (#79) — Player",
     "subtitle": "Player • 1060 runs (Avg 40.8) • 12 wickets (BB 3/24)",
     "url": "/players/mohd-arham-aquil",
@@ -335,7 +335,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Aryan Deshmukh (#82) — Player",
     "subtitle": "Player • 67 runs (Avg 13.4) • 0 wickets (BB 0/0)",
     "url": "/players/aryan-deshmukh",
@@ -344,7 +344,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Prabhanshu Shukla (#4) — Player",
     "subtitle": "Player • 66 runs (Avg 33) • 9 wickets (BB 8/22)",
     "url": "/players/prabhanshu-shukla",
@@ -353,7 +353,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "⚡",
+    "icon": "",
     "title": "Rahul Batham (#88) — Captain",
     "subtitle": "Captain • 63 runs (Avg 15.8) • 4 wickets (BB 3/91)",
     "url": "/players/rahul-batham",
@@ -362,7 +362,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Aditya Shrivastava (#2) — Player",
     "subtitle": "Player • 1290 runs (Avg 46.1) • 8 wickets (BB 2/20)",
     "url": "/players/aditya-shrivastava",
@@ -371,7 +371,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Jaydev Singh (#5) — Player",
     "subtitle": "Player • 59 runs (Avg 11.8) • 8 wickets (BB 5/170)",
     "url": "/players/jaydev-singh",
@@ -380,7 +380,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Ankit Singh Kushwaha (#8) — Player",
     "subtitle": "Player • 54 runs (Avg 13.5) • 2 wickets (BB 2/24)",
     "url": "/players/ankit-singh-kushwaha",
@@ -389,7 +389,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Kulwant Khejroliya (#11) — Player",
     "subtitle": "Player • 84 runs (Avg 21) • 0 wickets (BB —)",
     "url": "/players/kulwant-khejroliya",
@@ -398,7 +398,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Sagar Pratap Singh (#14) — Player",
     "subtitle": "Player • 84 runs (Avg 21) • 0 wickets (BB —)",
     "url": "/players/sagar-pratap-singh",
@@ -407,7 +407,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Ashwin Das (#23) — Pace All-Rounder",
     "subtitle": "Pace All-Rounder • 47 runs (Avg 6.7) • 16 wickets (BB 6/92)",
     "url": "/players/ashwin-das",
@@ -416,7 +416,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Amarjeet Kumar Singh (#20) — Player",
     "subtitle": "Player • 39 runs (Avg 13) • 8 wickets (BB 5/1)",
     "url": "/players/amarjeet-kumar-singh",
@@ -425,7 +425,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Atharv Mahajan (#23) — Player",
     "subtitle": "Player • 26 runs (Avg 8.7) • 0 wickets (BB 0/0)",
     "url": "/players/atharv-mahajan",
@@ -434,7 +434,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Kanishk Dubey (#26) — Player",
     "subtitle": "Player • 18 runs (Avg 3) • 3 wickets (BB 2/3)",
     "url": "/players/kanishk-dubey",
@@ -443,7 +443,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Shivam Shukla (#29) — Player",
     "subtitle": "Player • 84 runs (Avg 21) • 0 wickets (BB —)",
     "url": "/players/shivam-shukla",
@@ -452,7 +452,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Harsh Gawli (#32) — Player",
     "subtitle": "Player • 84 runs (Avg 21) • 0 wickets (BB —)",
     "url": "/players/harsh-gawli",
@@ -461,7 +461,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Sagar Solanki (#35) — Player",
     "subtitle": "Player • 84 runs (Avg 21) • 0 wickets (BB —)",
     "url": "/players/sagar-solanki",
@@ -470,7 +470,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Aryan Shrivastava (#38) — Player",
     "subtitle": "Player • 84 runs (Avg 21) • 0 wickets (BB —)",
     "url": "/players/aryan-shrivastava",
@@ -479,7 +479,7 @@
   {
     "type": "Player",
     "badge": "player",
-    "icon": "🏏",
+    "icon": "",
     "title": "Aryan Dwivedi (#41) — Player",
     "subtitle": "Player • 84 runs (Avg 21) • 0 wickets (BB —)",
     "url": "/players/aryan-dwivedi",
@@ -488,7 +488,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2021 T20 Tournament Clash: Dread Eleven won by 3 wickets",
     "subtitle": "01 Aug 2021 • Martand School Ground No. 3 • POTM: Venkatesh Iyer (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2021-08-01",
@@ -497,7 +497,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2021 T20 Tournament Clash: Dread Eleven won by 2 wickets",
     "subtitle": "04 Aug 2021 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Amarjeet Kumar Singh (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2021-08-04",
@@ -506,7 +506,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2021 T20 Tournament Clash: Destroyers won by 20 runs",
     "subtitle": "07 Aug 2021 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Amarjeet Kumar Singh (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2021-08-07",
@@ -515,7 +515,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2021 T20 Tournament Clash: Dread Eleven won by 3 wickets",
     "subtitle": "11 Aug 2021 • Martand School Ground No. 3 • POTM: Rohit Rajawat (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2021-08-11",
@@ -524,7 +524,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2021 T20 Tournament Clash: Dread Eleven won by 5 wickets",
     "subtitle": "15 Aug 2021 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Rajat Patidar (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2021-08-15",
@@ -533,7 +533,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2021 T20 Tournament Clash: Dread Eleven won by 2 wickets",
     "subtitle": "20 Aug 2021 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Akhil Mishra (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2021-08-20",
@@ -542,7 +542,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2021 2021 Championship Final: Destroyers won by 14 runs",
     "subtitle": "28 Aug 2021 • Martand School Ground No. 3 • POTM: Pranav Dwivedi (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2021-08-28",
@@ -551,7 +551,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2022 T20 Tournament Clash: Dread Eleven won by 3 wickets",
     "subtitle": "10 Aug 2022 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Amarjeet Kumar Singh (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2022-08-10",
@@ -560,7 +560,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2022 T20 Tournament Clash: Dread Eleven won by 21 runs",
     "subtitle": "12 Aug 2022 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Kuldeep Sen (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2022-08-12",
@@ -569,7 +569,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2022 50-Over Derby Match: Dread Eleven won by 2 wickets",
     "subtitle": "04 Sep 2022 • Martand School Ground No. 3 • POTM: Mohd Arham Aquil (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2022-09-04",
@@ -578,7 +578,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2022 50-Over Derby Match: Destroyers won by 0 runs",
     "subtitle": "07 Sep 2022 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Pranav Dwivedi (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2022-09-07",
@@ -587,7 +587,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2022 50-Over Derby Match: Destroyers won by 37 runs",
     "subtitle": "10 Sep 2022 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Venkatesh Iyer (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2022-09-10",
@@ -596,7 +596,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2022 50-Over Derby Match: Dread Eleven won by 1 wickets",
     "subtitle": "14 Sep 2022 • Martand School Ground No. 3 • POTM: Subhranshu Senapati (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2022-09-14",
@@ -605,7 +605,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2022 2022 Championship Final: Destroyers won by 54 runs",
     "subtitle": "18 Sep 2022 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Pranav Dwivedi (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2022-09-18",
@@ -614,7 +614,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2023 T20 Tournament Clash: Dread Eleven won by 84 runs",
     "subtitle": "05 Sep 2023 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Prabhanshu Shukla (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2023-09-05",
@@ -623,7 +623,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2023 T20 Tournament Clash: Dread Eleven won by 57 runs",
     "subtitle": "08 Sep 2023 • Martand School Ground No. 3 • POTM: Akhil Mishra (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2023-09-08",
@@ -632,7 +632,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2023 50-Over Derby Match: Destroyers won by 27 runs",
     "subtitle": "12 Sep 2023 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Subhranshu Senapati (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2023-09-12",
@@ -641,7 +641,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2023 50-Over Derby Match: Destroyers won by 42 runs",
     "subtitle": "16 Sep 2023 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Pranav Dwivedi (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2023-09-16",
@@ -650,7 +650,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2023 2023 Championship Final: Dread Eleven won by 3 wickets",
     "subtitle": "20 Sep 2023 • Martand School Ground No. 3 • POTM: Kumar Kartikeya (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2023-09-20",
@@ -659,7 +659,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2024 T20 Tournament Clash: Dread Eleven won by 1 wickets",
     "subtitle": "05 Sep 2024 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Rahul Batham (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2024-09-05",
@@ -668,7 +668,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2024 T20 Tournament Clash: Destroyers won by 5 runs",
     "subtitle": "08 Sep 2024 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Pranav Dwivedi (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2024-09-08",
@@ -677,7 +677,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2024 50-Over Derby Match: Destroyers won by 2 runs",
     "subtitle": "12 Sep 2024 • Martand School Ground No. 3 • POTM: Anubhav Agarwal (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2024-09-12",
@@ -686,7 +686,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2024 50-Over Derby Match: Destroyers won by 18 runs",
     "subtitle": "16 Sep 2024 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Pranav Dwivedi (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2024-09-16",
@@ -695,7 +695,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2024 2024 Championship Final: Destroyers won by 8 runs",
     "subtitle": "20 Sep 2024 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Sagar Pratap Singh (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2024-09-20",
@@ -704,7 +704,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2025 T20 Tournament Clash: Destroyers won by 22 runs",
     "subtitle": "05 Sep 2025 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Venkatesh Iyer (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2025-09-05",
@@ -713,7 +713,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2025 T20 Tournament Clash: Destroyers won by 6 wickets",
     "subtitle": "08 Sep 2025 • Martand School Ground No. 3 • POTM: Aryan Deshmukh (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2025-09-08",
@@ -722,7 +722,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2025 One-Day League Clash: Destroyers won by 45 runs",
     "subtitle": "12 Sep 2025 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Venkatesh Iyer (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2025-09-12",
@@ -731,7 +731,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2025 One-Day League Clash: Destroyers won by 5 wickets",
     "subtitle": "16 Sep 2025 • Martand School Ground No. 3 • POTM: Rajat Patidar (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2025-09-16",
@@ -740,7 +740,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2025 2025 Championship Final: Destroyers won by 34 runs",
     "subtitle": "20 Sep 2025 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Venkatesh Iyer (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2025-09-20",
@@ -749,7 +749,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2026 T20 Tournament Clash: Dread Eleven won by 14 runs",
     "subtitle": "05 Sep 2026 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Yash Dubey (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2026-09-05",
@@ -758,7 +758,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2026 T20 Tournament Clash: Destroyers won by 7 wickets",
     "subtitle": "08 Sep 2026 • Martand School Ground No. 3 • POTM: Venkatesh Iyer (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2026-09-08",
@@ -767,7 +767,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2026 One-Day League Clash: Dread Eleven won by 19 runs",
     "subtitle": "12 Sep 2026 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Yash Dubey (Dread Eleven)",
     "url": "/matches/destroyers-vs-dread-eleven-2026-09-12",
@@ -776,7 +776,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2026 One-Day League Clash: Destroyers won by 4 wickets",
     "subtitle": "16 Sep 2026 • Martand School Ground No. 3 • POTM: Venkatesh Iyer (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2026-09-16",
@@ -785,7 +785,7 @@
   {
     "type": "Match",
     "badge": "match",
-    "icon": "🏏",
+    "icon": "",
     "title": "2026 2026 Championship Final: Destroyers won by 12 runs",
     "subtitle": "20 Sep 2026 • Awadhesh Pratap Singh University (APSU) Stadium • POTM: Ajay Rohera (Destroyers)",
     "url": "/matches/destroyers-vs-dread-eleven-2026-09-20",
@@ -794,7 +794,7 @@
   {
     "type": "News",
     "badge": "news",
-    "icon": "📰",
+    "icon": "",
     "title": "Dread Eleven Convenes High-Velocity Tactical Camp at Martand Ground",
     "subtitle": " • By [object Object] • Tactical Dossier",
     "url": "/news/dread-eleven-tactical-camp-ahead-of-divisional-championship",
@@ -803,7 +803,7 @@
   {
     "type": "News",
     "badge": "news",
-    "icon": "📰",
+    "icon": "",
     "title": "Championship Glory: Inside Dread Eleven’s 2022 Atal Bihari Vajpayee Trophy Triumph",
     "subtitle": " • By [object Object] • Historical Silverware",
     "url": "/news/championship-glory-dread-eleven-2022-final-triumph",
@@ -812,7 +812,7 @@
   {
     "type": "News",
     "badge": "news",
-    "icon": "📰",
+    "icon": "",
     "title": "Pace Battery: Kuldeep Sen and Ashwin Das Set Tournament Velocity Benchmark",
     "subtitle": " • By [object Object] • Player Focus",
     "url": "/news/pace-battery-kuldeep-sen-and-ashwin-das-spearhead-attack",
@@ -821,7 +821,7 @@
   {
     "type": "News",
     "badge": "news",
-    "icon": "📰",
+    "icon": "",
     "title": "Captain’s Log: Akhil Mishra Crosses 900 Runs with 47.6 Average",
     "subtitle": " • By [object Object] • Milestone Feature",
     "url": "/news/akhil-mishra-900-run-mastery-rewa-records",
@@ -830,7 +830,7 @@
   {
     "type": "Record",
     "badge": "record",
-    "icon": "👑",
+    "icon": "",
     "title": "All-Time Leading Run Scorer: Pranav Dwivedi (1,998 runs)",
     "subtitle": "Destroyers captain has amassed 1,998 tournament runs with 2 centuries & 18 fifties",
     "url": "/stats/",
@@ -839,7 +839,7 @@
   {
     "type": "Record",
     "badge": "record",
-    "icon": "👑",
+    "icon": "",
     "title": "Dread Eleven Leading Run Scorer: Akhil Mishra (1,378 runs)",
     "subtitle": "Dread Eleven skipper with 1,378 runs (44.5 avg, 12 fifties, 1 century) in 28 derbies",
     "url": "/players/akhil-mishra/",
@@ -848,7 +848,7 @@
   {
     "type": "Record",
     "badge": "record",
-    "icon": "🎯",
+    "icon": "",
     "title": "Leading Wicket-Taker: Kuldeep Sen (98 wickets)",
     "subtitle": "Express pacer with 98 wickets at 14.8 avg and 3 five-wicket hauls for Dread Eleven",
     "url": "/players/kuldeep-sen/",
@@ -857,7 +857,7 @@
   {
     "type": "Record",
     "badge": "record",
-    "icon": "💥",
+    "icon": "",
     "title": "Highest Team Total: Destroyers 242/4 (20 ov)",
     "subtitle": "Set at APSU Stadium Rewa during the 2025 Championship season",
     "url": "/stats/",
@@ -866,7 +866,7 @@
   {
     "type": "Record",
     "badge": "record",
-    "icon": "💥",
+    "icon": "",
     "title": "Highest Dread Eleven Chase: 218/5 vs Destroyers (19.4 ov)",
     "subtitle": "Historic 2023 season thriller sealed by Akhil Mishra & Venkatesh Iyer",
     "url": "/stats/",
