@@ -1163,7 +1163,7 @@ ${renderHeader('squad')}
         <button type="button" class="squad-suggest-chip" data-search="Akhil Mishra">Capt. Akhil Mishra</button>
         <button type="button" class="squad-suggest-chip" data-search="Kuldeep Sen"> Kuldeep Sen</button>
         <button type="button" class="squad-suggest-chip" data-search="Venkatesh Iyer"> Venkatesh Iyer</button>
-        <button type="button" class="squad-suggest-chip" data-search="Rajat Patidar">⭐ Rajat Patidar</button>
+        <button type="button" class="squad-suggest-chip" data-search="Rajat Patidar">Rajat Patidar</button>
         <button type="button" class="squad-suggest-chip" data-search="Kumar Kartikeya"> Kumar Kartikeya</button>
         <button type="button" class="squad-suggest-chip" data-search="Captain">Captains</button>
         <button type="button" class="squad-suggest-chip" data-search="All-Rounder">All-Rounders</button>
