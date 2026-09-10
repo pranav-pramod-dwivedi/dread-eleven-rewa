@@ -1,0 +1,107 @@
+# Dread Eleven Cricket Club (DE)
+
+> Official digital stadium and franchise website for Dread Eleven Cricket Club (DE) based in Rewa, Madhya Pradesh. Affiliated with the Rewa Division Cricket Association (RDCA) and competing in the Atal Bihari Vajpayee Memorial Tournament against arch-rivals Destroyers (DES).
+
+## Core Franchise Information
+- Franchise Name: Dread Eleven Cricket Club (DE)
+- Team Captain: Akhil Mishra (Franchise Talisman & Batsman, 1,747 career runs, 92 career wickets)
+- Tournament: Atal Bihari Vajpayee Memorial Tournament (Rewa)
+- Governing Association: Rewa Division Cricket Association (RDCA)
+- Home Fortress: Martand School Ground No. 3, APSU Stadium (Rewa)
+- Championship Silverware: 2022 Atal Bihari Vajpayee Memorial Trophy Champions
+- Derby Record: 15 Wins vs Destroyers across 34 tournament clashes (2021–2026)
+- Disciplines: 50 Overs & T20 Blast
+
+## Key Stadium & Roster Sections
+- Squad Directory: https://dread-eleven-rewacricket.pages.dev/players (Complete 43-man roster with batting and bowling career statistics)
+- Tournament Fixtures: https://dread-eleven-rewacricket.pages.dev/fixtures (Complete season schedules and venue timings)
+- Results Archive: https://dread-eleven-rewacricket.pages.dev/results (Scorecards and ball-by-ball analysis for all 34 derby clashes)
+- Points Table: https://dread-eleven-rewacricket.pages.dev/points-table (Verified standings, net run rates, and season champion rankings)
+- Franchise Records: https://dread-eleven-rewacricket.pages.dev/stats (Top run-scorers, leading wicket-takers, and highest team totals)
+- Press Center: https://dread-eleven-rewacricket.pages.dev/news (Match post-mortems, editorial reviews, and tactical analysis)
+- About the Franchise: https://dread-eleven-rewacricket.pages.dev/about (Club heritage, RDCA affiliation, and championship dynasties)
+- Contact & Trials: https://dread-eleven-rewacricket.pages.dev/contact (Academy trials protocol, venue directions, and administrative inquiries)
+
+## Full Documentation
+- Detailed Dataset: https://dread-eleven-rewacricket.pages.dev/llms-full.txt
+
+## 43-Man Squad Roster
+- #45 Akhil Mishra (Top-Order All-Rounder & Captain): 1378 runs (Avg 44.5), 38 wickets (Econ 5.92). Bio: Akhil Mishra is the franchise captain and talisman of Dread Eleven Cricket Club (DE). Standing among the all-time tournament greats with 1,378 runs (44.5 avg) and 38 wickets across 28 clashes, Akhil leads Dread Eleven in the Atal Bihari Vajpayee Memorial Tournament, Rewa.
+- #12 Ritesh Shakya (Player): 620 runs (Avg 34.4), 8 wickets (Econ 6.5). Bio: Ritesh Shakya is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #7 Kuldeep Sen (Express Fast Bowler): 180 runs (Avg 15), 74 wickets (Econ 4.82). Bio: Kuldeep Sen is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #13 Anubhav Agarwal (Player): 208 runs (Avg 52), 3 wickets (Econ 1.71). Bio: Anubhav Agarwal is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #18 Yash Dubey (Wicketkeeper): 1460 runs (Avg 50.3), 7 wickets (Econ 6.2). Bio: Yash Dubey is an indispensable wicketkeeper for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #24 Saransh Jain (Captain): 580 runs (Avg 29), 52 wickets (Econ 5.24). Bio: Saransh Jain is an indispensable captain for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #22 Prithviraj Singh Tomar (Captain): 177 runs (Avg 29.5), 2 wickets (Econ 1.25). Bio: Prithviraj Singh Tomar is an indispensable captain for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #5 Anant Verma (Wicketkeeper): 163 runs (Avg 40.8), 2 wickets (Econ 4.42). Bio: Anant Verma is an indispensable wicketkeeper for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #28 Naveen Singh Chouhan (Player): 162 runs (Avg 32.4), 3 wickets (Econ 3.05). Bio: Naveen Singh Chouhan is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #99 Avesh Khan (Player): 240 runs (Avg 18.5), 65 wickets (Econ 4.95). Bio: Avesh Khan is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #34 Venkatesh Iyer (Captain): 142 runs (Avg 28.4), 3 wickets (Econ 3.1). Bio: Venkatesh Iyer is an indispensable captain for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #8 Subhranshu Senapati (Player): 980 runs (Avg 39.2), 15 wickets (Econ 5.6). Bio: Subhranshu Senapati is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #40 Ajay Rohera (Wicketkeeper): 133 runs (Avg 26.6), 0 wickets (Econ 3.77). Bio: Ajay Rohera is an indispensable wicketkeeper for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #43 Radhakrishna Dwivedi (Player): 129 runs (Avg 32.2), 0 wickets (Econ 1.88). Bio: Radhakrishna Dwivedi is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #46 Akshat Raghuwanshi (Player): 126 runs (Avg 31.5), 3 wickets (Econ 6.85). Bio: Akshat Raghuwanshi is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #14 Rohit Rajawat (Player): 114 runs (Avg 38), 8 wickets (Econ 6.46). Bio: Rohit Rajawat is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #22 Himanshu Mantri (Wicketkeeper): 112 runs (Avg 18.7), 5 wickets (Econ 2.25). Bio: Himanshu Mantri is an indispensable wicketkeeper for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #55 Ramveer Singh Gurjar (Player): 780 runs (Avg 35.5), 10 wickets (Econ 6.1). Bio: Ramveer Singh Gurjar is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #58 Shubham Sharma (Captain): 108 runs (Avg 36), 1 wickets (Econ 0.82). Bio: Shubham Sharma is an indispensable captain for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #61 Mohd Arshad Khan (Player): 106 runs (Avg 35.3), 3 wickets (Econ 2.74). Bio: Mohd Arshad Khan is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #19 Kumar Kartikeya (Lead Spin Bowler): 320 runs (Avg 21.3), 44 wickets (Econ 5.05). Bio: Kumar Kartikeya is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #67 Rajat Patidar (Batsman): 103 runs (Avg 12.9), 4 wickets (Econ 7.94). Bio: Rajat Patidar is an indispensable batsman for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #70 Arshad Khan (Captain): 101 runs (Avg 33.7), 5 wickets (Econ 2.98). Bio: Arshad Khan is an indispensable captain for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #73 Saransh Surana (Player): 88 runs (Avg 22), 4 wickets (Econ 5.86). Bio: Saransh Surana is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #76 Chanchal Rathore (Player): 88 runs (Avg 22), 4 wickets (Econ 15.06). Bio: Chanchal Rathore is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #79 Mohd Arham Aquil (Player): 1060 runs (Avg 40.8), 12 wickets (Econ 5.8). Bio: Mohd Arham Aquil is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #82 Aryan Deshmukh (Player): 67 runs (Avg 13.4), 0 wickets (Econ 0). Bio: Aryan Deshmukh is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #4 Prabhanshu Shukla (Player): 66 runs (Avg 33), 9 wickets (Econ 2.3). Bio: Prabhanshu Shukla is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #88 Rahul Batham (Captain): 63 runs (Avg 15.8), 4 wickets (Econ 8.38). Bio: Rahul Batham is an indispensable captain for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #2 Aditya Shrivastava (Player): 1290 runs (Avg 46.1), 8 wickets (Econ 6.4). Bio: Aditya Shrivastava is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #5 Jaydev Singh (Player): 59 runs (Avg 11.8), 8 wickets (Econ 9.71). Bio: Jaydev Singh is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #8 Ankit Singh Kushwaha (Player): 54 runs (Avg 13.5), 2 wickets (Econ 2.4). Bio: Ankit Singh Kushwaha is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #11 Kulwant Khejroliya (Player): 84 runs (Avg 21), 0 wickets (Econ 0). Bio: Kulwant Khejroliya is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #14 Sagar Pratap Singh (Player): 84 runs (Avg 21), 0 wickets (Econ 0). Bio: Sagar Pratap Singh is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #23 Ashwin Das (Pace All-Rounder): 47 runs (Avg 6.7), 16 wickets (Econ 9.26). Bio: Ashwin Das is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #20 Amarjeet Kumar Singh (Player): 39 runs (Avg 13), 8 wickets (Econ 5.04). Bio: Amarjeet Kumar Singh is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #23 Atharv Mahajan (Player): 26 runs (Avg 8.7), 0 wickets (Econ 4.33). Bio: Atharv Mahajan is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #26 Kanishk Dubey (Player): 18 runs (Avg 3), 3 wickets (Econ 1.38). Bio: Kanishk Dubey is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #29 Shivam Shukla (Player): 84 runs (Avg 21), 0 wickets (Econ 0). Bio: Shivam Shukla is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #32 Harsh Gawli (Player): 84 runs (Avg 21), 0 wickets (Econ 0). Bio: Harsh Gawli is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #35 Sagar Solanki (Player): 84 runs (Avg 21), 0 wickets (Econ 0). Bio: Sagar Solanki is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #38 Aryan Shrivastava (Player): 84 runs (Avg 21), 0 wickets (Econ 0). Bio: Aryan Shrivastava is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+- #41 Aryan Dwivedi (Player): 84 runs (Avg 21), 0 wickets (Econ 0). Bio: Aryan Dwivedi is an indispensable player for Dread Eleven (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. Instrumental in high-intensity divisional fixtures in Rewa at Martand Ground and APSU Stadium.
+
+## Historical Match Scorecard Archive (34 Matches)
+- Match #1 (2021-08-01): T20 Tournament Clash at Martand School Ground No. 3. Result: Dread Eleven won by 3 wickets. Winner: DE
+- Match #2 (2021-08-04): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 2 wickets. Winner: DE
+- Match #3 (2021-08-07): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 20 runs. Winner: DES
+- Match #4 (2021-08-11): T20 Tournament Clash at Martand School Ground No. 3. Result: Dread Eleven won by 3 wickets. Winner: DE
+- Match #5 (2021-08-15): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 5 wickets. Winner: DE
+- Match #6 (2021-08-20): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 2 wickets. Winner: DE
+- Match #7 (2021-08-28): 2021 Championship Final at Martand School Ground No. 3. Result: Destroyers won by 14 runs. Winner: DES
+- Match #8 (2022-08-10): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 3 wickets. Winner: DE
+- Match #9 (2022-08-12): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 21 runs. Winner: DE
+- Match #10 (2022-09-04): 50-Over Derby Match at Martand School Ground No. 3. Result: Dread Eleven won by 2 wickets. Winner: DE
+- Match #11 (2022-09-07): 50-Over Derby Match at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 0 runs. Winner: DES
+- Match #12 (2022-09-10): 50-Over Derby Match at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 37 runs. Winner: DES
+- Match #13 (2022-09-14): 50-Over Derby Match at Martand School Ground No. 3. Result: Dread Eleven won by 1 wickets. Winner: DE
+- Match #14 (2022-09-18): 2022 Championship Final at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 54 runs. Winner: DES
+- Match #15 (2023-09-05): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 84 runs. Winner: DE
+- Match #16 (2023-09-08): T20 Tournament Clash at Martand School Ground No. 3. Result: Dread Eleven won by 57 runs. Winner: DE
+- Match #17 (2023-09-12): 50-Over Derby Match at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 27 runs. Winner: DES
+- Match #18 (2023-09-16): 50-Over Derby Match at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 42 runs. Winner: DES
+- Match #19 (2023-09-20): 2023 Championship Final at Martand School Ground No. 3. Result: Dread Eleven won by 3 wickets. Winner: DE
+- Match #20 (2024-09-05): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 1 wickets. Winner: DE
+- Match #21 (2024-09-08): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 5 runs. Winner: DES
+- Match #22 (2024-09-12): 50-Over Derby Match at Martand School Ground No. 3. Result: Destroyers won by 2 runs. Winner: DES
+- Match #23 (2024-09-16): 50-Over Derby Match at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 18 runs. Winner: DES
+- Match #24 (2024-09-20): 2024 Championship Final at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 8 runs. Winner: DES
+- Match #25 (2025-09-05): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 22 runs. Winner: DES
+- Match #26 (2025-09-08): T20 Tournament Clash at Martand School Ground No. 3. Result: Destroyers won by 6 wickets. Winner: DES
+- Match #27 (2025-09-12): One-Day League Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 45 runs. Winner: DES
+- Match #28 (2025-09-16): One-Day League Clash at Martand School Ground No. 3. Result: Destroyers won by 5 wickets. Winner: DES
+- Match #29 (2025-09-20): 2025 Championship Final at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 34 runs. Winner: DES
+- Match #30 (2026-09-05): T20 Tournament Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 14 runs. Winner: DE
+- Match #31 (2026-09-08): T20 Tournament Clash at Martand School Ground No. 3. Result: Destroyers won by 7 wickets. Winner: DES
+- Match #32 (2026-09-12): One-Day League Clash at Awadhesh Pratap Singh University (APSU) Stadium. Result: Dread Eleven won by 19 runs. Winner: DE
+- Match #33 (2026-09-16): One-Day League Clash at Martand School Ground No. 3. Result: Destroyers won by 4 wickets. Winner: DES
+- Match #34 (2026-09-20): 2026 Championship Final at Awadhesh Pratap Singh University (APSU) Stadium. Result: Destroyers won by 12 runs. Winner: DES

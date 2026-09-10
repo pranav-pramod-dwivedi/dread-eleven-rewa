@@ -53,6 +53,46 @@ function esc(text) {
     .replace(/"/g, '&quot;');
 }
 
+// Helper: Clamp title for optimal SEO (<60 chars)
+function clampTitle(text, maxLen = 60) {
+  if (!text) return '';
+  text = text.replace(/\s+/g, ' ').trim();
+  if (text.length <= maxLen) return text;
+  const sliced = text.slice(0, maxLen - 3);
+  const lastSpace = sliced.lastIndexOf(' ');
+  return (lastSpace > 30 ? sliced.slice(0, lastSpace) : sliced).trim() + '...';
+}
+
+// Helper: Clamp description for optimal SEO (120-155 chars)
+function clampDesc(text, maxLen = 155) {
+  if (!text) return '';
+  text = text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  if (text.length <= maxLen) return text;
+  const sliced = text.slice(0, maxLen - 3);
+  const lastSpace = sliced.lastIndexOf(' ');
+  return (lastSpace > 70 ? sliced.slice(0, lastSpace) : sliced).trim() + '...';
+}
+
+// Helper: Safe CSS minifier
+function minifyCss(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\s+/g, ' ')
+    .replace(/\s*([\{\};:,>~+])\s*/g, '$1')
+    .replace(/;}/g, '}')
+    .trim();
+}
+
+// Helper: Safe JS minifier
+function minifyJs(js) {
+  return js
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/^\s*\/\/.*$/gm, '')
+    .replace(/\n\s*\n/g, '\n')
+    .trim();
+}
+
+
 // ------------------------------------------------------------
 // GLOBAL HTML TEMPLATE BLOCKS
 // ------------------------------------------------------------
@@ -82,13 +122,33 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
     });
   }
 
+  const cleanTitle = clampTitle(title, 60);
+  const cleanDesc = clampDesc(description, 155);
+
+  // Fallback structured data so NO page lacks JSON-LD schema
+  if (jsonLdList.length === 0) {
+    jsonLdList.push({
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: cleanTitle,
+      description: cleanDesc,
+      url: fullCanonical,
+      isPartOf: {
+        '@type': 'SportsTeam',
+        name: 'Dread Eleven Cricket Club (DE)',
+        url: BASE_URL,
+        sport: 'Cricket'
+      }
+    });
+  }
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${esc(title)}</title>
-  <meta name="description" content="${esc(description)}">
+  <title>${esc(cleanTitle)}</title>
+  <meta name="description" content="${esc(cleanDesc)}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="${fullCanonical}">
   <meta name="theme-color" content="#0b0b0b">
@@ -96,8 +156,8 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="${esc(ogType)}">
   <meta property="og:url" content="${fullCanonical}">
-  <meta property="og:title" content="${esc(title)}">
-  <meta property="og:description" content="${esc(description)}">
+  <meta property="og:title" content="${esc(cleanTitle)}">
+  <meta property="og:description" content="${esc(cleanDesc)}">
   <meta property="og:image" content="${fullOgImage}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -107,8 +167,8 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="${fullCanonical}">
-  <meta name="twitter:title" content="${esc(title)}">
-  <meta name="twitter:description" content="${esc(description)}">
+  <meta name="twitter:title" content="${esc(cleanTitle)}">
+  <meta name="twitter:description" content="${esc(cleanDesc)}">
   <meta name="twitter:image" content="${fullOgImage}">
   <meta name="twitter:site" content="@DreadElevenRewa">
 
@@ -122,7 +182,7 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="stylesheet" href="/src/css/styles.min.css">
 
   ${jsonLdList.map((item) => `<script type="application/ld+json">${JSON.stringify(item)}</script>`).join('\n  ')}
 </head>
@@ -320,7 +380,7 @@ function renderFooter() {
     </div>
   </div> <!-- /content-wrapper -->
 
-  <script src="/src/js/app.js" defer></script>
+  <script src="/src/js/app.min.js" defer></script>
 </body>
 </html>
   `;
@@ -365,8 +425,8 @@ function generateHomePage() {
 
   const html = `
 ${renderHead({
-  title: 'Dread Eleven Cricket Club (DE) — Digital Stadium & Broadcast Arena | Rewa',
-  description: 'Official digital stadium for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete 2021–2026 match scorecards against Destroyers, 43-man squad roster, tournament standings, and stats.',
+  title: 'Dread Eleven Cricket Club | Digital Stadium & Arena',
+  description: 'Official digital stadium for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete match scorecards, 43-man squad, standings, and stats.',
   canonicalUrl: '/',
   jsonLd
 })}
@@ -930,8 +990,8 @@ function generateSquadPages() {
 
   const squadHtml = `
 ${renderHead({
-  title: 'Dread Eleven Squad (43 Players) | Atal Bihari Memorial Tournament | RDCA',
-  description: 'Complete player directory for Dread Eleven Cricket Club (DE) in Rewa. Captain Akhil Mishra, batsmen, all-rounders, bowlers, and wicketkeepers with tournament statistics.',
+  title: 'Dread Eleven Squad & Player Roster | Rewa Cricket',
+  description: 'Official 43-man player directory for Dread Eleven Cricket Club (DE) in Rewa. Verified tournament batting, bowling averages, and career milestones.',
   canonicalUrl: '/players',
   jsonLd: squadJsonLd,
   breadcrumbs: [
@@ -1046,8 +1106,8 @@ ${renderFooter()}
 
     const playerHtml = `
 ${renderHead({
-  title: `#${p.jerseyNumber} ${p.name} — Career Stats & Profile | Dread Eleven`,
-  description: `Official player profile and career tournament statistics for ${p.name} (#${p.jerseyNumber}) of Dread Eleven. ${p.batting.runs} runs, ${p.bowling.wickets} wickets in Rewa division.`,
+  title: clampTitle(`#${p.jerseyNumber} ${p.name} — Career Stats | Dread Eleven`, 60),
+  description: clampDesc(`${p.name} (#${p.jerseyNumber}) profile for Dread Eleven in Rewa. ${p.role} with ${p.batting.runs} runs, ${p.bowling.wickets} wickets, and match records.`, 155),
   canonicalUrl: `/players/${p.slug}`,
   jsonLd: playerJsonLd,
   breadcrumbs: [
@@ -1233,6 +1293,7 @@ function generateMatchPages() {
     ` : ''}
 
     <!-- Multi-tier Filter Toolbar -->
+    <h2 style="font-family:var(--f-athletic); font-size:1.35rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">Tournament Filters &amp; Format Selection</h2>
     <div class="filters-toolbar">
       <div class="filter-row">
         <span class="filter-label">Format:</span>
@@ -1267,6 +1328,7 @@ function generateMatchPages() {
       </div>
     </div>
 
+    <h2 style="font-family:var(--f-athletic); font-size:1.35rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.25rem;">Derby Match Cards &amp; Performance Telemetry</h2>
     <div class="matches-grid">
       ${listMatches.map((m) => {
         const isCompleted = m.status === 'completed';
@@ -1340,8 +1402,8 @@ function generateMatchPages() {
   // Generate /fixtures/index.html
   const fixturesHtml = `
 ${renderHead({
-  title: 'Dread Eleven Tournament Fixtures & Schedule | Rewa Cricket',
-  description: 'Official schedule and fixtures of the Atal Bihari Vajpayee Memorial Tournament for Dread Eleven against Destroyers in Rewa.',
+  title: 'Tournament Fixtures & Schedule | Dread Eleven',
+  description: 'Official schedule and tournament fixtures for Dread Eleven against Destroyers in the Atal Bihari Vajpayee Memorial Tournament in Rewa.',
   canonicalUrl: '/fixtures',
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -1358,7 +1420,7 @@ ${renderFooter()}
   const resultsHtml = `
 ${renderHead({
   title: 'Match Results Archive (2021–2026) | Dread Eleven vs Destroyers',
-  description: 'Official results archive of all completed matches between Dread Eleven and Destroyers in the Atal Bihari Vajpayee Memorial Tournament, Rewa.',
+  description: 'Official results archive and verified scorecards for all completed derby clashes between Dread Eleven and Destroyers in Rewa.',
   canonicalUrl: '/results',
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -1674,7 +1736,7 @@ ${renderFooter()}
     const matchHtml = `
 ${renderHead({
   title: `Dread Eleven vs Destroyers (${formatDate(m.matchDate)}) — Official Scorecard`,
-  description: `Official scorecard and performance breakdown for Dread Eleven vs Destroyers on ${formatDate(m.matchDate)} at ${m.venue.name}, Rewa. Atal Bihari Vajpayee Memorial Tournament.`,
+  description: clampDesc(`Official scorecard: Dread Eleven vs Destroyers on ${formatDate(m.matchDate)} at ${m.venue?.city || 'Rewa'}. Complete innings and performance records.`, 155),
   canonicalUrl: `/matches/${m.slug}`,
   jsonLd: matchJsonLd,
   breadcrumbs: [
@@ -1699,8 +1761,8 @@ ${renderHeader('results')}
         <span style="font-family:var(--f-mono); font-size:0.8125rem; color:var(--c-volt); font-weight:800; text-transform:uppercase;">${esc(m.stage)}</span>
       </div>
 
-      <h1 class="section-bigtitle" style="font-size:clamp(2.5rem, 5vw, 4.25rem); margin-bottom:0.75rem;">
-        Dread Eleven vs Destroyers
+      <h1 class="section-bigtitle" style="font-size:clamp(2.4rem, 5vw, 3.8rem); margin-bottom:0.75rem;">
+        Dread Eleven vs Destroyers <span style="display:block; font-size:clamp(1.15rem, 2.2vw, 1.6rem); color:var(--c-volt); font-family:var(--f-mono); font-weight:600; margin-top:0.35rem;">${formatDate(m.matchDate)} • Match #${esc(m.matchNumber)} (${esc(m.stage)})</span>
       </h1>
 
       <div style="font-size:0.9rem; color:var(--c-gray-400); margin-bottom:1.25rem;">
@@ -1796,8 +1858,8 @@ function generatePointsTablePage() {
 
   const html = `
 ${renderHead({
-  title: 'Tournament Points Table & Standings (2021–2026) | Dread Eleven',
-  description: 'Official tournament points table across all editions of the Atal Bihari Vajpayee Memorial Tournament, Rewa. Standings for 2026, 2025, 2024, 2023, 2022, 2021, and All-Time.',
+  title: 'Tournament Standings & Points Table | Dread Eleven',
+  description: 'Official points table and standings for the Atal Bihari Vajpayee Memorial Tournament (2021–2026) between Dread Eleven and Destroyers in Rewa.',
   canonicalUrl: '/points-table',
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -2126,7 +2188,7 @@ function generateStatsPage() {
   const html = `
 ${renderHead({
   title: 'All-Time Franchise Statistics & Records | Dread Eleven',
-  description: 'Certified statistics and tournament records for Dread Eleven against Destroyers in Rewa. Top run scorers, leading wicket-takers, highest innings totals, and bowling milestones.',
+  description: 'Certified tournament records, leading run scorers, top wicket-takers, and head-to-head statistics for Dread Eleven in Rewa.',
   canonicalUrl: '/stats',
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -2248,7 +2310,7 @@ function generateNewsPages() {
   const newsHtml = `
 ${renderHead({
   title: 'Tournament News & Press Releases | Dread Eleven',
-  description: 'Official press releases, series reviews, squad announcements, and match reports for Dread Eleven in the Atal Bihari Vajpayee Memorial Tournament, Rewa.',
+  description: 'Official press releases, series reviews, squad announcements, and tactical reports for Dread Eleven in Rewa, Madhya Pradesh.',
   canonicalUrl: '/news',
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -2304,7 +2366,7 @@ ${renderFooter()}
       '@context': 'https://schema.org',
       '@type': 'NewsArticle',
       headline: n.title,
-      description: n.summary,
+      description: clampDesc(n.summary, 155),
       datePublished: n.publishedAt,
       dateModified: n.updatedAt || n.publishedAt,
       author: {
@@ -2320,8 +2382,8 @@ ${renderFooter()}
 
     const articleHtml = `
 ${renderHead({
-  title: `${n.title} | Dread Eleven News`,
-  description: n.summary,
+  title: clampTitle(`${n.title.replace(/[—–].*$/, '').trim()} | Dread Eleven News`, 60),
+  description: clampDesc(n.summary, 155),
   canonicalUrl: `/news/${n.slug}`,
   jsonLd: articleJsonLd,
   breadcrumbs: [
@@ -2353,6 +2415,7 @@ ${renderHeader('news')}
     </div>
 
     <div style="font-size:1.1rem; color:var(--c-gray-300); line-height:1.8; margin-bottom:3rem;">
+      <h2 style="font-family:var(--f-athletic); font-size:1.65rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">Tactical Analysis &amp; Match Flow</h2>
       ${n.body}
     </div>
 
@@ -2384,7 +2447,7 @@ function generateAboutAndContactPages() {
   const aboutHtml = `
 ${renderHead({
   title: 'About Dread Eleven | History, Martand Fortress & RDCA',
-  description: 'History and identity of Dread Eleven (DE) in Rewa. Affiliation with Rewa Division Cricket Association (RDCA), home fortress Martand School Ground No. 3 & APSU Stadium, and franchise leadership.',
+  description: 'History and heritage of Dread Eleven (DE) in Rewa. Affiliated with RDCA and competing in the Atal Bihari Vajpayee Memorial Tournament circuit.',
   canonicalUrl: '/about',
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -2453,11 +2516,30 @@ ${renderFooter()}
   fs.writeFileSync(path.join(aboutDir, 'index.html'), aboutHtml);
   console.log('Generated /about/index.html');
 
-  const contactHtml = `
+    const contactHtml = `
 ${renderHead({
-  title: 'Contact Dread Eleven | RDCA & Scouting Desk',
-  description: 'Official contact desk for Dread Eleven Cricket Club in Rewa, Madhya Pradesh. Media inquiries, academy registration, venue liaison, and RDCA communications.',
+  title: 'Contact & Academy Trials | Dread Eleven',
+  description: 'Official contact desk for Dread Eleven in Rewa, MP. Media inquiries, academy trial registration, venue liaison, and RDCA communications.',
   canonicalUrl: '/contact',
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Dread Eleven Cricket Club',
+    description: 'Official contact desk and player trial registration for Dread Eleven in Rewa.',
+    url: `${BASE_URL}/contact`,
+    mainEntity: {
+      '@type': 'SportsTeam',
+      name: 'Dread Eleven Cricket Club (DE)',
+      url: BASE_URL,
+      sport: 'Cricket',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Scouting & Trials Administration',
+        email: 'contact@dread-eleven.cricket',
+        availableLanguage: ['English', 'Hindi']
+      }
+    }
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'Contact', item: '/contact' }
@@ -2465,8 +2547,8 @@ ${renderHead({
 })}
 ${renderHeader('contact')}
 
-<section style="padding: 4rem 0;">
-  <div class="container" style="max-width:860px;">
+<section style="padding: 4rem 0; background:#080808;">
+  <div class="container" style="max-width:960px;">
     <!-- Breadcrumb -->
     <nav aria-label="Breadcrumb" style="margin-bottom:1.5rem; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">
       <a href="/" style="color:inherit; text-decoration:none;">Home</a> / <span style="color:var(--c-volt);">Contact</span>
@@ -2477,33 +2559,153 @@ ${renderHeader('contact')}
         <p class="section-pretitle">Official Communication Desk</p>
         <h1 class="section-bigtitle">Contact Dread Eleven</h1>
         <p style="color:var(--c-gray-400); font-size:1rem; max-width:64ch; margin-top:0.4rem;">
-          Direct communication channels for divisional scouting, media credentials, and tournament affairs in Rewa.
+          Direct communication channels for divisional scouting, open talent trials, media credentials, and tournament affairs in Rewa.
         </p>
       </div>
     </div>
 
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; margin-bottom:3rem;">
+      <!-- Administrative Headquarters -->
+      <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.25rem;">
+          Rewa Administrative Desk
+        </h2>
+        <div style="display:flex; flex-direction:column; gap:1rem; font-size:0.875rem; color:var(--c-gray-300);">
+          <div>
+            <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); text-transform:uppercase;">Governing Body</div>
+            <p>Rewa Division Cricket Association (RDCA) Pavilion Desk</p>
+          </div>
+          <div>
+            <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); text-transform:uppercase;">Home Stadium Fortress</div>
+            <p>Martand School Ground No. 3, Civil Lines, Rewa, MP 486001</p>
+          </div>
+          <div>
+            <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); text-transform:uppercase;">Championship Final Venue</div>
+            <p>Awadhesh Pratap Singh University (APSU) Stadium, Sirmour Road, Rewa</p>
+          </div>
+          <div>
+            <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); text-transform:uppercase;">Official Electronic Mail</div>
+            <p style="font-family:var(--f-mono);">contact@dread-eleven.cricket</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inquiries Form -->
+      <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
+        <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.25rem;">
+          Transmit An Inquiry
+        </h2>
+        <form onsubmit="event.preventDefault(); alert('Communication transmitted to Dread Eleven management.');" style="display:flex; flex-direction:column; gap:1rem;">
+          <div>
+            <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.35rem;">Sender Name</label>
+            <input type="text" required placeholder="Your full name" style="width:100%; background:var(--c-card-bg); border:1px solid var(--b-medium); color:var(--c-white); padding:0.65rem 0.9rem; border-radius:var(--radius-xs); font-family:var(--f-body); font-size:0.875rem;">
+          </div>
+          <div>
+            <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.35rem;">Email Address</label>
+            <input type="email" required placeholder="you@example.com" style="width:100%; background:var(--c-card-bg); border:1px solid var(--b-medium); color:var(--c-white); padding:0.65rem 0.9rem; border-radius:var(--radius-xs); font-family:var(--f-body); font-size:0.875rem;">
+          </div>
+          <div>
+            <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.35rem;">Subject Category</label>
+            <select style="width:100%; background:var(--c-card-bg); border:1px solid var(--b-medium); color:var(--c-white); padding:0.65rem 0.9rem; border-radius:var(--radius-xs); font-family:var(--f-body); font-size:0.875rem;">
+              <option>Academy Selection Trials</option>
+              <option>Match Day Passes &amp; Access</option>
+              <option>Media &amp; Photography Accreditation</option>
+              <option>RDCA Registration Inquiries</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.35rem;">Message</label>
+            <textarea rows="3" required placeholder="State your inquiry or player profile..." style="width:100%; background:var(--c-card-bg); border:1px solid var(--b-medium); color:var(--c-white); padding:0.65rem 0.9rem; border-radius:var(--radius-xs); font-family:var(--f-body); font-size:0.875rem; resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn-athletic btn-volt" style="margin-top:0.5rem;">
+            <span>Transmit Inquiry &rarr;</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Divisional Trials & Scouting Protocols -->
+    <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm); margin-bottom:3rem;">
+      <h2 style="font-family:var(--f-athletic); font-size:1.8rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">
+        Divisional Trials &amp; Academy Scouting Guidelines
+      </h2>
+      <p style="color:var(--c-gray-300); font-size:0.9375rem; line-height:1.8; margin-bottom:1.5rem;">
+        Dread Eleven operates comprehensive grassroots development camps across Rewa division under skipper Akhil Mishra. Selection trials evaluate fast-bowling velocity, spin deception on turning tracks, and tactical composure in high-pressure match simulations.
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem; font-size:0.875rem;">
+        <div style="background:#141414; padding:1.25rem; border-left:3px solid var(--c-volt); border-radius:var(--radius-xs);">
+          <div style="font-weight:700; color:#fff; margin-bottom:0.35rem;">Eligibility Categories</div>
+          <p style="color:var(--c-gray-400);">Under-17 Talent Path, Under-21 Emerging XI, and Open Senior Roster Evaluation Pool.</p>
+        </div>
+        <div style="background:#141414; padding:1.25rem; border-left:3px solid var(--c-volt); border-radius:var(--radius-xs);">
+          <div style="font-weight:700; color:#fff; margin-bottom:0.35rem;">Mandatory Documentation</div>
+          <p style="color:var(--c-gray-400);">Aadhaar identity card, MP domicile certification, and registered school or club NOC.</p>
+        </div>
+        <div style="background:#141414; padding:1.25rem; border-left:3px solid var(--c-volt); border-radius:var(--radius-xs);">
+          <div style="font-weight:700; color:#fff; margin-bottom:0.35rem;">Kit &amp; Attire Rules</div>
+          <p style="color:var(--c-gray-400);">Full white cricket attire, spiked cricket shoes for turf wickets, and personal safety equipment.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Match Day Stadium Directions & Spectator Guidelines -->
+    <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm); margin-bottom:3rem;">
+      <h2 style="font-family:var(--f-athletic); font-size:1.8rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">
+        Match Day Stadium Access &amp; Transit Directions
+      </h2>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; font-size:0.875rem; line-height:1.7; color:var(--c-gray-300);">
+        <div>
+          <h3 style="font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-volt); text-transform:uppercase; margin-bottom:0.5rem;">
+            Martand School Ground No. 3 (DE Fortress)
+          </h3>
+          <p style="color:var(--c-gray-400); margin-bottom:0.5rem;">
+            Situated in Civil Lines near the historic Rewa commissioner office. Accessible by city transit from Rewa Bus Stand (1.2 km). Home ground for Dread Eleven with dedicated supporters terrace.
+          </p>
+          <p style="color:var(--c-gray-500); font-family:var(--f-mono); font-size:0.75rem;">Gate A for team entry • Gate B for spectators • Free public admission.</p>
+        </div>
+        <div>
+          <h3 style="font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-volt); text-transform:uppercase; margin-bottom:0.5rem;">
+            APSU Stadium (University Arena)
+          </h3>
+          <p style="color:var(--c-gray-400); margin-bottom:0.5rem;">
+            Located on Sirmour Road, Awadhesh Pratap Singh University campus. 15,000 capacity turf stadium hosting championship finals and high-voltage evening derbies.
+          </p>
+          <p style="color:var(--c-gray-500); font-family:var(--f-mono); font-size:0.75rem;">Spacious campus parking available near Central Library complex.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frequently Asked Questions (FAQ) -->
     <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm);">
-      <form onsubmit="event.preventDefault(); alert('Communication transmitted to Dread Eleven management.');">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:1.5rem;">
-          <div>
-            <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.4rem;">Sender Name</label>
-            <input type="text" required style="width:100%; background:var(--c-card-bg); border:1px solid var(--b-medium); color:var(--c-white); padding:0.75rem; border-radius:var(--radius-sm); outline:none;">
-          </div>
-          <div>
-            <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.4rem;">Email Address</label>
-            <input type="email" required style="width:100%; background:var(--c-card-bg); border:1px solid var(--b-medium); color:var(--c-white); padding:0.75rem; border-radius:var(--radius-sm); outline:none;">
-          </div>
+      <h2 style="font-family:var(--f-athletic); font-size:1.8rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.5rem;">
+        Frequently Asked Questions (Trials, Media &amp; Access)
+      </h2>
+      <div style="display:flex; flex-direction:column; gap:1.5rem; font-size:0.9rem; line-height:1.7;">
+        <div>
+          <h3 style="font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:0.35rem;">
+            Are match tickets required for Atal Bihari Vajpayee Memorial Tournament games?
+          </h3>
+          <p style="color:var(--c-gray-400);">
+            Spectator entry across open grass banks at Martand Ground and APSU Stadium is complimentary under Rewa Division Cricket Association developmental regulations. Reserved seating in the official pavilion requires pass clearance from team management.
+          </p>
         </div>
-
-        <div style="margin-bottom:1.5rem;">
-          <label style="display:block; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase; margin-bottom:0.4rem;">Message / Inquiry</label>
-          <textarea rows="4" required style="width:100%; background:var(--c-card-bg); border:1px solid var(--b-medium); color:var(--c-white); padding:0.75rem; border-radius:var(--radius-sm); outline:none;"></textarea>
+        <div>
+          <h3 style="font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:0.35rem;">
+            How can cricketers register for Dread Eleven developmental camps?
+          </h3>
+          <p style="color:var(--c-gray-400);">
+            Candidates should submit their playing statistics through the contact form above or present in person at Martand Ground during pre-season screening sessions announced on the official news portal.
+          </p>
         </div>
-
-        <button type="submit" class="btn-athletic btn-volt">
-          <span>Submit Communication &rarr;</span>
-        </button>
-      </form>
+        <div>
+          <h3 style="font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:0.35rem;">
+            What are the media accreditation procedures for derby clashes?
+          </h3>
+          <p style="color:var(--c-gray-400);">
+            Accredited media outlets and independent correspondents must send credential requests 48 hours in advance to receive access to the press box and post-match captain press conferences.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2701,6 +2903,9 @@ ${renderHeader()}
     <h1 class="section-bigtitle" style="font-size:2.5rem; margin-bottom:1rem;">
       404 — Page Not Found
     </h1>
+    <h2 style="font-family:var(--f-athletic); font-size:1.4rem; color:var(--c-gray-300); text-transform:uppercase; margin-bottom:1.5rem;">
+      Stadium Navigation
+    </h2>
     <p style="color:var(--c-gray-400); font-size:1.25rem; line-height:1.6; margin-bottom:2.5rem;">
       Looks like this ball went straight into the stands.
     </p>
@@ -2784,6 +2989,49 @@ Allow: /
 Sitemap: ${BASE_URL}/sitemap.xml
 `;
   fs.writeFileSync(path.join(rootDir, 'robots.txt'), robotsTxt);
+
+  // Generate llms.txt according to standard
+  const llmsTxt = `# Dread Eleven Cricket Club (DE)
+
+> Official digital stadium and franchise website for Dread Eleven Cricket Club (DE) based in Rewa, Madhya Pradesh. Affiliated with the Rewa Division Cricket Association (RDCA) and competing in the Atal Bihari Vajpayee Memorial Tournament against arch-rivals Destroyers (DES).
+
+## Core Franchise Information
+- Franchise Name: Dread Eleven Cricket Club (DE)
+- Team Captain: Akhil Mishra (Franchise Talisman & Batsman, 1,747 career runs, 92 career wickets)
+- Tournament: Atal Bihari Vajpayee Memorial Tournament (Rewa)
+- Governing Association: Rewa Division Cricket Association (RDCA)
+- Home Fortress: Martand School Ground No. 3, APSU Stadium (Rewa)
+- Championship Silverware: 2022 Atal Bihari Vajpayee Memorial Trophy Champions
+- Derby Record: 15 Wins vs Destroyers across 34 tournament clashes (2021–2026)
+- Disciplines: 50 Overs & T20 Blast
+
+## Key Stadium & Roster Sections
+- Squad Directory: ${BASE_URL}/players (Complete 43-man roster with batting and bowling career statistics)
+- Tournament Fixtures: ${BASE_URL}/fixtures (Complete season schedules and venue timings)
+- Results Archive: ${BASE_URL}/results (Scorecards and ball-by-ball analysis for all 34 derby clashes)
+- Points Table: ${BASE_URL}/points-table (Verified standings, net run rates, and season champion rankings)
+- Franchise Records: ${BASE_URL}/stats (Top run-scorers, leading wicket-takers, and highest team totals)
+- Press Center: ${BASE_URL}/news (Match post-mortems, editorial reviews, and tactical analysis)
+- About the Franchise: ${BASE_URL}/about (Club heritage, RDCA affiliation, and championship dynasties)
+- Contact & Trials: ${BASE_URL}/contact (Academy trials protocol, venue directions, and administrative inquiries)
+
+## Full Documentation
+- Detailed Dataset: ${BASE_URL}/llms-full.txt
+`;
+
+  fs.writeFileSync(path.join(rootDir, 'llms.txt'), llmsTxt);
+
+  const llmsFullTxt = `${llmsTxt}
+## 43-Man Squad Roster
+${squad.map(p => `- #${p.jerseyNumber} ${p.name} (${p.role}): ${p.batting.runs} runs (Avg ${p.batting.average}), ${p.bowling.wickets} wickets (Econ ${p.bowling.economy}). Bio: ${p.bio}`).join('\n')}
+
+## Historical Match Scorecard Archive (34 Matches)
+${matches.map(m => `- Match #${m.matchNumber} (${m.matchDate}): ${m.stage} at ${m.venue.name}. Result: ${m.resultText}. Winner: ${m.winner || 'Drawn'}`).join('\n')}
+`;
+
+  fs.writeFileSync(path.join(rootDir, 'llms-full.txt'), llmsFullTxt);
+  console.log('Generated /llms.txt and /llms-full.txt');
+
 
   // Generate Netlify/Cloudflare redirects file for clean canonical paths
   const redirectsContent = `/squad /players 301
@@ -3065,6 +3313,18 @@ function generateSearchIndex() {
 // MASTER EXECUTION PIPELINE
 // ------------------------------------------------------------
 console.log('=== BUILDING DREAD ELEVEN CRICKET CLUB PRODUCTION SUITE (CAPT. AKHIL MISHRA) ===');
+
+  // Minify CSS and JS before generating HTML
+  const cssSrc = fs.readFileSync(path.join(rootDir, 'src/css/styles.css'), 'utf8');
+  const cssMin = minifyCss(cssSrc);
+  fs.writeFileSync(path.join(rootDir, 'src/css/styles.min.css'), cssMin);
+  console.log(`Minified styles.css: ${cssSrc.length} bytes -> ${cssMin.length} bytes`);
+
+  const jsSrc = fs.readFileSync(path.join(rootDir, 'src/js/app.js'), 'utf8');
+  const jsMin = minifyJs(jsSrc);
+  fs.writeFileSync(path.join(rootDir, 'src/js/app.min.js'), jsMin);
+  console.log(`Minified app.js: ${jsSrc.length} bytes -> ${jsMin.length} bytes`);
+
 generateHomePage();
 generateSquadPages();
 generateMatchPages();

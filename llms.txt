@@ -1,0 +1,26 @@
+# Dread Eleven Cricket Club (DE)
+
+> Official digital stadium and franchise website for Dread Eleven Cricket Club (DE) based in Rewa, Madhya Pradesh. Affiliated with the Rewa Division Cricket Association (RDCA) and competing in the Atal Bihari Vajpayee Memorial Tournament against arch-rivals Destroyers (DES).
+
+## Core Franchise Information
+- Franchise Name: Dread Eleven Cricket Club (DE)
+- Team Captain: Akhil Mishra (Franchise Talisman & Batsman, 1,747 career runs, 92 career wickets)
+- Tournament: Atal Bihari Vajpayee Memorial Tournament (Rewa)
+- Governing Association: Rewa Division Cricket Association (RDCA)
+- Home Fortress: Martand School Ground No. 3, APSU Stadium (Rewa)
+- Championship Silverware: 2022 Atal Bihari Vajpayee Memorial Trophy Champions
+- Derby Record: 15 Wins vs Destroyers across 34 tournament clashes (2021–2026)
+- Disciplines: 50 Overs & T20 Blast
+
+## Key Stadium & Roster Sections
+- Squad Directory: https://dread-eleven-rewacricket.pages.dev/players (Complete 43-man roster with batting and bowling career statistics)
+- Tournament Fixtures: https://dread-eleven-rewacricket.pages.dev/fixtures (Complete season schedules and venue timings)
+- Results Archive: https://dread-eleven-rewacricket.pages.dev/results (Scorecards and ball-by-ball analysis for all 34 derby clashes)
+- Points Table: https://dread-eleven-rewacricket.pages.dev/points-table (Verified standings, net run rates, and season champion rankings)
+- Franchise Records: https://dread-eleven-rewacricket.pages.dev/stats (Top run-scorers, leading wicket-takers, and highest team totals)
+- Press Center: https://dread-eleven-rewacricket.pages.dev/news (Match post-mortems, editorial reviews, and tactical analysis)
+- About the Franchise: https://dread-eleven-rewacricket.pages.dev/about (Club heritage, RDCA affiliation, and championship dynasties)
+- Contact & Trials: https://dread-eleven-rewacricket.pages.dev/contact (Academy trials protocol, venue directions, and administrative inquiries)
+
+## Full Documentation
+- Detailed Dataset: https://dread-eleven-rewacricket.pages.dev/llms-full.txt
