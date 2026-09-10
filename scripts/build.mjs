@@ -376,8 +376,8 @@ ${renderHeader('home')}
     <div class="hero-command-col">
       <!-- High-Contrast Over-title Tag -->
       <div class="broadcast-overtitle">
-        <span class="broadcast-pill-badge">ATAL BIHARI VAJPAYEE MEMORIAL TOURNAMENT</span>
-        <span class="broadcast-match-round">RDCA DERBY • MATCH 24 ARCHIVE</span>
+        <span class="broadcast-pill-badge">3X TOURNAMENT CHAMPIONS (2021, 2022, 2023)</span>
+        <span class="broadcast-match-round">RDCA DERBY • 2026 FINALE ARCHIVE</span>
       </div>
 
       <!-- Giant Stacked High-Contrast Condensed Typography -->
@@ -395,11 +395,11 @@ ${renderHeader('home')}
         <div class="slate-header-row">
           <div class="slate-status-group">
             <span class="pulse-beacon gold"></span>
-            <span class="slate-status-text">OFFICIAL RDCA DERBY ARCHIVE</span>
+            <span class="slate-status-text">2026 TOURNAMENT GRAND FINALE</span>
           </div>
           <div class="slate-ground-spec">
             <span>APSU STADIUM</span>
-            <span class="slate-deck-badge">ODI DERBY • COMPLETED</span>
+            <span class="slate-deck-badge">FINAL • COMPLETED</span>
           </div>
         </div>
 
@@ -412,7 +412,7 @@ ${renderHeader('home')}
             <div class="team-form-strip">
               <span class="form-pill win">W</span>
               <span class="form-pill loss">L</span>
-              <span class="form-pill loss">L</span>
+              <span class="form-pill win">W</span>
               <span class="form-pill loss">L</span>
               <span class="form-pill loss">L</span>
             </div>
@@ -431,7 +431,7 @@ ${renderHeader('home')}
             <div class="team-form-strip">
               <span class="form-pill loss">L</span>
               <span class="form-pill win">W</span>
-              <span class="form-pill win">W</span>
+              <span class="form-pill loss">L</span>
               <span class="form-pill win">W</span>
               <span class="form-pill win">W</span>
             </div>
@@ -440,10 +440,10 @@ ${renderHeader('home')}
 
         <div class="slate-footer-row">
           <div class="slate-timing-spec">
-            <span class="timing-date">20 SEP 2024</span>
-            <span class="timing-time">50-OVER DERBY • RESULT: DES WON BY 8 RUNS</span>
+            <span class="timing-date">20 SEP 2026</span>
+            <span class="timing-time">CHAMPIONSHIP FINAL • RESULT: DES WON BY 12 RUNS</span>
           </div>
-          <a href="/matches/destroyers-vs-dread-eleven-2024-09-20" class="btn-broadcast-cta">
+          <a href="/matches/destroyers-vs-dread-eleven-2026-09-20" class="btn-broadcast-cta">
             <span>ENTER MATCH CENTRE &rarr;</span>
           </a>
         </div>
@@ -1225,9 +1225,29 @@ ${renderFooter()}
         return '<p style="color:var(--c-gray-400); padding:1rem;">Innings details scheduled for match day.</p>';
       }
 
-      const batRows = inn.batting.map((b) => `
+      const isDe = inn.teamShort === 'DE' || (inn.teamName && inn.teamName.includes('Dread'));
+      const batCaptainName = isDe
+        ? (m.captains?.DE?.playerName || (inn.captain?.playerName || 'Akhil Mishra'))
+        : (m.captains?.DES?.playerName || (inn.captain?.playerName || 'Pranav Dwivedi'));
+      const bowlCaptainName = isDe
+        ? (m.captains?.DES?.playerName || 'Pranav Dwivedi')
+        : (m.captains?.DE?.playerName || 'Akhil Mishra');
+
+      const isMatchCapt = (name, target) => {
+        if (!name || !target) return false;
+        const n = name.toLowerCase().replace(/\s*\(c\)$/i, '').trim();
+        const t = target.toLowerCase().replace(/\s*\(c\)$/i, '').trim();
+        return n === t;
+      };
+
+      const batRows = inn.batting.map((b) => {
+        const isCapt = isMatchCapt(b.playerName, batCaptainName);
+        const nameCell = isCapt
+          ? `${esc(b.playerName.replace(/\s*\(c\)$/i, ''))} <span style="color:var(--c-volt); font-size:0.75rem; font-family:var(--f-mono); font-weight:800;">(c)</span>`
+          : esc(b.playerName);
+        return `
         <tr>
-          <td style="font-weight:800; color:var(--c-white); font-family:var(--f-athletic); font-size:1.25rem;">${esc(b.playerName)}</td>
+          <td style="font-weight:800; color:var(--c-white); font-family:var(--f-athletic); font-size:1.25rem;">${nameCell}</td>
           <td style="color:var(--c-gray-400); font-size:0.8125rem;">${esc(b.dismissal)}</td>
           <td class="tabular font-bold" style="text-align:right; color:var(--c-white); font-size:1.1rem;">${esc(b.runs)}</td>
           <td class="tabular" style="text-align:right;">${esc(b.balls)}</td>
@@ -1235,18 +1255,25 @@ ${renderFooter()}
           <td class="tabular" style="text-align:right;">${esc(b.sixes)}</td>
           <td class="tabular" style="text-align:right; color:var(--c-volt); font-weight:700;">${esc(b.strikeRate)}</td>
         </tr>
-      `).join('');
+      `;
+      }).join('');
 
-      const bowlRows = (inn.bowling || []).map((bo) => `
+      const bowlRows = (inn.bowling || []).map((bo) => {
+        const isCapt = isMatchCapt(bo.playerName, bowlCaptainName);
+        const nameCell = isCapt
+          ? `${esc(bo.playerName.replace(/\s*\(c\)$/i, ''))} <span style="color:var(--c-volt); font-size:0.75rem; font-family:var(--f-mono); font-weight:800;">(c)</span>`
+          : esc(bo.playerName);
+        return `
         <tr>
-          <td style="font-weight:800; color:var(--c-white); font-family:var(--f-athletic); font-size:1.25rem;">${esc(bo.playerName)}</td>
+          <td style="font-weight:800; color:var(--c-white); font-family:var(--f-athletic); font-size:1.25rem;">${nameCell}</td>
           <td class="tabular" style="text-align:right;">${esc(bo.overs)}</td>
           <td class="tabular" style="text-align:right;">${esc(bo.maidens)}</td>
           <td class="tabular" style="text-align:right;">${esc(bo.runs)}</td>
           <td class="tabular font-bold" style="text-align:right; color:var(--c-emerald); font-size:1.1rem;">${esc(bo.wickets)}</td>
           <td class="tabular" style="text-align:right; color:var(--c-volt); font-weight:700;">${esc(bo.economy)}</td>
         </tr>
-      `).join('');
+      `;
+      }).join('');
 
       return `
         <div style="margin-bottom:2.5rem;">
@@ -1289,7 +1316,11 @@ ${renderFooter()}
             <div style="padding:0.75rem 1.25rem; margin-top:0.5rem; margin-bottom:1.5rem; background:rgba(255,255,255,0.03); border:1px solid var(--b-subtle); border-radius:var(--radius-sm); font-size:0.875rem;">
               <strong style="font-family:var(--f-mono); color:var(--c-volt); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em;">Did Not Bat:</strong>
               <span style="margin-left:0.6rem; color:var(--c-gray-300);">
-                ${inn.dnb.map(d => `<span style="display:inline-block; margin-right:0.85rem; font-weight:600;">${esc(typeof d === 'string' ? d : d.playerName)}</span>`).join('')}
+                ${inn.dnb.map(d => {
+                  const rawName = typeof d === 'string' ? d : d.playerName;
+                  const isCapt = isMatchCapt(rawName, batCaptainName);
+                  return `<span style="display:inline-block; margin-right:0.85rem; font-weight:600;">${esc(rawName.replace(/\s*\(c\)$/i, ''))}${isCapt ? ' <span style="color:var(--c-volt); font-size:0.75rem; font-family:var(--f-mono); font-weight:800;">(c)</span>' : ''}</span>`;
+                }).join('')}
               </span>
             </div>
           ` : ''}
@@ -1297,7 +1328,10 @@ ${renderFooter()}
           ${inn.fallOfWickets && inn.fallOfWickets.length ? `
             <div style="font-family:var(--f-mono); font-size:0.8125rem; color:var(--c-gray-400); margin-bottom:1.75rem; line-height:1.6;">
               <strong style="color:var(--c-volt); font-size:0.75rem; text-transform:uppercase;">Fall of Wickets:</strong>
-              <span style="margin-left:0.5rem;">${inn.fallOfWickets.map(f => `${f.wicket}-${f.score} (${esc(f.playerName)}, ${f.over} ov)`).join(', ')}</span>
+              <span style="margin-left:0.5rem;">${inn.fallOfWickets.map(f => {
+                const isFowCapt = isMatchCapt(f.playerName, batCaptainName);
+                return `${f.wicket}-${f.score} (${esc(f.playerName.replace(/\s*\(c\)$/i, ''))}${isFowCapt ? ' (c)' : ''}, ${f.over} ov)`;
+              }).join(', ')}</span>
             </div>
           ` : ''}
 
@@ -1355,8 +1389,14 @@ ${renderHeader('results')}
         Dread Eleven vs Destroyers
       </h1>
 
-      <div style="font-size:0.9rem; color:var(--c-gray-400); margin-bottom:1.5rem;">
+      <div style="font-size:0.9rem; color:var(--c-gray-400); margin-bottom:1.25rem;">
         <span>${formatDate(m.matchDate)}</span> • <span>${esc(m.time)}</span> • <span>${esc(m.venue.name)}, ${esc(m.venue.city)}</span>
+      </div>
+
+      <!-- Match Captains Banner -->
+      <div style="display:flex; gap:1.5rem; flex-wrap:wrap; font-family:var(--f-mono); font-size:0.8125rem; color:var(--c-gray-300); margin-bottom:1.25rem; background:var(--c-card-bg); padding:0.65rem 1rem; border:1px solid var(--b-subtle); border-radius:var(--radius-sm);">
+        <span><strong style="color:var(--c-volt); text-transform:uppercase;">DE Captain:</strong> ${esc(m.captains?.DE?.playerName || 'Akhil Mishra')} (c)</span>
+        <span><strong style="color:var(--c-orange); text-transform:uppercase;">DES Captain:</strong> ${esc(m.captains?.DES?.playerName || 'Pranav Dwivedi')} (c)</span>
       </div>
 
       ${m.toss ? `
@@ -1442,6 +1482,87 @@ ${renderHeader('table')}
         <p style="color:var(--c-gray-400); font-size:1rem; max-width:64ch; margin-top:0.4rem;">
           Certified standings and qualification records across all six editions of the Atal Bihari Vajpayee Memorial Tournament in Rewa.
         </p>
+      </div>
+    </div>
+
+    <!-- Championship Roll of Honour -->
+    <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm); margin-bottom:3rem;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <span class="badge-brutalist badge-gold" style="margin-bottom:0.5rem; display:inline-block;">TOURNAMENT ROLL OF HONOUR</span>
+          <h2 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase;">
+            Atal Bihari Vajpayee Memorial Cup Champions (2021–2026)
+          </h2>
+        </div>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <span class="badge-brutalist badge-volt">DE TITLES: 3</span>
+          <span class="badge-brutalist" style="background:rgba(255,107,0,0.15); color:var(--c-orange); border:1px solid var(--c-orange);">DES TITLES: 3</span>
+        </div>
+      </div>
+
+      <div class="scorecard-table-wrap">
+        <table class="cricket-table">
+          <thead>
+            <tr>
+              <th>Edition / Year</th>
+              <th>Format</th>
+              <th>Champion</th>
+              <th>Winning Captain</th>
+              <th style="text-align:right;">Series Margin</th>
+              <th>Runner-Up</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-white);">2026 Edition</td>
+              <td style="color:var(--c-gray-400);">2 T20s + 3 ODIs</td>
+              <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-orange);">Destroyers CC</td>
+              <td style="color:var(--c-white); font-weight:600;">Pranav Dwivedi <span style="color:var(--c-orange); font-size:0.75rem;">(c)</span></td>
+              <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">3–2 (5 matches)</td>
+              <td style="color:var(--c-gray-300);">Dread Eleven</td>
+            </tr>
+            <tr>
+              <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-white);">2025 Edition</td>
+              <td style="color:var(--c-gray-400);">2 T20s + 3 ODIs</td>
+              <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-orange);">Destroyers CC</td>
+              <td style="color:var(--c-white); font-weight:600;">Pranav Dwivedi <span style="color:var(--c-orange); font-size:0.75rem;">(c)</span></td>
+              <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">5–0 Clean Sweep</td>
+              <td style="color:var(--c-gray-300);">Dread Eleven</td>
+            </tr>
+            <tr>
+              <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-white);">2024 Edition</td>
+              <td style="color:var(--c-gray-400);">2 T20s + 3 ODIs</td>
+              <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-orange);">Destroyers CC</td>
+              <td style="color:var(--c-white); font-weight:600;">Pranav Dwivedi <span style="color:var(--c-orange); font-size:0.75rem;">(c)</span></td>
+              <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">4–1 (5 matches)</td>
+              <td style="color:var(--c-gray-300);">Dread Eleven</td>
+            </tr>
+            <tr>
+              <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-volt);">2023 Edition</td>
+              <td style="color:var(--c-gray-400);">2 T20s + 3 ODIs</td>
+              <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-volt);">Dread Eleven</td>
+              <td style="color:var(--c-white); font-weight:600;">Akhil Mishra <span style="color:var(--c-volt); font-size:0.75rem;">(c)</span></td>
+              <td class="tabular font-bold" style="text-align:right; color:var(--c-emerald);">3–2 (5 matches)</td>
+              <td style="color:var(--c-gray-300);">Destroyers CC</td>
+            </tr>
+            <tr>
+              <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-volt);">2022 Edition</td>
+              <td style="color:var(--c-gray-400);">ODI &amp; T20 Format</td>
+              <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-volt);">Dread Eleven</td>
+              <td style="color:var(--c-white); font-weight:600;">Akhil Mishra <span style="color:var(--c-volt); font-size:0.75rem;">(c)</span></td>
+              <td class="tabular font-bold" style="text-align:right; color:var(--c-emerald);">4–3 (7 matches)</td>
+              <td style="color:var(--c-gray-300);">Destroyers CC</td>
+            </tr>
+            <tr>
+              <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-volt);">2021 Inaugural</td>
+              <td style="color:var(--c-gray-400);">T20 Format</td>
+              <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-volt);">Dread Eleven</td>
+              <td style="color:var(--c-white); font-weight:600;">Akhil Mishra <span style="color:var(--c-volt); font-size:0.75rem;">(c)</span></td>
+              <td class="tabular font-bold" style="text-align:right; color:var(--c-emerald);">5–2 (7 matches)</td>
+              <td style="color:var(--c-gray-300);">Destroyers CC</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
