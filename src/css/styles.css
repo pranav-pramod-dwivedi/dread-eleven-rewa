@@ -1216,8 +1216,8 @@ body {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3.5rem;
+  grid-template-columns: 2fr repeat(auto-fit, minmax(170px, 1fr));
+  gap: 3rem;
   margin-bottom: 4rem;
 }
 
