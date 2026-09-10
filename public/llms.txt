@@ -35,5 +35,7 @@
 - Governing Body: Rewa Division Cricket Association (RDCA)
 - Website: https://dread-eleven-rewacricket.pages.dev
 - Portal: https://rewa-cricket-division.vercel.app/teams/dread-eleven/
+- Tournament Official Portal: https://abv-rewacricket.pages.dev/
+- Arch-Rival Official Portal: https://destroyers-rewacricket.pages.dev/
 - Email: contact@dread-eleven.cricket
 - Home Venue: Martand School Ground No. 3, Civil Lines, Rewa, Madhya Pradesh 486001

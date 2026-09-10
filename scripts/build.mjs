@@ -356,7 +356,7 @@ function renderFooter() {
             <h4>Official Network</h4>
             <ul class="footer-links">
               <li><a href="https://rewa-cricket-division.vercel.app" target="_blank" rel="noopener" style="color:var(--c-volt); font-weight:700;">Rewa Cricket Division (RDCA) ↗</a></li>
-              <li><a href="https://rewa-cricket-division.vercel.app/tournaments/atal-bihari-vajpayee-memorial-tournament/" target="_blank" rel="noopener" style="color:var(--c-volt);">ABV Memorial Tournament ↗</a></li>
+              <li><a href="https://abv-rewacricket.pages.dev/" target="_blank" rel="noopener" style="color:var(--c-volt);">ABV Memorial Tournament Official Portal ↗</a></li>
               <li><a href="https://abv-rewacricket.pages.dev" target="_blank" rel="noopener" style="color:var(--c-volt); font-weight:700;">ABV Tournament Official Portal ↗</a></li>
               <li><a href="https://rewa-cricket-division.vercel.app/teams/dread-eleven/" target="_blank" rel="noopener">DE on RDCA Registry ↗</a></li>
               <li><a href="https://destroyers-rewacricket.pages.dev" target="_blank" rel="noopener" style="color:var(--c-orange); font-weight:700;">Destroyers CC (Arch-Rival) ↗</a></li>
@@ -483,6 +483,7 @@ function generateHomePage() {
     },
     sameAs: [
       'https://rewa-cricket-division.vercel.app/teams/dread-eleven/',
+      'https://abv-rewacricket.pages.dev/',
       'https://rewa-cricket-division.vercel.app/tournaments/atal-bihari-vajpayee-memorial-tournament/',
       'https://destroyers-rewacricket.pages.dev/',
       'https://abv-rewacricket.pages.dev/'
@@ -3069,7 +3070,8 @@ function generateAboutAndContactPages() {
       },
       sameAs: [
         'https://rewa-cricket-division.vercel.app/teams/dread-eleven/',
-        'https://rewa-cricket-division.vercel.app/tournaments/atal-bihari-vajpayee-memorial-tournament/',
+        'https://abv-rewacricket.pages.dev/',
+      'https://rewa-cricket-division.vercel.app/tournaments/atal-bihari-vajpayee-memorial-tournament/',
         'https://destroyers-rewacricket.pages.dev/'
       ]
     }
@@ -3842,6 +3844,8 @@ LLM: ${BASE_URL}/llms.txt
 - Governing Body: Rewa Division Cricket Association (RDCA)
 - Website: ${BASE_URL}
 - Portal: https://rewa-cricket-division.vercel.app/teams/dread-eleven/
+- Tournament Official Portal: https://abv-rewacricket.pages.dev/
+- Arch-Rival Official Portal: https://destroyers-rewacricket.pages.dev/
 - Email: contact@dread-eleven.cricket
 - Home Venue: Martand School Ground No. 3, Civil Lines, Rewa, Madhya Pradesh 486001
 `;
