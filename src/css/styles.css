@@ -2068,6 +2068,156 @@ body {
   font-size: 0.95rem;
 }
 
+/* Command Palette Search Suggestions & Rich Full-Text Results */
+.cmd-suggestions-panel {
+  padding: 1rem 0.5rem;
+}
+.cmd-suggestions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+  padding: 0 0.5rem;
+}
+.cmd-suggestions-badge {
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--c-volt);
+  text-transform: uppercase;
+}
+.cmd-suggestions-hint {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  color: var(--c-gray-500);
+}
+.cmd-suggestion-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+.cmd-chip {
+  background: var(--c-card-bg);
+  border: 1px solid var(--b-medium);
+  border-radius: 999px;
+  color: var(--c-gray-200);
+  padding: 0.4rem 0.85rem;
+  font-family: var(--f-body);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.15s ease;
+}
+.cmd-chip:hover {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: var(--c-volt);
+  color: var(--c-white);
+  transform: translateY(-1px);
+}
+.cmd-suggestions-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  padding: 1rem 0.5rem 0;
+  border-top: 1px solid var(--b-subtle);
+}
+.cmd-cat-title {
+  font-family: var(--f-mono);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--c-gray-400);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+.cmd-cat-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-xs);
+  color: var(--c-gray-300);
+  text-decoration: none;
+  font-size: 0.825rem;
+  transition: all 0.15s ease;
+}
+.cmd-cat-link:hover {
+  background: var(--c-card-hover);
+  color: var(--c-volt);
+}
+.cmd-tag-link {
+  display: block;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-xs);
+  color: var(--c-gray-400);
+  font-size: 0.825rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.cmd-tag-link:hover {
+  background: var(--c-card-hover);
+  color: var(--c-white);
+}
+.squad-suggest-chip {
+  background: var(--c-dark-surface);
+  border: 1px solid var(--b-subtle);
+  border-radius: 999px;
+  color: var(--c-gray-300);
+  padding: 0.35rem 0.8rem;
+  font-family: var(--f-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.squad-suggest-chip:hover {
+  background: rgba(34, 197, 94, 0.15);
+  border-color: var(--c-volt);
+  color: var(--c-white);
+  transform: translateY(-1px);
+}
+.cmd-badge {
+  display: inline-block;
+  font-family: var(--f-mono);
+  font-size: 0.625rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+  letter-spacing: 0.05em;
+}
+.cmd-badge.player { background: rgba(34,197,94,0.15); color: var(--c-volt); border: 1px solid rgba(34,197,94,0.3); }
+.cmd-badge.match { background: rgba(249,115,22,0.15); color: var(--c-orange); border: 1px solid rgba(249,115,22,0.3); }
+.cmd-badge.news { background: rgba(255,255,255,0.12); color: var(--c-gray-200); border: 1px solid rgba(255,255,255,0.25); }
+.cmd-badge.venue { background: rgba(168,85,247,0.15); color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
+.cmd-badge.record { background: rgba(234,179,8,0.15); color: var(--c-gold); border: 1px solid rgba(234,179,8,0.3); }
+.cmd-badge.page { background: rgba(255,255,255,0.1); color: var(--c-gray-300); border: 1px solid var(--b-subtle); }
+.search-highlight {
+  background: rgba(34,197,94,0.3);
+  color: #fff;
+  padding: 0 2px;
+  border-radius: 2px;
+  font-weight: 700;
+}
+.cmd-count-bar {
+  padding: 0.5rem 1rem;
+  font-family: var(--f-mono);
+  font-size: 0.75rem;
+  color: var(--c-gray-400);
+  border-bottom: 1px solid var(--b-subtle);
+  display: flex;
+  justify-content: space-between;
+}
+
+
 /* League Control Room Points Table */
 .league-control-room-hero {
   background: var(--c-card-bg);

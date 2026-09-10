@@ -160,22 +160,38 @@
       </div>
     </div>
 
-    <!-- Role Filter Toolbar -->
-    <div class="filters-toolbar">
-      <div class="filter-row">
-        <span class="filter-label">Filter Role:</span>
-        <button type="button" class="filter-pill-btn role-filter-pill active" data-role="all">All Squad (43)</button>
-        <button type="button" class="filter-pill-btn role-filter-pill" data-role="captain">Captains &amp; All-Rounders</button>
-        <button type="button" class="filter-pill-btn role-filter-pill" data-role="bat">Batters</button>
-        <button type="button" class="filter-pill-btn role-filter-pill" data-role="bowl">Bowlers</button>
-        <button type="button" class="filter-pill-btn role-filter-pill" data-role="wicket">Wicketkeepers</button>
+    <!-- Interactive Squad Search & Filter Command Bar -->
+    <div class="squad-search-toolbar" style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:1.25rem; margin-bottom:2rem;">
+      <div style="display:flex; gap:0.75rem; align-items:center; margin-bottom:1rem;">
+        <div style="flex:1; position:relative;">
+          <input type="text" id="squad-search-input" placeholder="Search 43 players by name, jersey number, role, batting style, or bowling style..." style="width:100%; background:var(--c-dark-surface); border:1px solid var(--b-subtle); color:var(--c-white); padding:0.65rem 1rem; font-family:var(--f-body); font-size:0.875rem; outline:none; border-radius:var(--radius-xs);" autocomplete="off" />
+        </div>
+        <button type="button" id="squad-search-clear" class="btn-athletic btn-athletic-outline" style="padding:0.6rem 1rem; font-size:0.75rem;">Clear</button>
+      </div>
+      <!-- Search Suggestions Chips -->
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:0.5rem; margin-bottom:0.75rem;">
+        <span style="font-family:var(--f-mono); font-size:0.7rem; color:var(--c-volt); font-weight:800; text-transform:uppercase;">Search Suggestions:</span>
+        <button type="button" class="squad-suggest-chip" data-search="Akhil Mishra">⚡ Capt. Akhil Mishra</button>
+        <button type="button" class="squad-suggest-chip" data-search="Kuldeep Sen">💨 Kuldeep Sen</button>
+        <button type="button" class="squad-suggest-chip" data-search="Venkatesh Iyer">🏏 Venkatesh Iyer</button>
+        <button type="button" class="squad-suggest-chip" data-search="Rajat Patidar">⭐ Rajat Patidar</button>
+        <button type="button" class="squad-suggest-chip" data-search="Kumar Kartikeya">🌀 Kumar Kartikeya</button>
+        <button type="button" class="squad-suggest-chip" data-search="Captain">Captains</button>
+        <button type="button" class="squad-suggest-chip" data-search="All-Rounder">All-Rounders</button>
+        <button type="button" class="squad-suggest-chip" data-search="Bowler">Bowlers</button>
+        <button type="button" class="squad-suggest-chip" data-search="Batter">Batters</button>
+        <button type="button" class="squad-suggest-chip" data-search="Wicketkeeper">Wicketkeepers</button>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">
+        <span id="squad-count-display">Showing all <strong>43</strong> players</span>
+        <span>Click player card to inspect telemetry</span>
       </div>
     </div>
 
     <!-- Players Cards Grid -->
     <div class="players-cards-grid" id="players-grid">
       
-        <a href="/players/akhil-mishra" class="jersey-player-card" data-role="Top-Order All-Rounder &amp; Captain">
+        <a href="/players/akhil-mishra" class="jersey-player-card" data-role="Top-Order All-Rounder &amp; Captain" data-name="Akhil Mishra" data-number="45" data-style="Right-hand bat Right-arm medium" data-search="akhil mishra 45 top-order all-rounder &amp; captain right-hand bat right-arm medium">
           <div class="jersey-big-number">45</div>
           <div class="jersey-player-role">Top-Order All-Rounder &amp; Captain</div>
           <h2 class="jersey-player-name">#45 Akhil Mishra</h2>
@@ -187,7 +203,7 @@
           </div>
         </a>
       
-        <a href="/players/ritesh-shakya" class="jersey-player-card" data-role="Player">
+        <a href="/players/ritesh-shakya" class="jersey-player-card" data-role="Player" data-name="Ritesh Shakya" data-number="12" data-style="Right-hand bat Right-arm medium" data-search="ritesh shakya 12 player right-hand bat right-arm medium">
           <div class="jersey-big-number">12</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#12 Ritesh Shakya</h2>
@@ -199,7 +215,7 @@
           </div>
         </a>
       
-        <a href="/players/kuldeep-sen" class="jersey-player-card" data-role="Express Fast Bowler">
+        <a href="/players/kuldeep-sen" class="jersey-player-card" data-role="Express Fast Bowler" data-name="Kuldeep Sen" data-number="7" data-style="Right-hand bat Right-arm express fast" data-search="kuldeep sen 7 express fast bowler right-hand bat right-arm express fast">
           <div class="jersey-big-number">7</div>
           <div class="jersey-player-role">Express Fast Bowler</div>
           <h2 class="jersey-player-name">#7 Kuldeep Sen</h2>
@@ -211,7 +227,7 @@
           </div>
         </a>
       
-        <a href="/players/anubhav-agarwal" class="jersey-player-card" data-role="Player">
+        <a href="/players/anubhav-agarwal" class="jersey-player-card" data-role="Player" data-name="Anubhav Agarwal" data-number="13" data-style="Right-hand bat Right-arm medium" data-search="anubhav agarwal 13 player right-hand bat right-arm medium">
           <div class="jersey-big-number">13</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#13 Anubhav Agarwal</h2>
@@ -223,7 +239,7 @@
           </div>
         </a>
       
-        <a href="/players/yash-dubey" class="jersey-player-card" data-role="Wicketkeeper">
+        <a href="/players/yash-dubey" class="jersey-player-card" data-role="Wicketkeeper" data-name="Yash Dubey" data-number="18" data-style="Right-hand bat Right-arm medium" data-search="yash dubey 18 wicketkeeper right-hand bat right-arm medium">
           <div class="jersey-big-number">18</div>
           <div class="jersey-player-role">Wicketkeeper</div>
           <h2 class="jersey-player-name">#18 Yash Dubey</h2>
@@ -235,7 +251,7 @@
           </div>
         </a>
       
-        <a href="/players/saransh-jain" class="jersey-player-card" data-role="Captain">
+        <a href="/players/saransh-jain" class="jersey-player-card" data-role="Captain" data-name="Saransh Jain" data-number="24" data-style="Left-hand bat Right-arm medium" data-search="saransh jain 24 captain left-hand bat right-arm medium">
           <div class="jersey-big-number">24</div>
           <div class="jersey-player-role">Captain</div>
           <h2 class="jersey-player-name">#24 Saransh Jain</h2>
@@ -247,7 +263,7 @@
           </div>
         </a>
       
-        <a href="/players/prithviraj-singh-tomar" class="jersey-player-card" data-role="Captain">
+        <a href="/players/prithviraj-singh-tomar" class="jersey-player-card" data-role="Captain" data-name="Prithviraj Singh Tomar" data-number="22" data-style="Right-hand bat Right-arm medium" data-search="prithviraj singh tomar 22 captain right-hand bat right-arm medium">
           <div class="jersey-big-number">22</div>
           <div class="jersey-player-role">Captain</div>
           <h2 class="jersey-player-name">#22 Prithviraj Singh Tomar</h2>
@@ -259,7 +275,7 @@
           </div>
         </a>
       
-        <a href="/players/anant-verma" class="jersey-player-card" data-role="Wicketkeeper">
+        <a href="/players/anant-verma" class="jersey-player-card" data-role="Wicketkeeper" data-name="Anant Verma" data-number="5" data-style="Right-hand bat Right-arm medium" data-search="anant verma 5 wicketkeeper right-hand bat right-arm medium">
           <div class="jersey-big-number">5</div>
           <div class="jersey-player-role">Wicketkeeper</div>
           <h2 class="jersey-player-name">#5 Anant Verma</h2>
@@ -271,7 +287,7 @@
           </div>
         </a>
       
-        <a href="/players/naveen-singh-chouhan" class="jersey-player-card" data-role="Player">
+        <a href="/players/naveen-singh-chouhan" class="jersey-player-card" data-role="Player" data-name="Naveen Singh Chouhan" data-number="28" data-style="Right-hand bat Right-arm medium" data-search="naveen singh chouhan 28 player right-hand bat right-arm medium">
           <div class="jersey-big-number">28</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#28 Naveen Singh Chouhan</h2>
@@ -283,7 +299,7 @@
           </div>
         </a>
       
-        <a href="/players/avesh-khan" class="jersey-player-card" data-role="Player">
+        <a href="/players/avesh-khan" class="jersey-player-card" data-role="Player" data-name="Avesh Khan" data-number="99" data-style="Right-hand bat Right-arm express fast" data-search="avesh khan 99 player right-hand bat right-arm express fast">
           <div class="jersey-big-number">99</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#99 Avesh Khan</h2>
@@ -295,7 +311,7 @@
           </div>
         </a>
       
-        <a href="/players/venkatesh-iyer" class="jersey-player-card" data-role="Captain">
+        <a href="/players/venkatesh-iyer" class="jersey-player-card" data-role="Captain" data-name="Venkatesh Iyer" data-number="34" data-style="Right-hand bat Right-arm medium" data-search="venkatesh iyer 34 captain right-hand bat right-arm medium">
           <div class="jersey-big-number">34</div>
           <div class="jersey-player-role">Captain</div>
           <h2 class="jersey-player-name">#34 Venkatesh Iyer</h2>
@@ -307,7 +323,7 @@
           </div>
         </a>
       
-        <a href="/players/subhranshu-senapati" class="jersey-player-card" data-role="Player">
+        <a href="/players/subhranshu-senapati" class="jersey-player-card" data-role="Player" data-name="Subhranshu Senapati" data-number="8" data-style="Right-hand bat Right-arm medium" data-search="subhranshu senapati 8 player right-hand bat right-arm medium">
           <div class="jersey-big-number">8</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#8 Subhranshu Senapati</h2>
@@ -319,7 +335,7 @@
           </div>
         </a>
       
-        <a href="/players/ajay-rohera" class="jersey-player-card" data-role="Wicketkeeper">
+        <a href="/players/ajay-rohera" class="jersey-player-card" data-role="Wicketkeeper" data-name="Ajay Rohera" data-number="40" data-style="Right-hand bat Right-arm medium" data-search="ajay rohera 40 wicketkeeper right-hand bat right-arm medium">
           <div class="jersey-big-number">40</div>
           <div class="jersey-player-role">Wicketkeeper</div>
           <h2 class="jersey-player-name">#40 Ajay Rohera</h2>
@@ -331,7 +347,7 @@
           </div>
         </a>
       
-        <a href="/players/radhakrishna-dwivedi" class="jersey-player-card" data-role="Player">
+        <a href="/players/radhakrishna-dwivedi" class="jersey-player-card" data-role="Player" data-name="Radhakrishna Dwivedi" data-number="43" data-style="Right-hand bat Right-arm medium" data-search="radhakrishna dwivedi 43 player right-hand bat right-arm medium">
           <div class="jersey-big-number">43</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#43 Radhakrishna Dwivedi</h2>
@@ -343,7 +359,7 @@
           </div>
         </a>
       
-        <a href="/players/akshat-raghuwanshi" class="jersey-player-card" data-role="Player">
+        <a href="/players/akshat-raghuwanshi" class="jersey-player-card" data-role="Player" data-name="Akshat Raghuwanshi" data-number="46" data-style="Right-hand bat Right-arm medium" data-search="akshat raghuwanshi 46 player right-hand bat right-arm medium">
           <div class="jersey-big-number">46</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#46 Akshat Raghuwanshi</h2>
@@ -355,7 +371,7 @@
           </div>
         </a>
       
-        <a href="/players/rohit-rajawat" class="jersey-player-card" data-role="Player">
+        <a href="/players/rohit-rajawat" class="jersey-player-card" data-role="Player" data-name="Rohit Rajawat" data-number="14" data-style="Right-hand bat Right-arm medium" data-search="rohit rajawat 14 player right-hand bat right-arm medium">
           <div class="jersey-big-number">14</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#14 Rohit Rajawat</h2>
@@ -367,7 +383,7 @@
           </div>
         </a>
       
-        <a href="/players/himanshu-mantri" class="jersey-player-card" data-role="Wicketkeeper">
+        <a href="/players/himanshu-mantri" class="jersey-player-card" data-role="Wicketkeeper" data-name="Himanshu Mantri" data-number="22" data-style="Right-hand bat Right-arm medium" data-search="himanshu mantri 22 wicketkeeper right-hand bat right-arm medium">
           <div class="jersey-big-number">22</div>
           <div class="jersey-player-role">Wicketkeeper</div>
           <h2 class="jersey-player-name">#22 Himanshu Mantri</h2>
@@ -379,7 +395,7 @@
           </div>
         </a>
       
-        <a href="/players/ramveer-singh-gurjar" class="jersey-player-card" data-role="Player">
+        <a href="/players/ramveer-singh-gurjar" class="jersey-player-card" data-role="Player" data-name="Ramveer Singh Gurjar" data-number="55" data-style="Right-hand bat Right-arm medium" data-search="ramveer singh gurjar 55 player right-hand bat right-arm medium">
           <div class="jersey-big-number">55</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#55 Ramveer Singh Gurjar</h2>
@@ -391,7 +407,7 @@
           </div>
         </a>
       
-        <a href="/players/shubham-sharma" class="jersey-player-card" data-role="Captain">
+        <a href="/players/shubham-sharma" class="jersey-player-card" data-role="Captain" data-name="Shubham Sharma" data-number="58" data-style="Right-hand bat Right-arm medium" data-search="shubham sharma 58 captain right-hand bat right-arm medium">
           <div class="jersey-big-number">58</div>
           <div class="jersey-player-role">Captain</div>
           <h2 class="jersey-player-name">#58 Shubham Sharma</h2>
@@ -403,7 +419,7 @@
           </div>
         </a>
       
-        <a href="/players/mohd-arshad-khan" class="jersey-player-card" data-role="Player">
+        <a href="/players/mohd-arshad-khan" class="jersey-player-card" data-role="Player" data-name="Mohd Arshad Khan" data-number="61" data-style="Right-hand bat Right-arm medium" data-search="mohd arshad khan 61 player right-hand bat right-arm medium">
           <div class="jersey-big-number">61</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#61 Mohd Arshad Khan</h2>
@@ -415,7 +431,7 @@
           </div>
         </a>
       
-        <a href="/players/kumar-kartikeya" class="jersey-player-card" data-role="Lead Spin Bowler">
+        <a href="/players/kumar-kartikeya" class="jersey-player-card" data-role="Lead Spin Bowler" data-name="Kumar Kartikeya" data-number="19" data-style="Left-hand bat Slow left-arm orthodox" data-search="kumar kartikeya 19 lead spin bowler left-hand bat slow left-arm orthodox">
           <div class="jersey-big-number">19</div>
           <div class="jersey-player-role">Lead Spin Bowler</div>
           <h2 class="jersey-player-name">#19 Kumar Kartikeya</h2>
@@ -427,7 +443,7 @@
           </div>
         </a>
       
-        <a href="/players/rajat-patidar" class="jersey-player-card" data-role="Batsman">
+        <a href="/players/rajat-patidar" class="jersey-player-card" data-role="Batsman" data-name="Rajat Patidar" data-number="67" data-style="Right-hand bat Right-arm medium" data-search="rajat patidar 67 batsman right-hand bat right-arm medium">
           <div class="jersey-big-number">67</div>
           <div class="jersey-player-role">Batsman</div>
           <h2 class="jersey-player-name">#67 Rajat Patidar</h2>
@@ -439,7 +455,7 @@
           </div>
         </a>
       
-        <a href="/players/arshad-khan" class="jersey-player-card" data-role="Captain">
+        <a href="/players/arshad-khan" class="jersey-player-card" data-role="Captain" data-name="Arshad Khan" data-number="70" data-style="Right-hand bat Right-arm medium" data-search="arshad khan 70 captain right-hand bat right-arm medium">
           <div class="jersey-big-number">70</div>
           <div class="jersey-player-role">Captain</div>
           <h2 class="jersey-player-name">#70 Arshad Khan</h2>
@@ -451,7 +467,7 @@
           </div>
         </a>
       
-        <a href="/players/saransh-surana" class="jersey-player-card" data-role="Player">
+        <a href="/players/saransh-surana" class="jersey-player-card" data-role="Player" data-name="Saransh Surana" data-number="73" data-style="Right-hand bat Right-arm medium" data-search="saransh surana 73 player right-hand bat right-arm medium">
           <div class="jersey-big-number">73</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#73 Saransh Surana</h2>
@@ -463,7 +479,7 @@
           </div>
         </a>
       
-        <a href="/players/chanchal-rathore" class="jersey-player-card" data-role="Player">
+        <a href="/players/chanchal-rathore" class="jersey-player-card" data-role="Player" data-name="Chanchal Rathore" data-number="76" data-style="Right-hand bat Right-arm medium" data-search="chanchal rathore 76 player right-hand bat right-arm medium">
           <div class="jersey-big-number">76</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#76 Chanchal Rathore</h2>
@@ -475,7 +491,7 @@
           </div>
         </a>
       
-        <a href="/players/mohd-arham-aquil" class="jersey-player-card" data-role="Player">
+        <a href="/players/mohd-arham-aquil" class="jersey-player-card" data-role="Player" data-name="Mohd Arham Aquil" data-number="79" data-style="Right-hand bat Right-arm medium" data-search="mohd arham aquil 79 player right-hand bat right-arm medium">
           <div class="jersey-big-number">79</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#79 Mohd Arham Aquil</h2>
@@ -487,7 +503,7 @@
           </div>
         </a>
       
-        <a href="/players/aryan-deshmukh" class="jersey-player-card" data-role="Player">
+        <a href="/players/aryan-deshmukh" class="jersey-player-card" data-role="Player" data-name="Aryan Deshmukh" data-number="82" data-style="Right-hand bat Right-arm medium" data-search="aryan deshmukh 82 player right-hand bat right-arm medium">
           <div class="jersey-big-number">82</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#82 Aryan Deshmukh</h2>
@@ -499,7 +515,7 @@
           </div>
         </a>
       
-        <a href="/players/prabhanshu-shukla" class="jersey-player-card" data-role="Player">
+        <a href="/players/prabhanshu-shukla" class="jersey-player-card" data-role="Player" data-name="Prabhanshu Shukla" data-number="4" data-style="Right-hand bat Right-arm medium" data-search="prabhanshu shukla 4 player right-hand bat right-arm medium">
           <div class="jersey-big-number">4</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#4 Prabhanshu Shukla</h2>
@@ -511,7 +527,7 @@
           </div>
         </a>
       
-        <a href="/players/rahul-batham" class="jersey-player-card" data-role="Captain">
+        <a href="/players/rahul-batham" class="jersey-player-card" data-role="Captain" data-name="Rahul Batham" data-number="88" data-style="Right-hand bat Right-arm medium" data-search="rahul batham 88 captain right-hand bat right-arm medium">
           <div class="jersey-big-number">88</div>
           <div class="jersey-player-role">Captain</div>
           <h2 class="jersey-player-name">#88 Rahul Batham</h2>
@@ -523,7 +539,7 @@
           </div>
         </a>
       
-        <a href="/players/aditya-shrivastava" class="jersey-player-card" data-role="Player">
+        <a href="/players/aditya-shrivastava" class="jersey-player-card" data-role="Player" data-name="Aditya Shrivastava" data-number="2" data-style="Right-hand bat Right-arm medium" data-search="aditya shrivastava 2 player right-hand bat right-arm medium">
           <div class="jersey-big-number">2</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#2 Aditya Shrivastava</h2>
@@ -535,7 +551,7 @@
           </div>
         </a>
       
-        <a href="/players/jaydev-singh" class="jersey-player-card" data-role="Player">
+        <a href="/players/jaydev-singh" class="jersey-player-card" data-role="Player" data-name="Jaydev Singh" data-number="5" data-style="Right-hand bat Right-arm medium" data-search="jaydev singh 5 player right-hand bat right-arm medium">
           <div class="jersey-big-number">5</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#5 Jaydev Singh</h2>
@@ -547,7 +563,7 @@
           </div>
         </a>
       
-        <a href="/players/ankit-singh-kushwaha" class="jersey-player-card" data-role="Player">
+        <a href="/players/ankit-singh-kushwaha" class="jersey-player-card" data-role="Player" data-name="Ankit Singh Kushwaha" data-number="8" data-style="Right-hand bat Right-arm medium" data-search="ankit singh kushwaha 8 player right-hand bat right-arm medium">
           <div class="jersey-big-number">8</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#8 Ankit Singh Kushwaha</h2>
@@ -559,7 +575,7 @@
           </div>
         </a>
       
-        <a href="/players/kulwant-khejroliya" class="jersey-player-card" data-role="Player">
+        <a href="/players/kulwant-khejroliya" class="jersey-player-card" data-role="Player" data-name="Kulwant Khejroliya" data-number="11" data-style="Right-hand bat Right-arm medium" data-search="kulwant khejroliya 11 player right-hand bat right-arm medium">
           <div class="jersey-big-number">11</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#11 Kulwant Khejroliya</h2>
@@ -571,7 +587,7 @@
           </div>
         </a>
       
-        <a href="/players/sagar-pratap-singh" class="jersey-player-card" data-role="Player">
+        <a href="/players/sagar-pratap-singh" class="jersey-player-card" data-role="Player" data-name="Sagar Pratap Singh" data-number="14" data-style="Right-hand bat Right-arm medium" data-search="sagar pratap singh 14 player right-hand bat right-arm medium">
           <div class="jersey-big-number">14</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#14 Sagar Pratap Singh</h2>
@@ -583,7 +599,7 @@
           </div>
         </a>
       
-        <a href="/players/ashwin-das" class="jersey-player-card" data-role="Pace All-Rounder">
+        <a href="/players/ashwin-das" class="jersey-player-card" data-role="Pace All-Rounder" data-name="Ashwin Das" data-number="23" data-style="Right-hand bat Right-arm fast-medium" data-search="ashwin das 23 pace all-rounder right-hand bat right-arm fast-medium">
           <div class="jersey-big-number">23</div>
           <div class="jersey-player-role">Pace All-Rounder</div>
           <h2 class="jersey-player-name">#23 Ashwin Das</h2>
@@ -595,7 +611,7 @@
           </div>
         </a>
       
-        <a href="/players/amarjeet-kumar-singh" class="jersey-player-card" data-role="Player">
+        <a href="/players/amarjeet-kumar-singh" class="jersey-player-card" data-role="Player" data-name="Amarjeet Kumar Singh" data-number="20" data-style="Right-hand bat Right-arm medium" data-search="amarjeet kumar singh 20 player right-hand bat right-arm medium">
           <div class="jersey-big-number">20</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#20 Amarjeet Kumar Singh</h2>
@@ -607,7 +623,7 @@
           </div>
         </a>
       
-        <a href="/players/atharv-mahajan" class="jersey-player-card" data-role="Player">
+        <a href="/players/atharv-mahajan" class="jersey-player-card" data-role="Player" data-name="Atharv Mahajan" data-number="23" data-style="Right-hand bat Right-arm medium" data-search="atharv mahajan 23 player right-hand bat right-arm medium">
           <div class="jersey-big-number">23</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#23 Atharv Mahajan</h2>
@@ -619,7 +635,7 @@
           </div>
         </a>
       
-        <a href="/players/kanishk-dubey" class="jersey-player-card" data-role="Player">
+        <a href="/players/kanishk-dubey" class="jersey-player-card" data-role="Player" data-name="Kanishk Dubey" data-number="26" data-style="Right-hand bat Right-arm medium" data-search="kanishk dubey 26 player right-hand bat right-arm medium">
           <div class="jersey-big-number">26</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#26 Kanishk Dubey</h2>
@@ -631,7 +647,7 @@
           </div>
         </a>
       
-        <a href="/players/shivam-shukla" class="jersey-player-card" data-role="Player">
+        <a href="/players/shivam-shukla" class="jersey-player-card" data-role="Player" data-name="Shivam Shukla" data-number="29" data-style="Right-hand bat Right-arm medium" data-search="shivam shukla 29 player right-hand bat right-arm medium">
           <div class="jersey-big-number">29</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#29 Shivam Shukla</h2>
@@ -643,7 +659,7 @@
           </div>
         </a>
       
-        <a href="/players/harsh-gawli" class="jersey-player-card" data-role="Player">
+        <a href="/players/harsh-gawli" class="jersey-player-card" data-role="Player" data-name="Harsh Gawli" data-number="32" data-style="Right-hand bat Right-arm medium" data-search="harsh gawli 32 player right-hand bat right-arm medium">
           <div class="jersey-big-number">32</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#32 Harsh Gawli</h2>
@@ -655,7 +671,7 @@
           </div>
         </a>
       
-        <a href="/players/sagar-solanki" class="jersey-player-card" data-role="Player">
+        <a href="/players/sagar-solanki" class="jersey-player-card" data-role="Player" data-name="Sagar Solanki" data-number="35" data-style="Right-hand bat Right-arm medium" data-search="sagar solanki 35 player right-hand bat right-arm medium">
           <div class="jersey-big-number">35</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#35 Sagar Solanki</h2>
@@ -667,7 +683,7 @@
           </div>
         </a>
       
-        <a href="/players/aryan-shrivastava" class="jersey-player-card" data-role="Player">
+        <a href="/players/aryan-shrivastava" class="jersey-player-card" data-role="Player" data-name="Aryan Shrivastava" data-number="38" data-style="Right-hand bat Right-arm medium" data-search="aryan shrivastava 38 player right-hand bat right-arm medium">
           <div class="jersey-big-number">38</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#38 Aryan Shrivastava</h2>
@@ -679,7 +695,7 @@
           </div>
         </a>
       
-        <a href="/players/aryan-dwivedi" class="jersey-player-card" data-role="Player">
+        <a href="/players/aryan-dwivedi" class="jersey-player-card" data-role="Player" data-name="Aryan Dwivedi" data-number="41" data-style="Right-hand bat Right-arm medium" data-search="aryan dwivedi 41 player right-hand bat right-arm medium">
           <div class="jersey-big-number">41</div>
           <div class="jersey-player-role">Player</div>
           <h2 class="jersey-player-name">#41 Aryan Dwivedi</h2>

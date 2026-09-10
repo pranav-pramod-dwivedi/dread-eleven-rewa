@@ -281,39 +281,100 @@ function initMatchFilters() {
 }
 
 /* ==========================================================================
-   6. SQUAD ROLE FILTER & REAL-TIME SEARCH
+   6. SQUAD ROLE FILTER & REAL-TIME SEARCH WITH SUGGESTIONS
    ========================================================================== */
 function initSquadRoleFilter() {
+  const searchInput = document.getElementById('squad-search-input');
+  const clearBtn = document.getElementById('squad-search-clear');
+  const suggestChips = document.querySelectorAll('.squad-suggest-chip');
+  const countDisplay = document.getElementById('squad-count-display');
   const roleButtons = document.querySelectorAll('.role-filter-pill');
   const playerCards = document.querySelectorAll('.jersey-player-card, .fifa-player-card');
-  if (!roleButtons.length || !playerCards.length) return;
 
-  roleButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      roleButtons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      const targetRole = btn.getAttribute('data-role');
+  if (!playerCards.length) return;
 
-      playerCards.forEach((card) => {
-        const cardRole = (card.getAttribute('data-role') || '').toLowerCase();
-        let show = false;
+  function filterCards(query) {
+    const q = (query || '').toLowerCase().trim();
+    let visibleCount = 0;
 
-        if (targetRole === 'all') {
-          show = true;
-        } else if (targetRole === 'captain') {
-          show = cardRole.includes('captain') || cardRole.includes('all-rounder');
-        } else if (targetRole === 'bat') {
-          show = cardRole.includes('batter') || cardRole.includes('bat');
-        } else if (targetRole === 'bowl') {
-          show = cardRole.includes('bowler') || cardRole.includes('bowl');
-        } else if (targetRole === 'wicket') {
-          show = cardRole.includes('wicket');
-        }
+    playerCards.forEach((card) => {
+      const searchData = (card.getAttribute('data-search') || '').toLowerCase();
+      const cardRole = (card.getAttribute('data-role') || '').toLowerCase();
+      const cardName = (card.getAttribute('data-name') || '').toLowerCase();
+      const cardNum = (card.getAttribute('data-number') || '').toLowerCase();
+      const cardStyle = (card.getAttribute('data-style') || '').toLowerCase();
+      const allText = `${searchData} ${cardRole} ${cardName} ${cardNum} ${cardStyle}`;
 
-        card.style.display = show ? 'flex' : 'none';
-      });
+      let matches = false;
+      if (!q || q === 'all') {
+        matches = true;
+      } else if (q === 'captain') {
+        matches = cardRole.includes('captain') || cardRole.includes('all-rounder');
+      } else if (q === 'bat' || q === 'batter' || q === 'batters') {
+        matches = cardRole.includes('batter') || cardRole.includes('bat');
+      } else if (q === 'bowl' || q === 'bowler' || q === 'bowlers') {
+        matches = cardRole.includes('bowler') || cardRole.includes('bowl');
+      } else if (q === 'wicket' || q === 'wicketkeeper' || q === 'wicketkeepers') {
+        matches = cardRole.includes('wicket');
+      } else {
+        const terms = q.split(/\s+/).filter(Boolean);
+        matches = terms.every(t => allText.includes(t));
+      }
+
+      if (matches) {
+        card.style.display = 'flex';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (countDisplay) {
+      if (!q || q === 'all') {
+        countDisplay.innerHTML = `Showing all <strong>${playerCards.length}</strong> players`;
+      } else {
+        countDisplay.innerHTML = `Found <strong>${visibleCount}</strong> of ${playerCards.length} players for "<em>${query}</em>"`;
+      }
+    }
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      filterCards(e.target.value);
+    });
+  }
+
+  if (clearBtn && searchInput) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      filterCards('');
+      searchInput.focus();
+    });
+  }
+
+  suggestChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const val = chip.getAttribute('data-search');
+      if (searchInput) {
+        searchInput.value = val;
+        filterCards(val);
+        searchInput.focus();
+      } else {
+        filterCards(val);
+      }
     });
   });
+
+  if (roleButtons.length) {
+    roleButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        roleButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        const role = btn.getAttribute('data-role');
+        filterCards(role);
+      });
+    });
+  }
 }
 
 /* ==========================================================================
@@ -332,7 +393,8 @@ function initMobileMenu() {
 }
 
 /* ==========================================================================
-   8. COMMAND PALETTE (⌘K / Ctrl+K / Search Trigger)
+   8. COMMAND PALETTE (⌘K / Ctrl+K / Global Search)
+   Full-text search indexing players, matches, venues, news, records & pages.
    ========================================================================== */
 function initCommandPalette() {
   const palette = document.getElementById('cmd-palette');
@@ -343,6 +405,52 @@ function initCommandPalette() {
 
   if (!palette || !input || !resultsContainer) return;
 
+  let searchIndex = [];
+  let isIndexLoaded = false;
+
+  // Fallback initial dataset (used while fetching or offline)
+  const fallbackIndex = [
+    { type: 'Player', badge: 'player', icon: '⚡', title: 'Akhil Mishra (#45) — Captain & Top-Order All-Rounder', subtitle: 'Captain • 1,378 runs (Avg 44.5) • 38 wickets (BB 4/28)', url: '/players/akhil-mishra', text: 'Akhil Mishra Captain skipper top order all rounder 1378 runs 38 wickets 96* Dread Eleven Rewa' },
+    { type: 'Player', badge: 'player', icon: '💨', title: 'Kuldeep Sen (#99) — Express Pace Bowler', subtitle: 'Fast Bowler • 98 wickets (Avg 14.8) • BB 5/18', url: '/players/kuldeep-sen', text: 'Kuldeep Sen express pace fast bowler 98 wickets 5/18 Dread Eleven Rewa Ranji' },
+    { type: 'Player', badge: 'player', icon: '⚡', title: 'Venkatesh Iyer (#23) — Pace All-Rounder', subtitle: 'All-Rounder • 842 runs • 28 wickets', url: '/players/venkatesh-iyer', text: 'Venkatesh Iyer pace all rounder 842 runs 28 wickets Dread Eleven' },
+    { type: 'Player', badge: 'player', icon: '⭐', title: 'Rajat Patidar (#9) — Top-Order Batter', subtitle: 'Batter • 912 runs • 2 centuries', url: '/players/rajat-patidar', text: 'Rajat Patidar top order batter 912 runs 2 centuries Dread Eleven' },
+    { type: 'Player', badge: 'player', icon: '🌀', title: 'Kumar Kartikeya (#31) — Slow Left-Arm Spinner', subtitle: 'Spinner • 64 wickets • BB 5/21', url: '/players/kumar-kartikeya', text: 'Kumar Kartikeya slow left arm spinner 64 wickets Dread Eleven' },
+    { type: 'Match', badge: 'match', icon: '🏆', title: '2026 Championship Final: Destroyers def. Dread Eleven by 12 runs', subtitle: '20 Sep 2026 • APSU Stadium, Rewa • POTM: Pranav Dwivedi', url: '/matches/destroyers-vs-dread-eleven-2026-09-20', text: '2026 Championship Final APSU Stadium Rewa Destroyers Dread Eleven 12 runs Pranav Dwivedi Akhil Mishra' },
+    { type: 'Match', badge: 'match', icon: '🏏', title: '2021 Inaugural Derby: Dread Eleven def. Destroyers by 3 wickets', subtitle: '01 Aug 2021 • Martand Ground No. 3 • POTM: Venkatesh Iyer', url: '/matches/destroyers-vs-dread-eleven-2021-08-01', text: '2021 Inaugural Derby Martand Ground Venkatesh Iyer Dread Eleven Destroyers' },
+    { type: 'Venue', badge: 'venue', icon: '📍', title: 'APSU Stadium, Rewa (Awadhesh Pratap Singh University)', subtitle: 'Premier 15,000 capacity turf stadium in Rewa', url: '/fixtures', text: 'APSU Stadium Rewa Awadhesh Pratap Singh University finals turf wicket' },
+    { type: 'Venue', badge: 'venue', icon: '🏟️', title: 'Martand School Ground No. 3, Rewa', subtitle: 'Historic turf, spiritual home of the Rewa Derby', url: '/fixtures', text: 'Martand Ground No 3 Rewa spin derby' },
+    { type: 'Page', badge: 'page', icon: '♟', title: 'Squad Roster (43 Players)', subtitle: 'Full 43-man tournament squad for Dread Eleven', url: '/players', text: 'Squad roster 43 players Akhil Mishra Dread Eleven' },
+    { type: 'Page', badge: 'page', icon: '📊', title: 'Points Table & Standings', subtitle: 'Net Run Rate & Season telemetry (2021-2026)', url: '/points-table', text: 'Points table standings NRR net run rate' },
+    { type: 'Page', badge: 'page', icon: '📈', title: 'Statistical Leaderboards & Record Books', subtitle: 'All-time runs, wickets, centuries, highest team totals', url: '/stats', text: 'Stats records leaderboards most runs most wickets' }
+  ];
+
+  searchIndex = fallbackIndex;
+
+  function loadSearchIndex() {
+    if (isIndexLoaded) return;
+    fetch('/search-index.json')
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          searchIndex = data;
+          isIndexLoaded = true;
+          // Re-render if palette is open
+          if (palette.classList.contains('open')) {
+            renderResults(input.value);
+          }
+        }
+      })
+      .catch((err) => {
+        // Fallback already active
+      });
+  }
+
+  // Load index in background
+  loadSearchIndex();
+
   function openPalette() {
     palette.classList.add('open');
     palette.setAttribute('aria-hidden', 'false');
@@ -350,6 +458,7 @@ function initCommandPalette() {
     input.focus();
     renderResults('');
     document.body.style.overflow = 'hidden';
+    loadSearchIndex();
   }
 
   function closePalette() {
@@ -358,69 +467,236 @@ function initCommandPalette() {
     document.body.style.overflow = '';
   }
 
-  // Keyboard shortcut: Cmd+K, Ctrl+K, or Slash
+  // Keyboard shortcut: Cmd+K, Ctrl+K
   window.addEventListener('keydown', (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
       e.preventDefault();
       palette.classList.contains('open') ? closePalette() : openPalette();
     } else if (e.key === 'Escape' && palette.classList.contains('open')) {
       closePalette();
+    } else if (palette.classList.contains('open')) {
+      const items = Array.from(resultsContainer.querySelectorAll('.cmd-result-item'));
+      if (!items.length) return;
+      const focusedIdx = items.findIndex((el) => el.classList.contains('focused'));
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const nextIdx = focusedIdx < items.length - 1 ? focusedIdx + 1 : 0;
+        items.forEach((el) => el.classList.remove('focused'));
+        items[nextIdx].classList.add('focused');
+        items[nextIdx].scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prevIdx = focusedIdx > 0 ? focusedIdx - 1 : items.length - 1;
+        items.forEach((el) => el.classList.remove('focused'));
+        items[prevIdx].classList.add('focused');
+        items[prevIdx].scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'Enter') {
+        if (focusedIdx >= 0 && items[focusedIdx]) {
+          e.preventDefault();
+          items[focusedIdx].click();
+        }
+      }
     }
   });
 
-  openButtons.forEach(btn => btn.addEventListener('click', openPalette));
+  openButtons.forEach((btn) => btn.addEventListener('click', openPalette));
   if (closeButton) closeButton.addEventListener('click', closePalette);
 
   palette.addEventListener('click', (e) => {
     if (e.target === palette) closePalette();
   });
 
-  // Sample static search registry
-  const searchRegistry = [
-    { type: 'Quick Action', title: 'Home Arena & Digital Stadium', url: '/', icon: '⌂' },
-    { type: 'Quick Action', title: 'Squad Command Center (43 Players)', url: '/players/', icon: '♟' },
-    { type: 'Quick Action', title: '2026 Fixture Schedule & Tickets', url: '/fixtures/', icon: '📅' },
-    { type: 'Quick Action', title: 'All-Time DE vs DES Derby Results', url: '/results/', icon: '🏆' },
-    { type: 'Quick Action', title: 'League Points Table & Scenarios', url: '/points-table/', icon: '📊' },
-    { type: 'Quick Action', title: 'Team Analytics & Record Books', url: '/stats/', icon: '📈' },
-    { type: 'Player', title: 'Akhil Mishra (#1) — Captain & Top-Order Batter', url: '/players/akhil-mishra/', icon: '⚡' },
-    { type: 'Player', title: 'Ritesh Shakya (#7) — Explosive Finisher', url: '/players/ritesh-shakya/', icon: '⚡' },
-    { type: 'Player', title: 'Kuldeep Sen (#99) — Express Pace Bowler', url: '/players/kuldeep-sen/', icon: '⚡' },
-    { type: 'Player', title: 'Venkatesh Iyer (#23) — Pace All-Rounder', url: '/players/venkatesh-iyer/', icon: '⚡' },
-    { type: 'Player', title: 'Rajat Patidar (#9) — Top-Order Batter', url: '/players/rajat-patidar/', icon: '⚡' },
-    { type: 'Player', title: 'Kumar Kartikeya (#31) — Slow Left-Arm Spinner', url: '/players/kumar-kartikeya/', icon: '⚡' },
-    { type: 'Match', title: 'Championship Derby: DE vs DES (14 Feb 2026) — DE Won by 5 Wickets', url: '/matches/destroyers-vs-dread-eleven-2026-02-14/', icon: '🏏' },
-    { type: 'Match', title: 'Historic Thriller: DE vs DES (05 Sep 2023) — DE Won by 84 Runs', url: '/matches/destroyers-vs-dread-eleven-2023-09-05/', icon: '🏏' },
-    { type: 'Match', title: 'Inaugural Derby: DE vs DES (01 Aug 2021) — DE Won by 3 Wickets', url: '/matches/destroyers-vs-dread-eleven-2021-08-01/', icon: '🏏' },
-    { type: 'News', title: 'Akhil Mishra Masterclass Clinches Rewa Derby', url: '/news/akhil-mishra-masterclass-chase-destroyers-2024/', icon: '📰' },
-    { type: 'News', title: 'Tactical Blueprint: Death Overs Bowling Mastery', url: '/news/death-overs-bowling-masterclass-rewa-2025/', icon: '📰' }
-  ];
+  function escapeHtml(str) {
+    if (!str && str !== 0) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function highlightMatches(text, terms) {
+    if (!text) return '';
+    let escaped = escapeHtml(text);
+    terms.forEach((t) => {
+      if (!t || t.length < 2) return;
+      const cleanTerm = t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(`(${cleanTerm})`, 'gi');
+      escaped = escaped.replace(regex, '<mark class="search-highlight">$1</mark>');
+    });
+    return escaped;
+  }
 
   function renderResults(q) {
-    const query = q.toLowerCase().trim();
-    const filtered = query
-      ? searchRegistry.filter(item => item.title.toLowerCase().includes(query) || item.type.toLowerCase().includes(query))
-      : searchRegistry.slice(0, 8);
+    const rawQuery = (q || '').trim();
+    const query = rawQuery.toLowerCase();
 
-    if (!filtered.length) {
+    // 1. EMPTY QUERY: RENDER RICH SEARCH SUGGESTIONS
+    if (!query) {
       resultsContainer.innerHTML = `
-        <div class="cmd-no-results">
-          <p>No matches found for "<strong>${q}</strong>". Try searching for <em>Akhil</em>, <em>Derby</em>, or <em>Squad</em>.</p>
+        <div class="cmd-suggestions-panel">
+          <div class="cmd-suggestions-header">
+            <span class="cmd-suggestions-badge">⚡ Search Suggestions</span>
+            <span class="cmd-suggestions-hint">Click any suggestion or type to search everything</span>
+          </div>
+          <div class="cmd-suggestion-chips">
+            <button type="button" class="cmd-chip" data-search="Akhil Mishra">⚡ Capt. Akhil Mishra</button>
+            <button type="button" class="cmd-chip" data-search="Pranav Dwivedi">🔥 Pranav Dwivedi</button>
+            <button type="button" class="cmd-chip" data-search="2026 Finale">🏆 2026 Championship Final</button>
+            <button type="button" class="cmd-chip" data-search="APSU Stadium">📍 APSU Stadium, Rewa</button>
+            <button type="button" class="cmd-chip" data-search="Martand Ground">🏟️ Martand Ground No. 3</button>
+            <button type="button" class="cmd-chip" data-search="Kuldeep Sen">💨 Kuldeep Sen</button>
+            <button type="button" class="cmd-chip" data-search="Yash Dubey">⭐ Yash Dubey</button>
+            <button type="button" class="cmd-chip" data-search="T20">⚡ T20 Clashes</button>
+            <button type="button" class="cmd-chip" data-search="50-Over">🏏 50-Over Derbies</button>
+            <button type="button" class="cmd-chip" data-search="Points Table">📊 Standings &amp; NRR</button>
+            <button type="button" class="cmd-chip" data-search="Records">📈 Record Books</button>
+            <button type="button" class="cmd-chip" data-search="Atal Bihari">🛡️ ABV Tournament</button>
+          </div>
+          <div class="cmd-suggestions-categories">
+            <div>
+              <div class="cmd-cat-title">Franchise Portals</div>
+              <a href="/players/" class="cmd-cat-link"><span>♟ 43-Man Squad Roster</span><span class="cmd-item-enter">→</span></a>
+              <a href="/fixtures/" class="cmd-cat-link"><span>📅 Match Schedule &amp; Tickets</span><span class="cmd-item-enter">→</span></a>
+              <a href="/results/" class="cmd-cat-link"><span>🏆 34 Historic Derbies</span><span class="cmd-item-enter">→</span></a>
+              <a href="/points-table/" class="cmd-cat-link"><span>📊 Standings &amp; Net Run Rate</span><span class="cmd-item-enter">→</span></a>
+              <a href="/stats/" class="cmd-cat-link"><span>📈 Statistical Record Books</span><span class="cmd-item-enter">→</span></a>
+            </div>
+            <div>
+              <div class="cmd-cat-title">Trending Search Topics</div>
+              <div class="cmd-tag-link" data-search="Century">💥 Centuries &amp; High Scores</div>
+              <div class="cmd-tag-link" data-search="5 Wickets">🎯 5-Wicket Hauls</div>
+              <div class="cmd-tag-link" data-search="Final">🏅 Championship Finals</div>
+              <div class="cmd-tag-link" data-search="Death Overs">⚡ Death Overs Bowling</div>
+              <div class="cmd-tag-link" data-search="Rewa Division">🏛️ Rewa Cricket Division</div>
+            </div>
+          </div>
         </div>
       `;
+
+      resultsContainer.querySelectorAll('[data-search]').forEach((el) => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetQuery = el.getAttribute('data-search');
+          input.value = targetQuery;
+          renderResults(targetQuery);
+          input.focus();
+        });
+      });
       return;
     }
 
-    resultsContainer.innerHTML = filtered.map((item, idx) => `
-      <a href="${item.url}" class="cmd-result-item ${idx === 0 ? 'focused' : ''}">
-        <span class="cmd-item-icon">${item.icon}</span>
-        <div class="cmd-item-text">
-          <span class="cmd-item-title">${item.title}</span>
-          <span class="cmd-item-type">${item.type}</span>
+    // 2. QUERY PRESENT: FULL-TEXT SEARCH ACROSS ALL INDEXED CONTENT
+    const terms = query.split(/\s+/).filter(Boolean);
+
+    const scored = searchIndex
+      .map((item) => {
+        let score = 0;
+        const titleLower = (item.title || '').toLowerCase();
+        const subLower = (item.subtitle || '').toLowerCase();
+        const catLower = (item.type || '').toLowerCase();
+        const textLower = (item.text || '').toLowerCase();
+        const fullContent = `${titleLower} ${subLower} ${catLower} ${textLower}`;
+
+        // Exact phrase boost
+        if (titleLower.includes(query)) score += 20;
+        if (subLower.includes(query)) score += 10;
+        if (textLower.includes(query)) score += 5;
+
+        // Term-by-term scoring
+        let allTermsPresent = true;
+        for (const t of terms) {
+          let termFound = false;
+          if (titleLower.includes(t)) {
+            score += 12;
+            termFound = true;
+          }
+          if (subLower.includes(t)) {
+            score += 6;
+            termFound = true;
+          }
+          if (catLower.includes(t)) {
+            score += 4;
+            termFound = true;
+          }
+          if (textLower.includes(t)) {
+            score += 2;
+            termFound = true;
+          }
+          if (!termFound) allTermsPresent = false;
+        }
+
+        if (allTermsPresent) score += 10;
+
+        return { item, score };
+      })
+      .filter((x) => x.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 30);
+
+    if (!scored.length) {
+      resultsContainer.innerHTML = `
+        <div class="cmd-no-results">
+          <p style="font-size:1.05rem; margin-bottom:0.5rem; color:var(--c-white);">No matches found for "<strong>${escapeHtml(rawQuery)}</strong>"</p>
+          <p style="font-size:0.825rem; color:var(--c-gray-400); max-width:46ch; margin:0 auto 1.25rem;">
+            Every player, match scorecard, venue, news piece, and stat record is indexed. Try one of these suggestions:
+          </p>
+          <div class="cmd-suggestion-chips" style="justify-content:center;">
+            <button type="button" class="cmd-chip" data-search="Akhil">⚡ Akhil Mishra</button>
+            <button type="button" class="cmd-chip" data-search="Pranav">🔥 Pranav Dwivedi</button>
+            <button type="button" class="cmd-chip" data-search="Kuldeep">💨 Kuldeep Sen</button>
+            <button type="button" class="cmd-chip" data-search="APSU">📍 APSU Stadium</button>
+            <button type="button" class="cmd-chip" data-search="Final">🏆 Finals</button>
+          </div>
         </div>
-        <span class="cmd-item-enter">↵</span>
-      </a>
-    `).join('');
+      `;
+
+      resultsContainer.querySelectorAll('[data-search]').forEach((el) => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetQuery = el.getAttribute('data-search');
+          input.value = targetQuery;
+          renderResults(targetQuery);
+          input.focus();
+        });
+      });
+      return;
+    }
+
+    const itemsHtml = scored
+      .map(({ item }, idx) => {
+        const badgeClass = item.badge || (item.type || 'page').toLowerCase();
+        const highlightedTitle = highlightMatches(item.title, terms);
+        const highlightedSub = highlightMatches(item.subtitle, terms);
+
+        return `
+        <a href="${item.url}" class="cmd-result-item ${idx === 0 ? 'focused' : ''}">
+          <span class="cmd-item-icon">${item.icon || '🏏'}</span>
+          <div class="cmd-item-text">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.2rem;">
+              <span class="cmd-badge ${badgeClass}">${escapeHtml(item.type || 'Result')}</span>
+              <span class="cmd-item-title">${highlightedTitle}</span>
+            </div>
+            <span class="cmd-item-type" style="color:var(--c-gray-400); font-size:0.75rem; line-height:1.4;">${highlightedSub}</span>
+          </div>
+          <span class="cmd-item-enter">↵</span>
+        </a>
+      `;
+      })
+      .join('');
+
+    resultsContainer.innerHTML = `
+      <div class="cmd-count-bar">
+        <span>Found <strong>${scored.length}</strong> matches for "<strong>${escapeHtml(rawQuery)}</strong>"</span>
+        <span>Use ↑↓ to navigate, ↵ to open</span>
+      </div>
+      ${itemsHtml}
+    `;
+
+    resultsContainer.querySelectorAll('.cmd-result-item').forEach((itemEl) => {
+      itemEl.addEventListener('click', closePalette);
+    });
   }
 
   input.addEventListener('input', (e) => {
