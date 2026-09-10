@@ -96,7 +96,22 @@ function minifyJs(js) {
 // ------------------------------------------------------------
 // GLOBAL HTML TEMPLATE BLOCKS
 // ------------------------------------------------------------
-function renderHead({ title, description, canonicalUrl, ogType = 'website', ogImage = '/public/images/de-crest.svg', jsonLd = null, breadcrumbs = null }) {
+function renderHead({
+  title,
+  description,
+  canonicalUrl,
+  ogType = 'website',
+  ogImage = '/public/images/de-crest.svg',
+  jsonLd = null,
+  breadcrumbs = null,
+  keywords = null,
+  author = 'Dread Eleven Cricket Club Media Team',
+  profile = null,
+  article = null,
+  twitterData = null,
+  alternateJson = null,
+  alternateMd = null
+}) {
   const fullCanonical = canonicalUrl ? `${BASE_URL}${canonicalUrl}` : BASE_URL;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${BASE_URL}${ogImage}`;
 
@@ -149,14 +164,25 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${esc(cleanTitle)}</title>
   <meta name="description" content="${esc(cleanDesc)}">
-  <meta name="robots" content="index, follow">
+  ${keywords ? `<meta name="keywords" content="${esc(keywords)}">` : ''}
+  <meta name="author" content="${esc(author)}">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <link rel="canonical" href="${fullCanonical}">
   <meta name="theme-color" content="#0b0b0b">
+  <meta name="application-name" content="Dread Eleven Cricket Club">
+  <meta name="apple-mobile-web-app-title" content="Dread Eleven">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
 
   <!-- AI Crawler & LLM Discovery Standards (llmstxt.org) -->
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context">
   <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Context">
   <link rel="alternate" type="application/rss+xml" title="Dread Eleven News &amp; Match Feed" href="/feed.xml">
+  ${alternateJson ? `<link rel="alternate" type="application/json" href="${alternateJson}" title="${esc(cleanTitle)} (JSON)">` : ''}
+  ${alternateMd ? `<link rel="alternate" type="text/markdown" href="${alternateMd}" title="${esc(cleanTitle)} (Markdown)">` : ''}
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="${esc(ogType)}">
@@ -166,8 +192,20 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
   <meta property="og:image" content="${fullOgImage}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${esc(cleanTitle)}">
   <meta property="og:site_name" content="Dread Eleven Cricket Club (DE)">
   <meta property="og:locale" content="en_IN">
+  ${ogType === 'profile' && profile ? `
+  <meta property="profile:first_name" content="${esc(profile.firstName || '')}">
+  <meta property="profile:last_name" content="${esc(profile.lastName || '')}">
+  ${profile.username ? `<meta property="profile:username" content="${esc(profile.username)}">` : ''}
+  ${profile.gender ? `<meta property="profile:gender" content="${esc(profile.gender)}">` : ''}` : ''}
+  ${ogType === 'article' && article ? `
+  ${article.publishedTime ? `<meta property="article:published_time" content="${esc(article.publishedTime)}">` : ''}
+  ${article.modifiedTime ? `<meta property="article:modified_time" content="${esc(article.modifiedTime)}">` : ''}
+  ${article.author ? `<meta property="article:author" content="${esc(article.author)}">` : ''}
+  ${article.section ? `<meta property="article:section" content="${esc(article.section)}">` : ''}
+  ${(article.tags || []).map(t => `<meta property="article:tag" content="${esc(t)}">`).join('')}` : ''}
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
@@ -175,7 +213,15 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
   <meta name="twitter:title" content="${esc(cleanTitle)}">
   <meta name="twitter:description" content="${esc(cleanDesc)}">
   <meta name="twitter:image" content="${fullOgImage}">
+  <meta name="twitter:image:alt" content="${esc(cleanTitle)}">
   <meta name="twitter:site" content="@DreadElevenRewa">
+  <meta name="twitter:creator" content="@DreadElevenRewa">
+  ${twitterData && twitterData.label1 && twitterData.data1 ? `
+  <meta name="twitter:label1" content="${esc(twitterData.label1)}">
+  <meta name="twitter:data1" content="${esc(twitterData.data1)}">` : ''}
+  ${twitterData && twitterData.label2 && twitterData.data2 ? `
+  <meta name="twitter:label2" content="${esc(twitterData.label2)}">
+  <meta name="twitter:data2" content="${esc(twitterData.data2)}">` : ''}
 
   <!-- Icons & PWA -->
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
@@ -500,6 +546,14 @@ ${renderHead({
   title: 'Dread Eleven Cricket Club | Digital Stadium & Arena',
   description: 'Official digital stadium for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete match scorecards, 43-man squad, standings, and stats.',
   canonicalUrl: '/',
+  keywords: 'Dread Eleven Cricket Club, DE Rewa, Akhil Mishra, Atal Bihari Vajpayee Memorial Tournament, Rewa Cricket, RDCA, Dread Eleven vs Destroyers, Rewa Derby, Martand Ground, APSU Stadium',
+  author: 'Dread Eleven Cricket Club Media Team',
+  twitterData: {
+    label1: 'Franchise Leader',
+    data1: 'Capt. Akhil Mishra (#45)',
+    label2: 'Derby Telemetry',
+    data2: '15 Wins • 2022 Champions'
+  },
   jsonLd: [orgLd, teamLd, websiteLd]
 })}
 ${renderHeader('home')}
@@ -1065,6 +1119,14 @@ ${renderHead({
   title: 'Dread Eleven Squad & Player Roster | Rewa Cricket',
   description: 'Official 43-man player directory for Dread Eleven Cricket Club (DE) in Rewa. Verified tournament batting, bowling averages, and career milestones.',
   canonicalUrl: '/players',
+  keywords: 'Dread Eleven Squad, Rewa Cricket players, Akhil Mishra squad, DE cricket roster, Atal Bihari Vajpayee tournament squad',
+  author: 'Dread Eleven Cricket Club Media Team',
+  twitterData: {
+    label1: 'Active Roster',
+    data1: '43 Pro Athletes',
+    label2: 'Franchise Leader',
+    data2: 'Capt. Akhil Mishra'
+  },
   jsonLd: squadJsonLd,
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -1142,20 +1204,114 @@ ${renderFooter()}
     const playerDir = path.join(playersDir, p.slug);
     ensureDir(playerDir);
 
-    const playerJsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'Person',
-      name: p.name,
-      jobTitle: p.role,
-      description: p.bio,
-      url: `${BASE_URL}/players/${p.slug}`,
-      memberOf: {
-        '@type': ['SportsOrganization', 'SportsTeam'],
-        name: 'Dread Eleven Cricket Club (DE)',
-        url: BASE_URL
-      },
-      ...(p.slug === 'akhil-mishra' ? { sameAs: ['https://rewa-cricket-division.vercel.app/players/akhil-mishra/'] } : {})
-    };
+    const isAkhil = p.slug === 'akhil-mishra';
+
+    let playerJsonLd;
+    if (isAkhil) {
+      playerJsonLd = [
+        {
+          '@context': 'https://schema.org',
+          '@type': ['Person', 'Athlete'],
+          name: 'Akhil Mishra',
+          alternateName: [
+            'Capt. Akhil Mishra',
+            'Akhil Mishra Rewa',
+            'A. Mishra'
+          ],
+          jobTitle: 'Franchise Captain & Top-Order All-Rounder',
+          description: 'Franchise captain and premier talisman of Dread Eleven Cricket Club (DE). Champion captain of the 2022 Atal Bihari Vajpayee Memorial Tournament in Rewa.',
+          url: `${BASE_URL}/players/akhil-mishra`,
+          identifier: 'DE-45',
+          gender: 'https://schema.org/Male',
+          memberOf: {
+            '@type': ['SportsOrganization', 'SportsTeam'],
+            name: 'Dread Eleven Cricket Club (DE)',
+            url: BASE_URL,
+            sport: 'Cricket'
+          },
+          knowsAbout: [
+            'Cricket',
+            'Top-Order Batting',
+            'Dread Eleven Cricket Club',
+            'Atal Bihari Vajpayee Memorial Tournament',
+            'Rewa Cricket',
+            'Rewa Division Cricket Association'
+          ],
+          award: [
+            '2022 Atal Bihari Vajpayee Memorial Trophy Champion Captain',
+            'Rewa Derby Century Maker (100* at APSU Stadium)',
+            'Dread Eleven Franchise Player of the Era'
+          ],
+          sameAs: [
+            'https://rewa-cricket-division.vercel.app/players/akhil-mishra/'
+          ],
+          mainEntityOfPage: `${BASE_URL}/players/akhil-mishra`
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: 'Who is Akhil Mishra in Rewa cricket?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Akhil Mishra is the franchise captain, leading batsman, and talisman for Dread Eleven Cricket Club (DE) in Rewa, Madhya Pradesh. He captained Dread Eleven to the 2022 Atal Bihari Vajpayee Memorial Tournament championship.'
+              }
+            },
+            {
+              '@type': 'Question',
+              name: 'What are Akhil Mishra\'s career batting and bowling statistics?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'In official tournament play against Destroyers, Akhil Mishra has scored 1,378 runs at an average of 44.5 with a strike rate of 130.0 (highest score 96*, 12 fifties, 1 hundred) and taken 38 wickets with best bowling figures of 4/28.'
+              }
+            },
+            {
+              '@type': 'Question',
+              name: 'What is Akhil Mishra\'s leadership record for Dread Eleven?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Akhil Mishra has captained Dread Eleven across all 6 tournament editions (2021–2026), capturing 15 derby wins against Destroyers and hoisting the 2022 championship silverware.'
+              }
+            },
+            {
+              '@type': 'Question',
+              name: 'What jersey number and role does Akhil Mishra play?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Akhil Mishra wears jersey #45 for Dread Eleven. He is a premier right-handed top-order batsman and a handy right-arm medium pace bowler.'
+              }
+            },
+            {
+              '@type': 'Question',
+              name: 'Where can Akhil Mishra\'s official RDCA cricket records be verified?',
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: 'Akhil Mishra\'s official career records are maintained by the Rewa Division Cricket Association (RDCA) at https://rewa-cricket-division.vercel.app/players/akhil-mishra/.'
+              }
+            }
+          ]
+        }
+      ];
+    } else {
+      playerJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': ['Person', 'Athlete'],
+        name: p.name,
+        jobTitle: p.role,
+        description: p.bio,
+        url: `${BASE_URL}/players/${p.slug}`,
+        memberOf: {
+          '@type': ['SportsOrganization', 'SportsTeam'],
+          name: 'Dread Eleven Cricket Club (DE)',
+          url: BASE_URL,
+          sport: 'Cricket'
+        },
+        identifier: `DE-${p.jerseyNumber}`,
+        knowsAbout: ['Cricket', p.role, 'Dread Eleven Cricket Club', 'Rewa Cricket']
+      };
+    }
 
     // Filter match logs for this player (consolidate per match so 1 row has both batting & bowling)
     const playerLogs = [];
@@ -1181,9 +1337,39 @@ ${renderFooter()}
 
     const playerHtml = `
 ${renderHead({
-  title: clampTitle(`#${p.jerseyNumber} ${p.name} — Career Stats | Dread Eleven`, 60),
-  description: clampDesc(`${p.name} (#${p.jerseyNumber}) official player profile for Dread Eleven Cricket Club in Rewa. ${p.role} with ${p.batting.runs} runs, ${p.bowling.wickets} wickets, and match records.`, 155),
+  title: isAkhil
+    ? 'Capt. Akhil Mishra (#45) — Career Stats | Dread Eleven'
+    : clampTitle(`#${p.jerseyNumber} ${p.name} — Career Stats | Dread Eleven`, 60),
+  description: isAkhil
+    ? 'Official career profile for Akhil Mishra (#45), champion captain of Dread Eleven Cricket Club in Rewa. 1,378 runs (44.5 avg), 38 wickets, and RDCA records.'
+    : clampDesc(`${p.name} (#${p.jerseyNumber}) official player profile for Dread Eleven Cricket Club in Rewa. ${p.role} with ${p.batting.runs} runs, ${p.bowling.wickets} wickets, and match records.`, 155),
   canonicalUrl: `/players/${p.slug}`,
+  ogType: 'profile',
+  profile: {
+    firstName: p.name.split(' ')[0],
+    lastName: p.name.split(' ').slice(1).join(' ') || p.name,
+    username: isAkhil ? 'akhilmishra' : p.slug.replace(/-/g, ''),
+    gender: 'male'
+  },
+  keywords: isAkhil
+    ? 'Akhil Mishra, Dread Eleven Cricket Club Captain, Rewa Cricket, RDCA, Atal Bihari Vajpayee Memorial Tournament, Rewa Derby, Akhil Mishra stats, Akhil Mishra career'
+    : `${p.name}, ${p.name} stats, Dread Eleven Cricket Club, Rewa Cricket, Atal Bihari Vajpayee Memorial Tournament, ${p.role}`,
+  author: 'Dread Eleven Cricket Club Media Team',
+  twitterData: isAkhil
+    ? {
+        label1: 'Franchise Record',
+        data1: '2022 Champion Captain',
+        label2: 'Career Telemetry',
+        data2: '1,378 runs • 38 wickets'
+      }
+    : {
+        label1: 'Discipline',
+        data1: p.role,
+        label2: 'Franchise',
+        data2: `Dread Eleven (#${p.jerseyNumber})`
+      },
+  alternateJson: isAkhil ? `/players/${p.slug}.json` : null,
+  alternateMd: isAkhil ? `/players/${p.slug}.md` : null,
   jsonLd: playerJsonLd,
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -1273,6 +1459,54 @@ ${renderHeader('squad')}
       `}
     </div>
 
+    ${isAkhil ? `
+    <!-- AI Direct Answer & Entity Telemetry Card (GEO / AEO Optimized - Zero Blue) -->
+    <section class="ai-direct-answer-card" aria-label="AI Summary and Key Facts">
+      <div class="ai-card-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        AI Entity Summary &amp; Fast Telemetry
+      </div>
+      <h2 class="ai-direct-answer-title">Akhil Mishra: Franchise Captain &amp; Top-Order Talisman</h2>
+      <p class="ai-direct-answer-lead">
+        <strong>Akhil Mishra</strong> is an Indian cricketer and the franchise captain and premier batsman of <strong>Dread Eleven Cricket Club (DE)</strong> in the prestigious Atal Bihari Vajpayee Memorial Tournament in Rewa, Madhya Pradesh. Captaining Dread Eleven across 28 derby encounters against Destroyers, Mishra has registered <strong>1,378 tournament runs</strong> at an average of <strong>44.5</strong> (strike rate 130.0, 1 century, 12 fifties) and seized <strong>38 wickets</strong> with best bowling figures of <strong>4/28</strong>, including leading Dread Eleven to the 2022 tournament championship.
+      </p>
+      <div class="ai-facts-grid">
+        <div class="ai-fact-box">
+          <div class="ai-fact-label">Full Name</div>
+          <div class="ai-fact-value">Akhil Mishra</div>
+        </div>
+        <div class="ai-fact-box">
+          <div class="ai-fact-label">Franchise &amp; Role</div>
+          <div class="ai-fact-value">Dread Eleven • Captain (#45)</div>
+        </div>
+        <div class="ai-fact-box">
+          <div class="ai-fact-label">Championships</div>
+          <div class="ai-fact-value" style="color:var(--c-volt);">2022 Tournament Champions</div>
+        </div>
+        <div class="ai-fact-box">
+          <div class="ai-fact-label">Derby Wins</div>
+          <div class="ai-fact-value">15 Wins vs Destroyers</div>
+        </div>
+        <div class="ai-fact-box">
+          <div class="ai-fact-label">Batting Output</div>
+          <div class="ai-fact-value">1,378 Runs (44.5 Avg, 96* HS)</div>
+        </div>
+        <div class="ai-fact-box">
+          <div class="ai-fact-label">Bowling Output</div>
+          <div class="ai-fact-value" style="color:var(--c-emerald);">38 Wickets (4/28 BBI)</div>
+        </div>
+        <div class="ai-fact-box">
+          <div class="ai-fact-label">Disciplines</div>
+          <div class="ai-fact-value">Right-hand bat / Medium pace</div>
+        </div>
+        <div class="ai-fact-box">
+          <div class="ai-fact-label">Official Registry</div>
+          <div class="ai-fact-value">RDCA Central Verified</div>
+        </div>
+      </div>
+    </section>
+    ` : ''}
+
     <!-- Match Appearances Table -->
     <div style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
       <h2 style="font-family:var(--f-athletic); font-size:2rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.5rem;">
@@ -1312,6 +1546,50 @@ ${renderHeader('squad')}
         </table>
       </div>
     </div>
+
+    ${isAkhil ? `
+    <!-- Visible FAQ Section for Users & Search Engine Knowledge Extraction -->
+    <section class="player-faq-section" aria-label="Frequently Asked Questions">
+      <h2 style="font-family:var(--f-athletic); font-size:1.8rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.5rem;">
+        Frequently Asked Questions About Akhil Mishra
+      </h2>
+      <p style="color:var(--c-gray-400); font-size:0.875rem; margin-bottom:1.5rem;">
+        Verified answers compiled from official RDCA scorecards, tournament registries, and Dread Eleven franchise telemetry.
+      </p>
+      <div class="faq-grid">
+        <article class="faq-card">
+          <h3 class="faq-question">Who is Akhil Mishra in Rewa cricket?</h3>
+          <p class="faq-answer">
+            <strong>Akhil Mishra</strong> is the franchise captain and lead top-order batsman for <strong>Dread Eleven Cricket Club (DE)</strong> based in Rewa, Madhya Pradesh. He led Dread Eleven to the 2022 Atal Bihari Vajpayee Memorial Tournament championship title.
+          </p>
+        </article>
+        <article class="faq-card">
+          <h3 class="faq-question">What are Akhil Mishra's career batting and bowling statistics?</h3>
+          <p class="faq-answer">
+            In tournament play against Destroyers, Akhil Mishra has accumulated <strong>1,378 runs in 28 matches</strong> at an average of <strong>44.5</strong> and a strike rate of <strong>130.0</strong> (with 1 century, top score 96*, and 12 half-centuries). With the ball, he has taken <strong>38 wickets</strong> with best match figures of <strong>4/28</strong>.
+          </p>
+        </article>
+        <article class="faq-card">
+          <h3 class="faq-question">What is Akhil Mishra's captaincy record in the Rewa Derby?</h3>
+          <p class="faq-answer">
+            Akhil Mishra has captained Dread Eleven to <strong>15 derby victories</strong> against Destroyers across 34 clashes, including steering the club to the 2022 series title (3–2).
+          </p>
+        </article>
+        <article class="faq-card">
+          <h3 class="faq-question">What is Akhil Mishra's playing role and jersey number?</h3>
+          <p class="faq-answer">
+            Mishra wears <strong>Jersey #45</strong> for Dread Eleven. He plays as an anchoring top-order right-handed batter who commands the powerplay and middle overs, supported by right-arm medium bowling.
+          </p>
+        </article>
+        <article class="faq-card">
+          <h3 class="faq-question">Where can fans and scouts verify Akhil Mishra's official records?</h3>
+          <p class="faq-answer">
+            All match scorecards and career telemetry are verified and preserved by the Rewa Division Cricket Association on their central portal at <a href="https://rewa-cricket-division.vercel.app/players/akhil-mishra/" target="_blank" rel="noopener" style="color:var(--c-volt); font-weight:700; text-decoration:none;">RDCA Central Registry ↗</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+    ` : ''}
   </div>
 </section>
 
@@ -1319,6 +1597,116 @@ ${renderFooter()}
     `;
 
     fs.writeFileSync(path.join(playerDir, 'index.html'), playerHtml);
+
+    // Generate machine-readable .json and .md endpoints for Akhil Mishra
+    if (isAkhil) {
+      const akhilJsonData = {
+        entity: "Akhil Mishra",
+        fullName: "Akhil Mishra",
+        jerseyNumber: 45,
+        franchise: "Dread Eleven Cricket Club (DE)",
+        role: "Top-Order All-Rounder & Captain",
+        battingStyle: "Right-hand bat",
+        bowlingStyle: "Right-arm medium",
+        championshipTitles: [
+          "2022 Atal Bihari Vajpayee Memorial Trophy Champion Captain"
+        ],
+        careerStats: {
+          matches: 28,
+          runs: 1378,
+          average: 44.5,
+          strikeRate: 130.0,
+          highestScore: "96*",
+          fifties: 12,
+          hundreds: 1,
+          fours: 136,
+          sixes: 38,
+          overs: 116,
+          wickets: 38,
+          bowlingAverage: 61.12,
+          economy: 5.92,
+          bestBowling: "4/28"
+        },
+        derbyRecord: {
+          opponent: "Destroyers Cricket Club (DES)",
+          captainRival: "Pranav Dwivedi",
+          franchiseWins: 15,
+          franchiseLosses: 19
+        },
+        verifiedRegistry: "https://rewa-cricket-division.vercel.app/players/akhil-mishra/",
+        faq: [
+          {
+            question: "Who is Akhil Mishra in Rewa cricket?",
+            answer: "Akhil Mishra is the franchise captain and lead top-order batsman of Dread Eleven Cricket Club (DE). He captained Dread Eleven to the 2022 Atal Bihari Vajpayee Memorial Tournament championship."
+          },
+          {
+            question: "What are Akhil Mishra's career batting and bowling statistics?",
+            answer: "1,378 runs at 44.5 average (SR 130.0, HS 96*, 12 fifties, 1 hundred) and 38 wickets with best bowling figures of 4/28."
+          },
+          {
+            question: "What is Akhil Mishra's captaincy record against Destroyers?",
+            answer: "15 wins, leading Dread Eleven to the 2022 tournament title."
+          },
+          {
+            question: "What jersey number and role does Akhil Mishra play?",
+            answer: "Jersey #45, Captain & Top-Order All-Rounder."
+          },
+          {
+            question: "Where can Akhil Mishra's official RDCA cricket records be verified?",
+            answer: "https://rewa-cricket-division.vercel.app/players/akhil-mishra/"
+          }
+        ]
+      };
+
+      const akhilMdData = `# Akhil Mishra — Captain & Top-Order All-Rounder | Dread Eleven
+
+> Official AI & LLM Machine-Readable Dossier for Akhil Mishra (Jersey #45), champion captain of Dread Eleven Cricket Club (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa.
+
+## Player Overview
+- **Full Name**: Akhil Mishra
+- **Known As**: Capt. Akhil Mishra
+- **Jersey Number**: #45
+- **Franchise**: Dread Eleven Cricket Club (DE)
+- **Role**: Top-Order All-Rounder & Captain
+- **Batting Style**: Right-hand bat
+- **Bowling Style**: Right-arm medium
+- **Governing Body**: Rewa Division Cricket Association (RDCA)
+- **Official Registry**: https://rewa-cricket-division.vercel.app/players/akhil-mishra/
+
+## Championship Honours
+- **2022 Champions**: Defeated Destroyers 3–2
+
+## Career Statistics (vs Destroyers)
+- **Matches**: 28
+- **Runs Scored**: 1,378
+- **Batting Average**: 44.50
+- **Strike Rate**: 130.00
+- **Highest Score**: 96*
+- **Fifties**: 12
+- **Hundreds**: 1
+- **Fours / Sixes**: 136 fours, 38 sixes
+- **Wickets Taken**: 38
+- **Best Bowling Figures**: 4/28
+
+## Frequently Asked Questions (FAQ)
+### Who is Akhil Mishra in Rewa cricket?
+Akhil Mishra is the franchise captain and lead batsman for Dread Eleven Cricket Club (DE), champion captain of the 2022 tournament.
+
+### What are Akhil Mishra's career statistics?
+Akhil has scored 1,378 runs at 44.5 average (SR 130.0) and taken 38 wickets with best bowling figures of 4/28.
+
+### What is Akhil Mishra's captaincy record?
+Akhil has led Dread Eleven to 15 derby wins and the 2022 championship title.
+`;
+
+      fs.writeFileSync(path.join(playersDir, 'akhil-mishra.json'), JSON.stringify(akhilJsonData, null, 2));
+      fs.writeFileSync(path.join(playersDir, 'akhil-mishra.md'), akhilMdData);
+
+      const publicPlayersDir = path.join(rootDir, 'public/players');
+      ensureDir(publicPlayersDir);
+      fs.writeFileSync(path.join(publicPlayersDir, 'akhil-mishra.json'), JSON.stringify(akhilJsonData, null, 2));
+      fs.writeFileSync(path.join(publicPlayersDir, 'akhil-mishra.md'), akhilMdData);
+    }
   });
 
   console.log(`Generated /players directory and ${squad.length} individual player pages.`);
@@ -1480,6 +1868,13 @@ ${renderHead({
   title: 'Tournament Fixtures & Schedule | Dread Eleven',
   description: 'Official schedule and tournament fixtures for Dread Eleven against Destroyers in the Atal Bihari Vajpayee Memorial Tournament in Rewa.',
   canonicalUrl: '/fixtures',
+  keywords: 'Dread Eleven Fixtures, Rewa Cricket Schedule, Dread Eleven vs Destroyers, Atal Bihari Vajpayee Memorial Tournament fixtures, Martand Ground',
+  twitterData: {
+    label1: 'Tournament',
+    data1: 'Atal Bihari Vajpayee Memorial',
+    label2: 'Format',
+    data2: '50 Overs & T20'
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'Fixtures', item: '/fixtures' }
@@ -1494,9 +1889,16 @@ ${renderFooter()}
   // Generate /results/index.html
   const resultsHtml = `
 ${renderHead({
-  title: 'Match Results Archive (2021–2026) | Dread Eleven vs Destroyers',
+  title: 'Match Results Archive (2021–2026) | Dread Eleven',
   description: 'Official results archive and verified scorecards for all completed derby clashes between Dread Eleven and Destroyers in Rewa.',
   canonicalUrl: '/results',
+  keywords: 'Dread Eleven Results, Rewa Cricket Scorecards, Dread Eleven vs Destroyers scorecards, Atal Bihari Vajpayee Memorial Tournament results',
+  twitterData: {
+    label1: 'Historical Record',
+    data1: 'DE 15 Wins • DES 19 Wins',
+    label2: 'Latest Climax',
+    data2: '2026 Finale: DE 152 in chase'
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'Results', item: '/results' }
@@ -1810,9 +2212,22 @@ ${renderFooter()}
 
     const matchHtml = `
 ${renderHead({
-  title: `Dread Eleven vs Destroyers (${formatDate(m.matchDate)}) — Official Scorecard`,
+  title: clampTitle(`DE vs DES (${formatDate(m.matchDate)}) | Match #${m.matchNumber} Scorecard`, 60),
   description: clampDesc(`Official scorecard: Dread Eleven vs Destroyers on ${formatDate(m.matchDate)} at ${m.venue?.city || 'Rewa'}. Complete innings and performance records.`, 155),
   canonicalUrl: `/matches/${m.slug}`,
+  ogType: 'article',
+  article: {
+    publishedTime: m.matchDate,
+    section: 'Cricket Match Report',
+    tags: ['Cricket', 'Rewa Cricket', 'Dread Eleven', 'Destroyers CC', m.format]
+  },
+  keywords: `${m.stage}, ${m.matchDate}, Dread Eleven vs Destroyers, ${m.venue?.name || 'APSU Stadium'}, Rewa cricket match scorecard, Akhil Mishra vs Pranav Dwivedi`,
+  twitterData: {
+    label1: 'Match Result',
+    data1: m.resultText || 'Completed',
+    label2: 'Venue',
+    data2: m.venue?.name || 'APSU Stadium, Rewa'
+  },
   jsonLd: matchJsonLd,
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -1936,6 +2351,13 @@ ${renderHead({
   title: 'Tournament Standings & Points Table | Dread Eleven',
   description: 'Official points table and standings for the Atal Bihari Vajpayee Memorial Tournament (2021–2026) between Dread Eleven and Destroyers in Rewa.',
   canonicalUrl: '/points-table',
+  keywords: 'Dread Eleven Standings, Atal Bihari Vajpayee Memorial Tournament Points Table, Rewa cricket rankings, NRR, Akhil Mishra Dread Eleven',
+  twitterData: {
+    label1: 'Tournament Honours',
+    data1: '2022 Tournament Champions',
+    label2: 'Derby Clashes',
+    data2: '34 Matches Contested'
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'Standings', item: '/points-table' }
@@ -2265,6 +2687,13 @@ ${renderHead({
   title: 'All-Time Franchise Statistics & Records | Dread Eleven',
   description: 'Certified tournament records, leading run scorers, top wicket-takers, and head-to-head statistics for Dread Eleven in Rewa.',
   canonicalUrl: '/stats',
+  keywords: 'Dread Eleven Cricket Stats, Akhil Mishra career stats, Rewa cricket records, leading run scorers Rewa, highest wicket takers',
+  twitterData: {
+    label1: 'Leading Run Scorer',
+    data1: 'Akhil Mishra (1,378 runs)',
+    label2: 'Leading Wicket Taker',
+    data2: 'Aditya Shrivastava (49 wkts)'
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'Stats', item: '/stats' }
@@ -2387,6 +2816,14 @@ ${renderHead({
   title: 'Tournament News & Press Releases | Dread Eleven',
   description: 'Official press releases, series reviews, squad announcements, and tactical reports for Dread Eleven in Rewa, Madhya Pradesh.',
   canonicalUrl: '/news',
+  keywords: 'Dread Eleven Cricket News, Rewa Cricket press desk, match reports, squad announcements, Atal Bihari Vajpayee tournament news',
+  author: 'Dread Eleven Cricket Club Media Team',
+  twitterData: {
+    label1: 'Press Desk',
+    data1: 'Dread Eleven Media Hub',
+    label2: 'Coverage',
+    data2: 'Editorial & Tactical Analysis'
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'News', item: '/news' }
@@ -2470,6 +2907,22 @@ ${renderHead({
   title: clampTitle(`${n.title.replace(/[—–].*$/, '').trim()} | Dread Eleven News`, 60),
   description: clampDesc(n.summary, 155),
   canonicalUrl: `/news/${n.slug}`,
+  ogType: 'article',
+  ogImage: n.heroImage,
+  article: {
+    publishedTime: n.publishedAt,
+    author: n.author || 'Dread Eleven Media',
+    section: n.category || 'News',
+    tags: n.tags || ['Rewa Cricket', 'Dread Eleven']
+  },
+  keywords: `${n.title}, Dread Eleven news, Rewa cricket editorial, ${n.category || 'Press Release'}`,
+  author: n.author || 'Dread Eleven Cricket Club Media Team',
+  twitterData: {
+    label1: 'Category',
+    data1: n.category || 'Editorial',
+    label2: 'Published',
+    data2: formatDate(n.publishedAt)
+  },
   jsonLd: articleJsonLd,
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -2557,6 +3010,14 @@ ${renderHead({
   title: 'About Dread Eleven | History, Martand Fortress & RDCA',
   description: 'History and heritage of Dread Eleven (DE) in Rewa. Affiliated with RDCA and competing in the Atal Bihari Vajpayee Memorial Tournament circuit.',
   canonicalUrl: '/about',
+  keywords: 'About Dread Eleven Cricket Club, Rewa Cricket Association, RDCA franchise, Akhil Mishra captain, Martand Ground Rewa, franchise legacy',
+  author: 'Dread Eleven Cricket Club Media Team',
+  twitterData: {
+    label1: 'Franchise Base',
+    data1: 'Rewa, Madhya Pradesh',
+    label2: 'Honours',
+    data2: '2022 Tournament Champions'
+  },
   jsonLd: aboutJsonLd,
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -2708,6 +3169,14 @@ ${renderHead({
   title: 'Contact & Academy Trials | Dread Eleven',
   description: 'Official contact desk for Dread Eleven in Rewa, MP. Media inquiries, academy trial registration, venue liaison, and RDCA communications.',
   canonicalUrl: '/contact',
+  keywords: 'Contact Dread Eleven Cricket Club, Rewa Cricket trials, Martand Ground directions, cricket academy Rewa, player recruitment',
+  author: 'Dread Eleven Cricket Club Media Team',
+  twitterData: {
+    label1: 'Home Ground',
+    data1: 'Martand Ground No. 3, Rewa',
+    label2: 'Administration',
+    data2: 'RDCA Affiliated Desk'
+  },
   jsonLd: [contactJsonLd, faqJsonLd, howToJsonLd],
   breadcrumbs: [
     { name: 'Home', item: '/' },
@@ -2918,6 +3387,13 @@ ${renderHead({
   title: 'Privacy Policy | Dread Eleven Cricket Club (DE)',
   description: 'Official privacy policy for Dread Eleven Cricket Club, detailing data protection standards, tournament newsletter processing, and visitor rights under Rewa Division Cricket Association regulations.',
   canonicalUrl: '/privacy',
+  keywords: 'Dread Eleven Cricket Club privacy policy, RDCA data protection, spectator privacy Rewa, digital cricket portal terms',
+  twitterData: {
+    label1: 'Data Policy',
+    data1: 'DPDP Standard Compliance',
+    label2: 'Organization',
+    data2: 'Dread Eleven Cricket Club'
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'Privacy Policy', item: '/privacy' }
@@ -3004,6 +3480,13 @@ ${renderHead({
   title: 'Terms & Conditions | Dread Eleven Cricket Club (DE)',
   description: 'Official terms and conditions, match ticketing rules, stadium conduct policies, and intellectual property rights for Dread Eleven in Rewa.',
   canonicalUrl: '/terms',
+  keywords: 'Dread Eleven Cricket Club terms and conditions, RDCA bylaws, match ticketing Rewa, stadium conduct policy',
+  twitterData: {
+    label1: 'Legal Governance',
+    data1: 'RDCA & MPCA Bylaws',
+    label2: 'Franchise Jurisdiction',
+    data2: 'Rewa, Madhya Pradesh'
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'Terms & Conditions', item: '/terms' }
@@ -3081,6 +3564,13 @@ ${renderHead({
   title: '404 — Page Not Found | Dread Eleven',
   description: 'Looks like this ball went straight into the stands. Explore fixtures, squad profiles, or match results on the official Dread Eleven portal.',
   canonicalUrl: '/404',
+  keywords: 'Dread Eleven 404, page not found, Rewa cricket portal, match archives',
+  twitterData: {
+    label1: 'Status',
+    data1: '404 Not Found',
+    label2: 'Action',
+    data2: 'Return to Pavilion'
+  },
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: '404 Page Not Found', item: '/404' }
@@ -3251,7 +3741,8 @@ LLM: ${BASE_URL}/llms.txt
 
 ## Core Franchise Information
 - Franchise Name: Dread Eleven Cricket Club (DE)
-- Team Captain: Akhil Mishra (Franchise Talisman & Batsman, 1,747 career runs, 92 career wickets in 51 matches)
+- Team Captain: [Akhil Mishra](${BASE_URL}/players/akhil-mishra): Captain & Top-Order Batsman (#45). 2022 Champion Captain. 1,378 career runs (Avg 44.5), 38 wickets (Best 4/28).
+- Machine-Readable Captain Profile: [Akhil Mishra JSON](${BASE_URL}/players/akhil-mishra.json) | [Akhil Mishra Markdown](${BASE_URL}/players/akhil-mishra.md)
 - Tournament: Atal Bihari Vajpayee Memorial Tournament (Rewa)
 - Governing Association: Rewa Division Cricket Association (RDCA)
 - Home Fortress: Martand School Ground No. 3, APSU Stadium (Rewa)

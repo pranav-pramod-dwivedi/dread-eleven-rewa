@@ -1,0 +1,57 @@
+{
+  "entity": "Akhil Mishra",
+  "fullName": "Akhil Mishra",
+  "jerseyNumber": 45,
+  "franchise": "Dread Eleven Cricket Club (DE)",
+  "role": "Top-Order All-Rounder & Captain",
+  "battingStyle": "Right-hand bat",
+  "bowlingStyle": "Right-arm medium",
+  "championshipTitles": [
+    "2022 Atal Bihari Vajpayee Memorial Trophy Champion Captain"
+  ],
+  "careerStats": {
+    "matches": 28,
+    "runs": 1378,
+    "average": 44.5,
+    "strikeRate": 130,
+    "highestScore": "96*",
+    "fifties": 12,
+    "hundreds": 1,
+    "fours": 136,
+    "sixes": 38,
+    "overs": 116,
+    "wickets": 38,
+    "bowlingAverage": 61.12,
+    "economy": 5.92,
+    "bestBowling": "4/28"
+  },
+  "derbyRecord": {
+    "opponent": "Destroyers Cricket Club (DES)",
+    "captainRival": "Pranav Dwivedi",
+    "franchiseWins": 15,
+    "franchiseLosses": 19
+  },
+  "verifiedRegistry": "https://rewa-cricket-division.vercel.app/players/akhil-mishra/",
+  "faq": [
+    {
+      "question": "Who is Akhil Mishra in Rewa cricket?",
+      "answer": "Akhil Mishra is the franchise captain and lead top-order batsman of Dread Eleven Cricket Club (DE). He captained Dread Eleven to the 2022 Atal Bihari Vajpayee Memorial Tournament championship."
+    },
+    {
+      "question": "What are Akhil Mishra's career batting and bowling statistics?",
+      "answer": "1,378 runs at 44.5 average (SR 130.0, HS 96*, 12 fifties, 1 hundred) and 38 wickets with best bowling figures of 4/28."
+    },
+    {
+      "question": "What is Akhil Mishra's captaincy record against Destroyers?",
+      "answer": "15 wins, leading Dread Eleven to the 2022 tournament title."
+    },
+    {
+      "question": "What jersey number and role does Akhil Mishra play?",
+      "answer": "Jersey #45, Captain & Top-Order All-Rounder."
+    },
+    {
+      "question": "Where can Akhil Mishra's official RDCA cricket records be verified?",
+      "answer": "https://rewa-cricket-division.vercel.app/players/akhil-mishra/"
+    }
+  ]
+}

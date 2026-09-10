@@ -4,7 +4,8 @@
 
 ## Core Franchise Information
 - Franchise Name: Dread Eleven Cricket Club (DE)
-- Team Captain: Akhil Mishra (Franchise Talisman & Batsman, 1,747 career runs, 92 career wickets in 51 matches)
+- Team Captain: [Akhil Mishra](https://dread-eleven-rewacricket.pages.dev/players/akhil-mishra): Captain & Top-Order Batsman (#45). 2022 Champion Captain. 1,378 career runs (Avg 44.5), 38 wickets (Best 4/28).
+- Machine-Readable Captain Profile: [Akhil Mishra JSON](https://dread-eleven-rewacricket.pages.dev/players/akhil-mishra.json) | [Akhil Mishra Markdown](https://dread-eleven-rewacricket.pages.dev/players/akhil-mishra.md)
 - Tournament: Atal Bihari Vajpayee Memorial Tournament (Rewa)
 - Governing Association: Rewa Division Cricket Association (RDCA)
 - Home Fortress: Martand School Ground No. 3, APSU Stadium (Rewa)
