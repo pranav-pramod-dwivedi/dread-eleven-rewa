@@ -167,10 +167,6 @@ function renderHeader(activeNav = '') {
       </nav>
 
       <div class="header-cta-group">
-        <a href="/#live-pulse" class="nav-live-pill" aria-label="Jump to Live Match Centre">
-          <span class="pulse-beacon red"></span>
-          <span>LIVE</span>
-        </a>
         <button type="button" class="cmd-palette-trigger header-search-btn" aria-label="Open Command Palette (Cmd+K)">
           <span class="search-icon">⌕</span>
           <span class="search-label">SEARCH</span>
@@ -293,9 +289,9 @@ function renderFooter() {
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
         <span>Home</span>
       </a>
-      <a href="/#live-pulse" class="dock-item">
-        <span class="pulse-beacon red" style="width:8px;height:8px;"></span>
-        <span>Live</span>
+      <a href="/fixtures" class="dock-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Fixtures</span>
       </a>
       <a href="/players" class="dock-item">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
@@ -615,6 +611,152 @@ ${renderHeader('home')}
       <div class="barometer-stat-box">
         <div class="barometer-stat-val tabular" style="color:var(--c-emerald);">44.1%</div>
         <div class="barometer-stat-lbl">DE Win Ratio</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WE ARE THE CHAMPIONS: THE FOUNDATION DYNASTY (2021–2023) -->
+<section class="champions-dynasty-section" id="champions-dynasty" style="padding: 5rem 0; background: linear-gradient(180deg, rgba(10,10,12,0.98), rgba(6,6,8,1)); border-top: 1px solid var(--b-subtle); border-bottom: 1px solid var(--b-subtle);">
+  <div class="container">
+    <div class="section-masthead" style="margin-bottom: 2.5rem;">
+      <div>
+        <div style="display:inline-flex; align-items:center; gap:0.5rem; background:rgba(212,255,0,0.1); border:1px solid rgba(212,255,0,0.3); padding:0.35rem 0.85rem; border-radius:var(--radius-sm); margin-bottom:0.75rem;">
+          <span style="color:var(--c-volt); font-family:var(--f-mono); font-size:0.75rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase;">RDCA Sanctioned Dynasty • Three-Peat Champions</span>
+        </div>
+        <h2 class="section-bigtitle" style="font-size:clamp(2.4rem, 5.5vw, 4.2rem); line-height:1; letter-spacing:-0.02em;">
+          WE ARE THE CHAMPIONS: <span style="color:var(--c-volt);">THE FOUNDATION DYNASTY</span>
+        </h2>
+        <p style="color:var(--c-gray-300); font-size:1.05rem; max-width:68ch; margin-top:0.75rem; line-height:1.6;">
+          Three consecutive Atal Bihari Vajpayee Memorial Trophy titles (2021, 2022, 2023) captained by Akhil Mishra. Rewa's foundational cricket dynasty forged through relentless poise, defensive grit, and clutch strokeplay.
+        </p>
+      </div>
+      <div style="display:flex; align-items:center; gap:1rem;">
+        <span class="badge-brutalist badge-gold" style="font-size:0.9rem; padding:0.5rem 1rem;">3X CONSECUTIVE TITLES</span>
+      </div>
+    </div>
+
+    <!-- 3 Dynasty Cards Grid -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.75rem; margin-bottom:3rem;">
+      <!-- 2021 Inaugural Champions Card -->
+      <div class="dynasty-card" style="background:var(--c-surface); border:1px solid rgba(212,255,0,0.25); border-radius:var(--radius-sm); padding:2rem; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:linear-gradient(90deg, var(--c-volt), var(--c-gold));"></div>
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <span style="font-family:var(--f-athletic); font-size:2.25rem; font-weight:900; color:var(--c-volt); line-height:1;">2021</span>
+            <span class="badge-brutalist badge-volt" style="font-size:0.7rem;">INDEPENDENCE CUP • 5–2</span>
+          </div>
+          <h3 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem; line-height:1.15;">
+            Inaugural ABV Memorial Champions
+          </h3>
+          <p style="font-size:0.875rem; color:var(--c-gray-300); line-height:1.6; margin-bottom:1.25rem;">
+            Dread Eleven captured Rewa's inaugural professional tournament title in commanding fashion, dominating the 7-match marathon 5–2 behind Akhil Mishra's tactical mastery and Venkatesh Iyer's sensational power hitting.
+          </p>
+          <div style="background:rgba(255,255,255,0.03); border:1px solid var(--b-subtle); padding:0.85rem; border-radius:var(--radius-sm); margin-bottom:1.5rem; font-family:var(--f-mono); font-size:0.75rem;">
+            <div style="color:var(--c-gold); font-weight:700; margin-bottom:0.25rem;">CLIMAX HIGHLIGHT (28 AUG 2021)</div>
+            <div style="color:var(--c-white);">DE 258/7 def. DES 220 by 38 runs</div>
+            <div style="color:var(--c-gray-400); margin-top:0.2rem;">POTM: Mohit Sharma (4/24 in 8 ov)</div>
+          </div>
+        </div>
+        <a href="/matches/destroyers-vs-dread-eleven-2021-08-28" class="btn-athletic btn-volt btn-sm" style="width:100%; justify-content:center; text-decoration:none;">
+          <span>Inspect 2021 Title Decider Scorecard &rarr;</span>
+        </a>
+      </div>
+
+      <!-- 2022 Title Defense Card -->
+      <div class="dynasty-card" style="background:var(--c-surface); border:1px solid rgba(255,215,0,0.3); border-radius:var(--radius-sm); padding:2rem; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:linear-gradient(90deg, var(--c-gold), #fff);"></div>
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <span style="font-family:var(--f-athletic); font-size:2.25rem; font-weight:900; color:var(--c-gold); line-height:1;">2022</span>
+            <span class="badge-brutalist badge-gold" style="font-size:0.7rem;">7-MATCH MARATHON • 4–3</span>
+          </div>
+          <h3 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem; line-height:1.15;">
+            Back-to-Back Title Retained
+          </h3>
+          <p style="font-size:0.875rem; color:var(--c-gray-300); line-height:1.6; margin-bottom:1.25rem;">
+            In the most dramatic series in Vindhya cricket lore, Dread Eleven rebounded from 2–3 down to take the final two matches, retaining the trophy in the Match 7 decider by 11 runs under electric APSU floodlights.
+          </p>
+          <div style="background:rgba(255,255,255,0.03); border:1px solid var(--b-subtle); padding:0.85rem; border-radius:var(--radius-sm); margin-bottom:1.5rem; font-family:var(--f-mono); font-size:0.75rem;">
+            <div style="color:var(--c-gold); font-weight:700; margin-bottom:0.25rem;">CLIMAX HIGHLIGHT (18 SEP 2022)</div>
+            <div style="color:var(--c-white);">DE 248/7 def. DES 237 by 11 runs</div>
+            <div style="color:var(--c-gray-400); margin-top:0.2rem;">POTM: Akhil Mishra (65* off 48 &amp; 2/31)</div>
+          </div>
+        </div>
+        <a href="/matches/destroyers-vs-dread-eleven-2022-09-18" class="btn-athletic btn-volt btn-sm" style="width:100%; justify-content:center; text-decoration:none;">
+          <span>Inspect 2022 Grand Final Scorecard &rarr;</span>
+        </a>
+      </div>
+
+      <!-- 2023 Three-Peat Triumph Card -->
+      <div class="dynasty-card" style="background:var(--c-surface); border:1px solid rgba(212,255,0,0.25); border-radius:var(--radius-sm); padding:2rem; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;">
+        <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:linear-gradient(90deg, var(--c-volt), var(--c-emerald));"></div>
+        <div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <span style="font-family:var(--f-athletic); font-size:2.25rem; font-weight:900; color:var(--c-volt); line-height:1;">2023</span>
+            <span class="badge-brutalist badge-volt" style="font-size:0.7rem;">THE THREE-PEAT • 3–2</span>
+          </div>
+          <h3 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem; line-height:1.15;">
+            Historic Three-Peat Legacy
+          </h3>
+          <p style="font-size:0.875rem; color:var(--c-gray-300); line-height:1.6; margin-bottom:1.25rem;">
+            Sealing the dynasty with an iconic hat-trick of tournament championships, DE defended 279 in the 2023 series decider at Martand Ground No. 3, turning Destroyers away by 14 runs with clinical death bowling.
+          </p>
+          <div style="background:rgba(255,255,255,0.03); border:1px solid var(--b-subtle); padding:0.85rem; border-radius:var(--radius-sm); margin-bottom:1.5rem; font-family:var(--f-mono); font-size:0.75rem;">
+            <div style="color:var(--c-gold); font-weight:700; margin-bottom:0.25rem;">CLIMAX HIGHLIGHT (20 SEP 2023)</div>
+            <div style="color:var(--c-white);">DE 279/6 def. DES 265 by 14 runs</div>
+            <div style="color:var(--c-gray-400); margin-top:0.2rem;">POTM: Abhishek Pathak (3/38 in 9 ov)</div>
+          </div>
+        </div>
+        <a href="/matches/destroyers-vs-dread-eleven-2023-09-20" class="btn-athletic btn-volt btn-sm" style="width:100%; justify-content:center; text-decoration:none;">
+          <span>Inspect 2023 Three-Peat Scorecard &rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Editorial Dynasty Longform Feature Box -->
+    <div style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm); display:grid; grid-template-columns:1.5fr 1fr; gap:2.5rem; align-items:center;" class="dynasty-longform-grid">
+      <div>
+        <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-volt); text-transform:uppercase; font-weight:800; margin-bottom:0.5rem;">
+          CHAMPIONSHIP FEATURE &amp; EDITORIAL ARCHIVE
+        </div>
+        <h3 style="font-family:var(--f-athletic); font-size:2.25rem; color:var(--c-white); text-transform:uppercase; line-height:1.1; margin-bottom:1rem;">
+          How Dread Eleven Forged Rewa's Golden Cricket Era
+        </h3>
+        <p style="font-size:0.95rem; color:var(--c-gray-300); line-height:1.7; margin-bottom:1rem;">
+          Between 2021 and 2023, Dread Eleven contested 19 tournament matches against Destroyers, clinching 12 victories (63.2% win rate) and lifting three consecutive Atal Bihari Vajpayee Memorial Trophies. Captain Akhil Mishra instilled a ruthless tactical discipline — rotating spinners against Destroyers' hard-hitting top order and executing calculated run chases.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="/results" class="btn-athletic btn-outline btn-sm">
+            <span>Browse All 15 DE Derby Wins &rarr;</span>
+          </a>
+          <a href="/about" class="btn-athletic btn-sm" style="background:rgba(212,255,0,0.1); border:1px solid var(--c-volt); color:var(--c-volt);">
+            <span>Read Club History &rarr;</span>
+          </a>
+        </div>
+      </div>
+      <div style="background:var(--c-surface); border:1px solid var(--b-subtle); padding:1.75rem; border-radius:var(--radius-sm);">
+        <h4 style="font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-gold); text-transform:uppercase; margin-bottom:1rem;">
+          Foundation Dynasty Numbers
+        </h4>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+          <div style="border-bottom:1px solid var(--b-subtle); padding-bottom:0.75rem;">
+            <div style="font-family:var(--f-mono); font-size:1.75rem; font-weight:900; color:var(--c-white);">3/3</div>
+            <div style="font-size:0.7rem; color:var(--c-gray-400); text-transform:uppercase; font-family:var(--f-mono);">Trophies Won</div>
+          </div>
+          <div style="border-bottom:1px solid var(--b-subtle); padding-bottom:0.75rem;">
+            <div style="font-family:var(--f-mono); font-size:1.75rem; font-weight:900; color:var(--c-volt);">12</div>
+            <div style="font-size:0.7rem; color:var(--c-gray-400); text-transform:uppercase; font-family:var(--f-mono);">Derby Wins (21–23)</div>
+          </div>
+          <div>
+            <div style="font-family:var(--f-mono); font-size:1.75rem; font-weight:900; color:var(--c-emerald);">63.2%</div>
+            <div style="font-size:0.7rem; color:var(--c-gray-400); text-transform:uppercase; font-family:var(--f-mono);">Dynasty Win %</div>
+          </div>
+          <div>
+            <div style="font-family:var(--f-mono); font-size:1.75rem; font-weight:900; color:var(--c-gold);">1,280+</div>
+            <div style="font-size:0.7rem; color:var(--c-gray-400); text-transform:uppercase; font-family:var(--f-mono);">Mishra Derby Runs</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1274,6 +1416,124 @@ ${renderFooter()}
       }
     }
 
+    function renderMatchEditorialSection(m) {
+      if (m.status !== 'completed') return '';
+
+      const isDeWinner = m.winner === 'DE';
+      const inn1 = m.innings[0] || { teamName: 'Innings 1', runs: 0, wickets: 0, overs: 0, batting: [], bowling: [] };
+      const inn2 = m.innings[1] || { teamName: 'Innings 2', runs: 0, wickets: 0, overs: 0, batting: [], bowling: [] };
+
+      const bat1Sorted = [...(inn1.batting || [])].sort((a,b) => b.runs - a.runs);
+      const bat2Sorted = [...(inn2.batting || [])].sort((a,b) => b.runs - a.runs);
+      const bowl1Sorted = [...(inn1.bowling || [])].sort((a,b) => (b.wickets - a.wickets) || (a.runs - b.runs));
+      const bowl2Sorted = [...(inn2.bowling || [])].sort((a,b) => (b.wickets - a.wickets) || (a.runs - b.runs));
+
+      const topBat1 = bat1Sorted[0] || { playerName: 'Top Batter', runs: 0, balls: 0, fours: 0, sixes: 0 };
+      const topBat2 = bat2Sorted[0] || { playerName: 'Top Batter', runs: 0, balls: 0, fours: 0, sixes: 0 };
+      const topBowl1 = bowl1Sorted[0] || { playerName: 'Top Bowler', wickets: 0, runs: 0, overs: 0 };
+      const topBowl2 = bowl2Sorted[0] || { playerName: 'Top Bowler', wickets: 0, runs: 0, overs: 0 };
+
+      const potm = m.playerOfTheMatch || { name: isDeWinner ? 'Akhil Mishra' : 'Pranav Dwivedi', reason: 'match-winning performance' };
+      const deCapt = m.captains?.DE?.playerName || 'Akhil Mishra';
+      const desCapt = m.captains?.DES?.playerName || 'Pranav Dwivedi';
+
+      const venue = m.venue?.name || 'APSU Stadium, Rewa';
+      const isApsu = venue.includes('APSU');
+
+      const headline = isDeWinner
+        ? `Dread Eleven Seal ${m.format} Derby Glory: Inside the Tactical Battle at ${venue}`
+        : `Destroyers Edge High-Stakes Rewa Clash: Tactical Breakdown at ${venue}`;
+
+      const lead = `Under the intense scrutiny of the Atal Bihari Vajpayee Memorial Tournament, ${isDeWinner ? 'Dread Eleven' : 'Destroyers Cricket Club'} clinched a commanding result (${m.resultText}) on ${formatDate(m.matchDate)} at ${venue}.`;
+
+      const p1 = `The ${m.seasonYear} clash at ${venue} was defined early by the toss, with ${m.toss?.winner || 'the captains'} electing to ${m.toss?.decision || 'bat first'} on a ${isApsu ? 'hard, carry-friendly red-soil strip at APSU Stadium' : 'tactical surface at Martand Ground No. 3 providing early moisture and seam movement'}. In the opening exchange, ${inn1.teamName} posted ${inn1.runs}/${inn1.wickets} in ${inn1.overs} overs, anchored by ${topBat1.playerName}'s resolute ${topBat1.runs} off ${topBat1.balls} balls. However, ${inn2.teamName}'s bowling attack countered with relentless discipline, led by ${topBowl1.playerName} who claimed ${topBowl1.wickets}/${topBowl1.runs} across ${topBowl1.overs} overs.`;
+
+      const p2 = `In reply, ${inn2.teamName} answered the target with determination, scoring ${inn2.runs}/${inn2.wickets} in ${inn2.overs} overs. ${topBat2.playerName} spearheaded the innings with ${topBat2.runs} runs off ${topBat2.balls} deliveries, while the fielding side tightened their grip through ${topBowl2.playerName}'s crucial spell of ${topBowl2.wickets}/${topBowl2.runs}. High-pressure middle overs created immense tension as every single and boundary was contested with derby ferocity.`;
+
+      const p3 = `Tactically, captain ${isDeWinner ? deCapt : desCapt} orchestrated field settings that suffocated scoring avenues through the cover arc and deep midwicket boundary. The bowling changes between overs 12 to 16 proved decisive, cutting off boundaries and forcing false strokes from ${isDeWinner ? 'Destroyers' : 'Dread Eleven'}'s middle order.`;
+
+      const p4 = `The match-winning honours went to ${potm.name}, awarded Player of the Match for ${potm.reason}. This encounter not only shaped the ${m.seasonYear} standings of the Atal Bihari Vajpayee Memorial Tournament, but added another fiercely competitive chapter to Rewa's marquee sporting rivalry.`;
+
+      const turningPoint = isDeWinner
+        ? `The critical dismissal of ${topBat1.playerName} and the disciplined middle-overs squeeze by ${topBowl2.playerName}.`
+        : `The relentless spell from ${topBowl1.playerName} and clutch finishing strokes by ${potm.name}.`;
+
+      const conditions = isApsu
+        ? `APSU Stadium wicket offered consistent bounce with true carry for pacers and true strokeplay through the line.`
+        : `Martand Ground No. 3 surface provided notable grip for finger spinners and lateral seam movement with the new ball.`;
+
+      const captainMove = isDeWinner
+        ? `Capt. ${deCapt} brought fielders inside the circle during overs 14-17, tempting aerial shots to long-on.`
+        : `Capt. ${desCapt} deployed reverse-swing yorkers and aggressive bouncers in the death overs to lock down the victory.`;
+
+      return `
+        <article class="match-editorial-blog" style="margin-top:2.5rem; background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem; border-bottom:1px solid var(--b-subtle); padding-bottom:1rem;">
+            <div style="display:flex; align-items:center; gap:0.75rem;">
+              <span class="badge-brutalist badge-volt">EDITORIAL MATCH REPORT</span>
+              <span style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400); text-transform:uppercase;">By RDCA Senior Cricket Correspondent</span>
+            </div>
+            <div style="font-family:var(--f-mono); font-size:0.75rem; color:var(--c-gray-400);">
+              ${formatDate(m.matchDate)} • 5 Min Read
+            </div>
+          </div>
+
+          <h2 style="font-family:var(--f-athletic); font-size:clamp(1.75rem, 3.5vw, 2.75rem); color:var(--c-white); text-transform:uppercase; line-height:1.1; margin-bottom:1rem;">
+            ${esc(headline)}
+          </h2>
+
+          <p style="font-size:1.05rem; color:var(--c-volt); font-family:var(--f-body); line-height:1.6; margin-bottom:2rem; font-weight:600; border-left:3px solid var(--c-volt); padding-left:1rem;">
+            ${esc(lead)}
+          </p>
+
+          <div style="display:grid; grid-template-columns: 2fr 1fr; gap:2.5rem; margin-bottom:2rem;" class="match-blog-grid">
+            <div class="match-blog-body" style="font-size:0.95rem; color:var(--c-gray-300); line-height:1.8; display:flex; flex-direction:column; gap:1.25rem;">
+              <p>${p1}</p>
+              <p>${p2}</p>
+              <p>${p3}</p>
+              <p>${p4}</p>
+            </div>
+
+            <div class="match-blog-sidebar" style="background:var(--c-card-bg); border:1px solid var(--b-subtle); padding:1.5rem; border-radius:var(--radius-sm); height:fit-content;">
+              <h4 style="font-family:var(--f-athletic); font-size:1.25rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.25rem; border-bottom:1px solid var(--b-subtle); padding-bottom:0.5rem;">
+                Tactical Post-Mortem
+              </h4>
+
+              <div style="display:flex; flex-direction:column; gap:1rem;">
+                <div>
+                  <span style="font-family:var(--f-mono); font-size:0.7rem; color:var(--c-volt); text-transform:uppercase; font-weight:800; display:block; margin-bottom:0.25rem;">Turning Point</span>
+                  <p style="font-size:0.85rem; color:var(--c-gray-300); line-height:1.5; margin:0;">
+                    ${esc(turningPoint)}
+                  </p>
+                </div>
+
+                <div>
+                  <span style="font-family:var(--f-mono); font-size:0.7rem; color:var(--c-gold); text-transform:uppercase; font-weight:800; display:block; margin-bottom:0.25rem;">Pitch &amp; Conditions</span>
+                  <p style="font-size:0.85rem; color:var(--c-gray-300); line-height:1.5; margin:0;">
+                    ${esc(conditions)}
+                  </p>
+                </div>
+
+                <div>
+                  <span style="font-family:var(--f-mono); font-size:0.7rem; color:var(--c-emerald); text-transform:uppercase; font-weight:800; display:block; margin-bottom:0.25rem;">Captain's Masterstroke</span>
+                  <p style="font-size:0.85rem; color:var(--c-gray-300); line-height:1.5; margin:0;">
+                    ${esc(captainMove)}
+                  </p>
+                </div>
+
+                <div>
+                  <span style="font-family:var(--f-mono); font-size:0.7rem; color:var(--c-white); text-transform:uppercase; font-weight:800; display:block; margin-bottom:0.25rem;">Player of the Match</span>
+                  <p style="font-size:0.85rem; color:var(--c-gray-300); line-height:1.5; margin:0;">
+                    <strong>${esc(potm.name)}</strong>: ${esc(potm.reason)}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
     function renderInningsTable(inn, battingTeam, bowlingTeam) {
       if (!inn || !inn.batting || !inn.batting.length) {
         return '<p style="color:var(--c-gray-400); padding:1rem;">Innings details scheduled for match day.</p>';
@@ -1501,6 +1761,9 @@ ${renderHeader('results')}
         <!-- Innings 2 -->
         ${renderInningsTable(inn2, inn2.teamName || (inn2.teamShort === 'DE' ? 'Dread Eleven' : 'Destroyers Cricket Club'), (inn2.teamShort === 'DE' || inn2.teamName?.includes('Dread')) ? 'Destroyers Cricket Club' : 'Dread Eleven')}
       </div>
+
+      <!-- Match Tactical Post-Mortem & In-Depth Editorial Blog -->
+      ${renderMatchEditorialSection(m)}
     ` : `
       <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:3.5rem 2rem; text-align:center; border-radius:var(--radius-sm);">
         <h2 style="font-family:var(--f-athletic); font-size:2.5rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.75rem;">
