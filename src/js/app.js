@@ -211,7 +211,7 @@ function initMatchFilters() {
 
       const formatMatches =
         activeFormat === 'all' ||
-        (activeFormat === 'ODI' && (fmt.includes('ODI') || fmt.includes('ONE-DAY'))) ||
+        ((activeFormat === '50-overs' || activeFormat === 'ODI') && (fmt.includes('50') || fmt.includes('ODI') || fmt.includes('ONE-DAY'))) ||
         (activeFormat === 'T20' && fmt.includes('T20'));
 
       const seasonMatches = activeSeason === 'all' || season === activeSeason;

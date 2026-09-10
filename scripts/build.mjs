@@ -1237,7 +1237,7 @@ function generateMatchPages() {
       <div class="filter-row">
         <span class="filter-label">Format:</span>
         <button type="button" class="filter-pill-btn format-filter-pill active" data-format="all">All (${listMatches.length})</button>
-        <button type="button" class="filter-pill-btn format-filter-pill" data-format="ODI">ODI (50-Over)</button>
+        <button type="button" class="filter-pill-btn format-filter-pill" data-format="50-overs">50 Overs</button>
         <button type="button" class="filter-pill-btn format-filter-pill" data-format="T20">T20 Blast</button>
 
         <span class="filter-label" style="margin-left:1.5rem;">Result:</span>
@@ -1848,7 +1848,7 @@ ${renderHeader('table')}
           <tbody>
             <tr>
               <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-white);">2026 Edition</td>
-              <td style="color:var(--c-gray-400);">2 T20s + 3 ODIs</td>
+              <td style="color:var(--c-gray-400);">2 T20s + 3 50-Over Matches</td>
               <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-orange);">Destroyers CC</td>
               <td style="color:var(--c-white); font-weight:600;">Pranav Dwivedi <span style="color:var(--c-orange); font-size:0.75rem;">(c)</span></td>
               <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">3–2 (5 matches)</td>
@@ -1856,7 +1856,7 @@ ${renderHeader('table')}
             </tr>
             <tr>
               <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-white);">2025 Edition</td>
-              <td style="color:var(--c-gray-400);">2 T20s + 3 ODIs</td>
+              <td style="color:var(--c-gray-400);">2 T20s + 3 50-Over Matches</td>
               <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-orange);">Destroyers CC</td>
               <td style="color:var(--c-white); font-weight:600;">Pranav Dwivedi <span style="color:var(--c-orange); font-size:0.75rem;">(c)</span></td>
               <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">5–0 Clean Sweep</td>
@@ -1864,7 +1864,7 @@ ${renderHeader('table')}
             </tr>
             <tr>
               <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-white);">2024 Edition</td>
-              <td style="color:var(--c-gray-400);">2 T20s + 3 ODIs</td>
+              <td style="color:var(--c-gray-400);">2 T20s + 3 50-Over Matches</td>
               <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-orange);">Destroyers CC</td>
               <td style="color:var(--c-white); font-weight:600;">Pranav Dwivedi <span style="color:var(--c-orange); font-size:0.75rem;">(c)</span></td>
               <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">4–1 (5 matches)</td>
@@ -1872,7 +1872,7 @@ ${renderHeader('table')}
             </tr>
             <tr>
               <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-volt);">2023 Edition</td>
-              <td style="color:var(--c-gray-400);">2 T20s + 3 ODIs</td>
+              <td style="color:var(--c-gray-400);">2 T20s + 3 50-Over Matches</td>
               <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-volt);">Dread Eleven</td>
               <td style="color:var(--c-white); font-weight:600;">Akhil Mishra <span style="color:var(--c-volt); font-size:0.75rem;">(c)</span></td>
               <td class="tabular font-bold" style="text-align:right; color:var(--c-emerald);">3–2 (5 matches)</td>
@@ -1880,7 +1880,7 @@ ${renderHeader('table')}
             </tr>
             <tr>
               <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-volt);">2022 Edition</td>
-              <td style="color:var(--c-gray-400);">ODI &amp; T20 Format</td>
+              <td style="color:var(--c-gray-400);">50-Over &amp; T20 Format</td>
               <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-volt);">Dread Eleven</td>
               <td style="color:var(--c-white); font-weight:600;">Akhil Mishra <span style="color:var(--c-volt); font-size:0.75rem;">(c)</span></td>
               <td class="tabular font-bold" style="text-align:right; color:var(--c-emerald);">4–3 (7 matches)</td>
@@ -2002,7 +2002,7 @@ ${renderHeader('table')}
       <!-- 2024 Season -->
       <div style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
         <h3 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">
-          Season 2024 (50-Over ODI Series)
+          Season 2024 (50-Over Series)
         </h3>
         <div class="scorecard-table-wrap">
           <table class="cricket-table">
@@ -2414,7 +2414,7 @@ ${renderHeader('about')}
         Forged in 2021 in the heart of Rewa, Madhya Pradesh, <strong>Dread Eleven (DE)</strong> embodies the aggressive, clinical edge of Vindhya cricket. Sanctioned by the <strong>Rewa Division Cricket Association (RDCA)</strong>, Dread Eleven compete annually in the prestigious <strong>Atal Bihari Vajpayee Memorial Tournament</strong>.
       </p>
       <p style="margin-bottom:1.5rem;">
-        The club's defining trial is its epic derby with <strong>Destroyers Cricket Club (DES)</strong>. Spanning 24 fiercely contested clashes from 2021 to 2024 across both T20 Blast and 50-over ODI formats, Dread Eleven captured the pinnacle of glory on <strong>12 August 2022</strong>, lifting the Atal Bihari Vajpayee Memorial Trophy Championship title at APSU Stadium.
+        The club's defining trial is its epic derby with <strong>Destroyers Cricket Club (DES)</strong>. Spanning 24 fiercely contested clashes from 2021 to 2024 across both T20 Blast and 50-over formats, Dread Eleven captured the pinnacle of glory on <strong>12 August 2022</strong>, lifting the Atal Bihari Vajpayee Memorial Trophy Championship title at APSU Stadium.
       </p>
       <p style="margin-bottom:1.5rem;">
         Captained by top-order master <strong>Akhil Mishra</strong>, Dread Eleven play with venomous intent, utilizing the sharp spin and abrasive pace of Martand School Ground No. 3 to dismantle opposing batting lineups.
@@ -2564,7 +2564,7 @@ ${renderHeader('')}
         <ul style="padding-left:1.5rem; display:flex; flex-direction:column; gap:0.5rem;">
           <li><strong>Tournament Inquiries:</strong> When submitting forms through our Contact desk, your name, email address, and inquiry text are logged solely to fulfill match-day inquiries and trial scheduling.</li>
           <li><strong>Aggregated Site Telemetry:</strong> Anonymized Core Web Vitals, page visit counts, device classifications, and regional bandwidth telemetry to maintain 60 FPS client rendering.</li>
-          <li><strong>Cookies &amp; Local Storage:</strong> Essential session preferences such as filter toolbar states (T20 vs. ODI) and theme caching. No tracking pixels are sold or shared with third-party data brokers.</li>
+          <li><strong>Cookies &amp; Local Storage:</strong> Essential session preferences such as filter toolbar states (T20 vs. 50 Overs) and theme caching. No tracking pixels are sold or shared with third-party data brokers.</li>
         </ul>
       </div>
 
