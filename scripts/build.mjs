@@ -134,7 +134,7 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
       description: cleanDesc,
       url: fullCanonical,
       isPartOf: {
-        '@type': 'SportsTeam',
+        '@type': ['SportsOrganization', 'Organization'],
         name: 'Dread Eleven Cricket Club (DE)',
         url: BASE_URL,
         sport: 'Cricket'
@@ -152,6 +152,11 @@ function renderHead({ title, description, canonicalUrl, ogType = 'website', ogIm
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="${fullCanonical}">
   <meta name="theme-color" content="#0b0b0b">
+
+  <!-- AI Crawler & LLM Discovery Standards (llmstxt.org) -->
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context">
+  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full LLM Context">
+  <link rel="alternate" type="application/rss+xml" title="Dread Eleven News &amp; Match Feed" href="/feed.xml">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="${esc(ogType)}">
@@ -396,15 +401,59 @@ function generateHomePage() {
   const featuredSquad = squad.slice(0, 8);
   const recentTournamentMatches = matches.slice(-6);
 
-  const jsonLd = {
+  const orgLd = {
+    '@context': 'https://schema.org',
+    '@type': ['SportsOrganization', 'Organization'],
+    name: 'Dread Eleven Cricket Club (DE)',
+    alternateName: ['Dread Eleven', 'DE', 'Dread Eleven Rewa', 'Dread Eleven CC'],
+    url: BASE_URL,
+    logo: `${BASE_URL}/public/favicon.svg`,
+    image: `${BASE_URL}/public/images/de-crest.svg`,
+    description: 'Official digital stadium and franchise portal for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete match scorecards, 43-man squad, standings, and stats in Rewa, Madhya Pradesh.',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Rewa',
+      addressRegion: 'Madhya Pradesh',
+      postalCode: '486001',
+      addressCountry: 'India'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'Franchise Administration & Scouting',
+      email: 'contact@dread-eleven.cricket',
+      availableLanguage: ['English', 'Hindi']
+    },
+    founder: {
+      '@type': 'Person',
+      name: 'Akhil Mishra',
+      jobTitle: 'Captain & Franchise Leader',
+      url: `${BASE_URL}/players/akhil-mishra`
+    },
+    memberOf: {
+      '@type': 'SportsOrganization',
+      name: 'Rewa Division Cricket Association (RDCA)',
+      url: 'https://rewa-cricket-division.vercel.app'
+    },
+    sameAs: [
+      'https://rewa-cricket-division.vercel.app/teams/dread-eleven/',
+      'https://rewa-cricket-division.vercel.app/tournaments/atal-bihari-vajpayee-memorial-tournament/',
+      'https://destroyers-rewacricket.pages.dev/'
+    ]
+  };
+
+  const teamLd = {
     '@context': 'https://schema.org',
     '@type': 'SportsTeam',
     name: 'Dread Eleven Cricket Club',
     alternateName: 'Dread Eleven (DE)',
     sport: 'Cricket',
+    url: BASE_URL,
+    logo: `${BASE_URL}/public/favicon.svg`,
+    image: `${BASE_URL}/public/images/de-crest.svg`,
     memberOf: {
       '@type': 'SportsOrganization',
-      name: 'Rewa Division Cricket Association (RDCA)'
+      name: 'Rewa Division Cricket Association (RDCA)',
+      url: 'https://rewa-cricket-division.vercel.app'
     },
     location: {
       '@type': 'Place',
@@ -416,10 +465,33 @@ function generateHomePage() {
         addressCountry: 'India'
       }
     },
+    athlete: squad.slice(0, 15).map((p) => ({
+      '@type': 'Person',
+      name: p.name,
+      roleName: p.role,
+      url: `${BASE_URL}/players/${p.slug}`
+    })),
     coach: {
       '@type': 'Person',
       name: 'Akhil Mishra',
-      jobTitle: 'Captain & Top-Order Batter'
+      jobTitle: 'Captain & Top-Order Batter',
+      url: `${BASE_URL}/players/akhil-mishra`
+    }
+  };
+
+  const websiteLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Dread Eleven Cricket Club',
+    alternateName: 'Dread Eleven Digital Stadium',
+    url: BASE_URL,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${BASE_URL}/search?q={search_term_string}`
+      },
+      'query-input': 'required name=search_term_string'
     }
   };
 
@@ -428,7 +500,7 @@ ${renderHead({
   title: 'Dread Eleven Cricket Club | Digital Stadium & Arena',
   description: 'Official digital stadium for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete match scorecards, 43-man squad, standings, and stats.',
   canonicalUrl: '/',
-  jsonLd
+  jsonLd: [orgLd, teamLd, websiteLd]
 })}
 ${renderHeader('home')}
 
@@ -1076,10 +1148,13 @@ ${renderFooter()}
       name: p.name,
       jobTitle: p.role,
       description: p.bio,
+      url: `${BASE_URL}/players/${p.slug}`,
       memberOf: {
-        '@type': 'SportsTeam',
-        name: 'Dread Eleven Cricket Club'
-      }
+        '@type': ['SportsOrganization', 'SportsTeam'],
+        name: 'Dread Eleven Cricket Club (DE)',
+        url: BASE_URL
+      },
+      ...(p.slug === 'akhil-mishra' ? { sameAs: ['https://rewa-cricket-division.vercel.app/players/akhil-mishra/'] } : {})
     };
 
     // Filter match logs for this player (consolidate per match so 1 row has both batting & bowling)
@@ -1107,7 +1182,7 @@ ${renderFooter()}
     const playerHtml = `
 ${renderHead({
   title: clampTitle(`#${p.jerseyNumber} ${p.name} — Career Stats | Dread Eleven`, 60),
-  description: clampDesc(`${p.name} (#${p.jerseyNumber}) profile for Dread Eleven in Rewa. ${p.role} with ${p.batting.runs} runs, ${p.bowling.wickets} wickets, and match records.`, 155),
+  description: clampDesc(`${p.name} (#${p.jerseyNumber}) official player profile for Dread Eleven Cricket Club in Rewa. ${p.role} with ${p.batting.runs} runs, ${p.bowling.wickets} wickets, and match records.`, 155),
   canonicalUrl: `/players/${p.slug}`,
   jsonLd: playerJsonLd,
   breadcrumbs: [
@@ -2367,16 +2442,26 @@ ${renderFooter()}
       '@type': 'NewsArticle',
       headline: n.title,
       description: clampDesc(n.summary, 155),
+      image: `${BASE_URL}/public/images/de-crest.svg`,
       datePublished: n.publishedAt,
       dateModified: n.updatedAt || n.publishedAt,
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `${BASE_URL}/news/${n.slug}`
+      },
       author: {
         '@type': 'Person',
         name: n.author.name,
         jobTitle: n.author.role
       },
       publisher: {
-        '@type': 'Organization',
-        name: 'Dread Eleven Cricket Club'
+        '@type': ['SportsOrganization', 'Organization'],
+        name: 'Dread Eleven Cricket Club (DE)',
+        url: BASE_URL,
+        logo: {
+          '@type': 'ImageObject',
+          url: `${BASE_URL}/public/favicon.svg`
+        }
       }
     };
 
@@ -2444,11 +2529,35 @@ function generateAboutAndContactPages() {
   ensureDir(aboutDir);
   ensureDir(contactDir);
 
+  const aboutJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About Dread Eleven Cricket Club',
+    description: 'History and heritage of Dread Eleven (DE) in Rewa. Affiliated with RDCA and competing in the Atal Bihari Vajpayee Memorial Tournament circuit.',
+    url: `${BASE_URL}/about`,
+    about: {
+      '@type': ['SportsOrganization', 'Organization'],
+      name: 'Dread Eleven Cricket Club (DE)',
+      url: BASE_URL,
+      memberOf: {
+        '@type': 'SportsOrganization',
+        name: 'Rewa Division Cricket Association (RDCA)',
+        url: 'https://rewa-cricket-division.vercel.app'
+      },
+      sameAs: [
+        'https://rewa-cricket-division.vercel.app/teams/dread-eleven/',
+        'https://rewa-cricket-division.vercel.app/tournaments/atal-bihari-vajpayee-memorial-tournament/',
+        'https://destroyers-rewacricket.pages.dev/'
+      ]
+    }
+  };
+
   const aboutHtml = `
 ${renderHead({
   title: 'About Dread Eleven | History, Martand Fortress & RDCA',
   description: 'History and heritage of Dread Eleven (DE) in Rewa. Affiliated with RDCA and competing in the Atal Bihari Vajpayee Memorial Tournament circuit.',
   canonicalUrl: '/about',
+  jsonLd: aboutJsonLd,
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'About', item: '/about' }
@@ -2516,19 +2625,14 @@ ${renderFooter()}
   fs.writeFileSync(path.join(aboutDir, 'index.html'), aboutHtml);
   console.log('Generated /about/index.html');
 
-    const contactHtml = `
-${renderHead({
-  title: 'Contact & Academy Trials | Dread Eleven',
-  description: 'Official contact desk for Dread Eleven in Rewa, MP. Media inquiries, academy trial registration, venue liaison, and RDCA communications.',
-  canonicalUrl: '/contact',
-  jsonLd: {
+  const contactJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
     name: 'Contact Dread Eleven Cricket Club',
     description: 'Official contact desk and player trial registration for Dread Eleven in Rewa.',
     url: `${BASE_URL}/contact`,
     mainEntity: {
-      '@type': 'SportsTeam',
+      '@type': ['SportsOrganization', 'SportsTeam'],
       name: 'Dread Eleven Cricket Club (DE)',
       url: BASE_URL,
       sport: 'Cricket',
@@ -2539,7 +2643,72 @@ ${renderHead({
         availableLanguage: ['English', 'Hindi']
       }
     }
-  },
+  };
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Are match tickets required for Atal Bihari Vajpayee Memorial Tournament games?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Admission to Atal Bihari Vajpayee Memorial Tournament matches is free and open to the general public across all open spectator zones in Rewa. Complimentary access is available at Martand School Ground No. 3 and APSU Stadium without ticket reservations. Pavilion and media enclosure access requires verified accreditation credentials issued by the Rewa Division Cricket Association (RDCA). Spectators are encouraged to arrive 45 minutes prior to toss for optimum terrace positioning.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How can cricketers register for Dread Eleven developmental camps?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Dread Eleven talent trials are conducted semi-annually under the technical direction of captain Akhil Mishra and RDCA accredited evaluators. Candidates can file verified playing statistics and recent scorecards through the official contact portal, or report to Martand School Ground No. 3 during published open-net assessment windows in July and December. The program is open to Under-17, Under-21, and Senior division cricketers with valid Madhya Pradesh domicile documentation.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the media accreditation procedures for derby clashes?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Media credentials for Dread Eleven versus Destroyers derby fixtures are managed in partnership with the RDCA Press Secretariat. Accreditation applications must be submitted at least 48 hours prior to scheduled match toss with a valid press identity card from a recognized print, digital, or broadcast news organization. Privileges include boundary-side photography bibs, press box workstations, and post-match captain press conferences.'
+        }
+      }
+    ]
+  };
+
+  const howToJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Register for Dread Eleven Academy Selection Trials in Rewa',
+    description: 'Official step-by-step procedure for cricketers to register and trial for Dread Eleven Cricket Club in Rewa, Madhya Pradesh.',
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Verify Age Eligibility and Assemble Credentials',
+        text: 'Confirm eligibility in Under-17, Under-21, or Senior open categories and gather Aadhaar identity proof, MP domicile certificate, and club/school NOC.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Submit Candidate Profile Online',
+        text: 'Transmit your player profile, primary discipline (batting/bowling/all-rounder), and career statistics through the official Dread Eleven contact form.'
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Attend Screening at Martand Ground Fortress',
+        text: 'Report to Martand School Ground No. 3 in full whites with spiked cricket footwear and personal safety gear for radar speed and net assessment.'
+      }
+    ]
+  };
+
+  const contactHtml = `
+${renderHead({
+  title: 'Contact & Academy Trials | Dread Eleven',
+  description: 'Official contact desk for Dread Eleven in Rewa, MP. Media inquiries, academy trial registration, venue liaison, and RDCA communications.',
+  canonicalUrl: '/contact',
+  jsonLd: [contactJsonLd, faqJsonLd, howToJsonLd],
   breadcrumbs: [
     { name: 'Home', item: '/' },
     { name: 'Contact', item: '/contact' }
@@ -2680,29 +2849,53 @@ ${renderHeader('contact')}
       <h2 style="font-family:var(--f-athletic); font-size:1.8rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.5rem;">
         Frequently Asked Questions (Trials, Media &amp; Access)
       </h2>
-      <div style="display:flex; flex-direction:column; gap:1.5rem; font-size:0.9rem; line-height:1.7;">
+      <div style="display:flex; flex-direction:column; gap:2rem; font-size:0.9rem; line-height:1.7;">
         <div>
-          <h3 style="font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:0.35rem;">
+          <h3 style="font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:0.5rem;">
             Are match tickets required for Atal Bihari Vajpayee Memorial Tournament games?
           </h3>
+          <p style="color:var(--c-gray-300); margin-bottom:0.5rem;">
+            <strong>Admission to Atal Bihari Vajpayee Memorial Tournament matches is free and open to the general public across all open spectator zones in Rewa.</strong>
+          </p>
+          <ul style="margin: 0.5rem 0 0.5rem 1.25rem; color:var(--c-gray-400); list-style-type: disc;">
+            <li><strong>General Public Banks:</strong> Complimentary access at Martand School Ground No. 3 and APSU Stadium without ticket reservations.</li>
+            <li><strong>Pavilion &amp; Media Enclosure:</strong> Access requires verified accreditation credentials issued by the Rewa Division Cricket Association (RDCA).</li>
+            <li><strong>Match Timings:</strong> Morning sessions commence at 09:30 AM IST for 50-over matches; afternoon T20 fixtures commence at 02:00 PM IST.</li>
+          </ul>
           <p style="color:var(--c-gray-400);">
-            Spectator entry across open grass banks at Martand Ground and APSU Stadium is complimentary under Rewa Division Cricket Association developmental regulations. Reserved seating in the official pavilion requires pass clearance from team management.
+            Spectators are encouraged to arrive 45 minutes prior to toss for optimum terrace positioning.
           </p>
         </div>
         <div>
-          <h3 style="font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:0.35rem;">
+          <h3 style="font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:0.5rem;">
             How can cricketers register for Dread Eleven developmental camps?
           </h3>
+          <p style="color:var(--c-gray-300); margin-bottom:0.5rem;">
+            <strong>Dread Eleven talent trials are conducted semi-annually under the technical direction of captain Akhil Mishra and RDCA accredited evaluators.</strong>
+          </p>
+          <ul style="margin: 0.5rem 0 0.5rem 1.25rem; color:var(--c-gray-400); list-style-type: disc;">
+            <li><strong>Digital Submission:</strong> File verified playing statistics and recent scorecards through the official contact portal above.</li>
+            <li><strong>In-Person Walk-In:</strong> Report to Martand School Ground No. 3 during published open-net assessment windows in July and December.</li>
+            <li><strong>Eligibility Criteria:</strong> Open to Under-17, Under-21, and Senior division cricketers with valid Madhya Pradesh domicile documentation.</li>
+          </ul>
           <p style="color:var(--c-gray-400);">
-            Candidates should submit their playing statistics through the contact form above or present in person at Martand Ground during pre-season screening sessions announced on the official news portal.
+            Shortlisted candidates receive formal written invitations for high-performance net assessments within 5 business days.
           </p>
         </div>
         <div>
-          <h3 style="font-size:1.05rem; font-weight:700; color:#fff; margin-bottom:0.35rem;">
+          <h3 style="font-size:1.1rem; font-weight:700; color:#fff; margin-bottom:0.5rem;">
             What are the media accreditation procedures for derby clashes?
           </h3>
+          <p style="color:var(--c-gray-300); margin-bottom:0.5rem;">
+            <strong>Media credentials for Dread Eleven versus Destroyers derby fixtures are managed in partnership with the RDCA Press Secretariat.</strong>
+          </p>
+          <ul style="margin: 0.5rem 0 0.5rem 1.25rem; color:var(--c-gray-400); list-style-type: disc;">
+            <li><strong>Advance Notice:</strong> Accreditation applications must be submitted at least 48 hours prior to scheduled match toss.</li>
+            <li><strong>Required Documentation:</strong> Valid press identity card from a recognized print, digital, or broadcast news organization.</li>
+            <li><strong>Access Privileges:</strong> Boundary-side photography bibs, press box workstations, and post-match captain press conferences.</li>
+          </ul>
           <p style="color:var(--c-gray-400);">
-            Accredited media outlets and independent correspondents must send credential requests 48 hours in advance to receive access to the press box and post-match captain press conferences.
+            Approved media passes are collected directly from the Martand Ground pavilion administrative desk on match mornings.
           </p>
         </div>
       </div>
@@ -2896,7 +3089,7 @@ ${renderHead({
 ${renderHeader()}
 
 <section style="padding: 6rem 0 8rem; text-align:center;">
-  <div class="container" style="max-width:680px;">
+  <div class="container" style="max-width:760px;">
     <div style="font-family:var(--f-athletic); font-size:8rem; color:var(--c-volt); line-height:0.9; margin-bottom:1rem;">
       404
     </div>
@@ -2904,16 +3097,34 @@ ${renderHeader()}
       404 — Page Not Found
     </h1>
     <h2 style="font-family:var(--f-athletic); font-size:1.4rem; color:var(--c-gray-300); text-transform:uppercase; margin-bottom:1.5rem;">
-      Stadium Navigation
+      Stadium Navigation &amp; Pitch Directory
     </h2>
-    <p style="color:var(--c-gray-400); font-size:1.25rem; line-height:1.6; margin-bottom:2.5rem;">
-      Looks like this ball went straight into the stands.
+    <p style="color:var(--c-gray-400); font-size:1.15rem; line-height:1.7; margin-bottom:2rem;">
+      Looks like this delivery was struck straight over the boundary into the stadium concourse. The URL you attempted to reach may have moved or no longer exists within the Dread Eleven digital stadium archive.
     </p>
+
+    <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm); text-align:left; margin-bottom:2.5rem;">
+      <h3 style="font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">
+        Popular Tournament Destinations
+      </h3>
+      <p style="color:var(--c-gray-300); font-size:0.9rem; line-height:1.7; margin-bottom:1rem;">
+        Use the verified navigation pathways below to access tournament fixtures, squad career profiles, historical derby results, and official club administrative desks:
+      </p>
+      <ul style="color:var(--c-gray-400); font-size:0.875rem; line-height:1.8; list-style-type:disc; margin-left:1.5rem;">
+        <li><strong>Roster Directory:</strong> Browse detailed career statistics for all 43 active squad members under captain Akhil Mishra.</li>
+        <li><strong>Derby Climax Archive:</strong> Explore ball-by-ball scorecards and statistical summaries across all 34 rivalry clashes against Destroyers.</li>
+        <li><strong>Divisional Standings:</strong> Review verified multi-season points tables, win-loss telemetry, and net run rate metrics.</li>
+        <li><strong>Academy &amp; Scouting Trials:</strong> Access age-bracket eligibility rules and registration guidelines for upcoming talent screenings at Martand Ground No. 3.</li>
+      </ul>
+    </div>
+
     <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-      <a href="/" class="btn-athletic btn-volt">Go Home</a>
+      <a href="/" class="btn-athletic btn-volt">Return Home</a>
       <a href="/fixtures" class="btn-athletic btn-outline">View Fixtures</a>
       <a href="/players" class="btn-athletic btn-outline">View Squad</a>
-      <a href="/news" class="btn-athletic btn-outline">Latest News</a>
+      <a href="/results" class="btn-athletic btn-outline">Match Results</a>
+      <a href="/news" class="btn-athletic btn-outline">Press News</a>
+      <a href="/contact" class="btn-athletic btn-outline">Contact Desk</a>
     </div>
   </div>
 </section>
@@ -2981,23 +3192,66 @@ ${urls.map((u) => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
+  const publicDir = path.join(rootDir, 'public');
+  ensureDir(publicDir);
+
   fs.writeFileSync(path.join(rootDir, 'sitemap.xml'), sitemapXml);
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml);
 
   const robotsTxt = `User-agent: *
 Allow: /
 
+# Explicit AI Search Crawlers & LLM Indexing Directives
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: ${BASE_URL}/sitemap.xml
+LLM: ${BASE_URL}/llms.txt
 `;
   fs.writeFileSync(path.join(rootDir, 'robots.txt'), robotsTxt);
+  fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
 
-  // Generate llms.txt according to standard
+  // Generate llms.txt according to standard (llmstxt.org)
   const llmsTxt = `# Dread Eleven Cricket Club (DE)
 
-> Official digital stadium and franchise website for Dread Eleven Cricket Club (DE) based in Rewa, Madhya Pradesh. Affiliated with the Rewa Division Cricket Association (RDCA) and competing in the Atal Bihari Vajpayee Memorial Tournament against arch-rivals Destroyers (DES).
+> Official digital stadium and franchise portal for Dread Eleven Cricket Club (DE) based in Rewa, Madhya Pradesh. Affiliated with the Rewa Division Cricket Association (RDCA) and competing in the Atal Bihari Vajpayee Memorial Tournament against arch-rivals Destroyers (DES).
 
 ## Core Franchise Information
 - Franchise Name: Dread Eleven Cricket Club (DE)
-- Team Captain: Akhil Mishra (Franchise Talisman & Batsman, 1,747 career runs, 92 career wickets)
+- Team Captain: Akhil Mishra (Franchise Talisman & Batsman, 1,747 career runs, 92 career wickets in 51 matches)
 - Tournament: Atal Bihari Vajpayee Memorial Tournament (Rewa)
 - Governing Association: Rewa Division Cricket Association (RDCA)
 - Home Fortress: Martand School Ground No. 3, APSU Stadium (Rewa)
@@ -3006,31 +3260,84 @@ Sitemap: ${BASE_URL}/sitemap.xml
 - Disciplines: 50 Overs & T20 Blast
 
 ## Key Stadium & Roster Sections
-- Squad Directory: ${BASE_URL}/players (Complete 43-man roster with batting and bowling career statistics)
-- Tournament Fixtures: ${BASE_URL}/fixtures (Complete season schedules and venue timings)
-- Results Archive: ${BASE_URL}/results (Scorecards and ball-by-ball analysis for all 34 derby clashes)
-- Points Table: ${BASE_URL}/points-table (Verified standings, net run rates, and season champion rankings)
-- Franchise Records: ${BASE_URL}/stats (Top run-scorers, leading wicket-takers, and highest team totals)
-- Press Center: ${BASE_URL}/news (Match post-mortems, editorial reviews, and tactical analysis)
-- About the Franchise: ${BASE_URL}/about (Club heritage, RDCA affiliation, and championship dynasties)
-- Contact & Trials: ${BASE_URL}/contact (Academy trials protocol, venue directions, and administrative inquiries)
+- [Squad Directory](${BASE_URL}/players): Complete 43-man roster with batting and bowling career statistics
+- [Tournament Fixtures](${BASE_URL}/fixtures): Complete season schedules and venue timings
+- [Results Archive](${BASE_URL}/results): Scorecards and ball-by-ball analysis for all 34 derby clashes
+- [Points Table](${BASE_URL}/points-table): Verified standings, net run rates, and season champion rankings
+- [Franchise Records](${BASE_URL}/stats): Top run-scorers, leading wicket-takers, and highest team totals
+- [Press Center](${BASE_URL}/news): Match post-mortems, editorial reviews, and tactical analysis
+- [About the Franchise](${BASE_URL}/about): Club heritage, RDCA affiliation, and championship dynasties
+- [Contact & Trials](${BASE_URL}/contact): Academy trials protocol, venue directions, and administrative inquiries
 
-## Full Documentation
-- Detailed Dataset: ${BASE_URL}/llms-full.txt
+## Developer & AI Crawler Resources
+- [XML Sitemap](${BASE_URL}/sitemap.xml): Machine-readable index of all public URLs (${urls.length} URLs indexed)
+- [Robots Policy](${BASE_URL}/robots.txt): Explicit crawler permissions for AI agents (GPTBot, ClaudeBot, PerplexityBot, etc.)
+- [Freshness Feed](${BASE_URL}/feed.xml): RSS 2.0 feed with latest match reports and editorial dispatches
+- [Live Freshness Telemetry](${BASE_URL}/freshness.json): Real-time JSON state with latest completed matches and active squad count
+- [Full LLM Context](${BASE_URL}/llms-full.txt): Complete un-truncated player career tables and match-by-match scorecards
+
+## Contact & Governance
+- Organization: Dread Eleven Cricket Club (DE)
+- Governing Body: Rewa Division Cricket Association (RDCA)
+- Website: ${BASE_URL}
+- Portal: https://rewa-cricket-division.vercel.app/teams/dread-eleven/
+- Email: contact@dread-eleven.cricket
+- Home Venue: Martand School Ground No. 3, Civil Lines, Rewa, Madhya Pradesh 486001
 `;
 
   fs.writeFileSync(path.join(rootDir, 'llms.txt'), llmsTxt);
+  fs.writeFileSync(path.join(publicDir, 'llms.txt'), llmsTxt);
 
   const llmsFullTxt = `${llmsTxt}
 ## 43-Man Squad Roster
-${squad.map(p => `- #${p.jerseyNumber} ${p.name} (${p.role}): ${p.batting.runs} runs (Avg ${p.batting.average}), ${p.bowling.wickets} wickets (Econ ${p.bowling.economy}). Bio: ${p.bio}`).join('\n')}
+${squad.map(p => `- #${p.jerseyNumber} [${p.name}](${BASE_URL}/players/${p.slug}) (${p.role}): ${p.batting.runs} runs (Avg ${p.batting.average}), ${p.bowling.wickets} wickets (Econ ${p.bowling.economy}). Bio: ${p.bio}`).join('\n')}
 
 ## Historical Match Scorecard Archive (34 Matches)
-${matches.map(m => `- Match #${m.matchNumber} (${m.matchDate}): ${m.stage} at ${m.venue.name}. Result: ${m.resultText}. Winner: ${m.winner || 'Drawn'}`).join('\n')}
+${matches.map(m => `- Match #${m.matchNumber} (${m.matchDate}): [${m.stage}](${BASE_URL}/matches/${m.slug}) at ${m.venue.name}. Result: ${m.resultText}. Winner: ${m.winner || 'Drawn'}`).join('\n')}
 `;
 
   fs.writeFileSync(path.join(rootDir, 'llms-full.txt'), llmsFullTxt);
-  console.log('Generated /llms.txt and /llms-full.txt');
+  fs.writeFileSync(path.join(publicDir, 'llms-full.txt'), llmsFullTxt);
+
+  // Generate RSS 2.0 Feed (/feed.xml) for search and AI crawler freshness
+  const feedXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dread Eleven Cricket Club News &amp; Match Reports</title>
+    <link>${BASE_URL}</link>
+    <description>Official tournament dispatches, match reports, and announcements for Dread Eleven in Rewa, Madhya Pradesh.</description>
+    <language>en-in</language>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml" />
+${news.slice(0, 10).map((n) => `    <item>
+      <title>${esc(n.title)}</title>
+      <link>${BASE_URL}/news/${n.slug}</link>
+      <guid>${BASE_URL}/news/${n.slug}</guid>
+      <pubDate>${new Date(n.publishedAt || Date.now()).toUTCString()}</pubDate>
+      <description>${esc(n.summary)}</description>
+    </item>`).join('\n')}
+  </channel>
+</rss>`;
+
+  fs.writeFileSync(path.join(rootDir, 'feed.xml'), feedXml);
+  fs.writeFileSync(path.join(publicDir, 'feed.xml'), feedXml);
+
+  // Generate JSON freshness telemetry (/freshness.json)
+  const completedMatches = matches.filter((m) => m.status === 'completed');
+  const freshnessData = {
+    lastUpdated: new Date().toISOString(),
+    site: 'Dread Eleven Cricket Club',
+    domain: BASE_URL,
+    tournament: 'Atal Bihari Vajpayee Memorial Tournament',
+    governingBody: 'Rewa Division Cricket Association (RDCA)',
+    latestMatch: completedMatches[completedMatches.length - 1] || null,
+    latestNews: news[0] || null,
+    squadCount: squad.length,
+    matchesCount: matches.length
+  };
+  fs.writeFileSync(path.join(rootDir, 'freshness.json'), JSON.stringify(freshnessData, null, 2));
+  fs.writeFileSync(path.join(publicDir, 'freshness.json'), JSON.stringify(freshnessData, null, 2));
+  console.log('Generated /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt, /feed.xml, and /freshness.json (both root and public)');
 
 
   // Generate Netlify/Cloudflare redirects file for clean canonical paths
