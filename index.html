@@ -522,7 +522,7 @@
     </div>
 
     <!-- 3 Dynasty Cards Grid -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.75rem; margin-bottom:3rem;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:1.75rem; margin-bottom:3rem;">
       <!-- 2021 Inaugural Champions Card -->
       <div class="dynasty-card" style="background:var(--c-surface); border:1px solid rgba(212,255,0,0.25); border-radius:var(--radius-sm); padding:2rem; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;">
         <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:linear-gradient(90deg, var(--c-volt), var(--c-gold));"></div>
@@ -624,7 +624,7 @@
         <h4 style="font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-gold); text-transform:uppercase; margin-bottom:1rem;">
           Foundation Dynasty Numbers
         </h4>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+        <div class="responsive-duo-grid" style="gap:1rem;">
           <div style="border-bottom:1px solid var(--b-subtle); padding-bottom:0.75rem;">
             <div style="font-family:var(--f-mono); font-size:1.75rem; font-weight:900; color:var(--c-white);">3/3</div>
             <div style="font-size:0.7rem; color:var(--c-gray-400); text-transform:uppercase; font-family:var(--f-mono);">Trophies Won</div>
@@ -1066,7 +1066,7 @@
       </a>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:2rem;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap:2rem;">
       
         <article style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; display:flex; flex-direction:column; border-radius:var(--radius-sm);">
           <div style="font-family:var(--f-mono); font-size:0.6875rem; color:var(--c-volt); text-transform:uppercase; font-weight:800; margin-bottom:0.75rem;">

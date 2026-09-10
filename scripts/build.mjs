@@ -825,7 +825,7 @@ ${renderHeader('home')}
     </div>
 
     <!-- 3 Dynasty Cards Grid -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.75rem; margin-bottom:3rem;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:1.75rem; margin-bottom:3rem;">
       <!-- 2021 Inaugural Champions Card -->
       <div class="dynasty-card" style="background:var(--c-surface); border:1px solid rgba(212,255,0,0.25); border-radius:var(--radius-sm); padding:2rem; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;">
         <div style="position:absolute; top:0; left:0; width:100%; height:4px; background:linear-gradient(90deg, var(--c-volt), var(--c-gold));"></div>
@@ -927,7 +927,7 @@ ${renderHeader('home')}
         <h4 style="font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-gold); text-transform:uppercase; margin-bottom:1rem;">
           Foundation Dynasty Numbers
         </h4>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+        <div class="responsive-duo-grid" style="gap:1rem;">
           <div style="border-bottom:1px solid var(--b-subtle); padding-bottom:0.75rem;">
             <div style="font-family:var(--f-mono); font-size:1.75rem; font-weight:900; color:var(--c-white);">3/3</div>
             <div style="font-size:0.7rem; color:var(--c-gray-400); text-transform:uppercase; font-family:var(--f-mono);">Trophies Won</div>
@@ -1066,7 +1066,7 @@ ${renderHeader('home')}
       </a>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:2rem;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap:2rem;">
       ${featuredNews.map((n) => `
         <article style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; display:flex; flex-direction:column; border-radius:var(--radius-sm);">
           <div style="font-family:var(--f-mono); font-size:0.6875rem; color:var(--c-volt); text-transform:uppercase; font-weight:800; margin-bottom:0.75rem;">
@@ -2506,7 +2506,7 @@ ${renderHeader('table')}
     </div>
 
     <!-- Season by Season Standings Grid -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(440px, 1fr)); gap:2rem;">
+    <div class="responsive-duo-grid" style="gap:2rem;">
 
       <!-- 2026 Season -->
       <div style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
@@ -2733,7 +2733,7 @@ ${renderHeader('stats')}
         Official certified telemetry across both franchises (Destroyers CC &amp; Dread Eleven) over 6 tournament seasons (2021&ndash;2026). Overall series titles stand level at <strong>3&ndash;3</strong> (Dread Eleven: 2021, 2022, 2023 under Akhil Mishra; Destroyers CC: 2024, 2025, 2026 under Pranav Dwivedi).
       </p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(360px, 1fr)); gap:2.5rem;">
+      <div class="responsive-duo-grid">
         <!-- Leading Run Scorers -->
         <div>
           <h3 style="font-family:var(--f-athletic); font-size:1.5rem; color:var(--c-volt); text-transform:uppercase; margin-bottom:1rem;">
@@ -2811,7 +2811,7 @@ ${renderHeader('stats')}
     </div>
 
     <!-- Tables Grid -->
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(480px, 1fr)); gap:2.5rem;">
+    <div class="responsive-duo-grid">
       <!-- Top Run Scorers -->
       <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
         <h2 style="font-family:var(--f-athletic); font-size:1.85rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.25rem;">
@@ -2913,7 +2913,7 @@ ${renderHeader('news')}
       </div>
     </div>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(360px, 1fr)); gap:2.5rem;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap:2.5rem;">
       ${news.map((n) => `
         <article style="background:var(--c-card-bg); border:1px solid var(--b-medium); padding:2rem; display:flex; flex-direction:column; border-radius:var(--radius-sm);">
           <div style="font-family:var(--f-mono); font-size:0.6875rem; color:var(--c-volt); text-transform:uppercase; font-weight:800; margin-bottom:0.75rem;">
@@ -3272,7 +3272,7 @@ ${renderHeader('contact')}
       </div>
     </div>
 
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; margin-bottom:3rem;">
+    <div class="responsive-duo-grid" style="margin-bottom:3rem;">
       <!-- Administrative Headquarters -->
       <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2rem; border-radius:var(--radius-sm);">
         <h2 style="font-family:var(--f-athletic); font-size:1.6rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1.25rem;">
@@ -3361,7 +3361,7 @@ ${renderHeader('contact')}
       <h2 style="font-family:var(--f-athletic); font-size:1.8rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">
         Match Day Stadium Access &amp; Transit Directions
       </h2>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; font-size:0.875rem; line-height:1.7; color:var(--c-gray-300);">
+      <div class="responsive-duo-grid" style="gap:2rem; font-size:0.875rem; line-height:1.7; color:var(--c-gray-300);">
         <div>
           <h3 style="font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-volt); text-transform:uppercase; margin-bottom:0.5rem;">
             Martand School Ground No. 3 (DE Fortress)
