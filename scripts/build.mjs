@@ -259,6 +259,7 @@ function renderHeader(activeNav = '') {
     { label: 'Fixtures', href: '/fixtures', key: 'fixtures' },
     { label: 'Standings', href: '/points-table', key: 'table' },
     { label: 'Stats', href: '/stats', key: 'stats' },
+    { label: 'Portfolio', href: '/portfolio', key: 'portfolio' },
     { label: 'Media', href: '/news', key: 'news' },
     { label: 'Club', href: '/about', key: 'about' }
   ];
@@ -1254,7 +1255,14 @@ ${renderFooter()}
             'Dread Eleven Franchise Player of the Era'
           ],
           sameAs: [
-            'https://rewa-cricket-division.vercel.app/players/akhil-mishra/'
+            `${BASE_URL}/portfolio/`,
+            `${BASE_URL}/players/akhil-mishra`,
+            'https://rewa-cricket-division.vercel.app/players/akhil-mishra/',
+            'https://abv-rewacricket.pages.dev/',
+            'https://cricheroes.com/association/79/rewa-divisional-cricket-association/home',
+            'https://cricheroes.com/tournament/2168281/atal-bihari-vajpayee-cricket-tournament-season-3/matches/live-matches',
+            'https://www.instagram.com/dreadeleven_rewa',
+            'https://www.facebook.com/rewa.cricket.association'
           ],
           mainEntityOfPage: `${BASE_URL}/players/akhil-mishra`
         },
@@ -1454,6 +1462,9 @@ ${renderHeader('squad')}
 
       ${p.slug === 'akhil-mishra' ? `
         <div style="margin-top:1.5rem; display:flex; flex-wrap:wrap; gap:0.75rem; align-items:center;">
+          <a href="/portfolio/" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.25rem; background:linear-gradient(135deg, var(--c-volt) 0%, #10b981 100%); border:none; border-radius:var(--radius-sm); font-family:var(--f-mono); font-size:0.8125rem; color:#050505; text-decoration:none; font-weight:800; box-shadow:0 4px 15px rgba(212, 255, 0, 0.3);">
+            ⭐ Official Athlete Portfolio &amp; Entity Home ↗
+          </a>
           <a href="https://rewa-cricket-division.vercel.app/players/akhil-mishra/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.5rem; padding:0.6rem 1.25rem; background:rgba(34, 197, 94, 0.15); border:1px solid rgba(34, 197, 94, 0.5); border-radius:var(--radius-sm); font-family:var(--f-mono); font-size:0.8125rem; color:var(--c-volt); text-decoration:none; font-weight:700;">
             Verified Official Career Archive on RDCA Central ↗
           </a>
@@ -3055,6 +3066,481 @@ ${renderFooter()}
 // ------------------------------------------------------------
 // 7. ABOUT (/about) & CONTACT (/contact)
 // ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// 6.5. OFFICIAL ATHLETE PORTFOLIO & ENTITY HOME (/portfolio)
+// Dedicated Google Knowledge Graph & Gemini Entity Home for Capt. Akhil Mishra
+// ------------------------------------------------------------
+function generatePortfolioPage() {
+  const portfolioDir = path.join(rootDir, 'portfolio');
+  ensureDir(portfolioDir);
+  const publicPortfolioDir = path.join(rootDir, 'public/portfolio');
+  ensureDir(publicPortfolioDir);
+
+  const portfolioJsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': ['Person', 'Athlete'],
+      name: 'Akhil Mishra',
+      alternateName: [
+        'Capt. Akhil Mishra',
+        'Akhil Mishra Rewa',
+        'A. Mishra'
+      ],
+      jobTitle: 'Franchise Captain & Top-Order All-Rounder',
+      description: 'Official cricketer portfolio and Google Knowledge Graph entity home for Akhil Mishra (#45). Champion captain of Dread Eleven Cricket Club (DE) in the Atal Bihari Vajpayee Memorial Tournament, Rewa. 1,378 career derby runs (average 44.5, strike rate 130.0) and 38 wickets.',
+      url: `${BASE_URL}/portfolio/`,
+      identifier: 'DE-45',
+      gender: 'https://schema.org/Male',
+      nationality: {
+        '@type': 'Country',
+        name: 'India'
+      },
+      birthPlace: {
+        '@type': 'Place',
+        name: 'Rewa, Madhya Pradesh, India'
+      },
+      memberOf: [
+        {
+          '@type': 'SportsTeam',
+          name: 'Dread Eleven Cricket Club (DE)',
+          url: BASE_URL,
+          sport: 'Cricket'
+        },
+        {
+          '@type': 'SportsOrganization',
+          name: 'Rewa Division Cricket Association (RDCA)',
+          url: 'https://rewa-cricket-division.vercel.app',
+          sport: 'Cricket'
+        }
+      ],
+      knowsAbout: [
+        'Cricket',
+        'Top-Order Batting',
+        'Dread Eleven Cricket Club',
+        'Atal Bihari Vajpayee Memorial Tournament',
+        'Rewa Cricket',
+        'Rewa Division Cricket Association',
+        'Madhya Pradesh Cricket Association'
+      ],
+      award: [
+        '2022 Atal Bihari Vajpayee Memorial Trophy Champion Captain (3-2 vs Destroyers)',
+        'Rewa Derby Century Maker (100* at APSU Stadium)',
+        'Dread Eleven Franchise Player of the Era & Founding Talisman',
+        '2024 & 2026 ABV Memorial Tournament Finalist Captain'
+      ],
+      sameAs: [
+        `${BASE_URL}/portfolio/`,
+        `${BASE_URL}/players/akhil-mishra`,
+        'https://rewa-cricket-division.vercel.app/players/akhil-mishra/',
+        'https://abv-rewacricket.pages.dev/',
+        'https://cricheroes.com/association/79/rewa-divisional-cricket-association/home',
+        'https://cricheroes.com/tournament/2168281/atal-bihari-vajpayee-cricket-tournament-season-3/matches/live-matches',
+        'https://www.instagram.com/dreadeleven_rewa',
+        'https://www.facebook.com/rewa.cricket.association'
+      ],
+      mainEntityOfPage: `${BASE_URL}/portfolio/`
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Who is Akhil Mishra in Rewa cricket?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Akhil Mishra is the franchise captain, leading top-order batsman, and talisman for Dread Eleven Cricket Club (DE) in Rewa, Madhya Pradesh. He led Dread Eleven to the 2022 Atal Bihari Vajpayee Memorial Tournament championship.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What are Akhil Mishra\'s official career batting and bowling statistics?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In 34 official tournament derbies against Destroyers, Akhil Mishra has scored 1,378 runs at a 44.5 average and 130.0 strike rate (highest score 100*, 12 fifties, 1 century) and taken 38 wickets with best bowling figures of 4/28.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How many championships has Akhil Mishra won as captain?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Akhil Mishra captained Dread Eleven to the 2022 Atal Bihari Vajpayee Memorial Trophy title, defeating Pranav Dwivedi\'s Destroyers in a thrilling five-match final series (3-2), and captained Dread Eleven to the finals in 2024 and 2026.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'Where can Akhil Mishra\'s records and profiles be officially verified?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'His records are authenticated on the Rewa Division Cricket Association (RDCA) Central Registry at https://rewa-cricket-division.vercel.app/players/akhil-mishra/, the Dread Eleven portal at https://dread-eleven-rewacricket.pages.dev/players/akhil-mishra, and the Atal Bihari Vajpayee Tournament hub at https://abv-rewacricket.pages.dev/.'
+          }
+        }
+      ]
+    }
+  ];
+
+  const html = `
+${renderHead({
+  title: 'Capt. Akhil Mishra (#45) — Athlete Portfolio & Entity Home | Dread Eleven CC',
+  description: 'Official athlete portfolio and Google Knowledge Graph entity home for Akhil Mishra (#45). 2022 champion captain of Dread Eleven CC, 1,378 tournament runs, 38 wickets in Rewa, Madhya Pradesh.',
+  canonicalUrl: '/portfolio',
+  keywords: 'Akhil Mishra, Capt Akhil Mishra, Akhil Mishra portfolio, Dread Eleven Cricket Club Captain, Rewa Cricket, RDCA, Atal Bihari Vajpayee Memorial Tournament, athlete portfolio, cricket stats',
+  author: 'Dread Eleven Cricket Club Media Team',
+  twitterData: {
+    label1: 'Championship Record',
+    data1: '2022 Champion Captain & 2x Finalist',
+    label2: 'Career Telemetry',
+    data2: '1,378 Runs • 38 Wickets • 15 Derby Wins'
+  },
+  jsonLd: portfolioJsonLd,
+  breadcrumbs: [
+    { name: 'Home', item: '/' },
+    { name: 'Portfolio', item: '/portfolio' }
+  ]
+})}
+${renderHeader('portfolio')}
+
+<!-- HERO SPOTLIGHT SECTION (STRICT ZERO BLUE - ACID VOLT & VOID) -->
+<section class="portfolio-hero-section" style="padding: 4rem 0 3rem; background: radial-gradient(circle at top center, rgba(212, 255, 0, 0.15) 0%, #050505 70%); border-bottom: 1px solid var(--b-subtle);">
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; gap: 2.5rem; align-items: center; justify-content: space-between;">
+      <div style="flex: 1 1 500px;">
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.85rem; background: rgba(212, 255, 0, 0.12); border: 1px solid rgba(212, 255, 0, 0.4); border-radius: 9999px; margin-bottom: 1.25rem;">
+          <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--c-volt); box-shadow:0 0 10px var(--c-volt);"></span>
+          <span style="font-family: var(--f-mono); font-size: 0.75rem; font-weight: 800; color: var(--c-volt); letter-spacing: 0.08em; text-transform: uppercase;">Official Athlete Portfolio &amp; Entity Home</span>
+        </div>
+
+        <h1 style="font-family: var(--f-athletic); font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.05; font-weight: 900; letter-spacing: -0.02em; color: var(--c-white); margin-bottom: 0.75rem;">
+          AKHIL <span style="background: linear-gradient(135deg, var(--c-volt) 0%, #10b981 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">MISHRA</span>
+        </h1>
+
+        <p style="font-family: var(--f-mono); font-size: 1rem; color: var(--c-gray-300); margin-bottom: 1.25rem; font-weight: 600;">
+          Franchise Captain &amp; Top-Order Talisman (#45) • Dread Eleven Cricket Club • Rewa Division Cricket Association
+        </p>
+
+        <p style="font-size: 1.05rem; line-height: 1.7; color: var(--c-gray-300); max-width: 65ch; margin-bottom: 1.75rem;">
+          Akhil Mishra is the founding captain and premier top-order all-rounder of Dread Eleven Cricket Club (DE). An elegant yet destructive right-handed stroke maker and tactical right-arm seamer, he led Dread Eleven to championship glory in 2022 and steered them to the finals in 2024 and 2026. Across 34 classic derbies against Destroyers, he has piled up 1,378 runs with a century at APSU Stadium and 12 fifties, alongside 38 vital breakthroughs.
+        </p>
+
+        <!-- Authority Anchor Badges -->
+        <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
+          <a href="https://rewa-cricket-division.vercel.app/players/akhil-mishra/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.1rem; background: rgba(212, 255, 0, 0.15); border: 1px solid var(--c-volt); border-radius: var(--radius-sm); font-family: var(--f-mono); font-size: 0.8125rem; color: var(--c-volt); text-decoration: none; font-weight: 700;">
+            🏛️ RDCA Central Registry ↗
+          </a>
+          <a href="/players/akhil-mishra" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.1rem; background: rgba(255, 255, 255, 0.08); border: 1px solid var(--b-medium); border-radius: var(--radius-sm); font-family: var(--f-mono); font-size: 0.8125rem; color: var(--c-white); text-decoration: none; font-weight: 700;">
+            🏟️ Club Squad Profile ↗
+          </a>
+          <a href="https://abv-rewacricket.pages.dev/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.1rem; background: rgba(255, 255, 255, 0.08); border: 1px solid var(--b-medium); border-radius: var(--radius-sm); font-family: var(--f-mono); font-size: 0.8125rem; color: var(--c-white); text-decoration: none; font-weight: 700;">
+            🏆 ABV Tournament Hub ↗
+          </a>
+          <a href="https://cricheroes.com/association/79/rewa-divisional-cricket-association/home" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.1rem; background: rgba(16, 185, 129, 0.12); border: 1px solid var(--c-emerald); border-radius: var(--radius-sm); font-family: var(--f-mono); font-size: 0.8125rem; color: var(--c-emerald); text-decoration: none; font-weight: 700;">
+            📊 CricHeroes Association ↗
+          </a>
+          <a href="/portfolio/index.md" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.55rem 1.1rem; background: rgba(212, 255, 0, 0.12); border: 1px solid var(--c-volt); border-radius: var(--radius-sm); font-family: var(--f-mono); font-size: 0.8125rem; color: var(--c-volt); text-decoration: none; font-weight: 700;">
+            ⚡ AI &amp; Gemini Markdown (.md)
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Grid Card -->
+      <div style="flex: 1 1 380px; max-width: 480px; background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 8px; padding: 1.75rem; box-shadow: 0 10px 30px rgba(0,0,0,0.7);">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--b-subtle); padding-bottom: 1rem; margin-bottom: 1.25rem;">
+          <div>
+            <span style="font-family: var(--f-display); font-size: 2.25rem; font-weight: 800; color: var(--c-volt); line-height: 1;">#45</span>
+            <span style="font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400); margin-left: 0.5rem;">CAPTAIN</span>
+          </div>
+          <span style="padding: 0.25rem 0.65rem; background: rgba(212, 255, 0, 0.15); border: 1px solid var(--c-volt); color: var(--c-volt); font-family: var(--f-mono); font-size: 0.7rem; font-weight: 800; border-radius: 3px;">
+            2022 CHAMPION
+          </span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div style="background: rgba(0,0,0,0.4); padding: 0.85rem; border-radius: 4px; border: 1px solid var(--b-subtle);">
+            <div style="font-family: var(--f-mono); font-size: 0.7rem; color: var(--c-gray-400); text-transform: uppercase;">Tournament Runs</div>
+            <div style="font-family: var(--f-athletic); font-size: 1.75rem; font-weight: 900; color: var(--c-volt);">1,378</div>
+            <div style="font-size: 0.75rem; color: var(--c-gray-400);">Avg 44.5 • SR 130.0</div>
+          </div>
+          <div style="background: rgba(0,0,0,0.4); padding: 0.85rem; border-radius: 4px; border: 1px solid var(--b-subtle);">
+            <div style="font-family: var(--f-mono); font-size: 0.7rem; color: var(--c-gray-400); text-transform: uppercase;">Tournament Wkts</div>
+            <div style="font-family: var(--f-athletic); font-size: 1.75rem; font-weight: 900; color: var(--c-emerald);">38</div>
+            <div style="font-size: 0.75rem; color: var(--c-gray-400);">Econ 5.92 • 116 Overs</div>
+          </div>
+          <div style="background: rgba(0,0,0,0.4); padding: 0.85rem; border-radius: 4px; border: 1px solid var(--b-subtle);">
+            <div style="font-family: var(--f-mono); font-size: 0.7rem; color: var(--c-gray-400); text-transform: uppercase;">Highest Score</div>
+            <div style="font-family: var(--f-athletic); font-size: 1.75rem; font-weight: 900; color: var(--c-white);">100*</div>
+            <div style="font-size: 0.75rem; color: var(--c-gray-400);">12 Fifties • 1 Century</div>
+          </div>
+          <div style="background: rgba(0,0,0,0.4); padding: 0.85rem; border-radius: 4px; border: 1px solid var(--b-subtle);">
+            <div style="font-family: var(--f-mono); font-size: 0.7rem; color: var(--c-gray-400); text-transform: uppercase;">Best Bowling</div>
+            <div style="font-family: var(--f-athletic); font-size: 1.75rem; font-weight: 900; color: var(--c-gold);">4/28</div>
+            <div style="font-size: 0.75rem; color: var(--c-gray-400);">15 Derby Wins</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT SECTION -->
+<main id="main" class="container" style="padding: 3.5rem 1rem;">
+  <!-- 1. ATHLETIC DOSSIER TABLE -->
+  <section style="margin-bottom: 3.5rem;">
+    <div class="section-header-row" style="margin-bottom: 1.5rem;">
+      <div>
+        <span class="section-tag-sub">ATHLETIC BIO-DATA</span>
+        <h2 style="font-family: var(--f-athletic); font-size: 2rem; color: var(--c-white); font-weight: 800;">Official Player Dossier</h2>
+      </div>
+    </div>
+
+    <div style="background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 6px; overflow: hidden;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left;">
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--b-subtle);">
+            <th style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400); width: 30%;">Full Legal Name</th>
+            <td style="padding: 0.85rem 1.25rem; font-weight: 700; color: var(--c-white);">Akhil Mishra</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--b-subtle);">
+            <th style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400);">Playing Role</th>
+            <td style="padding: 0.85rem 1.25rem; color: var(--c-volt); font-weight: 700;">Franchise Captain &amp; Top-Order All-Rounder</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--b-subtle);">
+            <th style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400);">Batting Style</th>
+            <td style="padding: 0.85rem 1.25rem; color: var(--c-white);">Right-Hand Bat (Aggressive Top-Order Anchor &amp; Stroke Maker)</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--b-subtle);">
+            <th style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400);">Bowling Style</th>
+            <td style="padding: 0.85rem 1.25rem; color: var(--c-white);">Right-Arm Medium Pace &amp; Tactical Seam</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--b-subtle);">
+            <th style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400);">Native Origin</th>
+            <td style="padding: 0.85rem 1.25rem; color: var(--c-white);">Rewa, Madhya Pradesh, India</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--b-subtle);">
+            <th style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400);">Governing Circuit</th>
+            <td style="padding: 0.85rem 1.25rem; color: var(--c-white);">Rewa Division Cricket Association (RDCA) • MPCA Circuit</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--b-subtle);">
+            <th style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400);">Representative Sides</th>
+            <td style="padding: 0.85rem 1.25rem; color: var(--c-gray-300);">
+              Dread Eleven Cricket Club (Captain), Rewa Division Invitational XI, Vindhya Regional Senior Squad
+            </td>
+          </tr>
+          <tr>
+            <th style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-gray-400);">Entity Mapping Identifiers</th>
+            <td style="padding: 0.85rem 1.25rem; font-family: var(--f-mono); font-size: 0.8rem; color: var(--c-volt);">
+              DE-45 • RDCA-P-AKHIL-MISHRA • CRICHEROES-ASSOC-79
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 2. TROPHY CABINET & ACHIEVEMENTS -->
+  <section style="margin-bottom: 3.5rem;">
+    <div class="section-header-row" style="margin-bottom: 1.5rem;">
+      <div>
+        <span class="section-tag-sub">CHAMPIONSHIP HONOURS</span>
+        <h2 style="font-family: var(--f-athletic); font-size: 2rem; color: var(--c-white); font-weight: 800;">Honours &amp; Silverware Cabinet</h2>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem;">
+      <div style="background: var(--c-card-bg); border: 1px solid rgba(212, 255, 0, 0.4); border-radius: 6px; padding: 1.5rem;">
+        <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🏆</span>
+        <h3 style="font-family: var(--f-athletic); font-size: 1.25rem; color: var(--c-volt); margin-bottom: 0.5rem;">2022 ABV Memorial Trophy Champions</h3>
+        <p style="font-size: 0.9rem; color: var(--c-gray-300); line-height: 1.6;">
+          Captained Dread Eleven to the championship crown in a thrilling five-match series victory (3-2) over Destroyers, registering match-defining knocks and crucial breakthroughs.
+        </p>
+      </div>
+
+      <div style="background: var(--c-card-bg); border: 1px solid rgba(212, 255, 0, 0.4); border-radius: 6px; padding: 1.5rem;">
+        <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">⭐</span>
+        <h3 style="font-family: var(--f-athletic); font-size: 1.25rem; color: var(--c-volt); margin-bottom: 0.5rem;">Rewa Derby Century Maker</h3>
+        <p style="font-size: 0.9rem; color: var(--c-gray-300); line-height: 1.6;">
+          Scored a majestic unbeaten 100* at APSU Stadium against Destroyers' strike bowling attack, etching his name into the annals of Rewa cricket history.
+        </p>
+      </div>
+
+      <div style="background: var(--c-card-bg); border: 1px solid rgba(212, 255, 0, 0.4); border-radius: 6px; padding: 1.5rem;">
+        <span style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">🛡️</span>
+        <h3 style="font-family: var(--f-athletic); font-size: 1.25rem; color: var(--c-volt); margin-bottom: 0.5rem;">2024 &amp; 2026 Championship Finalist</h3>
+        <p style="font-size: 0.9rem; color: var(--c-gray-300); line-height: 1.6;">
+          Steered Dread Eleven to two additional tournament championship finals (2024 and 2026), demonstrating enduring tactical poise and consistent clutch performance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. VERIFIED KNOWLEDGE GRAPH FOOTPRINT (sameAs) -->
+  <section style="margin-bottom: 3.5rem;">
+    <div class="section-header-row" style="margin-bottom: 1.5rem;">
+      <div>
+        <span class="section-tag-sub">ENTITY HUBS &amp; CROSS-VALIDATION</span>
+        <h2 style="font-family: var(--f-athletic); font-size: 2rem; color: var(--c-white); font-weight: 800;">Google Knowledge Graph Anchors</h2>
+      </div>
+    </div>
+
+    <p style="font-size: 0.95rem; color: var(--c-gray-400); max-width: 75ch; margin-bottom: 1.25rem;">
+      To establish Google Search entity cards and Knowledge Panels, the following canonical authority endpoints anchor Akhil Mishra\'s identity across state and divisional cricket registries:
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+      <div style="background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.25rem;">
+        <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--c-volt); font-weight: 800; margin-bottom: 0.5rem;">1. DIVISION REGISTRY</div>
+        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;"><a href="https://rewa-cricket-division.vercel.app/players/akhil-mishra/" target="_blank" rel="noopener" style="color:var(--c-white); text-decoration:none;">RDCA Official Central Portal ↗</a></h3>
+        <p style="font-size: 0.85rem; color: var(--c-gray-400);">Official divisional record maintained under the Rewa Division Cricket Association.</p>
+      </div>
+
+      <div style="background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.25rem;">
+        <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--c-emerald); font-weight: 800; margin-bottom: 0.5rem;">2. TOURNAMENT HUB</div>
+        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;"><a href="https://abv-rewacricket.pages.dev/" target="_blank" rel="noopener" style="color:var(--c-white); text-decoration:none;">ABV Memorial Tournament ↗</a></h3>
+        <p style="font-size: 0.85rem; color: var(--c-gray-400);">Official tournament governing portal and verified season scorecard repository.</p>
+      </div>
+
+      <div style="background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.25rem;">
+        <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--c-gold); font-weight: 800; margin-bottom: 0.5rem;">3. CRICHEROES DASHBOARD</div>
+        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;"><a href="https://cricheroes.com/association/79/rewa-divisional-cricket-association/home" target="_blank" rel="noopener" style="color:var(--c-white); text-decoration:none;">CricHeroes RDCA Association ↗</a></h3>
+        <p style="font-size: 0.85rem; color: var(--c-gray-400);">Digital grassroot scoring platform tracking regional divisional cricket in Rewa.</p>
+      </div>
+
+      <div style="background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.25rem;">
+        <div style="font-family: var(--f-mono); font-size: 0.75rem; color: var(--c-white); font-weight: 800; margin-bottom: 0.5rem;">4. CLUB PORTAL</div>
+        <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem;"><a href="/players/akhil-mishra" style="color:var(--c-white); text-decoration:none;">Dread Eleven CC Franchise Profile ↗</a></h3>
+        <p style="font-size: 0.85rem; color: var(--c-gray-400);">Detailed match-by-match logs, captaincy telemetry, and career milestones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FAQ SCHEMA SECTION (AI & GOOGLE SEARCH READY) -->
+  <section style="margin-bottom: 2rem;">
+    <div class="section-header-row" style="margin-bottom: 1.5rem;">
+      <div>
+        <span class="section-tag-sub">FREQUENTLY ASKED QUESTIONS</span>
+        <h2 style="font-family: var(--f-athletic); font-size: 2rem; color: var(--c-white); font-weight: 800;">Google &amp; Gemini Q&amp;A</h2>
+      </div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <div style="background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.25rem;">
+        <h3 style="font-size: 1.1rem; color: var(--c-volt); margin-bottom: 0.5rem;">Who is Akhil Mishra in Indian regional cricket?</h3>
+        <p style="font-size: 0.9rem; color: var(--c-gray-300); line-height: 1.6;">
+          Akhil Mishra is an Indian cricketer and top-order all-rounder from Rewa, Madhya Pradesh. He is the franchise captain of Dread Eleven Cricket Club (DE) in the Atal Bihari Vajpayee Memorial Tournament and has represented Rewa Division in regional senior tournaments.
+        </p>
+      </div>
+
+      <div style="background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.25rem;">
+        <h3 style="font-size: 1.1rem; color: var(--c-volt); margin-bottom: 0.5rem;">What are Akhil Mishra\'s career batting and bowling statistics?</h3>
+        <p style="font-size: 0.9rem; color: var(--c-gray-300); line-height: 1.6;">
+          Across 34 tournament derby encounters against Destroyers, Akhil has accumulated 1,378 runs at an average of 44.5 with a strike rate of 130.0 (12 fifties, 1 century, 100* high) and taken 38 wickets with best bowling figures of 4/28.
+        </p>
+      </div>
+
+      <div style="background: var(--c-card-bg); border: 1px solid var(--b-medium); border-radius: 6px; padding: 1.25rem;">
+        <h3 style="font-size: 1.1rem; color: var(--c-volt); margin-bottom: 0.5rem;">What titles has Akhil Mishra won as captain?</h3>
+        <p style="font-size: 0.9rem; color: var(--c-gray-300); line-height: 1.6;">
+          He captained Dread Eleven Cricket Club to the 2022 Atal Bihari Vajpayee Memorial Trophy title, defeating Destroyers 3–2, and led them to the tournament finals in both 2024 and 2026.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+${renderFooter()}
+  `;
+
+  // Write HTML
+  fs.writeFileSync(path.join(portfolioDir, 'index.html'), html.trim());
+  fs.writeFileSync(path.join(publicPortfolioDir, 'index.html'), html.trim());
+
+  // Write Pure Markdown for Gemini / LLM Crawlers
+  const mdContent = `# Akhil Mishra (#45) — Official Athlete Portfolio & Entity Home
+> Franchise Captain & Top-Order All-Rounder | Dread Eleven Cricket Club (DE)
+> Rewa Division Cricket Association (RDCA) • Madhya Pradesh, India
+
+## Quick Athletic Dossier
+- **Full Legal Name**: Akhil Mishra
+- **Role**: Franchise Captain & Top-Order All-Rounder
+- **Batting Style**: Right-Hand Bat (Aggressive Top-Order Anchor & Stroke Maker)
+- **Bowling Style**: Right-Arm Medium Pace & Strategic Seam
+- **Jersey Number**: #45
+- **Origin**: Rewa, Madhya Pradesh, India
+- **Governing Body**: Rewa Division Cricket Association (RDCA) / MPCA Circuit
+- **Representative Teams**: Dread Eleven Cricket Club (Captain), Rewa Division Invitational XI, Vindhya Regional Senior Squad
+- **Entity ID**: DE-45 / RDCA-P-AKHIL-MISHRA
+
+## Career Telemetry (Atal Bihari Vajpayee Memorial Tournament)
+- **Matches Contested**: 34
+- **Derby Wins as Captain**: 15 Wins vs Destroyers (DES)
+- **Total Runs**: 1,378
+- **Batting Average**: 44.50
+- **Strike Rate**: 130.00
+- **Highest Score**: 100* (APSU Stadium)
+- **Milestones**: 12 Fifties, 1 Century
+- **Total Wickets**: 38
+- **Best Bowling in an Innings (BBI)**: 4/28
+- **Economy Rate**: 5.92
+
+## Championship Silverware & Dynasty Cabinet
+- **2022 Atal Bihari Vajpayee Memorial Trophy**: Champion Captain (3–2 vs Destroyers)
+- **Rewa Derby Century Maker**: 100* at APSU Stadium
+- **2024 & 2026 ABV Memorial Tournament**: Championship Finalist Captain
+- **Dread Eleven Founding Talisman & Franchise Player of the Era**
+
+## Official Knowledge Graph & Entity Anchors (sameAs)
+1. **RDCA Central Registry**: https://rewa-cricket-division.vercel.app/players/akhil-mishra/
+2. **Dread Eleven CC Official Profile**: ${BASE_URL}/players/akhil-mishra
+3. **Official Athlete Portfolio**: ${BASE_URL}/portfolio/
+4. **ABV Memorial Tournament Hub**: https://abv-rewacricket.pages.dev/
+5. **CricHeroes RDCA Association**: https://cricheroes.com/association/79/rewa-divisional-cricket-association/home
+6. **CricHeroes ABV Tournament Registry**: https://cricheroes.com/tournament/2168281/atal-bihari-vajpayee-cricket-tournament-season-3/matches/live-matches
+7. **Official Instagram**: https://www.instagram.com/dreadeleven_rewa
+8. **Official Facebook**: https://www.facebook.com/rewa.cricket.association
+`;
+
+  fs.writeFileSync(path.join(portfolioDir, 'index.md'), mdContent.trim());
+  fs.writeFileSync(path.join(publicPortfolioDir, 'index.md'), mdContent.trim());
+
+  // Write JSON Profile
+  const jsonProfile = {
+    name: 'Akhil Mishra',
+    alternateName: ['Capt. Akhil Mishra', 'Akhil Mishra Rewa', 'A. Mishra'],
+    jersey: 45,
+    role: 'Franchise Captain & Top-Order All-Rounder',
+    team: 'Dread Eleven Cricket Club',
+    association: 'Rewa Division Cricket Association (RDCA)',
+    origin: 'Rewa, Madhya Pradesh, India',
+    career: {
+      matches: 34,
+      runs: 1378,
+      battingAverage: 44.5,
+      strikeRate: 130.0,
+      highestScore: '100*',
+      fifties: 12,
+      hundreds: 1,
+      wickets: 38,
+      bowlingAverage: 61.1,
+      economy: 5.92,
+      bestBowling: '4/28',
+      titles: ['2022 Champion Captain', '2024 Finalist Captain', '2026 Finalist Captain']
+    },
+    sameAs: [
+      `${BASE_URL}/portfolio/`,
+      `${BASE_URL}/players/akhil-mishra`,
+      'https://rewa-cricket-division.vercel.app/players/akhil-mishra/',
+      'https://abv-rewacricket.pages.dev/',
+      'https://cricheroes.com/association/79/rewa-divisional-cricket-association/home'
+    ]
+  };
+
+  fs.writeFileSync(path.join(portfolioDir, 'profile.json'), JSON.stringify(jsonProfile, null, 2));
+  fs.writeFileSync(path.join(publicPortfolioDir, 'profile.json'), JSON.stringify(jsonProfile, null, 2));
+
+  console.log('Generated /portfolio/ suite (index.html, index.md, profile.json) for Capt. Akhil Mishra.');
+}
+
 function generateAboutAndContactPages() {
   const aboutDir = path.join(rootDir, 'about');
   const contactDir = path.join(rootDir, 'contact');
@@ -3756,7 +4242,8 @@ function generateSitemapAndRobots() {
     { loc: '/about', changefreq: 'monthly', priority: '0.7' },
     { loc: '/contact', changefreq: 'monthly', priority: '0.6' },
     { loc: '/privacy', changefreq: 'yearly', priority: '0.5' },
-    { loc: '/terms', changefreq: 'yearly', priority: '0.5' }
+    { loc: '/terms', changefreq: 'yearly', priority: '0.5' },
+    { loc: '/portfolio', changefreq: 'daily', priority: '0.95' }
   ];
 
   // Add all player pages (43 players)
@@ -3869,6 +4356,7 @@ LLM: ${BASE_URL}/llms.txt
 - [Tournament Fixtures](${BASE_URL}/fixtures): Complete season schedules and venue timings
 - [Results Archive](${BASE_URL}/results): Scorecards and ball-by-ball analysis for all 34 derby clashes
 - [Points Table](${BASE_URL}/points-table): Verified standings, net run rates, and season champion rankings
+- [Athlete Portfolio & Entity Home](${BASE_URL}/portfolio): Official cricketer profile & Knowledge Graph home for Captain Akhil Mishra (#45)
 - [Franchise Records](${BASE_URL}/stats): Top run-scorers, leading wicket-takers, and highest team totals
 - [Press Center](${BASE_URL}/news): Match post-mortems, editorial reviews, and tactical analysis
 - [About the Franchise](${BASE_URL}/about): Club heritage, RDCA affiliation, and championship dynasties
@@ -3980,6 +4468,16 @@ function generateSearchIndex() {
     url: '/',
     text: 'Dread Eleven DE home stadium Rewa cricket club Akhil Mishra Atal Bihari Vajpayee Memorial Tournament RDCA countdown derby highlights champions'
   });
+  index.push({
+    type: 'Page',
+    badge: 'official',
+    icon: '⭐',
+    title: 'Capt. Akhil Mishra (#45) — Athlete Portfolio & Entity Home',
+    subtitle: 'Official cricketer portfolio, Google Knowledge Graph entity home, bio-data & trophies',
+    url: '/portfolio/',
+    text: 'Akhil Mishra athlete portfolio entity home captain Dread Eleven DE 45 Rewa cricket RDCA stats profile bio honours 2022 champion'
+  });
+
   index.push({
     type: 'Page',
     badge: 'page',
@@ -4246,6 +4744,7 @@ console.log('=== BUILDING DREAD ELEVEN CRICKET CLUB PRODUCTION SUITE (CAPT. AKHI
 
 generateHomePage();
 generateSquadPages();
+generatePortfolioPage();
 generateMatchPages();
 generatePointsTablePage();
 generateStatsPage();

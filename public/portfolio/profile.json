@@ -1,0 +1,38 @@
+{
+  "name": "Akhil Mishra",
+  "alternateName": [
+    "Capt. Akhil Mishra",
+    "Akhil Mishra Rewa",
+    "A. Mishra"
+  ],
+  "jersey": 45,
+  "role": "Franchise Captain & Top-Order All-Rounder",
+  "team": "Dread Eleven Cricket Club",
+  "association": "Rewa Division Cricket Association (RDCA)",
+  "origin": "Rewa, Madhya Pradesh, India",
+  "career": {
+    "matches": 34,
+    "runs": 1378,
+    "battingAverage": 44.5,
+    "strikeRate": 130,
+    "highestScore": "100*",
+    "fifties": 12,
+    "hundreds": 1,
+    "wickets": 38,
+    "bowlingAverage": 61.1,
+    "economy": 5.92,
+    "bestBowling": "4/28",
+    "titles": [
+      "2022 Champion Captain",
+      "2024 Finalist Captain",
+      "2026 Finalist Captain"
+    ]
+  },
+  "sameAs": [
+    "https://dread-eleven-rewacricket.pages.dev/portfolio/",
+    "https://dread-eleven-rewacricket.pages.dev/players/akhil-mishra",
+    "https://rewa-cricket-division.vercel.app/players/akhil-mishra/",
+    "https://abv-rewacricket.pages.dev/",
+    "https://cricheroes.com/association/79/rewa-divisional-cricket-association/home"
+  ]
+}

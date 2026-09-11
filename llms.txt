@@ -18,13 +18,14 @@
 - [Tournament Fixtures](https://dread-eleven-rewacricket.pages.dev/fixtures): Complete season schedules and venue timings
 - [Results Archive](https://dread-eleven-rewacricket.pages.dev/results): Scorecards and ball-by-ball analysis for all 34 derby clashes
 - [Points Table](https://dread-eleven-rewacricket.pages.dev/points-table): Verified standings, net run rates, and season champion rankings
+- [Athlete Portfolio & Entity Home](https://dread-eleven-rewacricket.pages.dev/portfolio): Official cricketer profile & Knowledge Graph home for Captain Akhil Mishra (#45)
 - [Franchise Records](https://dread-eleven-rewacricket.pages.dev/stats): Top run-scorers, leading wicket-takers, and highest team totals
 - [Press Center](https://dread-eleven-rewacricket.pages.dev/news): Match post-mortems, editorial reviews, and tactical analysis
 - [About the Franchise](https://dread-eleven-rewacricket.pages.dev/about): Club heritage, RDCA affiliation, and championship dynasties
 - [Contact & Trials](https://dread-eleven-rewacricket.pages.dev/contact): Academy trials protocol, venue directions, and administrative inquiries
 
 ## Developer & AI Crawler Resources
-- [XML Sitemap](https://dread-eleven-rewacricket.pages.dev/sitemap.xml): Machine-readable index of all public URLs (92 URLs indexed)
+- [XML Sitemap](https://dread-eleven-rewacricket.pages.dev/sitemap.xml): Machine-readable index of all public URLs (93 URLs indexed)
 - [Robots Policy](https://dread-eleven-rewacricket.pages.dev/robots.txt): Explicit crawler permissions for AI agents (GPTBot, ClaudeBot, PerplexityBot, etc.)
 - [Freshness Feed](https://dread-eleven-rewacricket.pages.dev/feed.xml): RSS 2.0 feed with latest match reports and editorial dispatches
 - [Live Freshness Telemetry](https://dread-eleven-rewacricket.pages.dev/freshness.json): Real-time JSON state with latest completed matches and active squad count
