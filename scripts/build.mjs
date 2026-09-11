@@ -481,7 +481,14 @@ function generateHomePage() {
       '@type': 'Person',
       name: 'Akhil Mishra',
       jobTitle: 'Captain & Franchise Leader',
-      url: `${BASE_URL}/players/akhil-mishra`
+      url: `${BASE_URL}/players/akhil-mishra`,
+      sameAs: [
+        `${BASE_URL}/players/akhil-mishra`,
+        'https://rewa-cricket-division.vercel.app/players/akhil-mishra/',
+        'https://abv-rewacricket.pages.dev/',
+        'https://cricheroes.com/association/79/rewa-divisional-cricket-association/home',
+        'https://www.instagram.com/dreadeleven_rewa'
+      ]
     },
     memberOf: {
       '@type': 'SportsOrganization',
@@ -492,8 +499,7 @@ function generateHomePage() {
       'https://rewa-cricket-division.vercel.app/teams/dread-eleven/',
       'https://abv-rewacricket.pages.dev/',
       'https://rewa-cricket-division.vercel.app/tournaments/atal-bihari-vajpayee-memorial-tournament/',
-      'https://destroyers-rewacricket.pages.dev/',
-      'https://abv-rewacricket.pages.dev/'
+      'https://destroyers-rewacricket.pages.dev/'
     ]
   };
 
@@ -527,11 +533,23 @@ function generateHomePage() {
       roleName: p.role,
       url: `${BASE_URL}/players/${p.slug}`
     })),
+    sameAs: [
+      'https://rewa-cricket-division.vercel.app/teams/dread-eleven/',
+      'https://abv-rewacricket.pages.dev/',
+      'https://destroyers-rewacricket.pages.dev/'
+    ],
     coach: {
       '@type': 'Person',
       name: 'Akhil Mishra',
       jobTitle: 'Captain & Top-Order Batter',
-      url: `${BASE_URL}/players/akhil-mishra`
+      url: `${BASE_URL}/players/akhil-mishra`,
+      sameAs: [
+        `${BASE_URL}/players/akhil-mishra`,
+        'https://rewa-cricket-division.vercel.app/players/akhil-mishra/',
+        'https://abv-rewacricket.pages.dev/',
+        'https://cricheroes.com/association/79/rewa-divisional-cricket-association/home',
+        'https://www.instagram.com/dreadeleven_rewa'
+      ]
     }
   };
 
