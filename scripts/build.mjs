@@ -224,8 +224,10 @@ function renderHead({
   <meta name="twitter:data2" content="${esc(twitterData.data2)}">` : ''}
 
   <!-- Icons & PWA -->
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
-  <link rel="apple-touch-icon" href="/public/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
 
   <!-- Typography Preconnect -->
@@ -455,7 +457,7 @@ function generateHomePage() {
     name: 'Dread Eleven Cricket Club (DE)',
     alternateName: ['Dread Eleven', 'DE', 'Dread Eleven Rewa', 'Dread Eleven CC'],
     url: BASE_URL,
-    logo: `${BASE_URL}/public/favicon.svg`,
+    logo: `${BASE_URL}/public/images/logo.png`,
     image: `${BASE_URL}/public/images/de-crest.svg`,
     description: 'Official digital stadium and franchise portal for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete match scorecards, 43-man squad, standings, and stats in Rewa, Madhya Pradesh.',
     address: {
@@ -498,7 +500,7 @@ function generateHomePage() {
     alternateName: 'Dread Eleven (DE)',
     sport: 'Cricket',
     url: BASE_URL,
-    logo: `${BASE_URL}/public/favicon.svg`,
+    logo: `${BASE_URL}/public/images/logo.png`,
     image: `${BASE_URL}/public/images/de-crest.svg`,
     memberOf: {
       '@type': 'SportsOrganization',
