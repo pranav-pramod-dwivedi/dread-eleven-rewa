@@ -101,7 +101,7 @@ function renderHead({
   description,
   canonicalUrl,
   ogType = 'website',
-  ogImage = '/public/images/de-crest.svg',
+  ogImage = '/og-image.png',
   jsonLd = null,
   breadcrumbs = null,
   keywords = null,
@@ -224,7 +224,10 @@ function renderHead({
   <meta name="twitter:label2" content="${esc(twitterData.label2)}">
   <meta name="twitter:data2" content="${esc(twitterData.data2)}">` : ''}
 
-  <!-- Icons & PWA -->
+  <!-- Icons & PWA (Google Search Console & SEO Compliant) -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="512x512" href="/logo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/logo-192.png">
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
@@ -458,8 +461,8 @@ function generateHomePage() {
     name: 'Dread Eleven Cricket Club (DE)',
     alternateName: ['Dread Eleven', 'DE', 'Dread Eleven Rewa', 'Dread Eleven CC'],
     url: BASE_URL,
-    logo: `${BASE_URL}/public/images/logo.png`,
-    image: `${BASE_URL}/public/images/de-crest.svg`,
+    logo: `${BASE_URL}/logo.png`,
+    image: `${BASE_URL}/logo.png`,
     description: 'Official digital stadium and franchise portal for Dread Eleven Cricket Club (DE), captained by Akhil Mishra. Complete match scorecards, 43-man squad, standings, and stats in Rewa, Madhya Pradesh.',
     address: {
       '@type': 'PostalAddress',
@@ -501,8 +504,8 @@ function generateHomePage() {
     alternateName: 'Dread Eleven (DE)',
     sport: 'Cricket',
     url: BASE_URL,
-    logo: `${BASE_URL}/public/images/logo.png`,
-    image: `${BASE_URL}/public/images/de-crest.svg`,
+    logo: `${BASE_URL}/logo.png`,
+    image: `${BASE_URL}/logo.png`,
     memberOf: {
       '@type': 'SportsOrganization',
       name: 'Rewa Division Cricket Association (RDCA)',
@@ -538,6 +541,7 @@ function generateHomePage() {
     name: 'Dread Eleven Cricket Club',
     alternateName: 'Dread Eleven Digital Stadium',
     url: BASE_URL,
+    image: `${BASE_URL}/logo.png`,
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -2954,7 +2958,7 @@ ${renderFooter()}
       '@type': 'NewsArticle',
       headline: n.title,
       description: clampDesc(n.summary, 155),
-      image: `${BASE_URL}/public/images/de-crest.svg`,
+      image: `${BASE_URL}/logo.png`,
       datePublished: n.publishedAt,
       dateModified: n.updatedAt || n.publishedAt,
       mainEntityOfPage: {
