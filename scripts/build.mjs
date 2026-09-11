@@ -357,6 +357,7 @@ function renderFooter() {
             <ul class="footer-links">
               <li><a href="https://rewa-cricket-division.vercel.app" target="_blank" rel="noopener" style="color:var(--c-volt); font-weight:700;">Rewa Cricket Division (RDCA) ↗</a></li>
               <li><a href="https://abv-rewacricket.pages.dev/" target="_blank" rel="noopener" style="color:var(--c-volt);">ABV Memorial Tournament Official Portal ↗</a></li>
+              <li><a href="https://abv-rewacricket.pages.dev/rules/" target="_blank" rel="noopener" style="color:var(--c-gray-300); text-decoration:none;">Tournament Regulations (14 Codes) ↗</a></li>
               <li><a href="https://abv-rewacricket.pages.dev" target="_blank" rel="noopener" style="color:var(--c-volt); font-weight:700;">ABV Tournament Official Portal ↗</a></li>
               <li><a href="https://rewa-cricket-division.vercel.app/teams/dread-eleven/" target="_blank" rel="noopener">DE on RDCA Registry ↗</a></li>
               <li><a href="https://destroyers-rewacricket.pages.dev" target="_blank" rel="noopener" style="color:var(--c-orange); font-weight:700;">Destroyers CC (Arch-Rival) ↗</a></li>
@@ -3149,6 +3150,40 @@ ${renderHeader('about')}
       <p style="font-size:0.95rem; color:var(--c-gray-300); line-height:1.7;">
         The grand theater of Rewa cricket. Host ground for the 2022 Championship Final where Dread Eleven defeated Destroyers before a capacity crowd of 10,000 spectators.
       </p>
+    </div>
+
+    <!-- Tournament Playing Conditions & Regulatory Compliance -->
+    <div style="background:var(--c-surface); border:1px solid var(--b-medium); padding:2.5rem; border-radius:var(--radius-sm); margin-top:2rem; border-left:4px solid var(--c-volt);">
+      <p class="section-pretitle" style="color:var(--c-volt); margin:0 0 0.25rem 0;">Statutory Governance &bull; RDCA Mandates</p>
+      <h2 style="font-family:var(--f-athletic); font-size:1.85rem; color:var(--c-white); text-transform:uppercase; margin-bottom:1rem;">
+        Tournament Playing Conditions &amp; Regulatory Compliance
+      </h2>
+      <p style="color:var(--c-gray-300); font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem; max-width:85ch;">
+        Dread Eleven operates under the 14 codified statutory tournament regulations set forth by the Rewa Division Cricket Association (RDCA). Captain Akhil Mishra and the leadership unit ensure strict adherence to recent tactical playing condition updates:
+      </p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
+        <div style="background:rgba(255,255,255,0.03); padding:1.25rem; border:1px solid var(--b-subtle); border-radius:var(--radius-xs);">
+          <h4 style="font-family:var(--f-athletic); font-size:1.15rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.4rem;">In-Match Over Rate Penalty</h4>
+          <p style="font-size:0.85rem; color:var(--c-gray-400); line-height:1.6; margin:0;">Fielding must commence the final over by scheduled cutoff time. Failure triggers an immediate in-match penalty: only 4 fielders permitted outside the 30-yard circle for remaining overs.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); padding:1.25rem; border:1px solid var(--b-subtle); border-radius:var(--radius-xs);">
+          <h4 style="font-family:var(--f-athletic); font-size:1.15rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.4rem;">60-Second Stop-Clock</h4>
+          <p style="font-size:0.85rem; color:var(--c-gray-400); line-height:1.6; margin:0;">Bowling teams must commence run-up within 60 seconds of the prior over. Two warnings are allowed per innings; a 3rd breach costs a 5-run penalty awarded to the opposition.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); padding:1.25rem; border:1px solid var(--b-subtle); border-radius:var(--radius-xs);">
+          <h4 style="font-family:var(--f-athletic); font-size:1.15rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.4rem;">15° Bowling Action Scrutiny</h4>
+          <p style="font-size:0.85rem; color:var(--c-gray-400); line-height:1.6; margin:0;">Strict compliance with the 15-degree elbow extension limit. Biomechanical 3D motion analysis applies to any reported bowling action under RDCA oversight.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.03); padding:1.25rem; border:1px solid var(--b-subtle); border-radius:var(--radius-xs);">
+          <h4 style="font-family:var(--f-athletic); font-size:1.15rem; color:var(--c-white); text-transform:uppercase; margin-bottom:0.4rem;">PMOA Electronic Device Blackout</h4>
+          <p style="font-size:0.85rem; color:var(--c-gray-400); line-height:1.6; margin:0;">Full communication blackout in dressing rooms from 60 minutes pre-toss until post-match. Zero smartwatches or mobile devices permitted in team areas.</p>
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <a href="https://abv-rewacricket.pages.dev/rules/" target="_blank" rel="noopener" style="color:var(--c-volt); font-family:var(--f-mono); font-size:0.85rem; font-weight:700; text-decoration:none;">
+          Examine All 14 Statutory Codes on ABV Tournament Portal &rarr;
+        </a>
+      </div>
     </div>
   </div>
 </section>
