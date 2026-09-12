@@ -3979,6 +3979,11 @@ ${news.slice(0, 10).map((n) => `    <item>
 /match/* /matches/:splat 301
 /standing /points-table 301
 /standings /points-table 301
+/matches/destroyers-vs-dread-eleven-2026-09-05/* /matches/destroyers-vs-dread-eleven-2026-06-05/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-08/* /matches/destroyers-vs-dread-eleven-2026-06-08/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-12/* /matches/destroyers-vs-dread-eleven-2026-06-12/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-16/* /matches/destroyers-vs-dread-eleven-2026-06-16/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-20/* /matches/destroyers-vs-dread-eleven-2026-06-20/ 301
 /matches/destroyers-vs-dread-eleven-2026-09-05/ /matches/destroyers-vs-dread-eleven-2026-06-05/ 301
 /matches/destroyers-vs-dread-eleven-2026-09-08/ /matches/destroyers-vs-dread-eleven-2026-06-08/ 301
 /matches/destroyers-vs-dread-eleven-2026-09-12/ /matches/destroyers-vs-dread-eleven-2026-06-12/ 301
@@ -3991,6 +3996,7 @@ ${news.slice(0, 10).map((n) => `    <item>
 /matches/destroyers-vs-dread-eleven-2026-09-20 /matches/destroyers-vs-dread-eleven-2026-06-20/ 301
 `;
   fs.writeFileSync(path.join(rootDir, '_redirects'), redirectsContent);
+  if (fs.existsSync(publicDir)) fs.writeFileSync(path.join(publicDir, '_redirects'), redirectsContent);
 
   const googleVerifyFile = 'google23e3ba68f31a1fe8.html';
   const googleVerifyContent = 'google-site-verification: google23e3ba68f31a1fe8.html\n';
