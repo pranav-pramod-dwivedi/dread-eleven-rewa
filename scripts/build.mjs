@@ -663,10 +663,10 @@ ${renderHeader('home')}
 
         <div class="slate-footer-row">
           <div class="slate-timing-spec">
-            <span class="timing-date">20 SEP 2026</span>
+            <span class="timing-date">20 JUN 2026</span>
             <span class="timing-time">CHAMPIONSHIP FINAL • RESULT: DES WON BY 12 RUNS</span>
           </div>
-          <a href="/matches/destroyers-vs-dread-eleven-2026-09-20" class="btn-broadcast-cta">
+          <a href="/matches/destroyers-vs-dread-eleven-2026-06-20" class="btn-broadcast-cta">
             <span>ENTER MATCH CENTRE &rarr;</span>
           </a>
         </div>
@@ -726,7 +726,7 @@ ${renderHeader('home')}
         <span class="bug-team-name">DESTROYERS</span>
       </div>
       <div class="bug-schedule">
-        <span class="bug-date">20 SEP 2026</span>
+        <span class="bug-date">20 JUN 2026</span>
         <span class="bug-time">COMPLETED</span>
       </div>
       <div class="bug-venue">
@@ -736,7 +736,7 @@ ${renderHeader('home')}
         <span class="pitch-dot"></span>
         <span>DES WON BY 12 RUNS</span>
       </div>
-      <a href="/matches/destroyers-vs-dread-eleven-2026-09-20" class="bug-cta">
+      <a href="/matches/destroyers-vs-dread-eleven-2026-06-20" class="bug-cta">
         <span>VIEW SCORECARD &rarr;</span>
       </a>
     </div>
@@ -2446,7 +2446,7 @@ ${renderHeader('table')}
               <td style="font-weight:800; font-family:var(--f-mono); color:var(--c-white);">2026 Edition</td>
               <td style="color:var(--c-gray-400);">2 T20s + 3 50-Over Matches</td>
               <td style="font-weight:800; font-family:var(--f-athletic); font-size:1.3rem; color:var(--c-orange);">Destroyers CC</td>
-              <td style="color:var(--c-white); font-weight:600;">Pranav Dwivedi <span style="color:var(--c-orange); font-size:0.75rem;">(c)</span></td>
+              <td style="color:var(--c-white); font-weight:600;">Aryan Deshmukh <span style="color:var(--c-orange); font-size:0.75rem;">(c)</span></td>
               <td class="tabular font-bold" style="text-align:right; color:var(--c-volt);">3–2 (5 matches)</td>
               <td style="color:var(--c-gray-300);">Dread Eleven</td>
             </tr>
@@ -2765,7 +2765,7 @@ ${renderHeader('stats')}
         </div>
       </div>
       <p style="color:var(--c-gray-300); font-size:0.95rem; line-height:1.6; max-width:80ch; margin-bottom:2rem;">
-        Official certified telemetry across both franchises (Destroyers CC &amp; Dread Eleven) over 6 tournament seasons (2021&ndash;2026). Overall series titles stand level at <strong>3&ndash;3</strong> (Dread Eleven: 2021, 2022, 2023 under Akhil Mishra; Destroyers CC: 2024, 2025, 2026 under Pranav Dwivedi).
+        Official certified telemetry across both franchises (Destroyers CC &amp; Dread Eleven) over 6 tournament seasons (2021&ndash;2026). Overall series titles stand level at <strong>3&ndash;3</strong> (Dread Eleven: 2021, 2022, 2023 under Akhil Mishra; Destroyers CC: 2024, 2025 under Pranav Dwivedi; 2026 under winning captain Aryan Deshmukh).
       </p>
 
       <div class="responsive-duo-grid">
