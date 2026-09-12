@@ -415,8 +415,8 @@
         "runsConceded": 57
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -431,8 +431,8 @@
         "runsConceded": 22
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -447,8 +447,8 @@
         "runsConceded": 21
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -463,8 +463,8 @@
         "runsConceded": 49
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -479,8 +479,8 @@
         "runsConceded": 46
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -507,7 +507,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 76,
         "balls": 44,
@@ -516,7 +516,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 39,
         "balls": 28,
@@ -525,7 +525,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 82,
         "balls": 88,
@@ -534,7 +534,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 62,
         "balls": 68,
@@ -543,7 +543,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 84,
         "balls": 86,
@@ -1041,8 +1041,8 @@
         "runsConceded": 62
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -1057,8 +1057,8 @@
         "runsConceded": 30
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -1073,8 +1073,8 @@
         "runsConceded": 32
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -1089,8 +1089,8 @@
         "runsConceded": 38
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -1105,8 +1105,8 @@
         "runsConceded": 55
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -1133,7 +1133,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -1142,7 +1142,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -1151,7 +1151,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -1160,7 +1160,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -1169,7 +1169,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 12,
         "balls": 14,
@@ -1587,8 +1587,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -1603,8 +1603,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -1619,8 +1619,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -1635,8 +1635,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -1651,8 +1651,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -1679,7 +1679,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 24,
         "balls": 18,
@@ -1688,7 +1688,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 32,
         "balls": 27,
@@ -1697,7 +1697,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 51,
         "balls": 62,
@@ -1706,7 +1706,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 49,
         "balls": 58,
@@ -1715,7 +1715,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 46,
         "balls": 54,
@@ -1940,8 +1940,8 @@
         "runsConceded": 51
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -1956,8 +1956,8 @@
         "runsConceded": 39
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -1972,8 +1972,8 @@
         "runsConceded": 30
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -1988,8 +1988,8 @@
         "runsConceded": 46
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -2004,8 +2004,8 @@
         "runsConceded": 47
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -2032,7 +2032,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -2041,7 +2041,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 14,
         "balls": 13,
@@ -2050,7 +2050,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 22,
         "balls": 26,
@@ -2059,7 +2059,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 27,
         "balls": 32,
@@ -2068,7 +2068,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 28,
         "balls": 30,
@@ -2920,8 +2920,8 @@
         "runsConceded": 59
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -2936,8 +2936,8 @@
         "runsConceded": 38
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -2952,8 +2952,8 @@
         "runsConceded": 38
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -2968,8 +2968,8 @@
         "runsConceded": 52
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -2984,8 +2984,8 @@
         "runsConceded": 58
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -3012,7 +3012,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -3021,7 +3021,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -3030,7 +3030,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -3039,7 +3039,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -3048,7 +3048,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -3514,8 +3514,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -3530,8 +3530,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -3546,8 +3546,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -3562,8 +3562,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -3578,8 +3578,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -3606,7 +3606,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 10,
         "balls": 8,
@@ -3615,7 +3615,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 9,
         "balls": 8,
@@ -3624,7 +3624,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 15,
         "balls": 18,
@@ -3633,7 +3633,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 20,
         "balls": 24,
@@ -3642,7 +3642,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 18,
         "balls": 20,
@@ -4896,8 +4896,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -4912,8 +4912,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -4928,8 +4928,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -4944,8 +4944,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -4960,8 +4960,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -4988,7 +4988,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 28,
         "balls": 22,
@@ -4997,7 +4997,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 22,
         "balls": 18,
@@ -5006,7 +5006,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 35,
         "balls": 44,
@@ -5015,7 +5015,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 28,
         "balls": 36,
@@ -5024,7 +5024,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 36,
         "balls": 42,
@@ -6258,8 +6258,8 @@
         "runsConceded": 64
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -6274,8 +6274,8 @@
         "runsConceded": 37
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -6290,8 +6290,8 @@
         "runsConceded": 36
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -6306,8 +6306,8 @@
         "runsConceded": 55
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -6322,8 +6322,8 @@
         "runsConceded": 54
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -6350,7 +6350,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -6359,7 +6359,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -6368,7 +6368,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -6377,7 +6377,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -6386,7 +6386,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 0,
         "balls": 0,
@@ -6804,8 +6804,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-05",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-05",
+        "date": "2026-06-05",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -6820,8 +6820,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-08",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-08",
+        "date": "2026-06-08",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "format": "T20",
         "season": "2026",
@@ -6836,8 +6836,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-12",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-12",
+        "date": "2026-06-12",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -6852,8 +6852,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-16",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-16",
+        "date": "2026-06-16",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -6868,8 +6868,8 @@
         "runsConceded": 0
       },
       {
-        "date": "2026-09-20",
-        "matchSlug": "destroyers-vs-dread-eleven-2026-09-20",
+        "date": "2026-06-20",
+        "matchSlug": "destroyers-vs-dread-eleven-2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "format": "50 Overs",
         "season": "2026",
@@ -6896,7 +6896,7 @@
     "last5Matches": [
       {
         "matchId": "m-shared-60",
-        "date": "2026-09-05",
+        "date": "2026-06-05",
         "opponent": "Destroyers Cricket Club",
         "runs": 38,
         "balls": 26,
@@ -6905,7 +6905,7 @@
       },
       {
         "matchId": "m-shared-61",
-        "date": "2026-09-08",
+        "date": "2026-06-08",
         "opponent": "Destroyers Cricket Club",
         "runs": 28,
         "balls": 22,
@@ -6914,7 +6914,7 @@
       },
       {
         "matchId": "m-shared-62",
-        "date": "2026-09-12",
+        "date": "2026-06-12",
         "opponent": "Destroyers Cricket Club",
         "runs": 44,
         "balls": 49,
@@ -6923,7 +6923,7 @@
       },
       {
         "matchId": "m-shared-63",
-        "date": "2026-09-16",
+        "date": "2026-06-16",
         "opponent": "Destroyers Cricket Club",
         "runs": 42,
         "balls": 48,
@@ -6932,7 +6932,7 @@
       },
       {
         "matchId": "m-shared-64",
-        "date": "2026-09-20",
+        "date": "2026-06-20",
         "opponent": "Destroyers Cricket Club",
         "runs": 38,
         "balls": 44,

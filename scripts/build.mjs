@@ -268,7 +268,7 @@ function renderHeader(activeNav = '') {
   <header class="site-header">
     <div class="container nav-container">
       <a href="/" class="brand-crest" aria-label="Dread Eleven Cricket Club Home">
-        <img src="/public/images/de-crest.svg" alt="Dread Eleven CC Crest" class="brand-crest-shield-img" width="40" height="48">
+        <img src="/logo.png" alt="Official crest of Dread Eleven Cricket Club" class="brand-logo" width="44" height="44">
         <div class="brand-title-wrap">
           <span class="brand-main-title">DREAD ELEVEN <span style="color:var(--c-volt);">CC</span></span>
           <span class="brand-sub-title">Atal Bihari Vajpayee Cup • Rewa</span>
@@ -3977,6 +3977,16 @@ ${news.slice(0, 10).map((n) => `    <item>
 /match/* /matches/:splat 301
 /standing /points-table 301
 /standings /points-table 301
+/matches/destroyers-vs-dread-eleven-2026-09-05/ /matches/destroyers-vs-dread-eleven-2026-06-05/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-08/ /matches/destroyers-vs-dread-eleven-2026-06-08/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-12/ /matches/destroyers-vs-dread-eleven-2026-06-12/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-16/ /matches/destroyers-vs-dread-eleven-2026-06-16/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-20/ /matches/destroyers-vs-dread-eleven-2026-06-20/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-05 /matches/destroyers-vs-dread-eleven-2026-06-05/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-08 /matches/destroyers-vs-dread-eleven-2026-06-08/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-12 /matches/destroyers-vs-dread-eleven-2026-06-12/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-16 /matches/destroyers-vs-dread-eleven-2026-06-16/ 301
+/matches/destroyers-vs-dread-eleven-2026-09-20 /matches/destroyers-vs-dread-eleven-2026-06-20/ 301
 `;
   fs.writeFileSync(path.join(rootDir, '_redirects'), redirectsContent);
 

@@ -2661,11 +2661,27 @@ body {
   min-height: 100vh;
 }
 
-/* Brand Crest SVG in Navbar */
-.brand-crest-shield-img {
-  width: 36px;
+/* Brand Crest in Navbar */
+.brand-logo {
+  width: 44px;
   height: 44px;
-  object-fit: contain;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border: 2px solid var(--c-volt);
+  box-shadow: 0 0 16px rgba(230, 253, 83, 0.35);
+  transition: transform 0.2s var(--ease-snappy);
+  flex-shrink: 0;
+}
+.brand-crest:hover .brand-logo {
+  transform: scale(1.06);
+}
+
+.brand-crest-shield-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.7));
   transition: transform 0.2s var(--ease-snappy);
 }
